@@ -1,0 +1,219 @@
+22:20 root                 INFO    tutorial directory: 
+22:20 root                 INFO    running madgraph on 1000000 events
+22:20 root                 INFO    loading miner results...
+22:20 madminer.utils.inter DEBUG   HDF5 file does not contain is_reference field.
+22:20 madminer.core        INFO    Found 2 parameters:
+22:20 madminer.core        INFO       TOP_MASS (LHA: MASS 6, maximal power in squared ME: (2,), range: (0.0, 1.0))
+22:20 madminer.core        INFO       TOP_WIDTH (LHA: DECAY 6, maximal power in squared ME: (2,), range: (0.0, 1.0))
+22:20 madminer.core        INFO    Found 26 benchmarks:
+22:20 madminer.core        INFO       160_15: TOP_MASS = 1.60e+02, TOP_WIDTH = 1.50
+22:20 madminer.core        INFO       161_15: TOP_MASS = 1.61e+02, TOP_WIDTH = 1.50
+22:20 madminer.core        INFO       162_15: TOP_MASS = 1.62e+02, TOP_WIDTH = 1.50
+22:20 madminer.core        INFO       163_15: TOP_MASS = 1.63e+02, TOP_WIDTH = 1.50
+22:20 madminer.core        INFO       164_15: TOP_MASS = 1.64e+02, TOP_WIDTH = 1.50
+22:20 madminer.core        INFO       165_15: TOP_MASS = 1.65e+02, TOP_WIDTH = 1.50
+22:20 madminer.core        INFO       166_15: TOP_MASS = 1.66e+02, TOP_WIDTH = 1.50
+22:20 madminer.core        INFO       167_15: TOP_MASS = 1.67e+02, TOP_WIDTH = 1.50
+22:20 madminer.core        INFO       168_15: TOP_MASS = 1.68e+02, TOP_WIDTH = 1.50
+22:20 madminer.core        INFO       169_15: TOP_MASS = 1.69e+02, TOP_WIDTH = 1.50
+22:20 madminer.core        INFO       170_15: TOP_MASS = 1.70e+02, TOP_WIDTH = 1.50
+22:20 madminer.core        INFO       171_15: TOP_MASS = 1.71e+02, TOP_WIDTH = 1.50
+22:20 madminer.core        INFO       172_15: TOP_MASS = 1.72e+02, TOP_WIDTH = 1.50
+22:20 madminer.core        INFO       173_15: TOP_MASS = 1.73e+02, TOP_WIDTH = 1.50
+22:20 madminer.core        INFO       174_15: TOP_MASS = 1.74e+02, TOP_WIDTH = 1.50
+22:20 madminer.core        INFO       175_15: TOP_MASS = 1.75e+02, TOP_WIDTH = 1.50
+22:20 madminer.core        INFO       176_15: TOP_MASS = 1.76e+02, TOP_WIDTH = 1.50
+22:20 madminer.core        INFO       177_15: TOP_MASS = 1.77e+02, TOP_WIDTH = 1.50
+22:20 madminer.core        INFO       178_15: TOP_MASS = 1.78e+02, TOP_WIDTH = 1.50
+22:20 madminer.core        INFO       179_15: TOP_MASS = 1.79e+02, TOP_WIDTH = 1.50
+22:20 madminer.core        INFO       180_15: TOP_MASS = 1.80e+02, TOP_WIDTH = 1.50
+22:20 madminer.core        INFO       181_15: TOP_MASS = 1.81e+02, TOP_WIDTH = 1.50
+22:20 madminer.core        INFO       182_15: TOP_MASS = 1.82e+02, TOP_WIDTH = 1.50
+22:20 madminer.core        INFO       183_15: TOP_MASS = 1.83e+02, TOP_WIDTH = 1.50
+22:20 madminer.core        INFO       184_15: TOP_MASS = 1.84e+02, TOP_WIDTH = 1.50
+22:20 madminer.core        INFO       172_70: TOP_MASS = 1.72e+02, TOP_WIDTH = 7.00
+22:20 madminer.core        INFO    Did not find morphing setup.
+22:20 madminer.core        INFO    Did not find systematics setup.
+22:20 root                 INFO    running LHEProcessor...
+22:20 madminer.utils.inter DEBUG   HDF5 file does not contain is_reference field.
+22:20 madminer.lhe         DEBUG   Adding event sample mg_processes/signal/Events/run_01/unweighted_events.lhe.gz
+22:20 madminer.lhe         DEBUG   Adding required observable j_0_energy = j[0].e
+22:20 madminer.lhe         DEBUG   Adding required observable j_0_momentum = j[0].pt
+22:20 madminer.lhe         DEBUG   Adding cut j[0].pt >= 25.0
+22:20 madminer.lhe         DEBUG   Adding required observable j_0_eta = j[0].eta
+22:20 madminer.lhe         DEBUG   Adding required observable j_0_phi = j[0].phi()
+22:20 madminer.lhe         DEBUG   Adding required observable j_1_energy = j[1].e
+22:20 madminer.lhe         DEBUG   Adding required observable j_1_momentum = j[1].pt
+22:20 madminer.lhe         DEBUG   Adding cut j[1].pt >= 25.0
+22:20 madminer.lhe         DEBUG   Adding required observable j_1_eta = j[1].eta
+22:20 madminer.lhe         DEBUG   Adding required observable j_1_phi = j[1].phi()
+22:20 madminer.lhe         DEBUG   Adding required observable e_0_energy = e[0].e
+22:20 madminer.lhe         DEBUG   Adding required observable e_0_momentum = e[0].pt
+22:20 madminer.lhe         DEBUG   Adding cut e[0].pt >= 25.0
+22:20 madminer.lhe         DEBUG   Adding required observable e_0_eta = e[0].eta
+22:20 madminer.lhe         DEBUG   Adding required observable e_0_phi = e[0].phi()
+22:20 madminer.lhe         DEBUG   Adding required observable mu_0_energy = mu[0].e
+22:20 madminer.lhe         DEBUG   Adding required observable mu_0_momentum = mu[0].pt
+22:20 madminer.lhe         DEBUG   Adding cut mu[0].pt >= 25.0
+22:20 madminer.lhe         DEBUG   Adding required observable mu_0_eta = mu[0].eta
+22:20 madminer.lhe         DEBUG   Adding required observable mu_0_phi = mu[0].phi()
+22:20 madminer.lhe         DEBUG   Adding required observable met_pt = met.pt
+22:20 madminer.lhe         DEBUG   Adding cut met.pt >= 25.0
+22:20 madminer.lhe         DEBUG   Adding required observable m_e_0_j_0 = sqrt( (e[0].e + j[0].e) ** 2 - (e[0].pt + j[0].pt) ** 2)
+22:20 madminer.lhe         DEBUG   Adding required observable m_e_0_j_1 = sqrt( (e[0].e + j[1].e) ** 2 - (e[0].pt + j[1].pt) ** 2)
+22:20 madminer.lhe         DEBUG   Adding required observable m_mu_0_j_0 = sqrt( (mu[0].e + j[0].e) ** 2 - (mu[0].pt + j[0].pt) ** 2)
+22:20 madminer.lhe         DEBUG   Adding required observable m_mu_0_j_1 = sqrt( (mu[0].e + j[1].e) ** 2 - (mu[0].pt + j[1].pt) ** 2)
+22:20 madminer.lhe         DEBUG   Adding required observable mt2 defined through external function
+22:20 madminer.lhe         INFO    Analysing LHE sample mg_processes/signal/Events/run_01/unweighted_events.lhe.gz
+22:20 madminer.lhe         DEBUG   Extracting nuisance parameter definitions from LHE file
+22:20 madminer.utils.inter DEBUG   Parsing nuisance parameter setup from LHE file at mg_processes/signal/Events/run_01/unweighted_events.lhe.gz
+22:20 madminer.lhe         DEBUG   Found 0 nuisance parameters with matching benchmarks:
+22:20 madminer.utils.inter DEBUG   Parsing LHE file mg_processes/signal/Events/run_01/unweighted_events.lhe.gz
+22:20 madminer.utils.inter DEBUG   Parsing header and events as XML with cElementTree
+22:20 madminer.utils.inter DEBUG   Found entry event_norm = sum in LHE header. Interpreting this as weight_norm_is_average = False.
+22:20 madminer.utils.inter INFO    processed 0/1000000 events
+22:25 madminer.utils.inter INFO    processed 100000/1000000 events
+22:29 madminer.utils.inter INFO    processed 200000/1000000 events
+22:33 madminer.utils.inter INFO    processed 300000/1000000 events
+22:38 madminer.utils.inter INFO    processed 400000/1000000 events
+22:42 madminer.utils.inter INFO    processed 500000/1000000 events
+22:46 madminer.utils.inter INFO    processed 600000/1000000 events
+22:51 madminer.utils.inter INFO    processed 700000/1000000 events
+22:56 madminer.utils.inter INFO    processed 800000/1000000 events
+23:01 madminer.utils.inter INFO    processed 900000/1000000 events
+23:05 madminer.utils.inter DEBUG     994116 / 1000000 events pass cut j[0].pt >= 25.0
+23:05 madminer.utils.inter DEBUG     852129 / 1000000 events pass cut j[1].pt >= 25.0
+23:05 madminer.utils.inter DEBUG     765500 / 1000000 events pass cut e[0].pt >= 25.0
+23:05 madminer.utils.inter DEBUG     766308 / 1000000 events pass cut mu[0].pt >= 25.0
+23:05 madminer.utils.inter DEBUG     757683 / 1000000 events pass cut met.pt >= 25.0
+23:05 madminer.utils.inter INFO      363432 events pass all cuts
+23:05 madminer.lhe         DEBUG   Found weights ['172_70', '160_15', '161_15', '162_15', '163_15', '164_15', '165_15', '166_15', '167_15', '168_15', '169_15', '170_15', '171_15', '172_15', '173_15', '174_15', '175_15', '176_15', '177_15', '178_15', '179_15', '180_15', '181_15', '182_15', '183_15', '184_15'] in LHE file
+23:05 madminer.lhe         DEBUG   Found 363432 events
+23:05 madminer.lhe         DEBUG   Loading HDF5 data from data/madminer_example_mvm.h5 and saving file to data/madminer_example_mvm_with_data.h5
+23:05 madminer.lhe         DEBUG   Weight names: ['172_70', '160_15', '161_15', '162_15', '163_15', '164_15', '165_15', '166_15', '167_15', '168_15', '169_15', '170_15', '171_15', '172_15', '173_15', '174_15', '175_15', '176_15', '177_15', '178_15', '179_15', '180_15', '181_15', '182_15', '183_15', '184_15']
+23:05 madminer.utils.inter DEBUG   Benchmarks found in HDF5 file: [u'160_15', u'161_15', u'162_15', u'163_15', u'164_15', u'165_15', u'166_15', u'167_15', u'168_15', u'169_15', u'170_15', u'171_15', u'172_15', u'173_15', u'174_15', u'175_15', u'176_15', u'177_15', u'178_15', u'179_15', u'180_15', u'181_15', u'182_15', u'183_15', u'184_15', u'172_70']
+23:05 madminer.utils.inter DEBUG   Benchmark 160_15 already in benchmark_names_phys
+23:05 madminer.utils.inter DEBUG   Benchmark 161_15 already in benchmark_names_phys
+23:05 madminer.utils.inter DEBUG   Benchmark 162_15 already in benchmark_names_phys
+23:05 madminer.utils.inter DEBUG   Benchmark 163_15 already in benchmark_names_phys
+23:05 madminer.utils.inter DEBUG   Benchmark 164_15 already in benchmark_names_phys
+23:05 madminer.utils.inter DEBUG   Benchmark 165_15 already in benchmark_names_phys
+23:05 madminer.utils.inter DEBUG   Benchmark 166_15 already in benchmark_names_phys
+23:05 madminer.utils.inter DEBUG   Benchmark 167_15 already in benchmark_names_phys
+23:05 madminer.utils.inter DEBUG   Benchmark 168_15 already in benchmark_names_phys
+23:05 madminer.utils.inter DEBUG   Benchmark 169_15 already in benchmark_names_phys
+23:05 madminer.utils.inter DEBUG   Benchmark 170_15 already in benchmark_names_phys
+23:05 madminer.utils.inter DEBUG   Benchmark 171_15 already in benchmark_names_phys
+23:05 madminer.utils.inter DEBUG   Benchmark 172_15 already in benchmark_names_phys
+23:05 madminer.utils.inter DEBUG   Benchmark 172_70 already in benchmark_names_phys
+23:05 madminer.utils.inter DEBUG   Benchmark 173_15 already in benchmark_names_phys
+23:05 madminer.utils.inter DEBUG   Benchmark 174_15 already in benchmark_names_phys
+23:05 madminer.utils.inter DEBUG   Benchmark 175_15 already in benchmark_names_phys
+23:05 madminer.utils.inter DEBUG   Benchmark 176_15 already in benchmark_names_phys
+23:05 madminer.utils.inter DEBUG   Benchmark 177_15 already in benchmark_names_phys
+23:05 madminer.utils.inter DEBUG   Benchmark 178_15 already in benchmark_names_phys
+23:05 madminer.utils.inter DEBUG   Benchmark 179_15 already in benchmark_names_phys
+23:05 madminer.utils.inter DEBUG   Benchmark 180_15 already in benchmark_names_phys
+23:05 madminer.utils.inter DEBUG   Benchmark 181_15 already in benchmark_names_phys
+23:05 madminer.utils.inter DEBUG   Benchmark 182_15 already in benchmark_names_phys
+23:05 madminer.utils.inter DEBUG   Benchmark 183_15 already in benchmark_names_phys
+23:05 madminer.utils.inter DEBUG   Benchmark 184_15 already in benchmark_names_phys
+23:05 madminer.utils.inter DEBUG   Combined benchmark names: [u'160_15', u'161_15', u'162_15', u'163_15', u'164_15', u'165_15', u'166_15', u'167_15', u'168_15', u'169_15', u'170_15', u'171_15', u'172_15', u'173_15', u'174_15', u'175_15', u'176_15', u'177_15', u'178_15', u'179_15', u'180_15', u'181_15', u'182_15', u'183_15', u'184_15', u'172_70']
+23:05 madminer.utils.inter DEBUG   Combined is_nuisance: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+23:05 madminer.utils.inter DEBUG   Combined is_reference: [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+23:05 madminer.utils.inter DEBUG   Weight names found in event file: ['172_70', '160_15', '161_15', '162_15', '163_15', '164_15', '165_15', '166_15', '167_15', '168_15', '169_15', '170_15', '171_15', '172_15', '173_15', '174_15', '175_15', '176_15', '177_15', '178_15', '179_15', '180_15', '181_15', '182_15', '183_15', '184_15']
+23:05 madminer.utils.inter DEBUG   Benchmarks found in MadMiner file: [u'160_15', u'161_15', u'162_15', u'163_15', u'164_15', u'165_15', u'166_15', u'167_15', u'168_15', u'169_15', u'170_15', u'171_15', u'172_15', u'173_15', u'174_15', u'175_15', u'176_15', u'177_15', u'178_15', u'179_15', u'180_15', u'181_15', u'182_15', u'183_15', u'184_15', u'172_70']
+23:05 madminer.utils.inter DEBUG   Sorted benchmarks: [u'160_15', u'161_15', u'162_15', u'163_15', u'164_15', u'165_15', u'166_15', u'167_15', u'168_15', u'169_15', u'170_15', u'171_15', u'172_15', u'173_15', u'174_15', u'175_15', u'176_15', u'177_15', u'178_15', u'179_15', u'180_15', u'181_15', u'182_15', u'183_15', u'184_15', u'172_70']
+23:05 root                 INFO    OrderedDict([('j_0_energy', 'j[0].e'), ('j_0_momentum', 'j[0].pt'), ('j_0_eta', 'j[0].eta'), ('j_0_phi', 'j[0].phi()'), ('j_1_energy', 'j[1].e'), ('j_1_momentum', 'j[1].pt'), ('j_1_eta', 'j[1].eta'), ('j_1_phi', 'j[1].phi()'), ('e_0_energy', 'e[0].e'), ('e_0_momentum', 'e[0].pt'), ('e_0_eta', 'e[0].eta'), ('e_0_phi', 'e[0].phi()'), ('mu_0_energy', 'mu[0].e'), ('mu_0_momentum', 'mu[0].pt'), ('mu_0_eta', 'mu[0].eta'), ('mu_0_phi', 'mu[0].phi()'), ('met_pt', 'met.pt'), ('m_e_0_j_0', 'sqrt( (e[0].e + j[0].e) ** 2 - (e[0].pt + j[0].pt) ** 2)'), ('m_e_0_j_1', 'sqrt( (e[0].e + j[1].e) ** 2 - (e[0].pt + j[1].pt) ** 2)'), ('m_mu_0_j_0', 'sqrt( (mu[0].e + j[0].e) ** 2 - (mu[0].pt + j[0].pt) ** 2)'), ('m_mu_0_j_1', 'sqrt( (mu[0].e + j[1].e) ** 2 - (mu[0].pt + j[1].pt) ** 2)'), ('mt2', <function mt2 at 0x7f21c83b25f0>)])
+23:05 root                 INFO    ['j_0_energy', 'j_0_momentum', 'j_0_eta', 'j_0_phi', 'j_1_energy', 'j_1_momentum', 'j_1_eta', 'j_1_phi', 'e_0_energy', 'e_0_momentum', 'e_0_eta', 'e_0_phi', 'mu_0_energy', 'mu_0_momentum', 'mu_0_eta', 'mu_0_phi', 'met_pt', 'm_e_0_j_0', 'm_e_0_j_1', 'm_mu_0_j_0', 'm_mu_0_j_1', 'mt2']
+23:05 madminer.sampling    INFO    Loading data from data/madminer_example_mvm_with_data.h5
+23:05 madminer.sampling    INFO    Found 2 parameters
+23:05 madminer.sampling    DEBUG      TOP_MASS (LHA: MASS 6, maximal power in squared ME: (2,), range: (0.0, 1.0))
+23:05 madminer.sampling    DEBUG      TOP_WIDTH (LHA: DECAY 6, maximal power in squared ME: (2,), range: (0.0, 1.0))
+23:05 madminer.sampling    INFO    Did not find nuisance parameters
+23:05 madminer.sampling    INFO    Found 26 benchmarks, of which 26 physical
+23:05 madminer.sampling    DEBUG      160_15: TOP_MASS = 1.60e+02, TOP_WIDTH = 1.50
+23:05 madminer.sampling    DEBUG      161_15: TOP_MASS = 1.61e+02, TOP_WIDTH = 1.50
+23:05 madminer.sampling    DEBUG      162_15: TOP_MASS = 1.62e+02, TOP_WIDTH = 1.50
+23:05 madminer.sampling    DEBUG      163_15: TOP_MASS = 1.63e+02, TOP_WIDTH = 1.50
+23:05 madminer.sampling    DEBUG      164_15: TOP_MASS = 1.64e+02, TOP_WIDTH = 1.50
+23:05 madminer.sampling    DEBUG      165_15: TOP_MASS = 1.65e+02, TOP_WIDTH = 1.50
+23:05 madminer.sampling    DEBUG      166_15: TOP_MASS = 1.66e+02, TOP_WIDTH = 1.50
+23:05 madminer.sampling    DEBUG      167_15: TOP_MASS = 1.67e+02, TOP_WIDTH = 1.50
+23:05 madminer.sampling    DEBUG      168_15: TOP_MASS = 1.68e+02, TOP_WIDTH = 1.50
+23:05 madminer.sampling    DEBUG      169_15: TOP_MASS = 1.69e+02, TOP_WIDTH = 1.50
+23:05 madminer.sampling    DEBUG      170_15: TOP_MASS = 1.70e+02, TOP_WIDTH = 1.50
+23:05 madminer.sampling    DEBUG      171_15: TOP_MASS = 1.71e+02, TOP_WIDTH = 1.50
+23:05 madminer.sampling    DEBUG      172_15: TOP_MASS = 1.72e+02, TOP_WIDTH = 1.50
+23:05 madminer.sampling    DEBUG      173_15: TOP_MASS = 1.73e+02, TOP_WIDTH = 1.50
+23:05 madminer.sampling    DEBUG      174_15: TOP_MASS = 1.74e+02, TOP_WIDTH = 1.50
+23:05 madminer.sampling    DEBUG      175_15: TOP_MASS = 1.75e+02, TOP_WIDTH = 1.50
+23:05 madminer.sampling    DEBUG      176_15: TOP_MASS = 1.76e+02, TOP_WIDTH = 1.50
+23:05 madminer.sampling    DEBUG      177_15: TOP_MASS = 1.77e+02, TOP_WIDTH = 1.50
+23:05 madminer.sampling    DEBUG      178_15: TOP_MASS = 1.78e+02, TOP_WIDTH = 1.50
+23:05 madminer.sampling    DEBUG      179_15: TOP_MASS = 1.79e+02, TOP_WIDTH = 1.50
+23:05 madminer.sampling    DEBUG      180_15: TOP_MASS = 1.80e+02, TOP_WIDTH = 1.50
+23:05 madminer.sampling    DEBUG      181_15: TOP_MASS = 1.81e+02, TOP_WIDTH = 1.50
+23:05 madminer.sampling    DEBUG      182_15: TOP_MASS = 1.82e+02, TOP_WIDTH = 1.50
+23:05 madminer.sampling    DEBUG      183_15: TOP_MASS = 1.83e+02, TOP_WIDTH = 1.50
+23:05 madminer.sampling    DEBUG      184_15: TOP_MASS = 1.84e+02, TOP_WIDTH = 1.50
+23:05 madminer.sampling    DEBUG      172_70: TOP_MASS = 1.72e+02, TOP_WIDTH = 7.00
+23:05 madminer.sampling    INFO    Found 22 observables
+23:05 madminer.sampling    DEBUG      0 j_0_energy
+23:05 madminer.sampling    DEBUG      1 j_0_momentum
+23:05 madminer.sampling    DEBUG      2 j_0_eta
+23:05 madminer.sampling    DEBUG      3 j_0_phi
+23:05 madminer.sampling    DEBUG      4 j_1_energy
+23:05 madminer.sampling    DEBUG      5 j_1_momentum
+23:05 madminer.sampling    DEBUG      6 j_1_eta
+23:05 madminer.sampling    DEBUG      7 j_1_phi
+23:05 madminer.sampling    DEBUG      8 e_0_energy
+23:05 madminer.sampling    DEBUG      9 e_0_momentum
+23:05 madminer.sampling    DEBUG     10 e_0_eta
+23:05 madminer.sampling    DEBUG     11 e_0_phi
+23:05 madminer.sampling    DEBUG     12 mu_0_energy
+23:05 madminer.sampling    DEBUG     13 mu_0_momentum
+23:05 madminer.sampling    DEBUG     14 mu_0_eta
+23:05 madminer.sampling    DEBUG     15 mu_0_phi
+23:05 madminer.sampling    DEBUG     16 met_pt
+23:05 madminer.sampling    DEBUG     17 m_e_0_j_0
+23:05 madminer.sampling    DEBUG     18 m_e_0_j_1
+23:05 madminer.sampling    DEBUG     19 m_mu_0_j_0
+23:05 madminer.sampling    DEBUG     20 m_mu_0_j_1
+23:05 madminer.sampling    DEBUG     21 mt2
+23:05 madminer.sampling    INFO    Found 363432 events
+23:05 madminer.sampling    INFO    Did not find morphing setup.
+23:05 madminer.plotting    DEBUG   Observable indices: [16, 17, 18, 19, 20, 21]
+23:05 madminer.plotting    DEBUG   Loaded raw data with shapes (363432, 22), (363432, 26)
+23:05 madminer.plotting    DEBUG   Calculated 26 theta matrices
+23:05 madminer.plotting    DEBUG   Plotting panel 0: observable 16, label met_pt
+23:05 madminer.plotting    DEBUG   Ranges for observable met_pt: min = [25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258], max = [234.49851197472194, 234.48973791468134, 173.6412567330655, 173.64658073211174, 171.68188482176484, 196.4289661362113, 259.4424128858582, 196.17172621999154, 185.6918267770375, 195.976243967069, 195.60182123472143, 205.79995313995374, 203.36158887192454, 199.6277936301124, 194.0068608793484, 207.0704485186671, 195.85506283393028, 199.65138952276337, 232.68375480115475, 182.08637169550903, 154.75401052273165, 145.55948946323582, 145.46269278504712, 153.1474201969357, 151.40103008389724, 202.0688242180729]
+23:05 madminer.plotting    DEBUG   Plotting panel 1: observable 17, label m_e_0_j_0
+23:05 madminer.plotting    DEBUG   Ranges for observable m_e_0_j_0: min = [5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545], max = [849.7426999698057, 923.5460103178486, 923.7700145998045, 923.9167197194404, 899.0170112229794, 902.4366620796353, 1582.2593046315367, 1573.8621851750206, 1277.4148847725774, 1247.4328868995465, 1260.4844847889885, 1251.6846639363569, 1199.3434591346577, 1215.0707616376114, 1247.97510686286, 1151.2389330736175, 1184.9953903530902, 1073.3879849884456, 1128.465958138873, 1130.0711305568746, 923.18767502039, 1031.9484042515037, 1032.614490706245, 1207.9816553484993, 1210.0112189428844, 1205.4870892907563]
+23:05 madminer.plotting    DEBUG   Plotting panel 2: observable 18, label m_e_0_j_1
+23:05 madminer.plotting    DEBUG   Ranges for observable m_e_0_j_1: min = [5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976], max = [816.0628531397566, 697.1397364502718, 697.0555053497976, 813.5549771540653, 815.1299533011916, 1050.0914176601918, 1051.98896591253, 1161.747718414995, 1145.7271500683971, 1141.994432792225, 1143.1849190648659, 1066.645686466496, 1005.5412695780387, 1022.2870398447023, 1015.7846210590102, 977.9690345130902, 1175.633517928708, 944.5853888272351, 944.1244169847059, 943.5928028073611, 901.1148422714674, 972.9953031928483, 972.7228344786192, 981.50125652414, 981.2327216678488, 1030.2043294099537]
+23:05 madminer.plotting    DEBUG   Plotting panel 3: observable 19, label m_mu_0_j_0
+23:05 madminer.plotting    DEBUG   Ranges for observable m_mu_0_j_0: min = [5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449], max = [756.8118982637519, 833.6442425066025, 833.6393501855016, 931.6319498171049, 1015.6601547997275, 1014.5753751562348, 1327.8957728868718, 1397.205697201396, 1245.0181560647268, 1192.9399569361149, 1263.2109826639546, 1345.3138028233805, 1248.2426163506734, 1227.7435808496664, 1322.2514010032, 1189.579909833651, 1168.3987374076955, 1266.466481866893, 2084.3722785306913, 1094.3651728732418, 1030.3971182779687, 1001.3101480170305, 932.2654214799439, 1168.603247930873, 998.6839710144249, 1199.7509457404115]
+23:05 madminer.plotting    DEBUG   Plotting panel 4: observable 20, label m_mu_0_j_1
+23:05 madminer.plotting    DEBUG   Ranges for observable m_mu_0_j_1: min = [5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809], max = [795.7898247933919, 787.2243626392823, 753.6625559186423, 877.4528783745374, 1340.787481867458, 1347.4841482190875, 1497.8095936453801, 1200.124322359256, 1069.377946855213, 1028.0143847548418, 1027.4172338580559, 1017.381968181006, 967.6627129141948, 939.0625414826361, 977.0757150095959, 998.8842570636326, 1196.1467607214254, 1106.124343952029, 1748.5122567202552, 877.5387118241823, 877.9222189617833, 680.6904111018325, 656.3712711040167, 894.7716769599714, 895.3285084430865, 1005.5386790358027]
+23:05 madminer.plotting    DEBUG   Plotting panel 5: observable 21, label mt2
+23:05 madminer.plotting    DEBUG   Ranges for observable mt2: min = [9.002364815203654, 8.52381585482461, 10.181013659942787, 10.114524809591217, 1.2567931963242644, 1.2567931963242644, 2.703081690465071, 3.805716219794185, 3.9847667534745224, 1.926662860361473, 1.2567931963242644, 2.615314047302272, 3.0031647706186746, 4.728758956681695, 3.568825543327364, 1.2567931963242644, 1.2567931963242644, 1.2567931963242644, 2.0309011591738884, 3.8764967005443154, 3.45715478553959, 1.2567931963242644, 1.2567931963242644, 1.4379367938172045, 1.4485050186834396, 2.3333899853718716], max = [113.74471820940893, 118.91007493979139, 112.68304929257346, 113.50607886396331, 128.3910114625885, 161.44549260747388, 164.56905848115468, 170.96345735912954, 165.64950755012202, 168.54485855272733, 163.8658470361194, 161.36409361879, 151.57130513862728, 150.17925033648518, 162.86963001459213, 164.53147043711908, 159.3676864682071, 152.36710276317237, 151.90609364284035, 139.54606722335032, 143.9812003979746, 165.5807908795397, 165.62493882737402, 162.81941260992886, 162.68098927417094, 161.12355595323]
+23:05 matplotlib.font_mana DEBUG   findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/home/zbhatti/.conda/envs/mm_vs_mem/lib/python2.7/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000
+23:05 matplotlib.font_mana DEBUG   findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=6.94 to DejaVu Sans (u'/home/zbhatti/.conda/envs/mm_vs_mem/lib/python2.7/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000
+23:05 root                 INFO    skipping SampleAugmenter...
+23:05 madminer.ml          DEBUG   Loading settings from models/alice_settings.json
+23:05 madminer.ml          DEBUG     Found method alice, 22 observables, 2 parameters, (29, 19, 13, 31) hidden layers, tanh activation function, features None
+23:05 madminer.ml          DEBUG     Found input scaling information: means [ 2.04442861e+02  9.32879747e+01 -1.31580839e-03  5.26900020e-03
+  1.44859670e+02  5.37820275e+01  2.87568360e-03 -2.98457590e-03
+  1.20960093e+02  5.11990550e+01 -9.91782768e-04 -1.05365339e-02
+  1.21295684e+02  5.13516990e+01 -2.36020003e-03  4.69951645e-03
+  6.55372515e+01  2.71268210e+02  2.29211001e+02  2.71421282e+02
+  2.29473261e+02  4.88077276e+01], stds [191.14458893  44.72009596   1.33732993   1.81285411 165.01282245
+  33.05984143   1.6095655    1.81043409 138.23097994  36.65454756
+   1.47673087   1.80886569 138.80563969  37.05861917   1.47863345
+   1.82081435  50.75028995 271.48008762 239.32897615 273.11506802
+ 239.56234618  33.34436237]
+23:05 madminer.ml          DEBUG   Loading state dictionary from models/alice_state_dict.pt
+23:06 root                 INFO    skipping forge
+23:06 matplotlib.backends. INFO    Could not load matplotlib icon: can't use "pyimage10" as iconphoto: not a photo image
+23:06 root                 INFO    

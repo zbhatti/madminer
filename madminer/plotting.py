@@ -368,8 +368,8 @@ def plot_distributions(
             if not is_nuisance:
                 parameter_points.append(key)
 
-        if line_labels is None:
-            line_labels = parameter_points
+    if line_labels is None:
+        line_labels = parameter_points
 
     n_parameter_points = len(parameter_points)
 
@@ -578,13 +578,13 @@ def plot_distributions(
 
             plt.plot(bin_edges_, histo_, color=color, lw=lw, ls=ls, label=label, alpha=1.0)
 
-        plt.legend()
+        plt.legend(ncol=2, fontsize='x-small')
 
         plt.xlabel(xlabel)
-        if normalize:
-            plt.ylabel("Normalized distribution")
-        else:
-            plt.ylabel(r"$\frac{d\sigma}{dx}$ [pb / bin]")
+        # if normalize:
+        #     plt.ylabel("Normalized distribution")
+        # else:
+        #     plt.ylabel(r"$\frac{d\sigma}{dx}$ [pb / bin]")
 
         plt.xlim(x_range[0], x_range[1])
         if log:

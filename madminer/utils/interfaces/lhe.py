@@ -69,10 +69,16 @@ def parse_lhe_file(
         cuts_default_pass = {key: False for key in six.iterkeys(cuts)}
 
     # Untar and open LHE file
-    root, filename = _untar_and_parse_lhe_file(filename)
+    run_card = None
+    for elem in _untar_and_parse_lhe_file(filename):
+        if elem.tag == 'MGRunCard':
+            run_card = elem.text
+            break
+        else:
+            continue
 
     # Figure out event weighting
-    run_card = root.find("header").find("MGRunCard").text
+    # run_card = root.find("header").find("MGRunCard").text
 
     weight_norm_is_average = None
     n_events_runcard = None
@@ -128,16 +134,16 @@ def parse_lhe_file(
 
     # Option one: XML parsing
     if parse_events_as_xml:
-
         observations_all_events = []
         weights_all_events = []
         weight_names_all_events = None
 
-        events = root.findall("event")
-
-        for event in events:
+        events = _untar_and_parse_lhe_file(filename, ['event'])
+        for idx, event in enumerate(events):
             # Parse event
             particles, weights = _parse_event(event, sampling_benchmark)
+            if idx % 100000 == 0:
+                logger.info('processed %d/%d events', idx, n_events_runcard)
 
             # Negative weights?
             n_negative_weights = np.sum(np.array(list(weights.values())) < 0.0)
@@ -165,9 +171,11 @@ def parse_lhe_file(
             for obs_name, obs_definition in six.iteritems(observables):
                 if isinstance(obs_definition, six.string_types):
                     try:
+                        # observations.append(eval(obs_definition, dict(variables, **globals())))
                         observations.append(eval(obs_definition, variables))
-                    except (SyntaxError, NameError, TypeError, ZeroDivisionError, IndexError):
+                    except (SyntaxError, NameError, TypeError, ZeroDivisionError, IndexError) as e:
                         if observables_required[obs_name]:
+                            # raise RuntimeError('{0}\nobs_name\n{1}\nobs_definition\n{2}\n'.format(e, obs_name, obs_definition))
                             continue
 
                         default = observables_defaults[obs_name]
@@ -218,7 +226,6 @@ def parse_lhe_file(
     # Option two: text parsing
     else:
         # Free up memory
-        del root
 
         observations_all_events = []
         weights_all_events = []
@@ -367,11 +374,13 @@ def extract_nuisance_parameters_from_lhe_file(filename, systematics):
             systematics_scales.append(None)
 
     # Untar and parse LHE file
-    root, _ = _untar_and_parse_lhe_file(filename)
+    elem_generator = _untar_and_parse_lhe_file(filename, 'initrwgt')
 
     # Find weight groups
+    weight_groups = []
     try:
-        weight_groups = root.findall("header")[0].findall("initrwgt")[0].findall("weightgroup")
+        for elem in elem_generator:
+            weight_groups.append(elem.findall('weightgroup'))
     except KeyError as e:
         raise RuntimeError("Could not find weight groups in LHE file!\n%s", e)
 
@@ -703,7 +712,19 @@ def _parse_events_text(filename, sampling_benchmark):
                 weights[rwgtid] = rwgtval
 
 
-def _untar_and_parse_lhe_file(filename):
+def read_contents(filename):
+    # In some cases, the LHE comments can contain bad characters
+    with open(filename, "r") as file:
+        for line in file:
+            comment_pos = line.find("#")
+            if comment_pos >= 0:
+                yield line[:comment_pos]
+            else:
+                yield line
+
+
+# should be called as a context with a generator read method so we can iterate through it correctly
+def _untar_and_parse_lhe_file(filename, tags=None):
     # Untar event file
     new_filename, extension = os.path.splitext(filename)
     if extension == ".gz":
@@ -711,21 +732,13 @@ def _untar_and_parse_lhe_file(filename):
             call_command("gunzip -k {}".format(filename))
         filename = new_filename
 
-    # In some cases, the LHE comments can contain bad characters
-    with open(filename, "r") as file:
-        lhe_content = file.read()
-    lhe_lines = lhe_content.split("\n")
-    for i, line in enumerate(lhe_lines):
-        comment_pos = line.find("#")
-        if comment_pos >= 0:
-            lhe_lines[i] = line[:comment_pos]
-    lhe_content = "\n".join(lhe_lines)
+    for event, elem in ET.iterparse(filename):
+        if tags and elem.tag not in tags:
+            continue
+        else:
+            yield elem
 
-    # Parse XML tree
-    root = ET.fromstring(lhe_content)
-
-    return root, filename
-
+        elem.clear()
 
 def _get_objects(particles):
     # Find visible particles

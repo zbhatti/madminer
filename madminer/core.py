@@ -672,8 +672,8 @@ class MadMiner:
             Path to the MadGraph Pythia8 card. If None, the card present in the process folder is used.
             Default value: None.
 
-        sample_benchmark : list of str or None, optional
-            Lists the names of benchmarks that should be used to sample events. A different sampling does not change
+        sample_benchmark : str or None, optional
+            The name of the benchmark that should be used to sample events. A different sampling does not change
             the expected differential cross sections, but will change which regions of phase space have many events
             (small variance) or few events (high variance). If None, the benchmark added first is used. Default value:
             None.

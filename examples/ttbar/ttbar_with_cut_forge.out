@@ -1,0 +1,663 @@
+23:08 root                 INFO    tutorial directory: 
+23:08 root                 INFO    running madgraph on 1000000 events
+23:08 root                 INFO    loading miner results...
+23:08 madminer.utils.inter DEBUG   HDF5 file does not contain is_reference field.
+23:08 madminer.core        INFO    Found 2 parameters:
+23:08 madminer.core        INFO       TOP_MASS (LHA: MASS 6, maximal power in squared ME: (2,), range: (0.0, 1.0))
+23:08 madminer.core        INFO       TOP_WIDTH (LHA: DECAY 6, maximal power in squared ME: (2,), range: (0.0, 1.0))
+23:08 madminer.core        INFO    Found 26 benchmarks:
+23:08 madminer.core        INFO       160_15: TOP_MASS = 1.60e+02, TOP_WIDTH = 1.50
+23:08 madminer.core        INFO       161_15: TOP_MASS = 1.61e+02, TOP_WIDTH = 1.50
+23:08 madminer.core        INFO       162_15: TOP_MASS = 1.62e+02, TOP_WIDTH = 1.50
+23:08 madminer.core        INFO       163_15: TOP_MASS = 1.63e+02, TOP_WIDTH = 1.50
+23:08 madminer.core        INFO       164_15: TOP_MASS = 1.64e+02, TOP_WIDTH = 1.50
+23:08 madminer.core        INFO       165_15: TOP_MASS = 1.65e+02, TOP_WIDTH = 1.50
+23:08 madminer.core        INFO       166_15: TOP_MASS = 1.66e+02, TOP_WIDTH = 1.50
+23:08 madminer.core        INFO       167_15: TOP_MASS = 1.67e+02, TOP_WIDTH = 1.50
+23:08 madminer.core        INFO       168_15: TOP_MASS = 1.68e+02, TOP_WIDTH = 1.50
+23:08 madminer.core        INFO       169_15: TOP_MASS = 1.69e+02, TOP_WIDTH = 1.50
+23:08 madminer.core        INFO       170_15: TOP_MASS = 1.70e+02, TOP_WIDTH = 1.50
+23:08 madminer.core        INFO       171_15: TOP_MASS = 1.71e+02, TOP_WIDTH = 1.50
+23:08 madminer.core        INFO       172_15: TOP_MASS = 1.72e+02, TOP_WIDTH = 1.50
+23:08 madminer.core        INFO       173_15: TOP_MASS = 1.73e+02, TOP_WIDTH = 1.50
+23:08 madminer.core        INFO       174_15: TOP_MASS = 1.74e+02, TOP_WIDTH = 1.50
+23:08 madminer.core        INFO       175_15: TOP_MASS = 1.75e+02, TOP_WIDTH = 1.50
+23:08 madminer.core        INFO       176_15: TOP_MASS = 1.76e+02, TOP_WIDTH = 1.50
+23:08 madminer.core        INFO       177_15: TOP_MASS = 1.77e+02, TOP_WIDTH = 1.50
+23:08 madminer.core        INFO       178_15: TOP_MASS = 1.78e+02, TOP_WIDTH = 1.50
+23:08 madminer.core        INFO       179_15: TOP_MASS = 1.79e+02, TOP_WIDTH = 1.50
+23:08 madminer.core        INFO       180_15: TOP_MASS = 1.80e+02, TOP_WIDTH = 1.50
+23:08 madminer.core        INFO       181_15: TOP_MASS = 1.81e+02, TOP_WIDTH = 1.50
+23:08 madminer.core        INFO       182_15: TOP_MASS = 1.82e+02, TOP_WIDTH = 1.50
+23:08 madminer.core        INFO       183_15: TOP_MASS = 1.83e+02, TOP_WIDTH = 1.50
+23:08 madminer.core        INFO       184_15: TOP_MASS = 1.84e+02, TOP_WIDTH = 1.50
+23:08 madminer.core        INFO       172_70: TOP_MASS = 1.72e+02, TOP_WIDTH = 7.00
+23:08 madminer.core        INFO    Did not find morphing setup.
+23:08 madminer.core        INFO    Did not find systematics setup.
+23:08 root                 INFO    skipping LHEProcessor...
+23:08 madminer.sampling    INFO    Loading data from data/madminer_example_mvm_with_data.h5
+23:08 madminer.sampling    INFO    Found 2 parameters
+23:08 madminer.sampling    DEBUG      TOP_MASS (LHA: MASS 6, maximal power in squared ME: (2,), range: (0.0, 1.0))
+23:08 madminer.sampling    DEBUG      TOP_WIDTH (LHA: DECAY 6, maximal power in squared ME: (2,), range: (0.0, 1.0))
+23:08 madminer.sampling    INFO    Did not find nuisance parameters
+23:08 madminer.sampling    INFO    Found 26 benchmarks, of which 26 physical
+23:08 madminer.sampling    DEBUG      160_15: TOP_MASS = 1.60e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      161_15: TOP_MASS = 1.61e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      162_15: TOP_MASS = 1.62e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      163_15: TOP_MASS = 1.63e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      164_15: TOP_MASS = 1.64e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      165_15: TOP_MASS = 1.65e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      166_15: TOP_MASS = 1.66e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      167_15: TOP_MASS = 1.67e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      168_15: TOP_MASS = 1.68e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      169_15: TOP_MASS = 1.69e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      170_15: TOP_MASS = 1.70e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      171_15: TOP_MASS = 1.71e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      172_15: TOP_MASS = 1.72e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      173_15: TOP_MASS = 1.73e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      174_15: TOP_MASS = 1.74e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      175_15: TOP_MASS = 1.75e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      176_15: TOP_MASS = 1.76e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      177_15: TOP_MASS = 1.77e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      178_15: TOP_MASS = 1.78e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      179_15: TOP_MASS = 1.79e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      180_15: TOP_MASS = 1.80e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      181_15: TOP_MASS = 1.81e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      182_15: TOP_MASS = 1.82e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      183_15: TOP_MASS = 1.83e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      184_15: TOP_MASS = 1.84e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      172_70: TOP_MASS = 1.72e+02, TOP_WIDTH = 7.00
+23:08 madminer.sampling    INFO    Found 22 observables
+23:08 madminer.sampling    DEBUG      0 j_0_energy
+23:08 madminer.sampling    DEBUG      1 j_0_momentum
+23:08 madminer.sampling    DEBUG      2 j_0_eta
+23:08 madminer.sampling    DEBUG      3 j_0_phi
+23:08 madminer.sampling    DEBUG      4 j_1_energy
+23:08 madminer.sampling    DEBUG      5 j_1_momentum
+23:08 madminer.sampling    DEBUG      6 j_1_eta
+23:08 madminer.sampling    DEBUG      7 j_1_phi
+23:08 madminer.sampling    DEBUG      8 e_0_energy
+23:08 madminer.sampling    DEBUG      9 e_0_momentum
+23:08 madminer.sampling    DEBUG     10 e_0_eta
+23:08 madminer.sampling    DEBUG     11 e_0_phi
+23:08 madminer.sampling    DEBUG     12 mu_0_energy
+23:08 madminer.sampling    DEBUG     13 mu_0_momentum
+23:08 madminer.sampling    DEBUG     14 mu_0_eta
+23:08 madminer.sampling    DEBUG     15 mu_0_phi
+23:08 madminer.sampling    DEBUG     16 met_pt
+23:08 madminer.sampling    DEBUG     17 m_e_0_j_0
+23:08 madminer.sampling    DEBUG     18 m_e_0_j_1
+23:08 madminer.sampling    DEBUG     19 m_mu_0_j_0
+23:08 madminer.sampling    DEBUG     20 m_mu_0_j_1
+23:08 madminer.sampling    DEBUG     21 mt2
+23:08 madminer.sampling    INFO    Found 363432 events
+23:08 madminer.sampling    INFO    Did not find morphing setup.
+23:08 madminer.plotting    DEBUG   Observable indices: [16, 17, 18, 19, 20, 21]
+23:08 madminer.plotting    DEBUG   Loaded raw data with shapes (363432, 22), (363432, 26)
+23:08 madminer.plotting    DEBUG   Calculated 26 theta matrices
+23:08 madminer.plotting    DEBUG   Plotting panel 0: observable 16, label met_pt
+23:08 madminer.plotting    DEBUG   Ranges for observable met_pt: min = [25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258, 25.000620044027258], max = [139.6225153546936, 162.60294262821566, 162.7998889575607, 155.67914480755206, 163.11406043469447, 165.2135461780001, 197.9126307966165, 188.24038228876276, 188.15259921861804, 205.94685028848727, 182.82850101525915, 187.7439938638956, 189.69322851538533, 200.53052979367632, 193.44118658549291, 201.2442111245341, 187.398867720283, 188.29200789616863, 188.24865708253637, 185.6133277445171, 162.16932085003648, 191.12342356682137, 191.8551499651597, 192.03580925319832, 190.85901748692962, 195.969678018343]
+23:08 madminer.plotting    DEBUG   Plotting panel 1: observable 17, label m_e_0_j_0
+23:08 madminer.plotting    DEBUG   Ranges for observable m_e_0_j_0: min = [5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545, 5.462951628270545], max = [1166.1205317103509, 906.0781515371938, 929.1169237338565, 929.4440012052905, 929.380524985977, 903.2712124784975, 1272.5045087305607, 1094.9439118432747, 1093.6455222862705, 1094.3228810547105, 1099.0828896814483, 1219.013435665624, 1218.0909356465445, 1090.9423240138583, 1091.3185229941464, 1008.159650573744, 1067.039350587646, 1019.3195795179824, 1093.2364898464627, 1189.3534303099061, 1041.216491016826, 1000.6519506978906, 987.9257941821228, 974.0555875770956, 769.6166726026007, 1153.1348317743034]
+23:08 madminer.plotting    DEBUG   Plotting panel 2: observable 18, label m_e_0_j_1
+23:08 madminer.plotting    DEBUG   Ranges for observable m_e_0_j_1: min = [5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976, 5.348000051690976], max = [608.8968441914359, 611.9311818406773, 943.641437569658, 943.9232184286319, 944.7819424803546, 788.8425184517835, 986.9606473610249, 986.149031723969, 984.2069428575801, 889.9103085675688, 1072.1284856365683, 1229.5319947083026, 989.809823139395, 982.7421820050865, 1050.0385964119678, 959.749606553858, 967.8069887415608, 1018.7536065401579, 941.7353858740851, 940.520365316564, 820.653244991953, 863.8133006639923, 918.5470924780349, 917.6852842222473, 815.7874737353013, 988.3658261231519]
+23:08 madminer.plotting    DEBUG   Plotting panel 3: observable 19, label m_mu_0_j_0
+23:08 madminer.plotting    DEBUG   Ranges for observable m_mu_0_j_0: min = [5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449, 5.310113022753449], max = [918.1772501092032, 830.3508267536528, 902.4623575438684, 942.9371930198936, 943.0701035992611, 1017.8655501512798, 1312.2116201596682, 1148.8928834440023, 1169.0269522775914, 1147.491221734902, 1108.4442065549686, 1168.5813574755439, 1254.8859466205454, 1151.4334655146722, 1135.4570074739113, 1209.3925636272822, 1561.3282735333541, 1000.4102329403639, 992.6880552099205, 991.2529691989084, 908.2824214528691, 908.4185287034713, 908.4024412072301, 880.2675244303437, 788.1534173279633, 1188.6022999108654]
+23:08 madminer.plotting    DEBUG   Plotting panel 4: observable 20, label m_mu_0_j_1
+23:08 madminer.plotting    DEBUG   Ranges for observable m_mu_0_j_1: min = [6.028329446960861, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809, 5.471953530134809], max = [429.6447472503711, 572.8616430510064, 692.627900274615, 828.2668767677427, 829.2397636881623, 984.6129668251931, 985.8193812996741, 962.7003323514067, 964.6008772230623, 902.4338732564554, 1100.3939197397563, 1176.6939975741834, 991.1510280996671, 983.5576140465043, 1014.7109982975882, 960.6550250438571, 1228.6935077290138, 1070.425904984581, 1068.3849644090817, 1150.8812449232248, 758.6157501621183, 759.5116156301607, 765.8298024483973, 761.6569403783699, 760.4093506243171, 1024.3369315150326]
+23:08 madminer.plotting    DEBUG   Plotting panel 5: observable 21, label mt2
+23:08 madminer.plotting    DEBUG   Ranges for observable mt2: min = [13.369659496537569, 12.272866356583899, 13.33571736347078, 9.751324784368602, 1.5502344393461218, 1.2567931963242644, 1.5546229273575474, 1.4918943214973286, 3.182531901521646, 1.3631002800760434, 2.4976054464387776, 3.1874543681876997, 3.5685420131474466, 2.5950413633097984, 1.2567931963242644, 1.2567931963242644, 1.3113292328754724, 4.772473144553016, 2.8058674232011658, 6.04439384487231, 8.365326065706078, 6.541325883617265, 6.5114672915205425, 6.516249108747113, 8.242950564424287, 2.535470636936367], max = [105.14546206703736, 117.14589219700359, 119.61605891755991, 119.94655029088975, 130.04184642575868, 146.50176151720564, 130.0433614887307, 130.98621176896114, 143.7319943328603, 165.96825074728008, 160.4258778365952, 154.19658417109278, 150.170488050726, 155.88912546729242, 167.37383326810573, 165.44025256500743, 157.81041632164096, 149.86430029551283, 153.67350253524762, 153.36459310281992, 133.9058673671137, 147.83370304540674, 148.16176062189822, 148.10898014777612, 129.43894897331506, 156.388452717913]
+23:08 matplotlib.font_mana DEBUG   findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/home/zbhatti/.conda/envs/mm_vs_mem/lib/python2.7/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000
+23:08 matplotlib.font_mana DEBUG   findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=6.94 to DejaVu Sans (u'/home/zbhatti/.conda/envs/mm_vs_mem/lib/python2.7/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000
+23:08 root                 INFO    running SampleAugmenter...
+23:08 madminer.sampling    DEBUG   Combining and shuffling samples
+23:08 madminer.sampling    INFO    Copying setup from data/madminer_example_mvm_with_data.h5 to data/madminer_example_mvm_shuffled.h5
+23:08 madminer.sampling    INFO    Loading samples from file 1 / 1 at data/madminer_example_mvm_with_data.h5, multiplying weights with k factor 1.0
+23:08 madminer.sampling    INFO    Loading data from data/madminer_example_mvm_shuffled.h5
+23:08 madminer.sampling    INFO    Found 2 parameters
+23:08 madminer.sampling    DEBUG      TOP_MASS (LHA: MASS 6, maximal power in squared ME: (2,), range: (0.0, 1.0))
+23:08 madminer.sampling    DEBUG      TOP_WIDTH (LHA: DECAY 6, maximal power in squared ME: (2,), range: (0.0, 1.0))
+23:08 madminer.sampling    INFO    Did not find nuisance parameters
+23:08 madminer.sampling    INFO    Found 26 benchmarks, of which 26 physical
+23:08 madminer.sampling    DEBUG      160_15: TOP_MASS = 1.60e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      161_15: TOP_MASS = 1.61e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      162_15: TOP_MASS = 1.62e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      163_15: TOP_MASS = 1.63e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      164_15: TOP_MASS = 1.64e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      165_15: TOP_MASS = 1.65e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      166_15: TOP_MASS = 1.66e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      167_15: TOP_MASS = 1.67e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      168_15: TOP_MASS = 1.68e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      169_15: TOP_MASS = 1.69e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      170_15: TOP_MASS = 1.70e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      171_15: TOP_MASS = 1.71e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      172_15: TOP_MASS = 1.72e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      173_15: TOP_MASS = 1.73e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      174_15: TOP_MASS = 1.74e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      175_15: TOP_MASS = 1.75e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      176_15: TOP_MASS = 1.76e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      177_15: TOP_MASS = 1.77e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      178_15: TOP_MASS = 1.78e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      179_15: TOP_MASS = 1.79e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      180_15: TOP_MASS = 1.80e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      181_15: TOP_MASS = 1.81e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      182_15: TOP_MASS = 1.82e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      183_15: TOP_MASS = 1.83e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      184_15: TOP_MASS = 1.84e+02, TOP_WIDTH = 1.50
+23:08 madminer.sampling    DEBUG      172_70: TOP_MASS = 1.72e+02, TOP_WIDTH = 7.00
+23:08 madminer.sampling    INFO    Found 22 observables
+23:08 madminer.sampling    DEBUG      0 j_0_energy
+23:08 madminer.sampling    DEBUG      1 j_0_momentum
+23:08 madminer.sampling    DEBUG      2 j_0_eta
+23:08 madminer.sampling    DEBUG      3 j_0_phi
+23:08 madminer.sampling    DEBUG      4 j_1_energy
+23:08 madminer.sampling    DEBUG      5 j_1_momentum
+23:08 madminer.sampling    DEBUG      6 j_1_eta
+23:08 madminer.sampling    DEBUG      7 j_1_phi
+23:08 madminer.sampling    DEBUG      8 e_0_energy
+23:08 madminer.sampling    DEBUG      9 e_0_momentum
+23:08 madminer.sampling    DEBUG     10 e_0_eta
+23:08 madminer.sampling    DEBUG     11 e_0_phi
+23:08 madminer.sampling    DEBUG     12 mu_0_energy
+23:08 madminer.sampling    DEBUG     13 mu_0_momentum
+23:08 madminer.sampling    DEBUG     14 mu_0_eta
+23:08 madminer.sampling    DEBUG     15 mu_0_phi
+23:08 madminer.sampling    DEBUG     16 met_pt
+23:08 madminer.sampling    DEBUG     17 m_e_0_j_0
+23:08 madminer.sampling    DEBUG     18 m_e_0_j_1
+23:08 madminer.sampling    DEBUG     19 m_mu_0_j_0
+23:08 madminer.sampling    DEBUG     20 m_mu_0_j_1
+23:08 madminer.sampling    DEBUG     21 mt2
+23:08 madminer.sampling    INFO    Found 363432 events
+23:08 madminer.sampling    INFO    Did not find morphing setup.
+23:08 madminer.sampling    INFO    Extracting training sample for ratio-based methods. Numerator hypothesis: (u'benchmarks', ['160_15', '161_15', '162_15', '163_15', '164_15', '165_15', '166_15', '167_15', '168_15', '169_15', '170_15', '171_15', '172_15', '173_15', '174_15', '175_15', '176_15', '177_15', '178_15', '179_15', '180_15', '181_15', '182_15', '183_15', '184_15']), denominator hypothesis: (u'benchmark', '172_70')
+23:08 root                 WARNING No morphing setup loaded. Cannot calculate joint score.
+23:08 madminer.sampling    DEBUG   Starting sample extraction
+23:08 madminer.sampling    DEBUG   Augmented data requested:
+23:08 madminer.sampling    DEBUG     (u'ratio', 0, 1)
+23:08 madminer.sampling    DEBUG   Benchmark cross sections [pb]: [0.67602285 0.73185152 0.68791608 0.69313465 0.70037171 0.71005883
+ 0.74783565 0.74650604 0.76611096 0.80501344 0.81137366 0.83834374
+ 0.85144779 0.86779901 0.88757234 0.88798778 0.91142404 0.93329233
+ 0.93027758 0.9539002  0.97761113 1.0287745  1.01965458 1.11401119
+ 1.09131353 0.03765646]
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [160.    1.5] (sampling)
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.]
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999999931
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [161.    1.5] (sampling)
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.]
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.999999999999999
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [162.    1.5] (sampling)
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.]
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999999848
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [163.    1.5] (sampling)
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.]
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999999984
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [164.    1.5] (sampling)
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.]
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 1.0000000000000018
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [165.    1.5] (sampling)
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.]
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999999862
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [166.    1.5] (sampling)
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.]
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 1.0000000000000133
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [167.    1.5] (sampling)
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.]
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 1.00000000000001
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [168.    1.5] (sampling)
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.]
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 1.0000000000000018
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [169.    1.5] (sampling)
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.]
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 1.000000000000004
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [170.    1.5] (sampling)
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.]
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999999949
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [171.    1.5] (sampling)
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.]
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 1.0000000000000002
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [172.    1.5] (sampling)
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.]
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999999978
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [173.    1.5] (sampling)
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.]
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999999989
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [174.    1.5] (sampling)
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.]
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999999959
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [175.    1.5] (sampling)
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.]
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 1.0000000000000073
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [176.    1.5] (sampling)
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.]
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999999998
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [177.    1.5] (sampling)
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.]
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 1.000000000000007
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [178.    1.5] (sampling)
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.]
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 1.000000000000005
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [179.    1.5] (sampling)
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.]
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999999962
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [180.    1.5] (sampling)
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.]
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999999973
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [181.    1.5] (sampling)
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.]
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 1.0000000000000064
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [182.    1.5] (sampling)
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.]
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999999901
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [183.    1.5] (sampling)
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.]
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.999999999999998
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [184.    1.5] (sampling)
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.]
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 1.0000000000000044
+23:08 madminer.sampling    INFO    Effective number of samples: mean 1844.7584082357896, with individual thetas ranging from 43.78012880311495 to 8625.739742956954
+23:08 madminer.sampling    DEBUG   Effective number of samples for all thetas: [  43.7801288    53.51447325   76.6171411   111.5238868   173.62360663
+  263.70525152  457.64540337  743.38464177 1332.49888075 2529.70862859
+ 4394.26359711 7102.60899092 8625.73974296 7580.85337388 5142.49420157
+ 3016.34356564 1699.33000957 1042.89859592  614.47774495  386.5250855
+  250.60169078  175.25959099  134.68711116   91.66650337   75.20835901]
+23:08 madminer.sampling    DEBUG   Starting sample extraction
+23:08 madminer.sampling    DEBUG   Augmented data requested:
+23:08 madminer.sampling    DEBUG     (u'ratio', 0, 1)
+23:08 madminer.sampling    DEBUG   Benchmark cross sections [pb]: [0.67602285 0.73185152 0.68791608 0.69313465 0.70037171 0.71005883
+ 0.74783565 0.74650604 0.76611096 0.80501344 0.81137366 0.83834374
+ 0.85144779 0.86779901 0.88757234 0.88798778 0.91142404 0.93329233
+ 0.93027758 0.9539002  0.97761113 1.0287745  1.01965458 1.11401119
+ 1.09131353 0.03765646]
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [160.    1.5]
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.] (sampling)
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999982739
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [161.    1.5]
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.] (sampling)
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999982739
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [162.    1.5]
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.] (sampling)
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999982739
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [163.    1.5]
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.] (sampling)
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999982739
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [164.    1.5]
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.] (sampling)
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999982739
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [165.    1.5]
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.] (sampling)
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999982739
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [166.    1.5]
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.] (sampling)
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999982739
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [167.    1.5]
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.] (sampling)
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999982739
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [168.    1.5]
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.] (sampling)
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999982739
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [169.    1.5]
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.] (sampling)
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999982739
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [170.    1.5]
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.] (sampling)
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999982739
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [171.    1.5]
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.] (sampling)
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999982739
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [172.    1.5]
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.] (sampling)
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999982739
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [173.    1.5]
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.] (sampling)
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999982739
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [174.    1.5]
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.] (sampling)
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999982739
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [175.    1.5]
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.] (sampling)
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999982739
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [176.    1.5]
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.] (sampling)
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999982739
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [177.    1.5]
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.] (sampling)
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999982739
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [178.    1.5]
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.] (sampling)
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999982739
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [179.    1.5]
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.] (sampling)
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999982739
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [180.    1.5]
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.] (sampling)
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999982739
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [181.    1.5]
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.] (sampling)
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999982739
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [182.    1.5]
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.] (sampling)
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999982739
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [183.    1.5]
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.] (sampling)
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999982739
+23:08 madminer.sampling    DEBUG   Drawing 20000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [184.    1.5]
+23:08 madminer.sampling    DEBUG     theta 1 = [172.   7.] (sampling)
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999982739
+23:08 madminer.sampling    INFO    Effective number of samples: mean 181716.00000033673, with individual thetas ranging from 181716.0000003367 to 181716.0000003367
+23:08 madminer.sampling    DEBUG   Effective number of samples for all thetas: [181716.00000034 181716.00000034 181716.00000034 181716.00000034
+ 181716.00000034 181716.00000034 181716.00000034 181716.00000034
+ 181716.00000034 181716.00000034 181716.00000034 181716.00000034
+ 181716.00000034 181716.00000034 181716.00000034 181716.00000034
+ 181716.00000034 181716.00000034 181716.00000034 181716.00000034
+ 181716.00000034 181716.00000034 181716.00000034 181716.00000034
+ 181716.00000034]
+23:08 madminer.sampling    INFO    Extracting evaluation sample. Sampling according to (u'benchmark', '172_15')
+23:08 madminer.sampling    DEBUG   Starting sample extraction
+23:08 madminer.sampling    DEBUG   Augmented data requested:
+23:08 madminer.sampling    DEBUG   Benchmark cross sections [pb]: [0.66636744 0.64402652 0.6929001  0.6637146  0.72023021 0.71528406
+ 0.73565674 0.76688137 0.78843323 0.80548531 0.81651459 0.83070079
+ 0.84706928 0.86448694 0.88806391 0.92253836 0.93392622 0.95372211
+ 0.98295291 1.00547478 1.032727   1.00624287 1.08863488 1.08196656
+ 0.9902375  0.03765625]
+23:08 madminer.sampling    DEBUG   Drawing 1000000 events for the following thetas:
+23:08 madminer.sampling    DEBUG     theta 0 = [172.    1.5] (sampling)
+23:08 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 1.0000000000000053
+23:08 madminer.sampling    INFO    Effective number of samples: 8567.449302425981
+23:08 madminer.sampling    INFO    Starting cross-section calculation
+23:08 madminer.sampling    DEBUG   theta [160.    1.5]: xsec = (1.342390291235335 +/- 0.07760810626393988) pb
+23:08 madminer.sampling    DEBUG   theta [161.    1.5]: xsec = (1.3758780477000854 +/- 0.06770767232556786) pb
+23:08 madminer.sampling    DEBUG   theta [162.    1.5]: xsec = (1.3808161938467836 +/- 0.05625332741727986) pb
+23:08 madminer.sampling    DEBUG   theta [163.    1.5]: xsec = (1.35684926530294 +/- 0.04487073757324301) pb
+23:08 madminer.sampling    DEBUG   theta [164.    1.5]: xsec = (1.4206019406746513 +/- 0.039035780043573894) pb
+23:08 madminer.sampling    DEBUG   theta [165.    1.5]: xsec = (1.4253429122732508 +/- 0.030801521052507056) pb
+23:08 madminer.sampling    DEBUG   theta [166.    1.5]: xsec = (1.4834924305434065 +/- 0.025082439028385015) pb
+23:08 madminer.sampling    DEBUG   theta [167.    1.5]: xsec = (1.5133874765615425 +/- 0.019321295074692144) pb
+23:08 madminer.sampling    DEBUG   theta [168.    1.5]: xsec = (1.554544293706423 +/- 0.014921688558230433) pb
+23:08 madminer.sampling    DEBUG   theta [169.    1.5]: xsec = (1.6104989563176437 +/- 0.011536389764506601) pb
+23:08 madminer.sampling    DEBUG   theta [170.    1.5]: xsec = (1.627888737854983 +/- 0.008765142735075986) pb
+23:08 madminer.sampling    DEBUG   theta [171.    1.5]: xsec = (1.6690461785489783 +/- 0.007310189434629836) pb
+23:08 madminer.sampling    DEBUG   theta [172.    1.5]: xsec = (1.698521799523781 +/- 0.006768424953510084) pb
+23:08 madminer.sampling    DEBUG   theta [173.    1.5]: xsec = (1.7322877583073033 +/- 0.007331526388349014) pb
+23:08 madminer.sampling    DEBUG   theta [174.    1.5]: xsec = (1.7756369814672308 +/- 0.00898769171072838) pb
+23:08 madminer.sampling    DEBUG   theta [175.    1.5]: xsec = (1.810526556287487 +/- 0.011709527509346902) pb
+23:08 madminer.sampling    DEBUG   theta [176.    1.5]: xsec = (1.8453505576635432 +/- 0.015589042082092795) pb
+23:08 madminer.sampling    DEBUG   theta [177.    1.5]: xsec = (1.8870146733268405 +/- 0.02079018924461943) pb
+23:08 madminer.sampling    DEBUG   theta [178.    1.5]: xsec = (1.9132306984786331 +/- 0.027023425793917862) pb
+23:08 madminer.sampling    DEBUG   theta [179.    1.5]: xsec = (1.959375163329922 +/- 0.034340506045053426) pb
+23:08 madminer.sampling    DEBUG   theta [180.    1.5]: xsec = (2.010338326446432 +/- 0.042466853938142334) pb
+23:08 madminer.sampling    DEBUG   theta [181.    1.5]: xsec = (2.0350175982921592 +/- 0.05181311541903719) pb
+23:08 madminer.sampling    DEBUG   theta [182.    1.5]: xsec = (2.1082897330744825 +/- 0.06463752907641265) pb
+23:08 madminer.sampling    DEBUG   theta [183.    1.5]: xsec = (2.195978143004421 +/- 0.08085021614644676) pb
+23:08 madminer.sampling    DEBUG   theta [184.    1.5]: xsec = (2.081551724093073 +/- 0.08505209919772667) pb
+23:08 root                 INFO    [1.34239029 1.37587805 1.38081619 1.35684927 1.42060194 1.42534291
+ 1.48349243 1.51338748 1.55454429 1.61049896 1.62788874 1.66904618
+ 1.6985218  1.73228776 1.77563698 1.81052656 1.84535056 1.88701467
+ 1.9132307  1.95937516 2.01033833 2.0350176  2.10828973 2.19597814
+ 2.08155172]
+23:08 matplotlib.backends. INFO    Could not load matplotlib icon: can't use "pyimage10" as iconphoto: not a photo image
+23:08 root                 INFO    running forge
+23:08 madminer.ml          INFO    Starting training
+23:08 madminer.ml          INFO      Method:                 alice
+23:08 madminer.ml          INFO      Training data:          x at data/samples/x_train.npy
+23:08 madminer.ml          INFO                              theta0 at data/samples/theta0_train.npy
+23:08 madminer.ml          INFO                              y at data/samples/y_train.npy
+23:08 madminer.ml          INFO                              r_xz at data/samples/r_xz_train.npy
+23:08 madminer.ml          INFO      Features:               all
+23:08 madminer.ml          INFO      Method:                 alice
+23:08 madminer.ml          INFO      Hidden layers:          (100, 100, 100)
+23:08 madminer.ml          INFO      Activation function:    tanh
+23:08 madminer.ml          INFO      Batch size:             256
+23:08 madminer.ml          INFO      Trainer:                amsgrad
+23:08 madminer.ml          INFO      Epochs:                 50
+23:08 madminer.ml          INFO      Learning rate:          0.001 initially, decaying to 0.0001
+23:08 madminer.ml          INFO      Validation split:       0.3
+23:08 madminer.ml          INFO      Early stopping:         True
+23:08 madminer.ml          INFO      Scale inputs:           True
+23:08 madminer.ml          INFO      Shuffle labels          False
+23:08 madminer.ml          INFO      Regularization:         None
+23:08 madminer.ml          INFO      Samples:                all
+23:08 madminer.ml          INFO    Loading training data
+23:08 madminer.ml          INFO    Found 1000000 samples with 2 parameters and 22 observables
+23:08 madminer.ml          INFO    Rescaling inputs
+23:08 madminer.ml          DEBUG   Observable ranges:
+23:08 madminer.ml          DEBUG     x_1: mean 3.315174978979485e-14, std 0.9999999999999859, range -0.9539005583706872 ... 14.564495566091622
+23:08 madminer.ml          DEBUG     x_2: mean 1.7629769999416566e-13, std 0.9999999999999394, range -1.5483685932875186 ... 17.60167520351764
+23:08 madminer.ml          DEBUG     x_3: mean -4.544524756511237e-16, std 1.000000000000003, range -3.552655732690109 ... 3.615924537289167
+23:08 madminer.ml          DEBUG     x_4: mean -4.8679282826924466e-17, std 1.000000000000019, range -1.71933437892016 ... 1.7204905374308896
+23:08 madminer.ml          DEBUG     x_5: mean -7.093800746815759e-14, std 1.0000000000000602, range -0.7667071178101293 ... 17.820857007437173
+23:08 madminer.ml          DEBUG     x_6: mean -2.7942974156758283e-14, std 0.9999999999999204, range -1.0818151866278738 ... 17.846104831158538
+23:08 madminer.ml          DEBUG     x_7: mean 7.738520935163251e-17, std 0.9999999999999183, range -3.557677004174627 ... 3.6915563753517615
+23:08 madminer.ml          DEBUG     x_8: mean -7.51398943066306e-18, std 0.9999999999999905, range -1.734108046396205 ... 1.741909540832991
+23:08 madminer.ml          DEBUG     x_9: mean 1.1588182502464407e-13, std 1.0000000000000155, range -0.7880137547486008 ... 18.77808185921513
+23:08 madminer.ml          DEBUG     x_10: mean 1.9826209074480515e-13, std 0.9999999999999414, range -1.001447550083812 ... 23.012021539013865
+23:08 madminer.ml          DEBUG     x_11: mean -1.0793144156195922e-16, std 0.9999999999999577, range -3.4790827729436447 ... 3.5762105947541
+23:08 madminer.ml          DEBUG     x_12: mean 2.4996893444040324e-17, std 0.9999999999999991, range -1.7334649089633605 ... 1.736042472263658
+23:08 madminer.ml          DEBUG     x_13: mean -2.8934998397289744e-14, std 0.9999999999999986, range -0.7867230884902663 ... 17.50920252753514
+23:08 madminer.ml          DEBUG     x_14: mean 8.912497406754482e-14, std 1.000000000000022, range -1.0130716695873236 ... 15.137068533030423
+23:08 madminer.ml          DEBUG     x_15: mean -2.3929302983560773e-16, std 1.0000000000000204, range -3.4933994643840367 ... 3.466768205024016
+23:08 madminer.ml          DEBUG     x_16: mean 4.076738946423575e-16, std 0.9999999999999872, range -1.7350650611786202 ... 1.7253232539999126
+23:08 madminer.ml          DEBUG     x_17: mean -1.5219550064671239e-13, std 1.0000000000000555, range -1.1804653067348387 ... 19.064713237717214
+23:08 madminer.ml          DEBUG     x_18: mean 1.0367749325723707e-14, std 0.9999999999999873, range -0.999044737395106 ... 11.543089152964805
+23:08 madminer.ml          DEBUG     x_19: mean -6.528678930806109e-15, std 0.9999999999999876, range -0.9689338993827012 ... 14.512907084555541
+23:08 madminer.ml          DEBUG     x_20: mean 8.726486733223738e-14, std 0.999999999999951, range -0.9974122197581399 ... 12.50663580155489
+23:08 madminer.ml          DEBUG     x_21: mean 1.436224295048305e-14, std 0.999999999999945, range -0.9641483475986657 ... 16.188214855685025
+23:08 madminer.ml          DEBUG     x_22: mean -4.198954517420361e-14, std 1.0000000000000742, range -1.734281570697956 ... 9.534094530097288
+23:08 madminer.ml          INFO    Creating model for method alice
+23:08 madminer.ml          INFO    Training model
+23:08 madminer.utils.ml.ra DEBUG   Training on GPU with single precision
+23:08 madminer.utils.ml.ra DEBUG   Model score will not be calculated
+23:08 madminer.utils.ml.ra DEBUG   Preparing data
+23:08 madminer.utils.ml.ra DEBUG   Preparing optimizer amsgrad
+23:08 madminer.utils.ml.ra DEBUG   Beginning main training loop
+23:09 madminer.utils.ml.ra DEBUG     Epoch 01: train loss 0.6932 (improved_xe: 0.6932)
+23:09 madminer.utils.ml.ra DEBUG               val. loss  0.6934 (improved_xe: 0.6934) (*)
+23:09 madminer.utils.ml.ra DEBUG     Epoch 02: train loss 0.6925 (improved_xe: 0.6925)
+23:09 madminer.utils.ml.ra DEBUG               val. loss  0.6931 (improved_xe: 0.6925) (*)
+23:10 madminer.utils.ml.ra DEBUG     Epoch 03: train loss 0.6918 (improved_xe: 0.6918)
+23:10 madminer.utils.ml.ra DEBUG               val. loss  0.6914 (improved_xe: 0.6908) (*)
+23:10 madminer.utils.ml.ra DEBUG     Epoch 04: train loss 0.6910 (improved_xe: 0.6910)
+23:10 madminer.utils.ml.ra DEBUG               val. loss  0.6910 (improved_xe: 0.6904) (*)
+23:10 madminer.utils.ml.ra INFO      Epoch 05: train loss 0.6898 (improved_xe: 0.6898)
+23:10 madminer.utils.ml.ra INFO                val. loss  0.6897 (improved_xe: 0.6891) (*)
+23:11 madminer.utils.ml.ra DEBUG     Epoch 06: train loss 0.6889 (improved_xe: 0.6889)
+23:11 madminer.utils.ml.ra DEBUG               val. loss  0.6881 (improved_xe: 0.6875) (*)
+23:11 madminer.utils.ml.ra DEBUG     Epoch 07: train loss 0.6881 (improved_xe: 0.6881)
+23:11 madminer.utils.ml.ra DEBUG               val. loss  0.6875 (improved_xe: 0.6870) (*)
+23:11 madminer.utils.ml.ra DEBUG     Epoch 08: train loss 0.6872 (improved_xe: 0.6872)
+23:11 madminer.utils.ml.ra DEBUG               val. loss  0.6876 (improved_xe: 0.6870)
+23:12 madminer.utils.ml.ra DEBUG     Epoch 09: train loss 0.6863 (improved_xe: 0.6863)
+23:12 madminer.utils.ml.ra DEBUG               val. loss  0.6875 (improved_xe: 0.6869) (*)
+23:12 madminer.utils.ml.ra INFO      Epoch 10: train loss 0.6854 (improved_xe: 0.6854)
+23:12 madminer.utils.ml.ra INFO                val. loss  0.6866 (improved_xe: 0.6861) (*)
+23:13 madminer.utils.ml.ra DEBUG     Epoch 11: train loss 0.6849 (improved_xe: 0.6849)
+23:13 madminer.utils.ml.ra DEBUG               val. loss  0.6848 (improved_xe: 0.6842) (*)
+23:13 madminer.utils.ml.ra DEBUG     Epoch 12: train loss 0.6844 (improved_xe: 0.6844)
+23:13 madminer.utils.ml.ra DEBUG               val. loss  0.6846 (improved_xe: 0.6840) (*)
+23:13 madminer.utils.ml.ra DEBUG     Epoch 13: train loss 0.6838 (improved_xe: 0.6838)
+23:13 madminer.utils.ml.ra DEBUG               val. loss  0.6836 (improved_xe: 0.6830) (*)
+23:14 madminer.utils.ml.ra DEBUG     Epoch 14: train loss 0.6833 (improved_xe: 0.6833)
+23:14 madminer.utils.ml.ra DEBUG               val. loss  0.6834 (improved_xe: 0.6828) (*)
+23:14 madminer.utils.ml.ra INFO      Epoch 15: train loss 0.6828 (improved_xe: 0.6828)
+23:14 madminer.utils.ml.ra INFO                val. loss  0.6828 (improved_xe: 0.6822) (*)
+23:14 madminer.utils.ml.ra DEBUG     Epoch 16: train loss 0.6824 (improved_xe: 0.6824)
+23:14 madminer.utils.ml.ra DEBUG               val. loss  0.6829 (improved_xe: 0.6823)
+23:15 madminer.utils.ml.ra DEBUG     Epoch 17: train loss 0.6820 (improved_xe: 0.6820)
+23:15 madminer.utils.ml.ra DEBUG               val. loss  0.6820 (improved_xe: 0.6814) (*)
+23:15 madminer.utils.ml.ra DEBUG     Epoch 18: train loss 0.6815 (improved_xe: 0.6815)
+23:15 madminer.utils.ml.ra DEBUG               val. loss  0.6827 (improved_xe: 0.6821)
+23:15 madminer.utils.ml.ra DEBUG     Epoch 19: train loss 0.6809 (improved_xe: 0.6809)
+23:15 madminer.utils.ml.ra DEBUG               val. loss  0.6814 (improved_xe: 0.6808) (*)
+23:16 madminer.utils.ml.ra INFO      Epoch 20: train loss 0.6804 (improved_xe: 0.6804)
+23:16 madminer.utils.ml.ra INFO                val. loss  0.6816 (improved_xe: 0.6810)
+23:16 madminer.utils.ml.ra DEBUG     Epoch 21: train loss 0.6800 (improved_xe: 0.6800)
+23:16 madminer.utils.ml.ra DEBUG               val. loss  0.6808 (improved_xe: 0.6802) (*)
+23:17 madminer.utils.ml.ra DEBUG     Epoch 22: train loss 0.6793 (improved_xe: 0.6793)
+23:17 madminer.utils.ml.ra DEBUG               val. loss  0.6806 (improved_xe: 0.6801) (*)
+23:17 madminer.utils.ml.ra DEBUG     Epoch 23: train loss 0.6786 (improved_xe: 0.6786)
+23:17 madminer.utils.ml.ra DEBUG               val. loss  0.6793 (improved_xe: 0.6787) (*)
+23:17 madminer.utils.ml.ra DEBUG     Epoch 24: train loss 0.6781 (improved_xe: 0.6781)
+23:17 madminer.utils.ml.ra DEBUG               val. loss  0.6792 (improved_xe: 0.6786) (*)
+23:18 madminer.utils.ml.ra INFO      Epoch 25: train loss 0.6775 (improved_xe: 0.6775)
+23:18 madminer.utils.ml.ra INFO                val. loss  0.6803 (improved_xe: 0.6797)
+23:18 madminer.utils.ml.ra DEBUG     Epoch 26: train loss 0.6769 (improved_xe: 0.6769)
+23:18 madminer.utils.ml.ra DEBUG               val. loss  0.6778 (improved_xe: 0.6772) (*)
+23:18 madminer.utils.ml.ra DEBUG     Epoch 27: train loss 0.6764 (improved_xe: 0.6764)
+23:18 madminer.utils.ml.ra DEBUG               val. loss  0.6772 (improved_xe: 0.6767) (*)
+23:19 madminer.utils.ml.ra DEBUG     Epoch 28: train loss 0.6757 (improved_xe: 0.6757)
+23:19 madminer.utils.ml.ra DEBUG               val. loss  0.6763 (improved_xe: 0.6757) (*)
+23:19 madminer.utils.ml.ra DEBUG     Epoch 29: train loss 0.6750 (improved_xe: 0.6750)
+23:19 madminer.utils.ml.ra DEBUG               val. loss  0.6761 (improved_xe: 0.6755) (*)
+23:20 madminer.utils.ml.ra INFO      Epoch 30: train loss 0.6744 (improved_xe: 0.6744)
+23:20 madminer.utils.ml.ra INFO                val. loss  0.6754 (improved_xe: 0.6748) (*)
+23:20 madminer.utils.ml.ra DEBUG     Epoch 31: train loss 0.6737 (improved_xe: 0.6737)
+23:20 madminer.utils.ml.ra DEBUG               val. loss  0.6758 (improved_xe: 0.6752)
+23:20 madminer.utils.ml.ra DEBUG     Epoch 32: train loss 0.6733 (improved_xe: 0.6733)
+23:20 madminer.utils.ml.ra DEBUG               val. loss  0.6751 (improved_xe: 0.6746) (*)
+23:21 madminer.utils.ml.ra DEBUG     Epoch 33: train loss 0.6728 (improved_xe: 0.6728)
+23:21 madminer.utils.ml.ra DEBUG               val. loss  0.6739 (improved_xe: 0.6734) (*)
+23:21 madminer.utils.ml.ra DEBUG     Epoch 34: train loss 0.6722 (improved_xe: 0.6722)
+23:21 madminer.utils.ml.ra DEBUG               val. loss  0.6739 (improved_xe: 0.6734)
+23:21 madminer.utils.ml.ra INFO      Epoch 35: train loss 0.6717 (improved_xe: 0.6717)
+23:21 madminer.utils.ml.ra INFO                val. loss  0.6734 (improved_xe: 0.6729) (*)
+23:22 madminer.utils.ml.ra DEBUG     Epoch 36: train loss 0.6713 (improved_xe: 0.6713)
+23:22 madminer.utils.ml.ra DEBUG               val. loss  0.6728 (improved_xe: 0.6722) (*)
+23:22 madminer.utils.ml.ra DEBUG     Epoch 37: train loss 0.6708 (improved_xe: 0.6708)
+23:22 madminer.utils.ml.ra DEBUG               val. loss  0.6729 (improved_xe: 0.6723)
+23:23 madminer.utils.ml.ra DEBUG     Epoch 38: train loss 0.6704 (improved_xe: 0.6704)
+23:23 madminer.utils.ml.ra DEBUG               val. loss  0.6723 (improved_xe: 0.6717) (*)
+23:23 madminer.utils.ml.ra DEBUG     Epoch 39: train loss 0.6700 (improved_xe: 0.6700)
+23:23 madminer.utils.ml.ra DEBUG               val. loss  0.6722 (improved_xe: 0.6716) (*)
+23:23 madminer.utils.ml.ra INFO      Epoch 40: train loss 0.6696 (improved_xe: 0.6696)
+23:23 madminer.utils.ml.ra INFO                val. loss  0.6720 (improved_xe: 0.6714) (*)
+23:24 madminer.utils.ml.ra DEBUG     Epoch 41: train loss 0.6692 (improved_xe: 0.6692)
+23:24 madminer.utils.ml.ra DEBUG               val. loss  0.6719 (improved_xe: 0.6714) (*)
+23:24 madminer.utils.ml.ra DEBUG     Epoch 42: train loss 0.6688 (improved_xe: 0.6688)
+23:24 madminer.utils.ml.ra DEBUG               val. loss  0.6706 (improved_xe: 0.6701) (*)
+23:24 madminer.utils.ml.ra DEBUG     Epoch 43: train loss 0.6684 (improved_xe: 0.6684)
+23:24 madminer.utils.ml.ra DEBUG               val. loss  0.6707 (improved_xe: 0.6702)
+23:25 madminer.utils.ml.ra DEBUG     Epoch 44: train loss 0.6680 (improved_xe: 0.6680)
+23:25 madminer.utils.ml.ra DEBUG               val. loss  0.6699 (improved_xe: 0.6693) (*)
+23:25 madminer.utils.ml.ra INFO      Epoch 45: train loss 0.6676 (improved_xe: 0.6676)
+23:25 madminer.utils.ml.ra INFO                val. loss  0.6700 (improved_xe: 0.6694)
+23:25 madminer.utils.ml.ra DEBUG     Epoch 46: train loss 0.6672 (improved_xe: 0.6672)
+23:25 madminer.utils.ml.ra DEBUG               val. loss  0.6697 (improved_xe: 0.6691) (*)
+23:26 madminer.utils.ml.ra DEBUG     Epoch 47: train loss 0.6668 (improved_xe: 0.6668)
+23:26 madminer.utils.ml.ra DEBUG               val. loss  0.6697 (improved_xe: 0.6692)
+23:26 madminer.utils.ml.ra DEBUG     Epoch 48: train loss 0.6664 (improved_xe: 0.6664)
+23:26 madminer.utils.ml.ra DEBUG               val. loss  0.6695 (improved_xe: 0.6690) (*)
+23:27 madminer.utils.ml.ra DEBUG     Epoch 49: train loss 0.6662 (improved_xe: 0.6662)
+23:27 madminer.utils.ml.ra DEBUG               val. loss  0.6683 (improved_xe: 0.6677) (*)
+23:27 madminer.utils.ml.ra INFO      Epoch 50: train loss 0.6658 (improved_xe: 0.6658)
+23:27 madminer.utils.ml.ra INFO                val. loss  0.6680 (improved_xe: 0.6674) (*)
+23:27 madminer.utils.ml.ra DEBUG   Main training loop finished
+23:27 madminer.utils.ml.ra INFO    Early stopping did not improve performance
+23:27 madminer.utils.ml.ra INFO    Finished training
+23:27 madminer.ml          DEBUG   Saving settings to models/alice_settings.json
+23:27 madminer.ml          DEBUG   Saving input scaling information to models/alice_x_means.npy and models/alice_x_stds.npy
+23:27 madminer.ml          DEBUG   Saving state dictionary to models/alice_state_dict.pt
+23:27 madminer.ml          DEBUG   Loading evaluation data
+23:27 madminer.ml          DEBUG   Starting ratio evaluation for all combinations
+23:27 madminer.ml          DEBUG   Starting ratio evaluation for thetas 1 / 50: [160.    1.5] vs None
+23:27 madminer.ml          DEBUG   Starting ratio evaluation for thetas 2 / 50: [160.51020408   1.5       ] vs None
+23:27 madminer.ml          DEBUG   Starting ratio evaluation for thetas 3 / 50: [161.02040816   1.5       ] vs None
+23:28 madminer.ml          DEBUG   Starting ratio evaluation for thetas 4 / 50: [161.53061224   1.5       ] vs None
+23:28 madminer.ml          DEBUG   Starting ratio evaluation for thetas 5 / 50: [162.04081633   1.5       ] vs None
+23:28 madminer.ml          DEBUG   Starting ratio evaluation for thetas 6 / 50: [162.55102041   1.5       ] vs None
+23:28 madminer.ml          DEBUG   Starting ratio evaluation for thetas 7 / 50: [163.06122449   1.5       ] vs None
+23:28 madminer.ml          DEBUG   Starting ratio evaluation for thetas 8 / 50: [163.57142857   1.5       ] vs None
+23:29 madminer.ml          DEBUG   Starting ratio evaluation for thetas 9 / 50: [164.08163265   1.5       ] vs None
+23:29 madminer.ml          DEBUG   Starting ratio evaluation for thetas 10 / 50: [164.59183673   1.5       ] vs None
+23:29 madminer.ml          DEBUG   Starting ratio evaluation for thetas 11 / 50: [165.10204082   1.5       ] vs None
+23:29 madminer.ml          DEBUG   Starting ratio evaluation for thetas 12 / 50: [165.6122449   1.5      ] vs None
+23:29 madminer.ml          DEBUG   Starting ratio evaluation for thetas 13 / 50: [166.12244898   1.5       ] vs None
+23:30 madminer.ml          DEBUG   Starting ratio evaluation for thetas 14 / 50: [166.63265306   1.5       ] vs None
+23:30 madminer.ml          DEBUG   Starting ratio evaluation for thetas 15 / 50: [167.14285714   1.5       ] vs None
+23:30 madminer.ml          DEBUG   Starting ratio evaluation for thetas 16 / 50: [167.65306122   1.5       ] vs None
+23:30 madminer.ml          DEBUG   Starting ratio evaluation for thetas 17 / 50: [168.16326531   1.5       ] vs None
+23:30 madminer.ml          DEBUG   Starting ratio evaluation for thetas 18 / 50: [168.67346939   1.5       ] vs None
+23:30 madminer.ml          DEBUG   Starting ratio evaluation for thetas 19 / 50: [169.18367347   1.5       ] vs None
+23:31 madminer.ml          DEBUG   Starting ratio evaluation for thetas 20 / 50: [169.69387755   1.5       ] vs None
+23:31 madminer.ml          DEBUG   Starting ratio evaluation for thetas 21 / 50: [170.20408163   1.5       ] vs None
+23:31 madminer.ml          DEBUG   Starting ratio evaluation for thetas 22 / 50: [170.71428571   1.5       ] vs None
+23:31 madminer.ml          DEBUG   Starting ratio evaluation for thetas 23 / 50: [171.2244898   1.5      ] vs None
+23:31 madminer.ml          DEBUG   Starting ratio evaluation for thetas 24 / 50: [171.73469388   1.5       ] vs None
+23:32 madminer.ml          DEBUG   Starting ratio evaluation for thetas 25 / 50: [172.24489796   1.5       ] vs None
+23:32 madminer.ml          DEBUG   Starting ratio evaluation for thetas 26 / 50: [172.75510204   1.5       ] vs None
+23:32 madminer.ml          DEBUG   Starting ratio evaluation for thetas 27 / 50: [173.26530612   1.5       ] vs None
+23:32 madminer.ml          DEBUG   Starting ratio evaluation for thetas 28 / 50: [173.7755102   1.5      ] vs None
+23:32 madminer.ml          DEBUG   Starting ratio evaluation for thetas 29 / 50: [174.28571429   1.5       ] vs None
+23:33 madminer.ml          DEBUG   Starting ratio evaluation for thetas 30 / 50: [174.79591837   1.5       ] vs None
+23:33 madminer.ml          DEBUG   Starting ratio evaluation for thetas 31 / 50: [175.30612245   1.5       ] vs None
+23:33 madminer.ml          DEBUG   Starting ratio evaluation for thetas 32 / 50: [175.81632653   1.5       ] vs None
+23:33 madminer.ml          DEBUG   Starting ratio evaluation for thetas 33 / 50: [176.32653061   1.5       ] vs None
+23:33 madminer.ml          DEBUG   Starting ratio evaluation for thetas 34 / 50: [176.83673469   1.5       ] vs None
+23:34 madminer.ml          DEBUG   Starting ratio evaluation for thetas 35 / 50: [177.34693878   1.5       ] vs None
+23:34 madminer.ml          DEBUG   Starting ratio evaluation for thetas 36 / 50: [177.85714286   1.5       ] vs None
+23:34 madminer.ml          DEBUG   Starting ratio evaluation for thetas 37 / 50: [178.36734694   1.5       ] vs None
+23:34 madminer.ml          DEBUG   Starting ratio evaluation for thetas 38 / 50: [178.87755102   1.5       ] vs None
+23:34 madminer.ml          DEBUG   Starting ratio evaluation for thetas 39 / 50: [179.3877551   1.5      ] vs None
+23:35 madminer.ml          DEBUG   Starting ratio evaluation for thetas 40 / 50: [179.89795918   1.5       ] vs None
+23:35 madminer.ml          DEBUG   Starting ratio evaluation for thetas 41 / 50: [180.40816327   1.5       ] vs None
+23:35 madminer.ml          DEBUG   Starting ratio evaluation for thetas 42 / 50: [180.91836735   1.5       ] vs None
+23:35 madminer.ml          DEBUG   Starting ratio evaluation for thetas 43 / 50: [181.42857143   1.5       ] vs None
+23:35 madminer.ml          DEBUG   Starting ratio evaluation for thetas 44 / 50: [181.93877551   1.5       ] vs None
+23:36 madminer.ml          DEBUG   Starting ratio evaluation for thetas 45 / 50: [182.44897959   1.5       ] vs None
+23:36 madminer.ml          DEBUG   Starting ratio evaluation for thetas 46 / 50: [182.95918367   1.5       ] vs None
+23:36 madminer.ml          DEBUG   Starting ratio evaluation for thetas 47 / 50: [183.46938776   1.5       ] vs None
+23:36 madminer.ml          DEBUG   Starting ratio evaluation for thetas 48 / 50: [183.97959184   1.5       ] vs None
+23:36 madminer.ml          DEBUG   Starting ratio evaluation for thetas 49 / 50: [184.48979592   1.5       ] vs None
+23:37 madminer.ml          DEBUG   Starting ratio evaluation for thetas 50 / 50: [185.    1.5] vs None
+23:37 madminer.ml          DEBUG   Evaluation done
+23:37 matplotlib.backends. INFO    Could not load matplotlib icon: can't use "pyimage19" as iconphoto: not a photo image
+23:37 root                 INFO    
