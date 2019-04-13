@@ -71,15 +71,13 @@ def parse_lhe_file(
     # Untar and open LHE file
     run_card = None
     for elem in _untar_and_parse_lhe_file(filename):
-        if elem.tag == 'MGRunCard':
+        if elem.tag == "MGRunCard":
             run_card = elem.text
             break
         else:
             continue
 
     # Figure out event weighting
-    # run_card = root.find("header").find("MGRunCard").text
-
     weight_norm_is_average = None
     n_events_runcard = None
     for line in run_card.splitlines():
@@ -138,12 +136,12 @@ def parse_lhe_file(
         weights_all_events = []
         weight_names_all_events = None
 
-        events = _untar_and_parse_lhe_file(filename, ['event'])
+        events = _untar_and_parse_lhe_file(filename, ["event"])
         for idx, event in enumerate(events):
             # Parse event
             particles, weights = _parse_event(event, sampling_benchmark)
-            if idx % 100000 == 0:
-                logger.info('processed %d/%d events', idx, n_events_runcard)
+            if idx % 10000 == 0:
+                logger.debug("processed %d/%d events", idx, n_events_runcard)
 
             # Negative weights?
             n_negative_weights = np.sum(np.array(list(weights.values())) < 0.0)
@@ -171,11 +169,9 @@ def parse_lhe_file(
             for obs_name, obs_definition in six.iteritems(observables):
                 if isinstance(obs_definition, six.string_types):
                     try:
-                        # observations.append(eval(obs_definition, dict(variables, **globals())))
                         observations.append(eval(obs_definition, variables))
                     except (SyntaxError, NameError, TypeError, ZeroDivisionError, IndexError) as e:
                         if observables_required[obs_name]:
-                            # raise RuntimeError('{0}\nobs_name\n{1}\nobs_definition\n{2}\n'.format(e, obs_name, obs_definition))
                             continue
 
                         default = observables_defaults[obs_name]
@@ -225,8 +221,6 @@ def parse_lhe_file(
 
     # Option two: text parsing
     else:
-        # Free up memory
-
         observations_all_events = []
         weights_all_events = []
         weight_names_all_events = None
@@ -374,13 +368,13 @@ def extract_nuisance_parameters_from_lhe_file(filename, systematics):
             systematics_scales.append(None)
 
     # Untar and parse LHE file
-    elem_generator = _untar_and_parse_lhe_file(filename, 'initrwgt')
+    initrwgts = _untar_and_parse_lhe_file(filename, "initrwgt")
 
     # Find weight groups
     weight_groups = []
     try:
-        for elem in elem_generator:
-            weight_groups.append(elem.findall('weightgroup'))
+        for initrwgt in initrwgts:
+            weight_groups.append(initrwgt.findall("weightgroup"))
     except KeyError as e:
         raise RuntimeError("Could not find weight groups in LHE file!\n%s", e)
 
@@ -712,7 +706,7 @@ def _parse_events_text(filename, sampling_benchmark):
                 weights[rwgtid] = rwgtval
 
 
-def read_contents(filename):
+def _parse_lhe_file_with_bad_chars(filename):
     # In some cases, the LHE comments can contain bad characters
     with open(filename, "r") as file:
         for line in file:
@@ -723,7 +717,6 @@ def read_contents(filename):
                 yield line
 
 
-# should be called as a context with a generator read method so we can iterate through it correctly
 def _untar_and_parse_lhe_file(filename, tags=None):
     # Untar event file
     new_filename, extension = os.path.splitext(filename)
@@ -739,6 +732,7 @@ def _untar_and_parse_lhe_file(filename, tags=None):
             yield elem
 
         elem.clear()
+
 
 def _get_objects(particles):
     # Find visible particles

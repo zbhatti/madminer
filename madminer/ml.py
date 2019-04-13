@@ -25,17 +25,6 @@ except NameError:
 logger = logging.getLogger(__name__)
 
 
-def evaluate_ratio_model_wrapper(args):
-    model_arg, method_type_arg, theta0s, theta1s_arg, xs_arg, evaluate_score_arg = args
-    results = evaluate_ratio_model(model=model_arg,
-                                   method_type=method_type_arg,
-                                   theta0s=theta0s,
-                                   theta1s=theta1s_arg,
-                                   xs=xs_arg,
-                                   evaluate_score=evaluate_score_arg,
-    )
-    return results
-
 class MLForge:
     """
     Estimating likelihood ratios and scores with machine learning.
@@ -244,8 +233,8 @@ class MLForge:
 
         Returns
         -------
-            results: ndarray
-            Results of train_flow_model, train_local_score_model, train_ratio_model for example
+        results: ndarray
+            Results from SingleParameterizedRatioTrainer.train or DoubleParameterizedRatioTrainer.train for example
 
         """
 
@@ -587,7 +576,6 @@ class MLForge:
                 logger.debug(
                     "Starting ratio evaluation for thetas %s / %s: %s vs %s", i + 1, len(theta0s), theta0, theta1
                 )
-
                 _, log_r_hat, t_hat0, t_hat1 = evaluate_ratio_model(
                     model=self.model,
                     method_type=self.method_type,

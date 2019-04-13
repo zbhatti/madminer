@@ -578,13 +578,13 @@ def plot_distributions(
 
             plt.plot(bin_edges_, histo_, color=color, lw=lw, ls=ls, label=label, alpha=1.0)
 
-        plt.legend(ncol=2, fontsize='x-small')
+        plt.legend()
 
         plt.xlabel(xlabel)
-        # if normalize:
-        #     plt.ylabel("Normalized distribution")
-        # else:
-        #     plt.ylabel(r"$\frac{d\sigma}{dx}$ [pb / bin]")
+        if normalize:
+            plt.ylabel("Normalized distribution")
+        else:
+            plt.ylabel(r"$\frac{d\sigma}{dx}$ [pb / bin]")
 
         plt.xlim(x_range[0], x_range[1])
         if log:

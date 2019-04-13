@@ -15,7 +15,7 @@ from madminer.utils.various import format_benchmark, create_missing_folders, shu
 logger = logging.getLogger(__name__)
 
 
-def combine_and_shuffle(
+def combine_and_shuffle_orig(
     input_filenames, output_filename, k_factors=None, overwrite_existing_file=True, shuffle_sample=True
 ):
     """
@@ -103,6 +103,21 @@ def combine_and_shuffle(
         overwrite_existing_samples=overwrite_existing_file,
     )
 
+def combine_and_shuffle(input_filenames, output_filename):
+    k_factor = 1.0
+
+    # Load events
+    all_observations = None
+    all_weights = None
+
+    for filename in input_filenames:
+        for observations, weights in madminer_event_loader(filename):
+            if all_observations is None:
+                all_observations = observations
+                all_weights = k_factor * weights
+            else:
+                all_observations = np.vstack((all_observations, observations))
+                all_weights = np.vstack((all_weights, k_factor * weights))
 
 def constant_benchmark_theta(benchmark_name):
     """
