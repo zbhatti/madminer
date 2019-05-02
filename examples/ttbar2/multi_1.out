@@ -1,0 +1,866 @@
+08:03 root                 INFO    tutorial directory: 
+08:03 root                 INFO    running madgraph on 20000 events
+08:03 root                 INFO    loading miner results...
+08:03 madminer.utils.inter DEBUG   HDF5 file does not contain is_reference field.
+08:03 madminer.core        INFO    Found 2 parameters:
+08:03 madminer.core        INFO       TOP_MASS (LHA: MASS 6, maximal power in squared ME: (2,), range: (0.0, 1.0))
+08:03 madminer.core        INFO       TOP_WIDTH (LHA: DECAY 6, maximal power in squared ME: (2,), range: (0.0, 1.0))
+08:03 madminer.core        INFO    Found 32 benchmarks:
+08:03 madminer.core        INFO       160_15: TOP_MASS = 1.60e+02, TOP_WIDTH = 1.50
+08:03 madminer.core        INFO       161_15: TOP_MASS = 1.61e+02, TOP_WIDTH = 1.50
+08:03 madminer.core        INFO       162_15: TOP_MASS = 1.62e+02, TOP_WIDTH = 1.50
+08:03 madminer.core        INFO       163_15: TOP_MASS = 1.63e+02, TOP_WIDTH = 1.50
+08:03 madminer.core        INFO       164_15: TOP_MASS = 1.64e+02, TOP_WIDTH = 1.50
+08:03 madminer.core        INFO       165_15: TOP_MASS = 1.65e+02, TOP_WIDTH = 1.50
+08:03 madminer.core        INFO       166_15: TOP_MASS = 1.66e+02, TOP_WIDTH = 1.50
+08:03 madminer.core        INFO       167_15: TOP_MASS = 1.67e+02, TOP_WIDTH = 1.50
+08:03 madminer.core        INFO       168_15: TOP_MASS = 1.68e+02, TOP_WIDTH = 1.50
+08:03 madminer.core        INFO       169_15: TOP_MASS = 1.69e+02, TOP_WIDTH = 1.50
+08:03 madminer.core        INFO       170_15: TOP_MASS = 1.70e+02, TOP_WIDTH = 1.50
+08:03 madminer.core        INFO       171_15: TOP_MASS = 1.71e+02, TOP_WIDTH = 1.50
+08:03 madminer.core        INFO       172_15: TOP_MASS = 1.72e+02, TOP_WIDTH = 1.50
+08:03 madminer.core        INFO       173_15: TOP_MASS = 1.73e+02, TOP_WIDTH = 1.50
+08:03 madminer.core        INFO       174_15: TOP_MASS = 1.74e+02, TOP_WIDTH = 1.50
+08:03 madminer.core        INFO       175_15: TOP_MASS = 1.75e+02, TOP_WIDTH = 1.50
+08:03 madminer.core        INFO       176_15: TOP_MASS = 1.76e+02, TOP_WIDTH = 1.50
+08:03 madminer.core        INFO       177_15: TOP_MASS = 1.77e+02, TOP_WIDTH = 1.50
+08:03 madminer.core        INFO       178_15: TOP_MASS = 1.78e+02, TOP_WIDTH = 1.50
+08:03 madminer.core        INFO       179_15: TOP_MASS = 1.79e+02, TOP_WIDTH = 1.50
+08:03 madminer.core        INFO       180_15: TOP_MASS = 1.80e+02, TOP_WIDTH = 1.50
+08:03 madminer.core        INFO       181_15: TOP_MASS = 1.81e+02, TOP_WIDTH = 1.50
+08:03 madminer.core        INFO       182_15: TOP_MASS = 1.82e+02, TOP_WIDTH = 1.50
+08:03 madminer.core        INFO       183_15: TOP_MASS = 1.83e+02, TOP_WIDTH = 1.50
+08:03 madminer.core        INFO       184_15: TOP_MASS = 1.84e+02, TOP_WIDTH = 1.50
+08:03 madminer.core        INFO       185_15: TOP_MASS = 1.85e+02, TOP_WIDTH = 1.50
+08:03 madminer.core        INFO       160_80: TOP_MASS = 1.60e+02, TOP_WIDTH = 8.00
+08:03 madminer.core        INFO       165_80: TOP_MASS = 1.65e+02, TOP_WIDTH = 8.00
+08:03 madminer.core        INFO       170_80: TOP_MASS = 1.70e+02, TOP_WIDTH = 8.00
+08:03 madminer.core        INFO       175_80: TOP_MASS = 1.75e+02, TOP_WIDTH = 8.00
+08:03 madminer.core        INFO       180_80: TOP_MASS = 1.80e+02, TOP_WIDTH = 8.00
+08:03 madminer.core        INFO       185_80: TOP_MASS = 1.85e+02, TOP_WIDTH = 8.00
+08:03 madminer.core        INFO    Did not find morphing setup.
+08:03 madminer.core        INFO    Did not find systematics setup.
+08:03 root                 INFO    running LHEProcessor...
+08:03 madminer.utils.inter DEBUG   HDF5 file does not contain is_reference field.
+08:03 madminer.lhe         DEBUG   Adding event sample mg_processes/signal/Events/run_01/unweighted_events.lhe.gz
+08:03 madminer.lhe         DEBUG   Adding event sample mg_processes/signal/Events/run_02/unweighted_events.lhe.gz
+08:03 madminer.lhe         DEBUG   Adding event sample mg_processes/signal/Events/run_03/unweighted_events.lhe.gz
+08:03 madminer.lhe         DEBUG   Adding event sample mg_processes/signal/Events/run_04/unweighted_events.lhe.gz
+08:03 madminer.lhe         DEBUG   Adding event sample mg_processes/signal/Events/run_05/unweighted_events.lhe.gz
+08:03 madminer.lhe         DEBUG   Adding event sample mg_processes/signal/Events/run_06/unweighted_events.lhe.gz
+08:03 madminer.lhe         DEBUG   Adding required observable j_0_energy = j[0].e
+08:03 madminer.lhe         DEBUG   Adding required observable j_0_momentum = j[0].pt
+08:03 madminer.lhe         DEBUG   Adding cut j[0].pt >= 25.0
+08:03 madminer.lhe         DEBUG   Adding required observable j_0_eta = j[0].eta
+08:03 madminer.lhe         DEBUG   Adding required observable j_0_phi = j[0].phi()
+08:03 madminer.lhe         DEBUG   Adding required observable j_1_energy = j[1].e
+08:03 madminer.lhe         DEBUG   Adding required observable j_1_momentum = j[1].pt
+08:03 madminer.lhe         DEBUG   Adding cut j[1].pt >= 25.0
+08:03 madminer.lhe         DEBUG   Adding required observable j_1_eta = j[1].eta
+08:03 madminer.lhe         DEBUG   Adding required observable j_1_phi = j[1].phi()
+08:03 madminer.lhe         DEBUG   Adding required observable e_0_energy = e[0].e
+08:03 madminer.lhe         DEBUG   Adding required observable e_0_momentum = e[0].pt
+08:03 madminer.lhe         DEBUG   Adding cut e[0].pt >= 25.0
+08:03 madminer.lhe         DEBUG   Adding required observable e_0_eta = e[0].eta
+08:03 madminer.lhe         DEBUG   Adding required observable e_0_phi = e[0].phi()
+08:03 madminer.lhe         DEBUG   Adding required observable mu_0_energy = mu[0].e
+08:03 madminer.lhe         DEBUG   Adding required observable mu_0_momentum = mu[0].pt
+08:03 madminer.lhe         DEBUG   Adding cut mu[0].pt >= 25.0
+08:03 madminer.lhe         DEBUG   Adding required observable mu_0_eta = mu[0].eta
+08:03 madminer.lhe         DEBUG   Adding required observable mu_0_phi = mu[0].phi()
+08:03 madminer.lhe         DEBUG   Adding required observable met_pt = met.pt
+08:03 madminer.lhe         DEBUG   Adding cut met.pt >= 25.0
+08:03 madminer.lhe         DEBUG   Adding required observable m_e_0_j_0 = sqrt( (e[0].e + j[0].e) ** 2 - (e[0].pt + j[0].pt) ** 2)
+08:03 madminer.lhe         DEBUG   Adding required observable m_e_0_j_1 = sqrt( (e[0].e + j[1].e) ** 2 - (e[0].pt + j[1].pt) ** 2)
+08:03 madminer.lhe         DEBUG   Adding required observable m_mu_0_j_0 = sqrt( (mu[0].e + j[0].e) ** 2 - (mu[0].pt + j[0].pt) ** 2)
+08:03 madminer.lhe         DEBUG   Adding required observable m_mu_0_j_1 = sqrt( (mu[0].e + j[1].e) ** 2 - (mu[0].pt + j[1].pt) ** 2)
+08:03 madminer.lhe         DEBUG   Adding required observable mt2 defined through external function
+08:03 madminer.lhe         INFO    Analysing LHE sample mg_processes/signal/Events/run_01/unweighted_events.lhe.gz
+08:03 madminer.lhe         DEBUG   Extracting nuisance parameter definitions from LHE file
+08:03 madminer.utils.inter DEBUG   Parsing nuisance parameter setup from LHE file at mg_processes/signal/Events/run_01/unweighted_events.lhe.gz
+08:03 madminer.lhe         DEBUG   Found 0 nuisance parameters with matching benchmarks:
+08:03 madminer.utils.inter DEBUG   Parsing LHE file mg_processes/signal/Events/run_01/unweighted_events.lhe.gz
+08:03 madminer.utils.inter DEBUG   Parsing header and events as XML with cElementTree
+08:03 madminer.utils.inter DEBUG   Found entry event_norm = sum in LHE header. Interpreting this as weight_norm_is_average = False.
+08:09 madminer.utils.inter DEBUG     19782 / 20000 events pass cut j[0].pt >= 25.0
+08:09 madminer.utils.inter DEBUG     16247 / 20000 events pass cut j[1].pt >= 25.0
+08:09 madminer.utils.inter DEBUG     15125 / 20000 events pass cut e[0].pt >= 25.0
+08:09 madminer.utils.inter DEBUG     15221 / 20000 events pass cut mu[0].pt >= 25.0
+08:09 madminer.utils.inter DEBUG     15193 / 20000 events pass cut met.pt >= 25.0
+08:09 madminer.utils.inter INFO      6775 events pass all cuts/efficiencies
+08:09 madminer.lhe         DEBUG   Found weights ['160_80', '160_15', '161_15', '162_15', '163_15', '164_15', '165_15', '166_15', '167_15', '168_15', '169_15', '170_15', '171_15', '172_15', '173_15', '174_15', '175_15', '176_15', '177_15', '178_15', '179_15', '180_15', '181_15', '182_15', '183_15', '184_15', '185_15', '165_80', '170_80', '175_80', '180_80', '185_80'] in LHE file
+08:09 madminer.lhe         DEBUG   Found 6775 events in Obs j_0_energy
+08:09 madminer.lhe         DEBUG   Found 6775 events
+08:09 madminer.lhe         DEBUG   Found 6775 events in Obs j_0_momentum
+08:09 madminer.lhe         DEBUG   Found 6775 events in Obs j_0_eta
+08:09 madminer.lhe         DEBUG   Found 6775 events in Obs j_0_phi
+08:09 madminer.lhe         DEBUG   Found 6775 events in Obs j_1_energy
+08:09 madminer.lhe         DEBUG   Found 6775 events in Obs j_1_momentum
+08:09 madminer.lhe         DEBUG   Found 6775 events in Obs j_1_eta
+08:09 madminer.lhe         DEBUG   Found 6775 events in Obs j_1_phi
+08:09 madminer.lhe         DEBUG   Found 6775 events in Obs e_0_energy
+08:09 madminer.lhe         DEBUG   Found 6775 events in Obs e_0_momentum
+08:09 madminer.lhe         DEBUG   Found 6775 events in Obs e_0_eta
+08:09 madminer.lhe         DEBUG   Found 6775 events in Obs e_0_phi
+08:09 madminer.lhe         DEBUG   Found 6775 events in Obs mu_0_energy
+08:09 madminer.lhe         DEBUG   Found 6775 events in Obs mu_0_momentum
+08:09 madminer.lhe         DEBUG   Found 6775 events in Obs mu_0_eta
+08:09 madminer.lhe         DEBUG   Found 6775 events in Obs mu_0_phi
+08:09 madminer.lhe         DEBUG   Found 6775 events in Obs met_pt
+08:09 madminer.lhe         DEBUG   Found 6775 events in Obs m_e_0_j_0
+08:09 madminer.lhe         DEBUG   Found 6775 events in Obs m_e_0_j_1
+08:09 madminer.lhe         DEBUG   Found 6775 events in Obs m_mu_0_j_0
+08:09 madminer.lhe         DEBUG   Found 6775 events in Obs m_mu_0_j_1
+08:09 madminer.lhe         DEBUG   Found 6775 events in Obs mt2
+08:09 madminer.lhe         INFO    Analysing LHE sample mg_processes/signal/Events/run_02/unweighted_events.lhe.gz
+08:09 madminer.lhe         DEBUG   Extracting nuisance parameter definitions from LHE file
+08:09 madminer.utils.inter DEBUG   Parsing nuisance parameter setup from LHE file at mg_processes/signal/Events/run_02/unweighted_events.lhe.gz
+08:09 madminer.lhe         DEBUG   Found 0 nuisance parameters with matching benchmarks:
+08:09 madminer.utils.inter DEBUG   Parsing LHE file mg_processes/signal/Events/run_02/unweighted_events.lhe.gz
+08:09 madminer.utils.inter DEBUG   Parsing header and events as XML with cElementTree
+08:09 madminer.utils.inter DEBUG   Found entry event_norm = sum in LHE header. Interpreting this as weight_norm_is_average = False.
+08:15 madminer.utils.inter DEBUG     19841 / 20000 events pass cut j[0].pt >= 25.0
+08:15 madminer.utils.inter DEBUG     16601 / 20000 events pass cut j[1].pt >= 25.0
+08:15 madminer.utils.inter DEBUG     15262 / 20000 events pass cut e[0].pt >= 25.0
+08:15 madminer.utils.inter DEBUG     15230 / 20000 events pass cut mu[0].pt >= 25.0
+08:15 madminer.utils.inter DEBUG     15082 / 20000 events pass cut met.pt >= 25.0
+08:15 madminer.utils.inter INFO      6960 events pass all cuts/efficiencies
+08:15 madminer.lhe         DEBUG   Found weights ['165_80', '160_15', '161_15', '162_15', '163_15', '164_15', '165_15', '166_15', '167_15', '168_15', '169_15', '170_15', '171_15', '172_15', '173_15', '174_15', '175_15', '176_15', '177_15', '178_15', '179_15', '180_15', '181_15', '182_15', '183_15', '184_15', '185_15', '160_80', '170_80', '175_80', '180_80', '185_80'] in LHE file
+08:15 madminer.lhe         DEBUG   Found 6960 events in Obs j_0_energy
+08:15 madminer.lhe         DEBUG   Found 6960 events
+08:15 madminer.lhe         DEBUG   Found 6960 events in Obs j_0_momentum
+08:15 madminer.lhe         DEBUG   Found 6960 events in Obs j_0_eta
+08:15 madminer.lhe         DEBUG   Found 6960 events in Obs j_0_phi
+08:15 madminer.lhe         DEBUG   Found 6960 events in Obs j_1_energy
+08:15 madminer.lhe         DEBUG   Found 6960 events in Obs j_1_momentum
+08:15 madminer.lhe         DEBUG   Found 6960 events in Obs j_1_eta
+08:15 madminer.lhe         DEBUG   Found 6960 events in Obs j_1_phi
+08:15 madminer.lhe         DEBUG   Found 6960 events in Obs e_0_energy
+08:15 madminer.lhe         DEBUG   Found 6960 events in Obs e_0_momentum
+08:15 madminer.lhe         DEBUG   Found 6960 events in Obs e_0_eta
+08:15 madminer.lhe         DEBUG   Found 6960 events in Obs e_0_phi
+08:15 madminer.lhe         DEBUG   Found 6960 events in Obs mu_0_energy
+08:15 madminer.lhe         DEBUG   Found 6960 events in Obs mu_0_momentum
+08:15 madminer.lhe         DEBUG   Found 6960 events in Obs mu_0_eta
+08:15 madminer.lhe         DEBUG   Found 6960 events in Obs mu_0_phi
+08:15 madminer.lhe         DEBUG   Found 6960 events in Obs met_pt
+08:15 madminer.lhe         DEBUG   Found 6960 events in Obs m_e_0_j_0
+08:15 madminer.lhe         DEBUG   Found 6960 events in Obs m_e_0_j_1
+08:15 madminer.lhe         DEBUG   Found 6960 events in Obs m_mu_0_j_0
+08:15 madminer.lhe         DEBUG   Found 6960 events in Obs m_mu_0_j_1
+08:15 madminer.lhe         DEBUG   Found 6960 events in Obs mt2
+08:15 madminer.lhe         INFO    Analysing LHE sample mg_processes/signal/Events/run_03/unweighted_events.lhe.gz
+08:15 madminer.lhe         DEBUG   Extracting nuisance parameter definitions from LHE file
+08:15 madminer.utils.inter DEBUG   Parsing nuisance parameter setup from LHE file at mg_processes/signal/Events/run_03/unweighted_events.lhe.gz
+08:15 madminer.lhe         DEBUG   Found 0 nuisance parameters with matching benchmarks:
+08:15 madminer.utils.inter DEBUG   Parsing LHE file mg_processes/signal/Events/run_03/unweighted_events.lhe.gz
+08:15 madminer.utils.inter DEBUG   Parsing header and events as XML with cElementTree
+08:15 madminer.utils.inter DEBUG   Found entry event_norm = sum in LHE header. Interpreting this as weight_norm_is_average = False.
+08:21 madminer.utils.inter DEBUG     19879 / 20000 events pass cut j[0].pt >= 25.0
+08:21 madminer.utils.inter DEBUG     16956 / 20000 events pass cut j[1].pt >= 25.0
+08:21 madminer.utils.inter DEBUG     15228 / 20000 events pass cut e[0].pt >= 25.0
+08:21 madminer.utils.inter DEBUG     15260 / 20000 events pass cut mu[0].pt >= 25.0
+08:21 madminer.utils.inter DEBUG     15141 / 20000 events pass cut met.pt >= 25.0
+08:21 madminer.utils.inter INFO      7101 events pass all cuts/efficiencies
+08:21 madminer.lhe         DEBUG   Found weights ['170_80', '160_15', '161_15', '162_15', '163_15', '164_15', '165_15', '166_15', '167_15', '168_15', '169_15', '170_15', '171_15', '172_15', '173_15', '174_15', '175_15', '176_15', '177_15', '178_15', '179_15', '180_15', '181_15', '182_15', '183_15', '184_15', '185_15', '160_80', '165_80', '175_80', '180_80', '185_80'] in LHE file
+08:21 madminer.lhe         DEBUG   Found 7101 events in Obs j_0_energy
+08:21 madminer.lhe         DEBUG   Found 7101 events
+08:21 madminer.lhe         DEBUG   Found 7101 events in Obs j_0_momentum
+08:21 madminer.lhe         DEBUG   Found 7101 events in Obs j_0_eta
+08:21 madminer.lhe         DEBUG   Found 7101 events in Obs j_0_phi
+08:21 madminer.lhe         DEBUG   Found 7101 events in Obs j_1_energy
+08:21 madminer.lhe         DEBUG   Found 7101 events in Obs j_1_momentum
+08:21 madminer.lhe         DEBUG   Found 7101 events in Obs j_1_eta
+08:21 madminer.lhe         DEBUG   Found 7101 events in Obs j_1_phi
+08:21 madminer.lhe         DEBUG   Found 7101 events in Obs e_0_energy
+08:21 madminer.lhe         DEBUG   Found 7101 events in Obs e_0_momentum
+08:21 madminer.lhe         DEBUG   Found 7101 events in Obs e_0_eta
+08:21 madminer.lhe         DEBUG   Found 7101 events in Obs e_0_phi
+08:21 madminer.lhe         DEBUG   Found 7101 events in Obs mu_0_energy
+08:21 madminer.lhe         DEBUG   Found 7101 events in Obs mu_0_momentum
+08:21 madminer.lhe         DEBUG   Found 7101 events in Obs mu_0_eta
+08:21 madminer.lhe         DEBUG   Found 7101 events in Obs mu_0_phi
+08:21 madminer.lhe         DEBUG   Found 7101 events in Obs met_pt
+08:21 madminer.lhe         DEBUG   Found 7101 events in Obs m_e_0_j_0
+08:21 madminer.lhe         DEBUG   Found 7101 events in Obs m_e_0_j_1
+08:21 madminer.lhe         DEBUG   Found 7101 events in Obs m_mu_0_j_0
+08:21 madminer.lhe         DEBUG   Found 7101 events in Obs m_mu_0_j_1
+08:21 madminer.lhe         DEBUG   Found 7101 events in Obs mt2
+08:21 madminer.lhe         INFO    Analysing LHE sample mg_processes/signal/Events/run_04/unweighted_events.lhe.gz
+08:21 madminer.lhe         DEBUG   Extracting nuisance parameter definitions from LHE file
+08:21 madminer.utils.inter DEBUG   Parsing nuisance parameter setup from LHE file at mg_processes/signal/Events/run_04/unweighted_events.lhe.gz
+08:21 madminer.lhe         DEBUG   Found 0 nuisance parameters with matching benchmarks:
+08:21 madminer.utils.inter DEBUG   Parsing LHE file mg_processes/signal/Events/run_04/unweighted_events.lhe.gz
+08:21 madminer.utils.inter DEBUG   Parsing header and events as XML with cElementTree
+08:21 madminer.utils.inter DEBUG   Found entry event_norm = sum in LHE header. Interpreting this as weight_norm_is_average = False.
+08:27 madminer.utils.inter DEBUG     19879 / 20000 events pass cut j[0].pt >= 25.0
+08:27 madminer.utils.inter DEBUG     17129 / 20000 events pass cut j[1].pt >= 25.0
+08:27 madminer.utils.inter DEBUG     15431 / 20000 events pass cut e[0].pt >= 25.0
+08:27 madminer.utils.inter DEBUG     15256 / 20000 events pass cut mu[0].pt >= 25.0
+08:27 madminer.utils.inter DEBUG     15211 / 20000 events pass cut met.pt >= 25.0
+08:27 madminer.utils.inter INFO      7367 events pass all cuts/efficiencies
+08:27 madminer.lhe         DEBUG   Found weights ['175_80', '160_15', '161_15', '162_15', '163_15', '164_15', '165_15', '166_15', '167_15', '168_15', '169_15', '170_15', '171_15', '172_15', '173_15', '174_15', '175_15', '176_15', '177_15', '178_15', '179_15', '180_15', '181_15', '182_15', '183_15', '184_15', '185_15', '160_80', '165_80', '170_80', '180_80', '185_80'] in LHE file
+08:27 madminer.lhe         DEBUG   Found 7367 events in Obs j_0_energy
+08:27 madminer.lhe         DEBUG   Found 7367 events
+08:27 madminer.lhe         DEBUG   Found 7367 events in Obs j_0_momentum
+08:27 madminer.lhe         DEBUG   Found 7367 events in Obs j_0_eta
+08:27 madminer.lhe         DEBUG   Found 7367 events in Obs j_0_phi
+08:27 madminer.lhe         DEBUG   Found 7367 events in Obs j_1_energy
+08:27 madminer.lhe         DEBUG   Found 7367 events in Obs j_1_momentum
+08:27 madminer.lhe         DEBUG   Found 7367 events in Obs j_1_eta
+08:27 madminer.lhe         DEBUG   Found 7367 events in Obs j_1_phi
+08:27 madminer.lhe         DEBUG   Found 7367 events in Obs e_0_energy
+08:27 madminer.lhe         DEBUG   Found 7367 events in Obs e_0_momentum
+08:27 madminer.lhe         DEBUG   Found 7367 events in Obs e_0_eta
+08:27 madminer.lhe         DEBUG   Found 7367 events in Obs e_0_phi
+08:27 madminer.lhe         DEBUG   Found 7367 events in Obs mu_0_energy
+08:27 madminer.lhe         DEBUG   Found 7367 events in Obs mu_0_momentum
+08:27 madminer.lhe         DEBUG   Found 7367 events in Obs mu_0_eta
+08:27 madminer.lhe         DEBUG   Found 7367 events in Obs mu_0_phi
+08:27 madminer.lhe         DEBUG   Found 7367 events in Obs met_pt
+08:27 madminer.lhe         DEBUG   Found 7367 events in Obs m_e_0_j_0
+08:27 madminer.lhe         DEBUG   Found 7367 events in Obs m_e_0_j_1
+08:27 madminer.lhe         DEBUG   Found 7367 events in Obs m_mu_0_j_0
+08:27 madminer.lhe         DEBUG   Found 7367 events in Obs m_mu_0_j_1
+08:27 madminer.lhe         DEBUG   Found 7367 events in Obs mt2
+08:27 madminer.lhe         INFO    Analysing LHE sample mg_processes/signal/Events/run_05/unweighted_events.lhe.gz
+08:27 madminer.lhe         DEBUG   Extracting nuisance parameter definitions from LHE file
+08:27 madminer.utils.inter DEBUG   Parsing nuisance parameter setup from LHE file at mg_processes/signal/Events/run_05/unweighted_events.lhe.gz
+08:27 madminer.lhe         DEBUG   Found 0 nuisance parameters with matching benchmarks:
+08:27 madminer.utils.inter DEBUG   Parsing LHE file mg_processes/signal/Events/run_05/unweighted_events.lhe.gz
+08:27 madminer.utils.inter DEBUG   Parsing header and events as XML with cElementTree
+08:27 madminer.utils.inter DEBUG   Found entry event_norm = sum in LHE header. Interpreting this as weight_norm_is_average = False.
+08:33 madminer.utils.inter DEBUG     19911 / 20000 events pass cut j[0].pt >= 25.0
+08:33 madminer.utils.inter DEBUG     17409 / 20000 events pass cut j[1].pt >= 25.0
+08:33 madminer.utils.inter DEBUG     15483 / 20000 events pass cut e[0].pt >= 25.0
+08:33 madminer.utils.inter DEBUG     15443 / 20000 events pass cut mu[0].pt >= 25.0
+08:33 madminer.utils.inter DEBUG     15294 / 20000 events pass cut met.pt >= 25.0
+08:33 madminer.utils.inter INFO      7651 events pass all cuts/efficiencies
+08:33 madminer.lhe         DEBUG   Found weights ['180_80', '160_15', '161_15', '162_15', '163_15', '164_15', '165_15', '166_15', '167_15', '168_15', '169_15', '170_15', '171_15', '172_15', '173_15', '174_15', '175_15', '176_15', '177_15', '178_15', '179_15', '180_15', '181_15', '182_15', '183_15', '184_15', '185_15', '160_80', '165_80', '170_80', '175_80', '185_80'] in LHE file
+08:33 madminer.lhe         DEBUG   Found 7651 events in Obs j_0_energy
+08:33 madminer.lhe         DEBUG   Found 7651 events
+08:33 madminer.lhe         DEBUG   Found 7651 events in Obs j_0_momentum
+08:33 madminer.lhe         DEBUG   Found 7651 events in Obs j_0_eta
+08:33 madminer.lhe         DEBUG   Found 7651 events in Obs j_0_phi
+08:33 madminer.lhe         DEBUG   Found 7651 events in Obs j_1_energy
+08:33 madminer.lhe         DEBUG   Found 7651 events in Obs j_1_momentum
+08:33 madminer.lhe         DEBUG   Found 7651 events in Obs j_1_eta
+08:33 madminer.lhe         DEBUG   Found 7651 events in Obs j_1_phi
+08:33 madminer.lhe         DEBUG   Found 7651 events in Obs e_0_energy
+08:33 madminer.lhe         DEBUG   Found 7651 events in Obs e_0_momentum
+08:33 madminer.lhe         DEBUG   Found 7651 events in Obs e_0_eta
+08:33 madminer.lhe         DEBUG   Found 7651 events in Obs e_0_phi
+08:33 madminer.lhe         DEBUG   Found 7651 events in Obs mu_0_energy
+08:33 madminer.lhe         DEBUG   Found 7651 events in Obs mu_0_momentum
+08:33 madminer.lhe         DEBUG   Found 7651 events in Obs mu_0_eta
+08:33 madminer.lhe         DEBUG   Found 7651 events in Obs mu_0_phi
+08:33 madminer.lhe         DEBUG   Found 7651 events in Obs met_pt
+08:33 madminer.lhe         DEBUG   Found 7651 events in Obs m_e_0_j_0
+08:33 madminer.lhe         DEBUG   Found 7651 events in Obs m_e_0_j_1
+08:33 madminer.lhe         DEBUG   Found 7651 events in Obs m_mu_0_j_0
+08:33 madminer.lhe         DEBUG   Found 7651 events in Obs m_mu_0_j_1
+08:33 madminer.lhe         DEBUG   Found 7651 events in Obs mt2
+08:33 madminer.lhe         INFO    Analysing LHE sample mg_processes/signal/Events/run_06/unweighted_events.lhe.gz
+08:33 madminer.lhe         DEBUG   Extracting nuisance parameter definitions from LHE file
+08:33 madminer.utils.inter DEBUG   Parsing nuisance parameter setup from LHE file at mg_processes/signal/Events/run_06/unweighted_events.lhe.gz
+08:33 madminer.lhe         DEBUG   Found 0 nuisance parameters with matching benchmarks:
+08:33 madminer.utils.inter DEBUG   Parsing LHE file mg_processes/signal/Events/run_06/unweighted_events.lhe.gz
+08:33 madminer.utils.inter DEBUG   Parsing header and events as XML with cElementTree
+08:33 madminer.utils.inter DEBUG   Found entry event_norm = sum in LHE header. Interpreting this as weight_norm_is_average = False.
+08:39 madminer.utils.inter DEBUG     19934 / 20000 events pass cut j[0].pt >= 25.0
+08:39 madminer.utils.inter DEBUG     17682 / 20000 events pass cut j[1].pt >= 25.0
+08:39 madminer.utils.inter DEBUG     15562 / 20000 events pass cut e[0].pt >= 25.0
+08:39 madminer.utils.inter DEBUG     15490 / 20000 events pass cut mu[0].pt >= 25.0
+08:39 madminer.utils.inter DEBUG     15230 / 20000 events pass cut met.pt >= 25.0
+08:39 madminer.utils.inter INFO      7780 events pass all cuts/efficiencies
+08:39 madminer.lhe         DEBUG   Found weights ['185_80', '160_15', '161_15', '162_15', '163_15', '164_15', '165_15', '166_15', '167_15', '168_15', '169_15', '170_15', '171_15', '172_15', '173_15', '174_15', '175_15', '176_15', '177_15', '178_15', '179_15', '180_15', '181_15', '182_15', '183_15', '184_15', '185_15', '160_80', '165_80', '170_80', '175_80', '180_80'] in LHE file
+08:39 madminer.lhe         DEBUG   Found 7780 events in Obs j_0_energy
+08:39 madminer.lhe         DEBUG   Found 7780 events
+08:39 madminer.lhe         DEBUG   Found 7780 events in Obs j_0_momentum
+08:39 madminer.lhe         DEBUG   Found 7780 events in Obs j_0_eta
+08:39 madminer.lhe         DEBUG   Found 7780 events in Obs j_0_phi
+08:39 madminer.lhe         DEBUG   Found 7780 events in Obs j_1_energy
+08:39 madminer.lhe         DEBUG   Found 7780 events in Obs j_1_momentum
+08:39 madminer.lhe         DEBUG   Found 7780 events in Obs j_1_eta
+08:39 madminer.lhe         DEBUG   Found 7780 events in Obs j_1_phi
+08:39 madminer.lhe         DEBUG   Found 7780 events in Obs e_0_energy
+08:39 madminer.lhe         DEBUG   Found 7780 events in Obs e_0_momentum
+08:39 madminer.lhe         DEBUG   Found 7780 events in Obs e_0_eta
+08:39 madminer.lhe         DEBUG   Found 7780 events in Obs e_0_phi
+08:39 madminer.lhe         DEBUG   Found 7780 events in Obs mu_0_energy
+08:39 madminer.lhe         DEBUG   Found 7780 events in Obs mu_0_momentum
+08:39 madminer.lhe         DEBUG   Found 7780 events in Obs mu_0_eta
+08:39 madminer.lhe         DEBUG   Found 7780 events in Obs mu_0_phi
+08:39 madminer.lhe         DEBUG   Found 7780 events in Obs met_pt
+08:39 madminer.lhe         DEBUG   Found 7780 events in Obs m_e_0_j_0
+08:39 madminer.lhe         DEBUG   Found 7780 events in Obs m_e_0_j_1
+08:39 madminer.lhe         DEBUG   Found 7780 events in Obs m_mu_0_j_0
+08:39 madminer.lhe         DEBUG   Found 7780 events in Obs m_mu_0_j_1
+08:39 madminer.lhe         DEBUG   Found 7780 events in Obs mt2
+08:39 madminer.lhe         DEBUG   Loading HDF5 data from data/madminer_example_mvm.h5 and saving file to data/madminer_example_mvm_with_data.h5
+08:39 madminer.lhe         DEBUG   Weight names: ['160_80', '160_15', '161_15', '162_15', '163_15', '164_15', '165_15', '166_15', '167_15', '168_15', '169_15', '170_15', '171_15', '172_15', '173_15', '174_15', '175_15', '176_15', '177_15', '178_15', '179_15', '180_15', '181_15', '182_15', '183_15', '184_15', '185_15', '165_80', '170_80', '175_80', '180_80', '185_80']
+08:39 madminer.utils.inter DEBUG   Benchmarks found in HDF5 file: [u'160_15', u'161_15', u'162_15', u'163_15', u'164_15', u'165_15', u'166_15', u'167_15', u'168_15', u'169_15', u'170_15', u'171_15', u'172_15', u'173_15', u'174_15', u'175_15', u'176_15', u'177_15', u'178_15', u'179_15', u'180_15', u'181_15', u'182_15', u'183_15', u'184_15', u'185_15', u'160_80', u'165_80', u'170_80', u'175_80', u'180_80', u'185_80']
+08:39 madminer.utils.inter DEBUG   Benchmark 160_15 already in benchmark_names_phys
+08:39 madminer.utils.inter DEBUG   Benchmark 160_80 already in benchmark_names_phys
+08:39 madminer.utils.inter DEBUG   Benchmark 161_15 already in benchmark_names_phys
+08:39 madminer.utils.inter DEBUG   Benchmark 162_15 already in benchmark_names_phys
+08:39 madminer.utils.inter DEBUG   Benchmark 163_15 already in benchmark_names_phys
+08:39 madminer.utils.inter DEBUG   Benchmark 164_15 already in benchmark_names_phys
+08:39 madminer.utils.inter DEBUG   Benchmark 165_15 already in benchmark_names_phys
+08:39 madminer.utils.inter DEBUG   Benchmark 165_80 already in benchmark_names_phys
+08:39 madminer.utils.inter DEBUG   Benchmark 166_15 already in benchmark_names_phys
+08:39 madminer.utils.inter DEBUG   Benchmark 167_15 already in benchmark_names_phys
+08:39 madminer.utils.inter DEBUG   Benchmark 168_15 already in benchmark_names_phys
+08:39 madminer.utils.inter DEBUG   Benchmark 169_15 already in benchmark_names_phys
+08:39 madminer.utils.inter DEBUG   Benchmark 170_15 already in benchmark_names_phys
+08:39 madminer.utils.inter DEBUG   Benchmark 170_80 already in benchmark_names_phys
+08:39 madminer.utils.inter DEBUG   Benchmark 171_15 already in benchmark_names_phys
+08:39 madminer.utils.inter DEBUG   Benchmark 172_15 already in benchmark_names_phys
+08:39 madminer.utils.inter DEBUG   Benchmark 173_15 already in benchmark_names_phys
+08:39 madminer.utils.inter DEBUG   Benchmark 174_15 already in benchmark_names_phys
+08:39 madminer.utils.inter DEBUG   Benchmark 175_15 already in benchmark_names_phys
+08:39 madminer.utils.inter DEBUG   Benchmark 175_80 already in benchmark_names_phys
+08:39 madminer.utils.inter DEBUG   Benchmark 176_15 already in benchmark_names_phys
+08:39 madminer.utils.inter DEBUG   Benchmark 177_15 already in benchmark_names_phys
+08:39 madminer.utils.inter DEBUG   Benchmark 178_15 already in benchmark_names_phys
+08:39 madminer.utils.inter DEBUG   Benchmark 179_15 already in benchmark_names_phys
+08:39 madminer.utils.inter DEBUG   Benchmark 180_15 already in benchmark_names_phys
+08:39 madminer.utils.inter DEBUG   Benchmark 180_80 already in benchmark_names_phys
+08:39 madminer.utils.inter DEBUG   Benchmark 181_15 already in benchmark_names_phys
+08:39 madminer.utils.inter DEBUG   Benchmark 182_15 already in benchmark_names_phys
+08:39 madminer.utils.inter DEBUG   Benchmark 183_15 already in benchmark_names_phys
+08:39 madminer.utils.inter DEBUG   Benchmark 184_15 already in benchmark_names_phys
+08:39 madminer.utils.inter DEBUG   Benchmark 185_15 already in benchmark_names_phys
+08:39 madminer.utils.inter DEBUG   Benchmark 185_80 already in benchmark_names_phys
+08:39 madminer.utils.inter DEBUG   Combined benchmark names: [u'160_15', u'161_15', u'162_15', u'163_15', u'164_15', u'165_15', u'166_15', u'167_15', u'168_15', u'169_15', u'170_15', u'171_15', u'172_15', u'173_15', u'174_15', u'175_15', u'176_15', u'177_15', u'178_15', u'179_15', u'180_15', u'181_15', u'182_15', u'183_15', u'184_15', u'185_15', u'160_80', u'165_80', u'170_80', u'175_80', u'180_80', u'185_80']
+08:39 madminer.utils.inter DEBUG   Combined is_nuisance: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+08:39 madminer.utils.inter DEBUG   Combined is_reference: [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+08:39 madminer.utils.inter DEBUG   Weight names found in event file: ['160_80', '160_15', '161_15', '162_15', '163_15', '164_15', '165_15', '166_15', '167_15', '168_15', '169_15', '170_15', '171_15', '172_15', '173_15', '174_15', '175_15', '176_15', '177_15', '178_15', '179_15', '180_15', '181_15', '182_15', '183_15', '184_15', '185_15', '165_80', '170_80', '175_80', '180_80', '185_80']
+08:39 madminer.utils.inter DEBUG   Benchmarks found in MadMiner file: [u'160_15', u'161_15', u'162_15', u'163_15', u'164_15', u'165_15', u'166_15', u'167_15', u'168_15', u'169_15', u'170_15', u'171_15', u'172_15', u'173_15', u'174_15', u'175_15', u'176_15', u'177_15', u'178_15', u'179_15', u'180_15', u'181_15', u'182_15', u'183_15', u'184_15', u'185_15', u'160_80', u'165_80', u'170_80', u'175_80', u'180_80', u'185_80']
+08:39 madminer.utils.inter DEBUG   Sorted benchmarks: [u'160_15', u'161_15', u'162_15', u'163_15', u'164_15', u'165_15', u'166_15', u'167_15', u'168_15', u'169_15', u'170_15', u'171_15', u'172_15', u'173_15', u'174_15', u'175_15', u'176_15', u'177_15', u'178_15', u'179_15', u'180_15', u'181_15', u'182_15', u'183_15', u'184_15', u'185_15', u'160_80', u'165_80', u'170_80', u'175_80', u'180_80', u'185_80']
+08:39 root                 INFO    OrderedDict([('j_0_energy', 'j[0].e'), ('j_0_momentum', 'j[0].pt'), ('j_0_eta', 'j[0].eta'), ('j_0_phi', 'j[0].phi()'), ('j_1_energy', 'j[1].e'), ('j_1_momentum', 'j[1].pt'), ('j_1_eta', 'j[1].eta'), ('j_1_phi', 'j[1].phi()'), ('e_0_energy', 'e[0].e'), ('e_0_momentum', 'e[0].pt'), ('e_0_eta', 'e[0].eta'), ('e_0_phi', 'e[0].phi()'), ('mu_0_energy', 'mu[0].e'), ('mu_0_momentum', 'mu[0].pt'), ('mu_0_eta', 'mu[0].eta'), ('mu_0_phi', 'mu[0].phi()'), ('met_pt', 'met.pt'), ('m_e_0_j_0', 'sqrt( (e[0].e + j[0].e) ** 2 - (e[0].pt + j[0].pt) ** 2)'), ('m_e_0_j_1', 'sqrt( (e[0].e + j[1].e) ** 2 - (e[0].pt + j[1].pt) ** 2)'), ('m_mu_0_j_0', 'sqrt( (mu[0].e + j[0].e) ** 2 - (mu[0].pt + j[0].pt) ** 2)'), ('m_mu_0_j_1', 'sqrt( (mu[0].e + j[1].e) ** 2 - (mu[0].pt + j[1].pt) ** 2)'), ('mt2', <function mt2 at 0x7fc1c273b140>)])
+08:39 root                 INFO    ['j_0_energy', 'j_0_momentum', 'j_0_eta', 'j_0_phi', 'j_1_energy', 'j_1_momentum', 'j_1_eta', 'j_1_phi', 'e_0_energy', 'e_0_momentum', 'e_0_eta', 'e_0_phi', 'mu_0_energy', 'mu_0_momentum', 'mu_0_eta', 'mu_0_phi', 'met_pt', 'm_e_0_j_0', 'm_e_0_j_1', 'm_mu_0_j_0', 'm_mu_0_j_1', 'mt2']
+08:39 madminer.analysis    INFO    Loading data from data/madminer_example_mvm_with_data.h5
+08:39 madminer.analysis    INFO    Found 2 parameters
+08:39 madminer.analysis    DEBUG      TOP_MASS (LHA: MASS 6, maximal power in squared ME: (2,), range: (0.0, 1.0))
+08:39 madminer.analysis    DEBUG      TOP_WIDTH (LHA: DECAY 6, maximal power in squared ME: (2,), range: (0.0, 1.0))
+08:39 madminer.analysis    INFO    Did not find nuisance parameters
+08:39 madminer.analysis    INFO    Found 32 benchmarks, of which 32 physical
+08:39 madminer.analysis    DEBUG      160_15: TOP_MASS = 1.60e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      161_15: TOP_MASS = 1.61e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      162_15: TOP_MASS = 1.62e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      163_15: TOP_MASS = 1.63e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      164_15: TOP_MASS = 1.64e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      165_15: TOP_MASS = 1.65e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      166_15: TOP_MASS = 1.66e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      167_15: TOP_MASS = 1.67e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      168_15: TOP_MASS = 1.68e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      169_15: TOP_MASS = 1.69e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      170_15: TOP_MASS = 1.70e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      171_15: TOP_MASS = 1.71e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      172_15: TOP_MASS = 1.72e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      173_15: TOP_MASS = 1.73e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      174_15: TOP_MASS = 1.74e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      175_15: TOP_MASS = 1.75e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      176_15: TOP_MASS = 1.76e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      177_15: TOP_MASS = 1.77e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      178_15: TOP_MASS = 1.78e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      179_15: TOP_MASS = 1.79e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      180_15: TOP_MASS = 1.80e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      181_15: TOP_MASS = 1.81e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      182_15: TOP_MASS = 1.82e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      183_15: TOP_MASS = 1.83e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      184_15: TOP_MASS = 1.84e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      185_15: TOP_MASS = 1.85e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      160_80: TOP_MASS = 1.60e+02, TOP_WIDTH = 8.00
+08:39 madminer.analysis    DEBUG      165_80: TOP_MASS = 1.65e+02, TOP_WIDTH = 8.00
+08:39 madminer.analysis    DEBUG      170_80: TOP_MASS = 1.70e+02, TOP_WIDTH = 8.00
+08:39 madminer.analysis    DEBUG      175_80: TOP_MASS = 1.75e+02, TOP_WIDTH = 8.00
+08:39 madminer.analysis    DEBUG      180_80: TOP_MASS = 1.80e+02, TOP_WIDTH = 8.00
+08:39 madminer.analysis    DEBUG      185_80: TOP_MASS = 1.85e+02, TOP_WIDTH = 8.00
+08:39 madminer.analysis    INFO    Found 22 observables
+08:39 madminer.analysis    DEBUG      0 j_0_energy
+08:39 madminer.analysis    DEBUG      1 j_0_momentum
+08:39 madminer.analysis    DEBUG      2 j_0_eta
+08:39 madminer.analysis    DEBUG      3 j_0_phi
+08:39 madminer.analysis    DEBUG      4 j_1_energy
+08:39 madminer.analysis    DEBUG      5 j_1_momentum
+08:39 madminer.analysis    DEBUG      6 j_1_eta
+08:39 madminer.analysis    DEBUG      7 j_1_phi
+08:39 madminer.analysis    DEBUG      8 e_0_energy
+08:39 madminer.analysis    DEBUG      9 e_0_momentum
+08:39 madminer.analysis    DEBUG     10 e_0_eta
+08:39 madminer.analysis    DEBUG     11 e_0_phi
+08:39 madminer.analysis    DEBUG     12 mu_0_energy
+08:39 madminer.analysis    DEBUG     13 mu_0_momentum
+08:39 madminer.analysis    DEBUG     14 mu_0_eta
+08:39 madminer.analysis    DEBUG     15 mu_0_phi
+08:39 madminer.analysis    DEBUG     16 met_pt
+08:39 madminer.analysis    DEBUG     17 m_e_0_j_0
+08:39 madminer.analysis    DEBUG     18 m_e_0_j_1
+08:39 madminer.analysis    DEBUG     19 m_mu_0_j_0
+08:39 madminer.analysis    DEBUG     20 m_mu_0_j_1
+08:39 madminer.analysis    DEBUG     21 mt2
+08:39 madminer.analysis    INFO    Found 43634 events
+08:39 madminer.analysis    INFO    Did not find morphing setup.
+08:39 madminer.plotting    DEBUG   Observable indices: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
+08:39 madminer.plotting    DEBUG   Loaded raw data with shapes (43634, 22), (43634, 32)
+08:39 madminer.plotting    DEBUG   Calculated 6 theta matrices
+08:39 madminer.plotting    DEBUG   Plotting panel 0: observable 0, label j_0_energy
+08:39 madminer.plotting    DEBUG   Ranges for observable j_0_energy: min = [27.030197547, 27.030197547, 27.030197547, 27.030197547, 27.030197547, 27.030197547], max = [694.0449777773558, 664.32277890588, 865.0291602292984, 775.025928176607, 871.5847142818048, 837.9291366537207]
+08:39 madminer.plotting    DEBUG   Plotting panel 1: observable 1, label j_0_momentum
+08:39 madminer.plotting    DEBUG   Ranges for observable j_0_momentum: min = [25.473785003530224, 27.99069841150436, 34.37260560329457, 25.473785003530224, 25.473785003530224, 29.895829943551163], max = [203.53045524639379, 201.18166582902688, 234.72863695816355, 225.20514486059548, 239.75430813100064, 246.29083929459694]
+08:39 madminer.plotting    DEBUG   Plotting panel 2: observable 2, label j_0_eta
+08:39 madminer.plotting    DEBUG   Ranges for observable j_0_eta: min = [-3.2561878460373013, -2.8023671166459794, -3.2316339688505273, -2.8350688235489443, -3.1243100071259224, -2.99049909826614], max = [2.7160965838317392, 2.7653150795998847, 2.812284984928633, 2.7394711165133008, 2.9895956530701286, 2.877462087325457]
+08:39 madminer.plotting    DEBUG   Plotting panel 3: observable 3, label j_0_phi
+08:39 madminer.plotting    DEBUG   Ranges for observable j_0_phi: min = [-3.1415793632624505, -3.1415793632624505, -3.1415793632624505, -3.1415793632624505, -3.1415793632624505, -3.1415793632624505], max = [3.141474245426721, 3.141474245426721, 3.141474245426721, 3.141474245426721, 3.141474245426721, 3.141474245426721]
+08:39 madminer.plotting    DEBUG   Plotting panel 4: observable 4, label j_1_energy
+08:39 madminer.plotting    DEBUG   Ranges for observable j_1_energy: min = [25.54162628, 25.54162628, 25.54162628, 25.54162628, 25.54162628, 25.54162628], max = [433.74873463420397, 570.9654819912405, 567.2675618074167, 570.7875310652587, 617.0782596773314, 602.6026067162867]
+08:39 madminer.plotting    DEBUG   Plotting panel 5: observable 5, label j_1_momentum
+08:39 madminer.plotting    DEBUG   Ranges for observable j_1_momentum: min = [25.004508913339617, 25.004508913339617, 25.004508913339617, 25.004508913339617, 25.004508913339617, 25.004508913339617], max = [133.92067753916774, 138.39213005989444, 139.5913921784197, 149.90825812594647, 163.19261939058575, 161.27377941252882]
+08:39 madminer.plotting    DEBUG   Plotting panel 6: observable 6, label j_1_eta
+08:39 madminer.plotting    DEBUG   Ranges for observable j_1_eta: min = [-2.726550145851764, -3.247168067215313, -3.132199021291537, -3.1016935520529003, -3.194342782157454, -3.1406350528290607], max = [2.870930789589655, 3.0533699965934087, 2.854027501629591, 3.133542129034648, 3.2249292313716826, 3.2487365854342958]
+08:39 madminer.plotting    DEBUG   Plotting panel 7: observable 7, label j_1_phi
+08:39 madminer.plotting    DEBUG   Ranges for observable j_1_phi: min = [-3.141482904848075, -3.141482904848075, -3.141482904848075, -3.141482904848075, -3.141482904848075, -3.141482904848075], max = [3.1412568023688583, 3.1412568023688583, 3.1412568023688583, 3.1412568023688583, 3.1412568023688583, 3.1412568023688583]
+08:39 madminer.plotting    DEBUG   Plotting panel 8: observable 8, label e_0_energy
+08:39 madminer.plotting    DEBUG   Ranges for observable e_0_energy: min = [25.041745608, 25.041745608, 25.041745608, 25.041745608, 25.041745608, 25.041745608], max = [473.47045437088497, 467.2111348932268, 653.0623156797096, 521.0052799878104, 607.9261393777874, 651.947388292311]
+08:39 madminer.plotting    DEBUG   Plotting panel 9: observable 9, label e_0_momentum
+08:39 madminer.plotting    DEBUG   Ranges for observable e_0_momentum: min = [25.001052980107808, 25.001052980107808, 25.001052980107808, 25.001052980107808, 25.001052980107808, 25.001052980107808], max = [192.06930283123913, 142.7397875176382, 213.86224949832962, 192.06939881108192, 157.63758706454902, 180.67780022630362]
+08:39 madminer.plotting    DEBUG   Plotting panel 10: observable 10, label e_0_eta
+08:39 madminer.plotting    DEBUG   Ranges for observable e_0_eta: min = [-2.7505533475051904, -2.7306028810459972, -2.667569757924441, -3.082870712954704, -2.945934701140505, -2.944559834010691], max = [2.666313655815137, 3.20347681799731, 3.700039038887072, 3.003647831206097, 3.286115580980321, 3.561412712737262]
+08:39 madminer.plotting    DEBUG   Plotting panel 11: observable 11, label e_0_phi
+08:39 madminer.plotting    DEBUG   Ranges for observable e_0_phi: min = [-3.1413576921046724, -3.1413576921046724, -3.1413576921046724, -3.1413576921046724, -3.1413576921046724, -3.1413576921046724], max = [3.1414596757295197, 3.1414596757295197, 3.1414596757295197, 3.1414596757295197, 3.1414596757295197, 3.1414596757295197]
+08:39 madminer.plotting    DEBUG   Plotting panel 12: observable 12, label mu_0_energy
+08:39 madminer.plotting    DEBUG   Ranges for observable mu_0_energy: min = [25.082943441, 25.082943441, 25.082943441, 25.082943441, 25.082943441, 25.082943441], max = [382.61764226606056, 535.38225802672, 645.403546095554, 493.07263397725114, 551.3302504951434, 561.4351396639219]
+08:39 madminer.plotting    DEBUG   Plotting panel 13: observable 13, label mu_0_momentum
+08:39 madminer.plotting    DEBUG   Ranges for observable mu_0_momentum: min = [25.00119638238202, 25.00119638238202, 25.00119638238202, 25.00119638238202, 25.00119638238202, 25.00119638238202], max = [168.43817163912786, 136.4781069992211, 226.75151919771298, 160.72165511855383, 157.7162339655096, 197.2800848368009]
+08:39 madminer.plotting    DEBUG   Plotting panel 14: observable 14, label mu_0_eta
+08:39 madminer.plotting    DEBUG   Ranges for observable mu_0_eta: min = [-2.577365730709915, -2.8436404289775137, -3.3286073555920987, -3.190364383520489, -3.0240067827275117, -3.0142883541413585], max = [2.3883334522465547, 3.024000629873976, 2.906932474554365, 2.8974365942257294, 3.141121428224453, 3.051811933392392]
+08:39 madminer.plotting    DEBUG   Plotting panel 15: observable 15, label mu_0_phi
+08:39 madminer.plotting    DEBUG   Ranges for observable mu_0_phi: min = [-3.141462165564323, -3.141462165564323, -3.141462165564323, -3.141462165564323, -3.141462165564323, -3.141462165564323], max = [3.1414911161882313, 3.1414911161882313, 3.1414911161882313, 3.1414911161882313, 3.1414911161882313, 3.1414911161882313]
+08:39 madminer.plotting    DEBUG   Plotting panel 16: observable 16, label met_pt
+08:39 madminer.plotting    DEBUG   Ranges for observable met_pt: min = [25.000133959026826, 25.000133959026826, 25.000133959026826, 25.000133959026826, 25.000133959026826, 25.000133959026826], max = [175.07676125438795, 183.61315056558618, 180.22646179812557, 186.5661801746789, 205.5933846399243, 196.89871135488787]
+08:39 madminer.plotting    DEBUG   Plotting panel 17: observable 17, label m_e_0_j_0
+08:39 madminer.plotting    DEBUG   Ranges for observable m_e_0_j_0: min = [5.568171196065518, 5.568171196065518, 5.568171196065518, 5.568171196065518, 5.568171196065518, 5.568171196065518], max = [884.8496708191902, 959.4311574232763, 1189.3229569167606, 1049.2269302069233, 1110.7404971073627, 1282.5764803857194]
+08:39 madminer.plotting    DEBUG   Plotting panel 18: observable 18, label m_e_0_j_1
+08:39 madminer.plotting    DEBUG   Ranges for observable m_e_0_j_1: min = [5.720230612670632, 5.720230612670632, 5.720230612670632, 5.720230612670632, 5.720230612670632, 5.720230612670632], max = [783.9083502662057, 836.0831515684064, 927.5091875996827, 923.2405825839634, 992.1711672612505, 1037.8955940964106]
+08:39 madminer.plotting    DEBUG   Plotting panel 19: observable 19, label m_mu_0_j_0
+08:39 madminer.plotting    DEBUG   Ranges for observable m_mu_0_j_0: min = [5.593612303983118, 5.593612303983118, 5.593612303983118, 5.593612303983118, 5.593612303983118, 5.593612303983118], max = [818.5029639305093, 1056.9402639301811, 1255.931785126869, 1035.5338779167414, 1131.0779365474523, 1233.2964846044413]
+08:39 madminer.plotting    DEBUG   Plotting panel 20: observable 20, label m_mu_0_j_1
+08:39 madminer.plotting    DEBUG   Ranges for observable m_mu_0_j_1: min = [5.882022536828927, 5.882022536828927, 5.882022536828927, 5.882022536828927, 5.882022536828927, 5.882022536828927], max = [711.0963609564392, 929.0732705131207, 1069.1490288244538, 851.5978529091643, 908.7515754500611, 1066.5398382701055]
+08:39 madminer.plotting    DEBUG   Plotting panel 21: observable 21, label mt2
+08:39 madminer.plotting    DEBUG   Ranges for observable mt2: min = [5.839400214623653, 3.0991965124471736, 1.5884996627634749, 2.334072187738901, 0.6754991904290399, 1.2316832083385627], max = [91.18126130385463, 103.6041513356377, 109.28815153644749, 108.69608556156314, 115.99475947856317, 112.29635099738647]
+08:39 matplotlib.font_mana DEBUG   findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/home/zbhatti/.conda/envs/mm_vs_mem/lib/python2.7/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000
+08:39 root                 INFO    running SampleAugmenter...
+08:39 madminer.analysis    INFO    Loading data from data/madminer_example_mvm_with_data.h5
+08:39 madminer.analysis    INFO    Found 2 parameters
+08:39 madminer.analysis    DEBUG      TOP_MASS (LHA: MASS 6, maximal power in squared ME: (2,), range: (0.0, 1.0))
+08:39 madminer.analysis    DEBUG      TOP_WIDTH (LHA: DECAY 6, maximal power in squared ME: (2,), range: (0.0, 1.0))
+08:39 madminer.analysis    INFO    Did not find nuisance parameters
+08:39 madminer.analysis    INFO    Found 32 benchmarks, of which 32 physical
+08:39 madminer.analysis    DEBUG      160_15: TOP_MASS = 1.60e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      161_15: TOP_MASS = 1.61e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      162_15: TOP_MASS = 1.62e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      163_15: TOP_MASS = 1.63e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      164_15: TOP_MASS = 1.64e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      165_15: TOP_MASS = 1.65e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      166_15: TOP_MASS = 1.66e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      167_15: TOP_MASS = 1.67e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      168_15: TOP_MASS = 1.68e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      169_15: TOP_MASS = 1.69e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      170_15: TOP_MASS = 1.70e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      171_15: TOP_MASS = 1.71e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      172_15: TOP_MASS = 1.72e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      173_15: TOP_MASS = 1.73e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      174_15: TOP_MASS = 1.74e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      175_15: TOP_MASS = 1.75e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      176_15: TOP_MASS = 1.76e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      177_15: TOP_MASS = 1.77e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      178_15: TOP_MASS = 1.78e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      179_15: TOP_MASS = 1.79e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      180_15: TOP_MASS = 1.80e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      181_15: TOP_MASS = 1.81e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      182_15: TOP_MASS = 1.82e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      183_15: TOP_MASS = 1.83e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      184_15: TOP_MASS = 1.84e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      185_15: TOP_MASS = 1.85e+02, TOP_WIDTH = 1.50
+08:39 madminer.analysis    DEBUG      160_80: TOP_MASS = 1.60e+02, TOP_WIDTH = 8.00
+08:39 madminer.analysis    DEBUG      165_80: TOP_MASS = 1.65e+02, TOP_WIDTH = 8.00
+08:39 madminer.analysis    DEBUG      170_80: TOP_MASS = 1.70e+02, TOP_WIDTH = 8.00
+08:39 madminer.analysis    DEBUG      175_80: TOP_MASS = 1.75e+02, TOP_WIDTH = 8.00
+08:39 madminer.analysis    DEBUG      180_80: TOP_MASS = 1.80e+02, TOP_WIDTH = 8.00
+08:39 madminer.analysis    DEBUG      185_80: TOP_MASS = 1.85e+02, TOP_WIDTH = 8.00
+08:39 madminer.analysis    INFO    Found 22 observables
+08:39 madminer.analysis    DEBUG      0 j_0_energy
+08:39 madminer.analysis    DEBUG      1 j_0_momentum
+08:39 madminer.analysis    DEBUG      2 j_0_eta
+08:39 madminer.analysis    DEBUG      3 j_0_phi
+08:39 madminer.analysis    DEBUG      4 j_1_energy
+08:39 madminer.analysis    DEBUG      5 j_1_momentum
+08:39 madminer.analysis    DEBUG      6 j_1_eta
+08:39 madminer.analysis    DEBUG      7 j_1_phi
+08:39 madminer.analysis    DEBUG      8 e_0_energy
+08:39 madminer.analysis    DEBUG      9 e_0_momentum
+08:39 madminer.analysis    DEBUG     10 e_0_eta
+08:39 madminer.analysis    DEBUG     11 e_0_phi
+08:39 madminer.analysis    DEBUG     12 mu_0_energy
+08:39 madminer.analysis    DEBUG     13 mu_0_momentum
+08:39 madminer.analysis    DEBUG     14 mu_0_eta
+08:39 madminer.analysis    DEBUG     15 mu_0_phi
+08:39 madminer.analysis    DEBUG     16 met_pt
+08:39 madminer.analysis    DEBUG     17 m_e_0_j_0
+08:39 madminer.analysis    DEBUG     18 m_e_0_j_1
+08:39 madminer.analysis    DEBUG     19 m_mu_0_j_0
+08:39 madminer.analysis    DEBUG     20 m_mu_0_j_1
+08:39 madminer.analysis    DEBUG     21 mt2
+08:39 madminer.analysis    INFO    Found 43634 events
+08:39 madminer.analysis    INFO    Did not find morphing setup.
+08:39 madminer.sampling    INFO    Extracting training sample for ratio-based methods. Numerator hypothesis: (u'benchmarks', ['168_15', '169_15', '170_15', '171_15', '172_15']), denominator hypothesis: (u'benchmarks', ['180_80', '185_80', '160_80', '165_80', '175_80', '170_80'])
+08:39 root                 WARNING No morphing setup loaded. Cannot calculate joint score.
+08:39 madminer.sampling    DEBUG   Starting sample extraction
+08:39 madminer.sampling    INFO    Starting sampling serially
+08:39 madminer.sampling    DEBUG   Will print training progress every 1 sets
+08:39 madminer.sampling    INFO    Sampling from parameter point 1 / 6
+08:39 madminer.sampling    DEBUG   Drawing 16667 events for the following parameter points:
+08:39 madminer.sampling    DEBUG     0: theta = [168.    1.5], nu = None (sampling)
+08:39 madminer.sampling    DEBUG     1: theta = [180.   8.], nu = None
+08:39 madminer.analysis    DEBUG   Calculating cross sections for thetas = ['168_15', '180_80'] and nus = [None, None]
+08:39 madminer.analysis    DEBUG   Batch 1 with 34907 events
+08:39 madminer.analysis    DEBUG   Nominal weights: [[3.4951148e-07 1.0313433e-06 3.7376206e-06 ... 6.2975780e-06
+  8.1503811e-07 6.4404434e-07]
+ [2.0426129e-08 1.5599003e-08 2.9739173e-08 ... 8.7306500e-06
+  8.7306500e-06 8.7306500e-06]]
+08:39 madminer.analysis    DEBUG   Nuisance factors: 1.0
+08:39 madminer.analysis    DEBUG   xsecs and uncertainties [pb]:
+08:39 madminer.analysis    DEBUG     (9.050188 +/- 0.436994) pb (4.828565 %)
+08:39 madminer.analysis    DEBUG     (0.401468 +/- 0.012388) pb (3.085625 %)
+08:39 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 1.0000000000000022
+08:39 madminer.sampling    INFO    Sampling from parameter point 2 / 6
+08:39 madminer.sampling    DEBUG   Drawing 16667 events for the following parameter points:
+08:39 madminer.sampling    DEBUG     0: theta = [169.    1.5], nu = None (sampling)
+08:39 madminer.sampling    DEBUG     1: theta = [185.   8.], nu = None
+08:39 madminer.analysis    DEBUG   Calculating cross sections for thetas = ['169_15', '185_80'] and nus = [None, None]
+08:39 madminer.analysis    DEBUG   Batch 1 with 34907 events
+08:39 madminer.analysis    DEBUG   Nominal weights: [[2.5407079e-07 5.9333300e-07 1.8962240e-06 ... 1.3303750e-05
+  1.1133595e-06 7.6449645e-07]
+ [9.6187987e-09 6.2545144e-09 1.1008601e-08 ... 3.5976482e-06
+  6.5165825e-06 8.4962038e-06]]
+08:39 madminer.analysis    DEBUG   Nuisance factors: 1.0
+08:39 madminer.analysis    DEBUG   xsecs and uncertainties [pb]:
+08:39 madminer.analysis    DEBUG     (9.583009 +/- 0.622657) pb (6.497507 %)
+08:39 madminer.analysis    DEBUG     (0.432686 +/- 0.021505) pb (4.970011 %)
+08:39 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 1.0000000000000027
+08:39 madminer.sampling    INFO    Sampling from parameter point 3 / 6
+08:39 madminer.sampling    DEBUG   Drawing 16667 events for the following parameter points:
+08:39 madminer.sampling    DEBUG     0: theta = [170.    1.5], nu = None (sampling)
+08:39 madminer.sampling    DEBUG     1: theta = [160.   8.], nu = None
+08:39 madminer.analysis    DEBUG   Calculating cross sections for thetas = ['170_15', '160_80'] and nus = [None, None]
+08:39 madminer.analysis    DEBUG   Batch 1 with 34907 events
+08:39 madminer.analysis    DEBUG   Nominal weights: [[1.8901119e-07 3.6494433e-07 1.0593265e-06 ... 3.6032008e-05
+  1.5742701e-06 9.1822582e-07]
+ [6.6490500e-06 6.6490500e-06 6.6490500e-06 ... 2.4398870e-07
+  1.2873755e-07 2.1096349e-07]]
+08:39 madminer.analysis    DEBUG   Nuisance factors: 1.0
+08:39 madminer.analysis    DEBUG   xsecs and uncertainties [pb]:
+08:39 madminer.analysis    DEBUG     (9.970512 +/- 0.657629) pb (6.595735 %)
+08:39 madminer.analysis    DEBUG     (0.277237 +/- 0.012656) pb (4.565086 %)
+08:39 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999999987
+08:39 madminer.sampling    INFO    Sampling from parameter point 4 / 6
+08:39 madminer.sampling    DEBUG   Drawing 16667 events for the following parameter points:
+08:39 madminer.sampling    DEBUG     0: theta = [171.    1.5], nu = None (sampling)
+08:39 madminer.sampling    DEBUG     1: theta = [165.   8.], nu = None
+08:39 madminer.analysis    DEBUG   Calculating cross sections for thetas = ['171_15', '165_80'] and nus = [None, None]
+08:39 madminer.analysis    DEBUG   Batch 1 with 34907 events
+08:39 madminer.analysis    DEBUG   Nominal weights: [[1.4344150e-07 2.3656257e-07 6.3621027e-07 ... 1.4272809e-04
+  2.3262035e-06 1.1181278e-06]
+ [7.6579279e-07 2.3303305e-06 6.7800460e-06 ... 9.7014196e-07
+  3.3137360e-07 3.8848923e-07]]
+08:39 madminer.analysis    DEBUG   Nuisance factors: 1.0
+08:39 madminer.analysis    DEBUG   xsecs and uncertainties [pb]:
+08:39 madminer.analysis    DEBUG     (9.313621 +/- 0.491363) pb (5.275751 %)
+08:39 madminer.analysis    DEBUG     (0.306106 +/- 0.007500) pb (2.449994 %)
+08:39 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999999951
+08:39 madminer.sampling    INFO    Sampling from parameter point 5 / 6
+08:39 madminer.sampling    DEBUG   Drawing 16667 events for the following parameter points:
+08:39 madminer.sampling    DEBUG     0: theta = [172.    1.5], nu = None (sampling)
+08:39 madminer.sampling    DEBUG     1: theta = [175.   8.], nu = None
+08:39 madminer.analysis    DEBUG   Calculating cross sections for thetas = ['172_15', '175_80'] and nus = [None, None]
+08:39 madminer.analysis    DEBUG   Batch 1 with 34907 events
+08:39 madminer.analysis    DEBUG   Nominal weights: [[1.1076479e-07 1.5996523e-07 4.0423033e-07 ... 2.2277552e-04
+  3.6438687e-06 1.3838554e-06]
+ [5.0875204e-08 5.0187561e-08 1.0736658e-07 ... 8.6919777e-06
+  6.0572909e-06 2.3313944e-06]]
+08:39 madminer.analysis    DEBUG   Nuisance factors: 1.0
+08:39 madminer.analysis    DEBUG   xsecs and uncertainties [pb]:
+08:39 madminer.analysis    DEBUG     (9.600237 +/- 0.522762) pb (5.445305 %)
+08:39 madminer.analysis    DEBUG     (0.383610 +/- 0.007841) pb (2.044040 %)
+08:39 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999999971
+08:39 madminer.sampling    INFO    Sampling from parameter point 6 / 6
+08:39 madminer.sampling    DEBUG   Drawing 16667 events for the following parameter points:
+08:39 madminer.sampling    DEBUG     0: theta = [168.    1.5], nu = None (sampling)
+08:39 madminer.sampling    DEBUG     1: theta = [170.   8.], nu = None
+08:39 madminer.analysis    DEBUG   Calculating cross sections for thetas = ['168_15', '170_80'] and nus = [None, None]
+08:39 madminer.analysis    DEBUG   Batch 1 with 34907 events
+08:39 madminer.analysis    DEBUG   Nominal weights: [[3.4951148e-07 1.0313433e-06 3.7376206e-06 ... 6.2975780e-06
+  8.1503811e-07 6.4404434e-07]
+ [1.6156557e-07 2.4675945e-07 6.3219057e-07 ... 5.6418276e-06
+  1.1777216e-06 8.3562250e-07]]
+08:39 madminer.analysis    DEBUG   Nuisance factors: 1.0
+08:39 madminer.analysis    DEBUG   xsecs and uncertainties [pb]:
+08:39 madminer.analysis    DEBUG     (9.050188 +/- 0.436994) pb (4.828565 %)
+08:39 madminer.analysis    DEBUG     (0.339135 +/- 0.005036) pb (1.484808 %)
+08:39 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 1.0000000000000022
+08:39 madminer.sampling    INFO    Effective number of samples: mean 43.49179199296034, with individual thetas ranging from 22.79078044716552 to 67.19010776944091
+08:39 madminer.sampling    DEBUG   Effective number of samples for all thetas: [67.19010777 22.79078045 24.07213842 31.83786333 47.86975422 67.19010777]
+08:39 madminer.sampling    DEBUG   Starting sample extraction
+08:39 madminer.sampling    INFO    Starting sampling serially
+08:39 madminer.sampling    DEBUG   Will print training progress every 1 sets
+08:39 madminer.sampling    INFO    Sampling from parameter point 1 / 6
+08:39 madminer.sampling    DEBUG   Drawing 16667 events for the following parameter points:
+08:39 madminer.sampling    DEBUG     0: theta = [168.    1.5], nu = None
+08:39 madminer.sampling    DEBUG     1: theta = [180.   8.], nu = None (sampling)
+08:39 madminer.analysis    DEBUG   Calculating cross sections for thetas = ['168_15', '180_80'] and nus = [None, None]
+08:39 madminer.analysis    DEBUG   Batch 1 with 34907 events
+08:39 madminer.analysis    DEBUG   Nominal weights: [[3.4951148e-07 1.0313433e-06 3.7376206e-06 ... 6.2975780e-06
+  8.1503811e-07 6.4404434e-07]
+ [2.0426129e-08 1.5599003e-08 2.9739173e-08 ... 8.7306500e-06
+  8.7306500e-06 8.7306500e-06]]
+08:39 madminer.analysis    DEBUG   Nuisance factors: 1.0
+08:39 madminer.analysis    DEBUG   xsecs and uncertainties [pb]:
+08:39 madminer.analysis    DEBUG     (9.050188 +/- 0.436994) pb (4.828565 %)
+08:39 madminer.analysis    DEBUG     (0.401468 +/- 0.012388) pb (3.085625 %)
+08:39 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 1.0000000000000875
+08:39 madminer.sampling    INFO    Sampling from parameter point 2 / 6
+08:39 madminer.sampling    DEBUG   Drawing 16667 events for the following parameter points:
+08:39 madminer.sampling    DEBUG     0: theta = [169.    1.5], nu = None
+08:39 madminer.sampling    DEBUG     1: theta = [185.   8.], nu = None (sampling)
+08:39 madminer.analysis    DEBUG   Calculating cross sections for thetas = ['169_15', '185_80'] and nus = [None, None]
+08:39 madminer.analysis    DEBUG   Batch 1 with 34907 events
+08:39 madminer.analysis    DEBUG   Nominal weights: [[2.5407079e-07 5.9333300e-07 1.8962240e-06 ... 1.3303750e-05
+  1.1133595e-06 7.6449645e-07]
+ [9.6187987e-09 6.2545144e-09 1.1008601e-08 ... 3.5976482e-06
+  6.5165825e-06 8.4962038e-06]]
+08:39 madminer.analysis    DEBUG   Nuisance factors: 1.0
+08:39 madminer.analysis    DEBUG   xsecs and uncertainties [pb]:
+08:39 madminer.analysis    DEBUG     (9.583009 +/- 0.622657) pb (6.497507 %)
+08:39 madminer.analysis    DEBUG     (0.432686 +/- 0.021505) pb (4.970011 %)
+08:39 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.999999999999998
+08:39 madminer.sampling    INFO    Sampling from parameter point 3 / 6
+08:39 madminer.sampling    DEBUG   Drawing 16667 events for the following parameter points:
+08:39 madminer.sampling    DEBUG     0: theta = [170.    1.5], nu = None
+08:39 madminer.sampling    DEBUG     1: theta = [160.   8.], nu = None (sampling)
+08:39 madminer.analysis    DEBUG   Calculating cross sections for thetas = ['170_15', '160_80'] and nus = [None, None]
+08:39 madminer.analysis    DEBUG   Batch 1 with 34907 events
+08:39 madminer.analysis    DEBUG   Nominal weights: [[1.8901119e-07 3.6494433e-07 1.0593265e-06 ... 3.6032008e-05
+  1.5742701e-06 9.1822582e-07]
+ [6.6490500e-06 6.6490500e-06 6.6490500e-06 ... 2.4398870e-07
+  1.2873755e-07 2.1096349e-07]]
+08:39 madminer.analysis    DEBUG   Nuisance factors: 1.0
+08:39 madminer.analysis    DEBUG   xsecs and uncertainties [pb]:
+08:39 madminer.analysis    DEBUG     (9.970512 +/- 0.657629) pb (6.595735 %)
+08:39 madminer.analysis    DEBUG     (0.277237 +/- 0.012656) pb (4.565086 %)
+08:39 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999999852
+08:39 madminer.sampling    INFO    Sampling from parameter point 4 / 6
+08:39 madminer.sampling    DEBUG   Drawing 16667 events for the following parameter points:
+08:39 madminer.sampling    DEBUG     0: theta = [171.    1.5], nu = None
+08:39 madminer.sampling    DEBUG     1: theta = [165.   8.], nu = None (sampling)
+08:39 madminer.analysis    DEBUG   Calculating cross sections for thetas = ['171_15', '165_80'] and nus = [None, None]
+08:39 madminer.analysis    DEBUG   Batch 1 with 34907 events
+08:39 madminer.analysis    DEBUG   Nominal weights: [[1.4344150e-07 2.3656257e-07 6.3621027e-07 ... 1.4272809e-04
+  2.3262035e-06 1.1181278e-06]
+ [7.6579279e-07 2.3303305e-06 6.7800460e-06 ... 9.7014196e-07
+  3.3137360e-07 3.8848923e-07]]
+08:39 madminer.analysis    DEBUG   Nuisance factors: 1.0
+08:39 madminer.analysis    DEBUG   xsecs and uncertainties [pb]:
+08:39 madminer.analysis    DEBUG     (9.313621 +/- 0.491363) pb (5.275751 %)
+08:39 madminer.analysis    DEBUG     (0.306106 +/- 0.007500) pb (2.449994 %)
+08:39 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999999243
+08:39 madminer.sampling    INFO    Sampling from parameter point 5 / 6
+08:39 madminer.sampling    DEBUG   Drawing 16667 events for the following parameter points:
+08:39 madminer.sampling    DEBUG     0: theta = [172.    1.5], nu = None
+08:39 madminer.sampling    DEBUG     1: theta = [175.   8.], nu = None (sampling)
+08:39 madminer.analysis    DEBUG   Calculating cross sections for thetas = ['172_15', '175_80'] and nus = [None, None]
+08:39 madminer.analysis    DEBUG   Batch 1 with 34907 events
+08:39 madminer.analysis    DEBUG   Nominal weights: [[1.1076479e-07 1.5996523e-07 4.0423033e-07 ... 2.2277552e-04
+  3.6438687e-06 1.3838554e-06]
+ [5.0875204e-08 5.0187561e-08 1.0736658e-07 ... 8.6919777e-06
+  6.0572909e-06 2.3313944e-06]]
+08:39 madminer.analysis    DEBUG   Nuisance factors: 1.0
+08:39 madminer.analysis    DEBUG   xsecs and uncertainties [pb]:
+08:39 madminer.analysis    DEBUG     (9.600237 +/- 0.522762) pb (5.445305 %)
+08:39 madminer.analysis    DEBUG     (0.383610 +/- 0.007841) pb (2.044040 %)
+08:39 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999997077
+08:39 madminer.sampling    INFO    Sampling from parameter point 6 / 6
+08:39 madminer.sampling    DEBUG   Drawing 16667 events for the following parameter points:
+08:39 madminer.sampling    DEBUG     0: theta = [168.    1.5], nu = None
+08:39 madminer.sampling    DEBUG     1: theta = [170.   8.], nu = None (sampling)
+08:39 madminer.analysis    DEBUG   Calculating cross sections for thetas = ['168_15', '170_80'] and nus = [None, None]
+08:39 madminer.analysis    DEBUG   Batch 1 with 34907 events
+08:39 madminer.analysis    DEBUG   Nominal weights: [[3.4951148e-07 1.0313433e-06 3.7376206e-06 ... 6.2975780e-06
+  8.1503811e-07 6.4404434e-07]
+ [1.6156557e-07 2.4675945e-07 6.3219057e-07 ... 5.6418276e-06
+  1.1777216e-06 8.3562250e-07]]
+08:39 madminer.analysis    DEBUG   Nuisance factors: 1.0
+08:39 madminer.analysis    DEBUG   xsecs and uncertainties [pb]:
+08:39 madminer.analysis    DEBUG     (9.050188 +/- 0.436994) pb (4.828565 %)
+08:39 madminer.analysis    DEBUG     (0.339135 +/- 0.005036) pb (1.484808 %)
+08:39 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 1.0000000000000546
+08:39 madminer.sampling    INFO    Effective number of samples: mean 169.74512433686436, with individual thetas ranging from 41.513520878949535 to 466.6067837604673
+08:39 madminer.sampling    DEBUG   Effective number of samples for all thetas: [112.44333254  52.06402366  41.51352088  96.99714895 248.84593623
+ 466.60678376]
+08:39 madminer.sampling    INFO    Extracting evaluation sample. Sampling according to (u'benchmark', '172_15')
+08:39 madminer.sampling    DEBUG   Starting sample extraction
+08:39 madminer.sampling    INFO    Starting sampling serially
+08:39 madminer.sampling    DEBUG   Will print training progress every 1 sets
+08:39 madminer.sampling    INFO    Sampling from parameter point 1 / 1
+08:39 madminer.sampling    DEBUG   Drawing 200000 events for the following parameter points:
+08:39 madminer.sampling    DEBUG     0: theta = [172.    1.5], nu = None (sampling)
+08:39 madminer.analysis    DEBUG   Calculating cross sections for thetas = ['172_15'] and nus = [None]
+08:39 madminer.analysis    DEBUG   Batch 1 with 8726 events
+08:39 madminer.analysis    DEBUG   Nominal weights: [[1.3699203e-03 3.7574287e-07 1.7400135e-05 ... 3.4982382e-07
+  4.2734517e-05 2.7722093e-07]]
+08:39 madminer.analysis    DEBUG   Nuisance factors: 1.0
+08:39 madminer.analysis    DEBUG   xsecs and uncertainties [pb]:
+08:39 madminer.analysis    DEBUG     (9.371544 +/- 2.388408) pb (25.485750 %)
+08:39 madminer.sampling    WARNING Large statistical uncertainty on the total cross section when sampling from theta = [172.    1.5]: (9.371544 +/- 2.388408) pb (25.485750173361726 %). Skipping these warnings in the future...
+08:39 madminer.sampling    DEBUG     Cumulative probability (should be close to 1): 0.9999999999999992
+08:39 madminer.sampling    INFO    Effective number of samples: 5.564844861029227
+08:39 madminer.sampling    INFO    Starting cross-section calculation
+08:39 madminer.analysis    DEBUG   Calculating cross sections for thetas = ['160_15', '161_15', '162_15', '163_15', '164_15', '165_15', '166_15', '167_15', '168_15', '169_15', '170_15', '171_15', '172_15', '173_15', '174_15', '175_15', '176_15', '177_15', '178_15', '179_15', '180_15', '181_15', '182_15', '183_15', '184_15', '185_15'] and nus = None
+08:39 madminer.analysis    DEBUG   Batch 1 with 43634 events
+08:39 madminer.analysis    DEBUG   Nominal weights: [[2.7263167e-05 4.4547574e-04 6.6574409e-05 ... 6.4939408e-08
+  1.2688699e-06 1.7753454e-08]
+ [1.1216326e-05 3.1309333e-03 3.7758666e-04 ... 7.2702698e-08
+  1.7514902e-06 2.0902387e-08]
+ [5.4467477e-06 1.7995741e-03 3.3715335e-03 ... 8.1710137e-08
+  2.5049303e-06 2.4807833e-08]
+ ...
+ [1.3370747e-08 9.4864927e-09 1.7299396e-08 ... 6.3728695e-06
+  4.5831406e-04 2.8175541e-04]
+ [1.1527856e-08 7.9214666e-09 1.4215907e-08 ... 9.8795169e-06
+  1.4565539e-04 2.6794616e-04]
+ [9.9890333e-09 6.6660060e-09 1.1784812e-08 ... 1.6365269e-05
+  4.3613861e-05 4.7421816e-04]]
+08:39 madminer.analysis    DEBUG   Nuisance factors: 1.0
+08:39 madminer.analysis    DEBUG   xsecs and uncertainties [pb]:
+08:39 madminer.analysis    DEBUG     (8.333295 +/- 1.562219) pb (18.746713 %)
+08:39 madminer.analysis    DEBUG     (8.140817 +/- 1.221289) pb (15.002045 %)
+08:39 madminer.analysis    DEBUG     (11.059787 +/- 2.116226) pb (19.134422 %)
+08:39 madminer.analysis    DEBUG     (10.808435 +/- 2.379668) pb (22.016764 %)
+08:39 madminer.analysis    DEBUG     (10.056984 +/- 1.890829) pb (18.801154 %)
+08:39 madminer.analysis    DEBUG     (9.180186 +/- 1.343292) pb (14.632512 %)
+08:39 madminer.analysis    DEBUG     (9.186592 +/- 1.149797) pb (12.516033 %)
+08:39 madminer.analysis    DEBUG     (9.585827 +/- 1.022740) pb (10.669297 %)
+08:39 madminer.analysis    DEBUG     (8.798051 +/- 0.648060) pb (7.365947 %)
+08:39 madminer.analysis    DEBUG     (9.452081 +/- 0.773071) pb (8.178848 %)
+08:39 madminer.analysis    DEBUG     (10.681831 +/- 1.175964) pb (11.009012 %)
+08:39 madminer.analysis    DEBUG     (10.761670 +/- 1.453291) pb (13.504331 %)
+08:39 madminer.analysis    DEBUG     (9.554504 +/- 0.634885) pb (6.644879 %)
+08:39 madminer.analysis    DEBUG     (11.016906 +/- 0.849522) pb (7.711079 %)
+08:39 madminer.analysis    DEBUG     (12.196969 +/- 1.077168) pb (8.831440 %)
+08:39 madminer.analysis    DEBUG     (10.619452 +/- 0.888836) pb (8.369884 %)
+08:39 madminer.analysis    DEBUG     (9.958534 +/- 0.654584) pb (6.573092 %)
+08:39 madminer.analysis    DEBUG     (10.893919 +/- 0.856371) pb (7.860998 %)
+08:39 madminer.analysis    DEBUG     (12.338155 +/- 1.711412) pb (13.870887 %)
+08:39 madminer.analysis    DEBUG     (10.586122 +/- 1.003941) pb (9.483555 %)
+08:39 madminer.analysis    DEBUG     (10.055174 +/- 0.629229) pb (6.257764 %)
+08:39 madminer.analysis    DEBUG     (11.086550 +/- 0.860630) pb (7.762832 %)
+08:39 madminer.analysis    DEBUG     (10.357310 +/- 0.842088) pb (8.130373 %)
+08:39 madminer.analysis    DEBUG     (13.313892 +/- 3.049430) pb (22.904118 %)
+08:39 madminer.analysis    DEBUG     (13.825707 +/- 2.513328) pb (18.178658 %)
+08:39 madminer.analysis    DEBUG     (13.838163 +/- 2.391393) pb (17.281147 %)
+08:39 root                 INFO    [ 8.33329474  8.14081682 11.05978714 10.80843475 10.05698388  9.18018611
+  9.18659243  9.58582686  8.79805118  9.45208066 10.68183132 10.76166953
+  9.55450364 11.01690567 12.19696927 10.61945184  9.95853387 10.89391902
+ 12.33815502 10.58612226 10.0551736  11.08654993 10.35731038 13.31389206
+ 13.82570742 13.83816282]
+08:39 matplotlib.backends. INFO    Could not load matplotlib icon: can't use "pyimage10" as iconphoto: not a photo image
+08:39 root                 INFO    running forge
+08:39 madminer.ml          INFO    Starting training
+08:39 madminer.ml          INFO      Method:                 alice
+08:39 madminer.ml          INFO      Batch size:             250
+08:39 madminer.ml          INFO      Optimizer:              amsgrad
+08:39 madminer.ml          INFO      Epochs:                 20
+08:39 madminer.ml          INFO      Learning rate:          0.001 initially, decaying to 0.0001
+08:39 madminer.ml          INFO      Validation split:       0.3
+08:39 madminer.ml          INFO      Early stopping:         True
+08:39 madminer.ml          INFO      Scale inputs:           True
+08:39 madminer.ml          INFO      Shuffle labels          False
+08:39 madminer.ml          INFO      Samples:                all
+08:39 madminer.ml          INFO    Loading training data
+08:39 madminer.ml          INFO    Found 1199996 samples with 2 parameters and 22 observables
+08:39 madminer.ml          INFO    Rescaling inputs
+08:39 madminer.ml          INFO    Creating model
+08:39 madminer.ml          INFO    Training model
+08:39 madminer.utils.ml.tr DEBUG   Training on GPU with single precision
+08:39 madminer.utils.ml.tr DEBUG   Initialising training data
+08:39 madminer.utils.ml.tr DEBUG   Model score will not be calculated
+08:39 madminer.utils.ml.tr DEBUG   Training data:
+08:39 madminer.utils.ml.tr DEBUG     x: shape (1199996, 22), first [ 0.31826668  2.15112042 -0.61147873  0.73821854 -0.29642526  1.05532548
+  0.28903964 -1.38849826 -0.61388238 -0.26346213 -0.16891853  0.63362512
+ -0.14766422  1.22668885 -0.33515752 -1.0096293   0.35589874 -0.28704509
+ -0.82270055 -0.16118917 -0.63418688 -0.37852774], mean [ 1.48294607e-12  1.41953725e-13  3.98519771e-14  1.00099468e-14
+  5.56082219e-13 -2.40537283e-13 -1.54473129e-14  4.61018354e-15
+ -3.49322355e-13  2.39203889e-14  3.05773800e-14 -1.13412540e-14
+  1.94630402e-13  5.24635860e-13  1.81535551e-14 -1.74995147e-14
+  1.65210196e-12  5.25638478e-13  1.60301248e-13 -7.44268356e-13
+ -4.17548186e-13 -1.54609604e-12], min [-0.98234882 -1.56411473 -3.45770288 -1.7711132  -0.80123941 -1.12088743
+ -3.27458282 -1.71207879 -0.83159731 -1.04618165 -3.35681472 -1.80337533
+ -0.81545359 -1.01810275 -3.25028868 -1.69172859 -1.18999457 -1.04234125
+ -1.01043984 -1.02730216 -1.00157895 -1.68711229], max [11.84018106 10.88542319  3.29289768  1.67872574 14.44719351 15.05033709
+  3.23902463  1.81314416 14.58673472 11.8817709   3.54503552  1.68247586
+ 14.49992947 14.62102425  3.28044491  1.7350065  13.26407976 10.78020541
+ 12.28285619 11.69493344 10.68710149  7.69561455]
+08:39 madminer.utils.ml.tr DEBUG     theta: shape (1199996, 2), first [179.    1.5], mean [172.5   1.5], min [160.    1.5], max [185.    1.5]
+08:39 madminer.utils.ml.tr DEBUG     y: shape (1199996, 1), first [1.], mean [0.5], min [0.], max [1.]
+08:39 madminer.utils.ml.tr DEBUG     r_xz: shape (1199996, 1), first [0.40615586], mean [4.94777684], min [0.01803486], max [45.50875915]
+08:39 madminer.utils.ml.tr DEBUG   Setting up optimizer
+08:39 madminer.utils.ml.tr DEBUG   Using early stopping with infinite patience
+08:39 madminer.utils.ml.tr DEBUG   Will print training progress every 1 epochs
+08:39 madminer.utils.ml.tr DEBUG   Beginning main training loop
+08:39 madminer.utils.ml.tr DEBUG   Training epoch 1 / 20
+08:39 madminer.utils.ml.tr DEBUG   Learning rate: 0.001
+09:49 madminer.utils.ml.tr INFO    Epoch   1: train loss  0.67452 (improved_xe:  0.675)
+09:49 madminer.utils.ml.tr INFO               val. loss   0.66257 (improved_xe:  0.663)
+09:49 madminer.utils.ml.tr DEBUG   Training epoch 2 / 20
+09:49 madminer.utils.ml.tr DEBUG   Learning rate: 0.00088586679041
+11:03 madminer.utils.ml.tr INFO    Epoch   2: train loss  0.65882 (improved_xe:  0.659)
+11:03 madminer.utils.ml.tr INFO               val. loss   0.65584 (improved_xe:  0.656)
+11:03 madminer.utils.ml.tr DEBUG   Training epoch 3 / 20
+11:03 madminer.utils.ml.tr DEBUG   Learning rate: 0.000784759970351
+12:14 madminer.utils.ml.tr INFO    Epoch   3: train loss  0.65350 (improved_xe:  0.653)
+12:14 madminer.utils.ml.tr INFO               val. loss   0.65140 (improved_xe:  0.651)
+12:14 madminer.utils.ml.tr DEBUG   Training epoch 4 / 20
+12:14 madminer.utils.ml.tr DEBUG   Learning rate: 0.000695192796178
+13:25 madminer.utils.ml.tr INFO    Epoch   4: train loss  0.64987 (improved_xe:  0.650)
+13:25 madminer.utils.ml.tr INFO               val. loss   0.64736 (improved_xe:  0.647)
+13:25 madminer.utils.ml.tr DEBUG   Training epoch 5 / 20
+13:25 madminer.utils.ml.tr DEBUG   Learning rate: 0.000615848211066
+14:36 madminer.utils.ml.tr INFO    Epoch   5: train loss  0.64686 (improved_xe:  0.647)
+14:36 madminer.utils.ml.tr INFO               val. loss   0.64599 (improved_xe:  0.646)
+14:36 madminer.utils.ml.tr DEBUG   Training epoch 6 / 20
+14:36 madminer.utils.ml.tr DEBUG   Learning rate: 0.000545559478117
+15:47 madminer.utils.ml.tr INFO    Epoch   6: train loss  0.64381 (improved_xe:  0.644)
+15:47 madminer.utils.ml.tr INFO               val. loss   0.64154 (improved_xe:  0.642)
+15:47 madminer.utils.ml.tr DEBUG   Training epoch 7 / 20
+15:47 madminer.utils.ml.tr DEBUG   Learning rate: 0.000483293023857
+16:58 madminer.utils.ml.tr INFO    Epoch   7: train loss  0.64016 (improved_xe:  0.640)
+16:58 madminer.utils.ml.tr INFO               val. loss   0.64211 (improved_xe:  0.642)
+16:58 madminer.utils.ml.tr DEBUG   Training epoch 8 / 20
+16:58 madminer.utils.ml.tr DEBUG   Learning rate: 0.000428133239872
+18:12 madminer.utils.ml.tr INFO    Epoch   8: train loss  0.63769 (improved_xe:  0.638)
+18:12 madminer.utils.ml.tr INFO               val. loss   0.63787 (improved_xe:  0.638)
+18:12 madminer.utils.ml.tr DEBUG   Training epoch 9 / 20
+18:12 madminer.utils.ml.tr DEBUG   Learning rate: 0.000379269019073
+19:41 madminer.utils.ml.tr INFO    Epoch   9: train loss  0.63554 (improved_xe:  0.636)
+19:41 madminer.utils.ml.tr INFO               val. loss   0.63416 (improved_xe:  0.634)
+19:41 madminer.utils.ml.tr DEBUG   Training epoch 10 / 20
+19:41 madminer.utils.ml.tr DEBUG   Learning rate: 0.000335981828628
+20:59 madminer.utils.ml.tr INFO    Epoch  10: train loss  0.63376 (improved_xe:  0.634)
+20:59 madminer.utils.ml.tr INFO               val. loss   0.63293 (improved_xe:  0.633)
+20:59 madminer.utils.ml.tr DEBUG   Training epoch 11 / 20
+20:59 madminer.utils.ml.tr DEBUG   Learning rate: 0.000297635144163
+22:15 madminer.utils.ml.tr INFO    Epoch  11: train loss  0.63218 (improved_xe:  0.632)
+22:15 madminer.utils.ml.tr INFO               val. loss   0.63127 (improved_xe:  0.631)
+22:15 madminer.utils.ml.tr DEBUG   Training epoch 12 / 20
+22:15 madminer.utils.ml.tr DEBUG   Learning rate: 0.000263665089873

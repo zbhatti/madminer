@@ -734,7 +734,7 @@ class ParameterizedRatioEstimator(ConditionalEstimator):
         )
         return result
 
-    def evaluate_log_likelihood_ratio(self, x, theta, test_all_combinations=True, evaluate_score=False):
+    def evaluate_log_likelihood_ratio(self, x, theta, test_all_combinations=True, evaluate_score=False, run_on_gpu=True):
         """
         Evaluates the log likelihood ratio for given observations x betwen the given parameter point theta and the
         reference hypothesis.
@@ -799,6 +799,7 @@ class ParameterizedRatioEstimator(ConditionalEstimator):
                     theta1s=None,
                     xs=x,
                     evaluate_score=evaluate_score,
+                    run_on_gpu=run_on_gpu,
                 )
 
                 t_hat = self._transform_score(t_hat, inverse=True)
@@ -1323,7 +1324,7 @@ class DoubleParameterizedRatioEstimator(ConditionalEstimator):
         )
         return result
 
-    def evaluate_log_likelihood_ratio(self, x, theta0, theta1, test_all_combinations=True, evaluate_score=False):
+    def evaluate_log_likelihood_ratio(self, x, theta0, theta1, test_all_combinations=True, evaluate_score=False, run_on_gpu=True):
         """
         Evaluates the log likelihood ratio as a function of the observation x, the numerator hypothesis theta0, and
         the denominator hypothesis theta1.
@@ -1409,6 +1410,7 @@ class DoubleParameterizedRatioEstimator(ConditionalEstimator):
                     theta1s=[this_theta1],
                     xs=x,
                     evaluate_score=evaluate_score,
+                    run_on_gpu=run_on_gpu,
                 )
 
                 all_log_r_hat.append(log_r_hat)
