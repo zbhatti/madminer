@@ -93,9 +93,9 @@ def main():
 
     # control which steps are rerun
     rerun_madgraph = False
-    rerun_lhereader = False
-    rerun_sample_augmenter = False
-    rerun_forge_train = False
+    rerun_lhereader = True
+    rerun_sample_augmenter = True
+    rerun_forge_train = True
     rerun_forge_evaluate = True
 
     n_events = scrape_n_events(run_card)
@@ -305,6 +305,7 @@ def main():
                              validation_split=0.3,
                              batch_size=256,
                              initial_lr=0.001,
+                             scale_inputs=True
                              )
 
         forge.save(path.join(tutorial_dir, 'models/alice'))
