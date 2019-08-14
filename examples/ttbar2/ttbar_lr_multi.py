@@ -15,7 +15,7 @@ from madminer.lhe import LHEReader
 from madminer.sampling import combine_and_shuffle
 from madminer.sampling import SampleAugmenter
 from madminer.sampling import benchmark, benchmarks
-from madminer.ml import DoubleParameterizedRatioEstimator
+from madminer.ml import DoubleParameterizedRatioEstimator, ParameterizedRatioEstimator
 from madminer.plotting import plot_distributions
 from madminer.utils.particle import MadMinerParticle
 
@@ -31,7 +31,7 @@ def calc_mT(vis, invis):
 # from proc_card g g > t t~,  t > b  e+ ve, t~ > b~ mu- vm~
 # particles index:                0   1  2        3  4    5
 # particle id:                    5 -11 12       -5 13  -14
-def mt2(particles):
+def mt2(particles, leptons, photons, jets, met):
     b, e, ve, bbar, mu, vm = particles
     n_picks = 1000
     visible_sum_1 = MadMinerParticle()
@@ -93,7 +93,7 @@ def main():
 
     # control which steps are rerun
     rerun_madgraph = False
-    rerun_lhereader = True
+    rerun_lhereader = False
     rerun_sample_augmenter = True
     rerun_forge_train = True
     rerun_forge_evaluate = True
@@ -254,7 +254,7 @@ def main():
         train_result = sa.sample_train_ratio(
             theta0=benchmarks([b.name for b in physics_benchmarks]),
             theta1=benchmark('170_80'),
-            n_samples=n_events*10,
+            n_samples=n_events*100,
             sample_only_from_closest_benchmark=True,
             folder=path.join(tutorial_dir, 'data/samples'),
             filename='train',
@@ -286,8 +286,8 @@ def main():
     if rerun_sample_augmenter:
         del sa
 
-    # forge = DoubleParameterizedRatioEstimator(features=feature_train_list, n_hidden=(100, 100))
     forge = DoubleParameterizedRatioEstimator(n_hidden=(100, 100))
+    forge = ParameterizedRatioEstimator(n_hidden=(100, 100))
     if rerun_forge_train:
         logging.info('running forge')
         x_train_path = path.join(tutorial_dir, 'data/samples/x_train.npy')
@@ -298,8 +298,9 @@ def main():
         result = forge.train(method='alice',
                              x=x_train_path,
                              y=y_train_path,
-                             theta0=theta0_train_path,
-                             theta1=theta1_train_path,
+                             theta=theta0_train_path,
+                             # theta0=theta0_train_path,
+                             # theta1=theta1_train_path,
                              r_xz=r_xz_train_path,
                              n_epochs=25,
                              validation_split=0.3,
@@ -332,9 +333,11 @@ def main():
     np.save(path.join(tutorial_dir, 'data/samples/mass_width_grid_1.npy'), mass_width_grid_1)
 
     if rerun_forge_evaluate:
-        log_r_hat, _0, _1 = forge.evaluate(
-            theta0=path.join(tutorial_dir, 'data/samples/mass_width_grid_0.npy'),
-            theta1=path.join(tutorial_dir, 'data/samples/mass_width_grid_1.npy'),
+        # log_r_hat, _0, _1 = forge.evaluate(
+        log_r_hat, _0 = forge.evaluate(
+            theta=path.join(tutorial_dir, 'data/samples/mass_width_grid_0.npy'),
+            # theta0=path.join(tutorial_dir, 'data/samples/mass_width_grid_0.npy'),
+            # theta1=path.join(tutorial_dir, 'data/samples/mass_width_grid_1.npy'),
             x=path.join(tutorial_dir, 'data/samples/x_test.npy'),
             test_all_combinations=True,
             evaluate_score=False,

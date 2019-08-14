@@ -125,7 +125,7 @@ int main(int argc, char** argv) {
     
     // generate x_test.csv with python:
     // python -c 'import numpy as np; x_test = np.load("/home/zbhatti/codebase/madminer/examples/ttbar2/data/samples/x_test.npy");
-    // np.savetxt("/home/zbhatti/codebase/madminer/examples/ttbar2/data/samples/x_test.csv", x_test, delimiter=",")'
+    // np.savetxt("/home/zbhatti/codebase/madminer/momemta/inputs/x_test.csv", x_test, delimiter=",")'
     
     std::vector<std::vector<float>> x_test = parse2DCsvFile("/home/zbhatti/codebase/madminer/momemta/inputs/x_test.csv");
     
@@ -141,7 +141,7 @@ int main(int argc, char** argv) {
     LOG(info) << "****End****";
     
     std::ofstream outputFile;
-    outputFile.open("/home/zbhatti/codebase/madminer/momemta/weights5.csv");
+    outputFile.open("/home/zbhatti/codebase/madminer/momemta/weights6.csv");
     
     for (int k=0; k < o_benchmarks -1 -5; k++){
         outputFile << benchmarksValues[k][0] << ",";
