@@ -219,7 +219,7 @@ def main():
         proc.add_observable_from_function('mt2', mt2, required=True)
 
         # proc.analyse_samples(reference_benchmark=expected_benchmark.name, parse_events_as_xml=True)
-        proc.analyse_samples( parse_events_as_xml=True)
+        proc.analyse_samples(parse_events_as_xml=True)
         proc.save(miner_h5_path_with_lhe)
 
         logging.info(proc.observables)
