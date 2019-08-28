@@ -92,8 +92,8 @@ def main():
     mass_low, mass_high = (160, 186)  # high is exclusive
 
     # control which steps are rerun
-    rerun_madgraph = False
-    rerun_lhereader = False
+    rerun_madgraph = True
+    rerun_lhereader = True
     rerun_sample_augmenter = True
     rerun_forge_train = True
     rerun_forge_evaluate = True
@@ -218,7 +218,30 @@ def main():
 
         proc.add_observable_from_function('mt2', mt2, required=True)
 
-        # proc.analyse_samples(reference_benchmark=expected_benchmark.name, parse_events_as_xml=True)
+        proc.set_smearing(
+            pdgids=[5, -5], # Partons giving rise to jets lead to muddier results
+            energy_resolution_abs=0.,
+            energy_resolution_rel=0.1,
+            pt_resolution_abs=None,
+            pt_resolution_rel=None,
+            eta_resolution_abs=0,
+            eta_resolution_rel=0,
+            phi_resolution_abs=0,
+            phi_resolution_rel=0,
+        )
+
+        proc.set_smearing(
+            pdgids=[11, 13, -11, -13], # electron and muon smearing is minimal since semiconductor based detection is so excellent
+            energy_resolution_abs=0.,
+            energy_resolution_rel=0.05,
+            pt_resolution_abs=None,
+            pt_resolution_rel=None,
+            eta_resolution_abs=0,
+            eta_resolution_rel=0,
+            phi_resolution_abs=0,
+            phi_resolution_rel=0,
+        )
+
         proc.analyse_samples(parse_events_as_xml=True)
         proc.save(miner_h5_path_with_lhe)
 
@@ -254,7 +277,7 @@ def main():
         train_result = sa.sample_train_ratio(
             theta0=benchmarks([b.name for b in physics_benchmarks]),
             theta1=benchmark('170_80'),
-            n_samples=n_events*100,
+            n_samples=n_events*10,
             sample_only_from_closest_benchmark=True,
             folder=path.join(tutorial_dir, 'data/samples'),
             filename='train',
@@ -286,7 +309,7 @@ def main():
     if rerun_sample_augmenter:
         del sa
 
-    forge = DoubleParameterizedRatioEstimator(n_hidden=(100, 100))
+    # forge = DoubleParameterizedRatioEstimator(n_hidden=(100, 100))
     forge = ParameterizedRatioEstimator(n_hidden=(100, 100))
     if rerun_forge_train:
         logging.info('running forge')

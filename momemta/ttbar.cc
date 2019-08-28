@@ -121,7 +121,7 @@ int main(int argc, char** argv) {
     LOG(info) << "o_benchmarks: " << o_benchmarks;
     
     // const int totalRows = 200000;
-    const int rows = 300;
+    const int rows = 10;
     
     // generate x_test.csv with python:
     // python -c 'import numpy as np; x_test = np.load("/home/zbhatti/codebase/madminer/examples/ttbar2/data/samples/x_test.npy");
@@ -141,7 +141,7 @@ int main(int argc, char** argv) {
     LOG(info) << "****End****";
     
     std::ofstream outputFile;
-    outputFile.open("/home/zbhatti/codebase/madminer/momemta/weights6.csv");
+    outputFile.open("/home/zbhatti/codebase/madminer/momemta/weights7.csv");
     
     for (int k=0; k < o_benchmarks -1 -5; k++){
         outputFile << benchmarksValues[k][0] << ",";
