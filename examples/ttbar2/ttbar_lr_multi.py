@@ -88,12 +88,13 @@ def main():
     miner_h5_path_with_lhe = miner_h5_path.replace('.h5', '_with_data.h5')
     miner_h5_path_shuffled = miner_h5_path.replace('.h5', '_shuffled.h5')
     run_card = path.join(tutorial_dir, 'cards/ttbar_run_card.dat')
+    run_card_more = path.join(tutorial_dir, 'cards/ttbar_more_run_card.dat')
 
     mass_low, mass_high = (160, 186)  # high is exclusive
 
     # control which steps are rerun
-    rerun_madgraph = True
-    rerun_lhereader = True
+    rerun_madgraph = False
+    rerun_lhereader = False
     rerun_sample_augmenter = True
     rerun_forge_train = True
     rerun_forge_evaluate = True
@@ -105,6 +106,9 @@ def main():
     physics_benchmarks = [Benchmark(float(i), 1.5, '{0}_{1}'.format(i, 15)) for i in range(mass_low, mass_high)]
     expected_benchmark = Benchmark(172.0, 1.5, '172_15')
     artificial_benchmarks = [Benchmark(float(i), 8.0, '{0}_{1}'.format(i, 80)) for i in range(mass_low, mass_high, 5)]
+
+    regular_sample_benchmarks = [cb.name for cb in artificial_benchmarks if cb.name != '170_80']
+    high_sample_benchmarks = [expected_benchmark.name]
 
     miner = MadMiner()
     if rerun_madgraph:
@@ -125,9 +129,8 @@ def main():
         for b in physics_benchmarks + artificial_benchmarks:
             miner.add_benchmark({'TOP_MASS': b.mass, 'TOP_WIDTH': b.width}, b.name)
 
-        miner.save(miner_h5_path)
         miner.run_multiple(
-            sample_benchmarks=[cb.name for cb in artificial_benchmarks],
+            sample_benchmarks=regular_sample_benchmarks,
             mg_directory=mg_dir,
             mg_process_directory=path.join(tutorial_dir, 'mg_processes/signal'),
             proc_card_file=path.join(tutorial_dir, 'cards/ttbar_proc_card.dat'),
@@ -135,6 +138,17 @@ def main():
             run_card_files=[run_card],
             log_directory=path.join(tutorial_dir, 'logs/signal'),
         )
+        miner.run_multiple(
+            sample_benchmarks=high_sample_benchmarks,
+            mg_directory=mg_dir,
+            mg_process_directory=path.join(tutorial_dir, 'mg_processes/signal2'),
+            proc_card_file=path.join(tutorial_dir, 'cards/ttbar_proc_card.dat'),
+            param_card_template_file=path.join(tutorial_dir, 'cards/param_card_template.dat'),
+            run_card_files=[run_card_more],
+            log_directory=path.join(tutorial_dir, 'logs/signal2'),
+        )
+        miner.save(miner_h5_path)
+
     else:
         logging.info('loading miner results...')
         miner.load(miner_h5_path)
@@ -150,13 +164,23 @@ def main():
             'j_0': 'j[0]',
             'j_1': 'j[1]',
         }
+        proc = LHEReader(miner_h5_path)
 
         i = 1
-        proc = LHEReader(miner_h5_path)
-        for art_bench in artificial_benchmarks:
+        for sample_bench in regular_sample_benchmarks:
             proc.add_sample(
                 lhe_filename=path.join(tutorial_dir, 'mg_processes/signal/Events/run_{0:0>2}/unweighted_events.lhe.gz'.format(i)),
-                sampled_from_benchmark=art_bench.name,
+                sampled_from_benchmark=sample_bench,
+                is_background=False,
+                k_factor=1.0,
+            )
+            i += 1
+
+        i = 1
+        for sample_bench in high_sample_benchmarks:
+            proc.add_sample(
+                lhe_filename=path.join(tutorial_dir, 'mg_processes/signal2/Events/run_{0:0>2}/unweighted_events.lhe.gz'.format(i)),
+                sampled_from_benchmark=sample_bench,
                 is_background=False,
                 k_factor=1.0,
             )
