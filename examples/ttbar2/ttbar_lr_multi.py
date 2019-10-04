@@ -100,7 +100,11 @@ def main():
     rerun_forge_evaluate = True
 
     n_events = scrape_n_events(run_card)
-    logging.info('running madgraph on {0} events'.format(n_events))
+    n_more_events = scrape_n_events(run_card_more)
+    n_train_events = n_more_events * 10
+    n_test_events = n_events
+
+    logging.info('running madgraph on {0} events and {1} more events'.format(n_events, n_more_events))
 
     Benchmark = namedtuple('Benchmark', ['mass', 'width', 'name'])
     physics_benchmarks = [Benchmark(float(i), 1.5, '{0}_{1}'.format(i, 15)) for i in range(mass_low, mass_high)]
@@ -301,7 +305,7 @@ def main():
         train_result = sa.sample_train_ratio(
             theta0=benchmarks([b.name for b in physics_benchmarks]),
             theta1=benchmark('170_80'),
-            n_samples=n_events*10,
+            n_samples=n_train_events,
             sample_only_from_closest_benchmark=True,
             folder=path.join(tutorial_dir, 'data/samples'),
             filename='train',
@@ -309,7 +313,7 @@ def main():
 
         _0 = sa.sample_test(
             theta=benchmark(expected_benchmark.name),
-            n_samples=n_events*10,
+            n_samples=n_test_events,
             folder=path.join(tutorial_dir, 'data/samples'),
             filename='test'
         )
