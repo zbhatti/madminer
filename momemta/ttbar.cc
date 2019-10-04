@@ -121,7 +121,7 @@ int main(int argc, char** argv) {
     LOG(info) << "o_benchmarks: " << o_benchmarks;
     
     // const int totalRows = 200000;
-    const int rows = 10;
+    const int rows = 100;
     
     // generate x_test.csv with python:
     // python -c 'import numpy as np; x_test = np.load("/home/zbhatti/codebase/madminer/examples/ttbar2/data/samples/x_test.npy");
@@ -136,19 +136,19 @@ int main(int argc, char** argv) {
     LOG(info) << "****Sample of benchmark values****";
     LOG(info) << benchmarksValues[0][0];
     LOG(info) << benchmarksValues[5][0];
-    LOG(info) << benchmarksValues[13][0];
+    LOG(info) << benchmarksValues[12][0];
     LOG(info) << benchmarksValues[o_benchmarks -1][0];
     LOG(info) << "****End****";
     
     std::ofstream outputFile;
-    outputFile.open("/home/zbhatti/codebase/madminer/momemta/weights7.csv");
+    outputFile.open("/home/zbhatti/codebase/madminer/momemta/weights8.csv");
     
     for (int k=0; k < o_benchmarks -1 -5; k++){
         outputFile << benchmarksValues[k][0] << ",";
     }
     outputFile << std::endl;
     
-    // loop over events in the h5py file from madminer and add particle lorentz vectors:
+    // loop over events in the numpy file from madminer and add particle lorentz vectors:
     for(int i=0; i < rows; i++){
         std::vector<float> eventWeights;
         LOG(info) << "calculating event " << i << "/" << rows;
@@ -247,7 +247,7 @@ int main(int argc, char** argv) {
             
             outputFile << eventWeights[k] << ",";
             
-            weightRatios.push_back(eventWeights[k]/eventWeights[13]);
+            weightRatios.push_back(eventWeights[k]/eventWeights[12]);
             LOG(info) << "ratio: " << weightRatios[k];
         }
         outputFile << std::endl;
