@@ -95,24 +95,25 @@ def main():
     # control which steps are rerun
     rerun_madgraph = False
     rerun_lhereader = False
-    rerun_sample_augmenter = True
+    rerun_sample_augmenter = False
     rerun_forge_train = True
     rerun_forge_evaluate = True
 
     n_events = scrape_n_events(run_card)
     n_more_events = scrape_n_events(run_card_more)
     n_train_events = n_more_events * 10
-    n_test_events = n_events
+    n_test_events = 10000
 
     logging.info('running madgraph on {0} events and {1} more events'.format(n_events, n_more_events))
 
     Benchmark = namedtuple('Benchmark', ['mass', 'width', 'name'])
     physics_benchmarks = [Benchmark(float(i), 1.5, '{0}_{1}'.format(i, 15)) for i in range(mass_low, mass_high)]
     expected_benchmark = Benchmark(172.0, 1.5, '172_15')
-    artificial_benchmarks = [Benchmark(float(i), 8.0, '{0}_{1}'.format(i, 80)) for i in range(mass_low, mass_high, 5)]
+    artificial_benchmarks = [Benchmark(float(i), 4.0, '{0}_{1}'.format(i, 40)) for i in range(mass_low, mass_high, 5)]
+    high_sample_benchmark = Benchmark(172.5, 4.0, '172.5_40')
 
-    regular_sample_benchmarks = [cb.name for cb in artificial_benchmarks if cb.name != '170_80']
-    high_sample_benchmarks = [expected_benchmark.name]
+    low_sample_benchmarks = [cb.name for cb in artificial_benchmarks]
+    high_sample_benchmarks = [high_sample_benchmark.name]
 
     miner = MadMiner()
     if rerun_madgraph:
@@ -130,11 +131,11 @@ def main():
         )
 
         # add scanning points
-        for b in physics_benchmarks + artificial_benchmarks:
+        for b in physics_benchmarks + artificial_benchmarks + [high_sample_benchmark]:
             miner.add_benchmark({'TOP_MASS': b.mass, 'TOP_WIDTH': b.width}, b.name)
 
         miner.run_multiple(
-            sample_benchmarks=regular_sample_benchmarks,
+            sample_benchmarks=low_sample_benchmarks,
             mg_directory=mg_dir,
             mg_process_directory=path.join(tutorial_dir, 'mg_processes/signal'),
             proc_card_file=path.join(tutorial_dir, 'cards/ttbar_proc_card.dat'),
@@ -143,7 +144,7 @@ def main():
             log_directory=path.join(tutorial_dir, 'logs/signal'),
         )
         miner.run_multiple(
-            sample_benchmarks=high_sample_benchmarks,
+            sample_benchmarks=[high_sample_benchmark.name],
             mg_directory=mg_dir,
             mg_process_directory=path.join(tutorial_dir, 'mg_processes/signal2'),
             proc_card_file=path.join(tutorial_dir, 'cards/ttbar_proc_card.dat'),
@@ -171,7 +172,7 @@ def main():
         proc = LHEReader(miner_h5_path)
 
         i = 1
-        for sample_bench in regular_sample_benchmarks:
+        for sample_bench in low_sample_benchmarks:
             proc.add_sample(
                 lhe_filename=path.join(tutorial_dir, 'mg_processes/signal/Events/run_{0:0>2}/unweighted_events.lhe.gz'.format(i)),
                 sampled_from_benchmark=sample_bench,
@@ -282,7 +283,7 @@ def main():
     # skip_feature = 17
     # feature_train_list = range(0, skip_feature) + range(skip_feature+1, 23) # skip met.phi()
 
-    parameter_points = ['160_15', '172_15', '185_15', '160_80', '170_80', '185_80']
+    parameter_points = ['160_15', '172_15', '185_15', '160_40', '170_40', '185_40']
     _ = plot_distributions(
         filename=miner_h5_path_with_lhe,
         uncertainties='none',
@@ -304,7 +305,7 @@ def main():
         sa = SampleAugmenter(miner_h5_path_shuffled)
         train_result = sa.sample_train_ratio(
             theta0=benchmarks([b.name for b in physics_benchmarks]),
-            theta1=benchmark('170_80'),
+            theta1=benchmark(high_sample_benchmark.name),
             n_samples=n_train_events,
             sample_only_from_closest_benchmark=True,
             folder=path.join(tutorial_dir, 'data/samples'),
@@ -337,7 +338,6 @@ def main():
     if rerun_sample_augmenter:
         del sa
 
-    # forge = DoubleParameterizedRatioEstimator(n_hidden=(100, 100))
     forge = ParameterizedRatioEstimator(n_hidden=(100, 100))
     if rerun_forge_train:
         logging.info('running forge')
@@ -345,13 +345,10 @@ def main():
         y_train_path = path.join(tutorial_dir, 'data/samples/y_train.npy')
         r_xz_train_path = path.join(tutorial_dir, 'data/samples/r_xz_train.npy')
         theta0_train_path = path.join(tutorial_dir, 'data/samples/theta0_train.npy')
-        theta1_train_path = path.join(tutorial_dir, 'data/samples/theta1_train.npy')
         result = forge.train(method='alice',
                              x=x_train_path,
                              y=y_train_path,
                              theta=theta0_train_path,
-                             # theta0=theta0_train_path,
-                             # theta1=theta1_train_path,
                              r_xz=r_xz_train_path,
                              n_epochs=25,
                              validation_split=0.3,
@@ -377,18 +374,15 @@ def main():
     np.save(path.join(tutorial_dir, 'data/samples/mass_width_grid_0.npy'), mass_width_grid_0)
 
     # theta 1
-    mass_bins = np.array([170., ])
-    width_bins = np.array([8.0, ])
+    mass_bins = np.array([172.5, ])
+    width_bins = np.array([4.0, ])
     mass, width = np.meshgrid(mass_bins, width_bins)
     mass_width_grid_1 = np.vstack((mass.flatten(), width.flatten())).T
     np.save(path.join(tutorial_dir, 'data/samples/mass_width_grid_1.npy'), mass_width_grid_1)
 
     if rerun_forge_evaluate:
-        # log_r_hat, _0, _1 = forge.evaluate(
         log_r_hat, _0 = forge.evaluate(
             theta=path.join(tutorial_dir, 'data/samples/mass_width_grid_0.npy'),
-            # theta0=path.join(tutorial_dir, 'data/samples/mass_width_grid_0.npy'),
-            # theta1=path.join(tutorial_dir, 'data/samples/mass_width_grid_1.npy'),
             x=path.join(tutorial_dir, 'data/samples/x_test.npy'),
             test_all_combinations=True,
             evaluate_score=False,
