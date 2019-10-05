@@ -109,8 +109,14 @@ int main(int argc, char** argv) {
     ConfigurationReader configuration("../examples/ttbar.lua", lua_parameters);
 
     // load data structures from h5py
+    // look the h5 file over and confirm hardcoded values in this file reflect the latest madminer setup
+    // h = h5py.File('madminer_example_mvm.h5')
+    // h['benchmarks']['names'][:]
+    
     H5::H5File m_h5File = H5File("/home/zbhatti/codebase/madminer/examples/ttbar2/data/madminer_example_mvm_shuffled.h5", H5F_ACC_RDONLY);
     DataSet benchValsSet = m_h5File.openDataSet("/benchmarks/values");
+    const int n_artificial_benchmarks = 7;
+    const int expected_value_benchmark_position = 12;
     
     DataSpace benchValsSpace = benchValsSet.getSpace();
         
@@ -121,7 +127,7 @@ int main(int argc, char** argv) {
     LOG(info) << "o_benchmarks: " << o_benchmarks;
     
     // const int totalRows = 200000;
-    const int rows = 100;
+    const int rows = 15;
     
     // generate x_test.csv with python:
     // python -c 'import numpy as np; x_test = np.load("/home/zbhatti/codebase/madminer/examples/ttbar2/data/samples/x_test.npy");
@@ -136,14 +142,14 @@ int main(int argc, char** argv) {
     LOG(info) << "****Sample of benchmark values****";
     LOG(info) << benchmarksValues[0][0];
     LOG(info) << benchmarksValues[5][0];
-    LOG(info) << benchmarksValues[12][0];
+    LOG(info) << benchmarksValues[expected_value_benchmark_position][0];
     LOG(info) << benchmarksValues[o_benchmarks -1][0];
     LOG(info) << "****End****";
     
     std::ofstream outputFile;
-    outputFile.open("/home/zbhatti/codebase/madminer/momemta/weights8.csv");
+    outputFile.open("/home/zbhatti/codebase/madminer/momemta/weights9.csv");
     
-    for (int k=0; k < o_benchmarks -1 -5; k++){
+    for (int k=0; k < o_benchmarks - n_artificial_benchmarks; k++){
         outputFile << benchmarksValues[k][0] << ",";
     }
     outputFile << std::endl;
@@ -153,8 +159,8 @@ int main(int argc, char** argv) {
         std::vector<float> eventWeights;
         LOG(info) << "calculating event " << i << "/" << rows;
         
-        // don't evaluate the wide benchmarks again: -5
-        for (int j=0; j < o_benchmarks -1 -5 ; j++){
+        // don't evaluate the wide artificial benchmarks:
+        for (int j=0; j < o_benchmarks - n_artificial_benchmarks; j++){
             
             float topMass =  benchmarksValues[j][0];
             LOG(info) << "calculating top_mass at " << topMass;
@@ -242,12 +248,12 @@ int main(int argc, char** argv) {
         LOG(info) << "finished computing event: " << i ;
         
         std::vector<float> weightRatios;        
-        for (int k=0; k < o_benchmarks -1 -5; k++){
+        for (int k=0; k < o_benchmarks - n_artificial_benchmarks; k++){
             LOG(info) << "weight: " << eventWeights[k];
             
             outputFile << eventWeights[k] << ",";
             
-            weightRatios.push_back(eventWeights[k]/eventWeights[12]);
+            weightRatios.push_back(eventWeights[k]/eventWeights[expected_value_benchmark_position]);
             LOG(info) << "ratio: " << weightRatios[k];
         }
         outputFile << std::endl;

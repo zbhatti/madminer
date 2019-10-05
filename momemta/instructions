@@ -1,0 +1,36 @@
+source files:
+    ~/codebase/madminer/examples/ttbar2/ttbar_lr_multi.py
+    ~/codebase/madminer/momemta/ttbar.cc
+    ~/codebase/madminer/momemta/ttbar.lua
+
+reproducing:
+0. get the right environment 
+    conda activate mm_vs_mem
+    source /home/zbhatti/util/root_build/bin/thisroot.sh
+
+1. run madminer script
+    cd ~/codebase/madminer/examples/ttbar2
+    python -u ttbar_lr_multi.py 2>&1 |tee smearing_1.out
+
+2. export x_test.npy into x_test.csv
+    python -c 'import numpy as np; x_test = np.load("/home/zbhatti/codebase/madminer/examples/ttbar2/data/samples/x_test.npy"); np.savetxt("/home/zbhatti/codebase/madminer/momemta/inputs/x_test.csv", x_test, delimiter=",")'
+
+3. copy source and compile momemta
+    cd ~/util/MoMEMta-1.0.0/build
+    edit source files to reflect new weight output paths
+    cp ~/codebase/madminer/momemta/ttbar.* ~/util/MoMEMta-1.0.0/examples/ && /opt/cmake-3.14.0-Linux-x86_64/bin/cmake -DPYTHON_BINDINGS=ON -DCMAKE_INSTALL_PREFIX=/home/zbhatti/util/ -DBOOST_ROOT=/home/zbhatti/util/MG5_aMC_v2_6_5/HEPTools/boost/boost_1_59_0/ -DBoost_DEBUG=ON -DEXAMPLES=ON .. && make -j4
+    
+4. run momemta
+    cd ~/util/MoMEMta-1.0.0/build
+    ./ttbar.exe 2>&1 |tee ~/codebase/madminer/momemta/log10.out
+
+5. copy output and artifacts from madminer x_test.npy and model files for analysis script
+    cd ~/codebase/madminer/examples/ttbar2
+    cp models/alice_* ../../momemta/inputs/
+    cp data/samples/x_test.npy ../../momemta/inputs/
+
+6. analysis script
+    cd ~/codebase/madminer/momemta    
+    jupyter-notebook
+    http://localhost:8888/notebooks/codebase/madminer/momemta/Momemta%20Ratios%20Analysis.ipynb
+    update weights file created by momemta
