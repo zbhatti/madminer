@@ -30,7 +30,7 @@ reproducing:
     cp data/samples/x_test.npy ../../momemta/inputs/
 
 6. analysis script
-    cd ~/codebase/madminer/momemta    
+    cd ~/codebase/madminer/momemta
     jupyter-notebook
     http://localhost:8888/notebooks/codebase/madminer/momemta/Momemta%20Ratios%20Analysis.ipynb
     update weights file created by momemta

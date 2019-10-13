@@ -147,7 +147,7 @@ int main(int argc, char** argv) {
     LOG(info) << "****End****";
     
     std::ofstream outputFile;
-    outputFile.open("/home/zbhatti/codebase/madminer/momemta/weights9.csv");
+    outputFile.open("/home/zbhatti/codebase/madminer/momemta/weights10.csv");
     
     for (int k=0; k < o_benchmarks - n_artificial_benchmarks; k++){
         outputFile << benchmarksValues[k][0] << ",";
