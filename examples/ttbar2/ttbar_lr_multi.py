@@ -95,7 +95,7 @@ def main():
     # control which steps are rerun
     rerun_madgraph = False
     rerun_lhereader = False
-    rerun_sample_augmenter = False
+    rerun_sample_augmenter = True
     rerun_forge_train = True
     rerun_forge_evaluate = True
 
@@ -103,6 +103,8 @@ def main():
     n_more_events = scrape_n_events(run_card_more)
     n_train_events = n_more_events * 10
     n_test_events = 10000
+    run_smearing = False
+
 
     logging.info('running madgraph on {0} events and {1} more events'.format(n_events, n_more_events))
 
@@ -247,29 +249,31 @@ def main():
 
         proc.add_observable_from_function('mt2', mt2, required=True)
 
-        proc.set_smearing(
-            pdgids=[5, -5], # Partons giving rise to jets lead to muddier results
-            energy_resolution_abs=0.,
-            energy_resolution_rel=0.1,
-            pt_resolution_abs=None,
-            pt_resolution_rel=None,
-            eta_resolution_abs=0,
-            eta_resolution_rel=0,
-            phi_resolution_abs=0,
-            phi_resolution_rel=0,
-        )
+        if run_smearing:
+            logging.info('running with smearing')
+            proc.set_smearing(
+                pdgids=[5, -5], # Partons giving rise to jets lead to muddier results
+                energy_resolution_abs=0.,
+                energy_resolution_rel=0.1,
+                pt_resolution_abs=None,
+                pt_resolution_rel=None,
+                eta_resolution_abs=0,
+                eta_resolution_rel=0,
+                phi_resolution_abs=0,
+                phi_resolution_rel=0,
+            )
 
-        proc.set_smearing(
-            pdgids=[11, 13, -11, -13], # electron and muon smearing is minimal since semiconductor based detection is so excellent
-            energy_resolution_abs=0.,
-            energy_resolution_rel=0.05,
-            pt_resolution_abs=None,
-            pt_resolution_rel=None,
-            eta_resolution_abs=0,
-            eta_resolution_rel=0,
-            phi_resolution_abs=0,
-            phi_resolution_rel=0,
-        )
+            proc.set_smearing(
+                pdgids=[11, 13, -11, -13], # electron and muon smearing is minimal since semiconductor based detection is so excellent
+                energy_resolution_abs=0.,
+                energy_resolution_rel=0.05,
+                pt_resolution_abs=None,
+                pt_resolution_rel=None,
+                eta_resolution_abs=0,
+                eta_resolution_rel=0,
+                phi_resolution_abs=0,
+                phi_resolution_rel=0,
+            )
 
         proc.analyse_samples(parse_events_as_xml=True)
         proc.save(miner_h5_path_with_lhe)
