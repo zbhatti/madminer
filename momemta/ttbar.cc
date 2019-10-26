@@ -95,13 +95,15 @@ std::vector<std::vector<float>> parse2DCsvFile(std::string inputFileName) {
     return data;
 }
 
-int main(int argc, char** argv) {
-
-    UNUSED(argc);
-    UNUSED(argv);    
+int main(int argc, char* argv[]) {
 
     logging::set_level(logging::level::info);
-
+    
+    std::string observations_h5_file; // "/home/zbhatti/codebase/madminer/examples/ttbar2/data/madminer_example_mvm_shuffled.h5"
+    std::string x_test_csv_file; // "/home/zbhatti/codebase/madminer/momemta/inputs/x_test.csv"
+    std::string weight_output_file; // "/home/zbhatti/codebase/madminer/momemta/weights10.csv"
+    
+    
     ParameterSet lua_parameters;
     lua_parameters.set("USE_TF", true);
     lua_parameters.set("USE_PERM", true);
@@ -113,7 +115,16 @@ int main(int argc, char** argv) {
     // h = h5py.File('madminer_example_mvm.h5')
     // h['benchmarks']['names'][:]
     
-    H5::H5File m_h5File = H5File("/home/zbhatti/codebase/madminer/examples/ttbar2/data/madminer_example_mvm_shuffled.h5", H5F_ACC_RDONLY);
+    if (argc < 4) { // We expect 3 arguments: the program name, the source path and the destination path
+        std::cerr << "Usage: " << argv[0] << "observations_h5_file x_test_csv_file weight_output_file" << std::endl;
+        return 1;
+    }
+    
+    observations_h5_file = argv[1];
+    x_test_csv_file = argv[2];
+    weight_output_file = argv[3];
+    
+    H5::H5File m_h5File = H5File(observations_h5_file, H5F_ACC_RDONLY);
     DataSet benchValsSet = m_h5File.openDataSet("/benchmarks/values");
     const int n_artificial_benchmarks = 7;
     const int expected_value_benchmark_position = 12;
@@ -126,14 +137,13 @@ int main(int argc, char** argv) {
     
     LOG(info) << "o_benchmarks: " << o_benchmarks;
     
-    // const int totalRows = 200000;
     const int rows = 15;
     
     // generate x_test.csv with python:
     // python -c 'import numpy as np; x_test = np.load("/home/zbhatti/codebase/madminer/examples/ttbar2/data/samples/x_test.npy");
     // np.savetxt("/home/zbhatti/codebase/madminer/momemta/inputs/x_test.csv", x_test, delimiter=",")'
     
-    std::vector<std::vector<float>> x_test = parse2DCsvFile("/home/zbhatti/codebase/madminer/momemta/inputs/x_test.csv");
+    std::vector<std::vector<float>> x_test = parse2DCsvFile(x_test_csv_file);
     
     float benchmarksValues[o_benchmarks][2];
     benchValsSet.read(&benchmarksValues[0], PredType::NATIVE_FLOAT, benchValsSpace);
@@ -147,7 +157,7 @@ int main(int argc, char** argv) {
     LOG(info) << "****End****";
     
     std::ofstream outputFile;
-    outputFile.open("/home/zbhatti/codebase/madminer/momemta/weights10.csv");
+    outputFile.open(weight_output_file);
     
     for (int k=0; k < o_benchmarks - n_artificial_benchmarks; k++){
         outputFile << benchmarksValues[k][0] << ",";
@@ -261,6 +271,6 @@ int main(int argc, char** argv) {
     }   
     outputFile.close();
     
-    LOG(info) << "Finished, remove commas with sed 's/,$//' weights.csv > weights_clean.csv " ;
+    LOG(info) << "Finished, weights are in: " << weight_output_file;
     return 0;
 }
