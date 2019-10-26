@@ -15,7 +15,7 @@ from madminer.lhe import LHEReader
 from madminer.sampling import combine_and_shuffle
 from madminer.sampling import SampleAugmenter
 from madminer.sampling import benchmark, benchmarks
-from madminer.ml import DoubleParameterizedRatioEstimator, ParameterizedRatioEstimator
+from madminer.ml import ParameterizedRatioEstimator
 from madminer.plotting import plot_distributions
 from madminer.utils.particle import MadMinerParticle
 
@@ -84,7 +84,7 @@ def main():
     setup_logging(path.join(tutorial_dir, 'output.log'))
     logging.info('tutorial directory: {0}'.format(tutorial_dir))
 
-    miner_h5_path = path.join(tutorial_dir,  'data/madminer_example_mvm.h5')
+    miner_h5_path = path.join(tutorial_dir,  'data/ttbar_mvm.h5')
     miner_h5_path_with_lhe = miner_h5_path.replace('.h5', '_with_data.h5')
     miner_h5_path_shuffled = miner_h5_path.replace('.h5', '_shuffled.h5')
     run_card = path.join(tutorial_dir, 'cards/ttbar_run_card.dat')
@@ -94,7 +94,7 @@ def main():
 
     # control which steps are rerun
     rerun_madgraph = False
-    rerun_lhereader = False
+    rerun_lhereader = True
     rerun_sample_augmenter = True
     rerun_forge_train = True
     rerun_forge_evaluate = True
@@ -103,8 +103,13 @@ def main():
     n_more_events = scrape_n_events(run_card_more)
     n_train_events = n_more_events * 10
     n_test_events = 10000
-    run_smearing = False
-
+    run_smearing = True
+    if run_smearing:
+        train_filename = 'train_w_smearing'
+        test_filename = 'test_w_smearing'
+    else:
+        train_filename = 'train_wo_smearing'
+        test_filename = 'test_wo_smearing'
 
     logging.info('running madgraph on {0} events and {1} more events'.format(n_events, n_more_events))
 
@@ -251,8 +256,10 @@ def main():
 
         if run_smearing:
             logging.info('running with smearing')
+
+            # Partons giving rise to jets lead to muddier results
             proc.set_smearing(
-                pdgids=[5, -5], # Partons giving rise to jets lead to muddier results
+                pdgids=[5, -5],
                 energy_resolution_abs=0.,
                 energy_resolution_rel=0.1,
                 pt_resolution_abs=None,
@@ -263,8 +270,9 @@ def main():
                 phi_resolution_rel=0,
             )
 
+            # charged lepton smearing is minimal since semiconductor based detection works well
             proc.set_smearing(
-                pdgids=[11, 13, -11, -13], # electron and muon smearing is minimal since semiconductor based detection is so excellent
+                pdgids=[11, 13, -11, -13],
                 energy_resolution_abs=0.,
                 energy_resolution_rel=0.05,
                 pt_resolution_abs=None,
@@ -313,14 +321,14 @@ def main():
             n_samples=n_train_events,
             sample_only_from_closest_benchmark=True,
             folder=path.join(tutorial_dir, 'data/samples'),
-            filename='train',
+            filename=train_filename,
         )
 
         _0 = sa.sample_test(
             theta=benchmark(expected_benchmark.name),
             n_samples=n_test_events,
             folder=path.join(tutorial_dir, 'data/samples'),
-            filename='test'
+            filename=test_filename,
         )
 
         thetas_benchmarks, xsecs_benchmarks, xsec_errors_benchmarks = sa.cross_sections(
@@ -345,10 +353,10 @@ def main():
     forge = ParameterizedRatioEstimator(n_hidden=(100, 100))
     if rerun_forge_train:
         logging.info('running forge')
-        x_train_path = path.join(tutorial_dir, 'data/samples/x_train.npy')
-        y_train_path = path.join(tutorial_dir, 'data/samples/y_train.npy')
-        r_xz_train_path = path.join(tutorial_dir, 'data/samples/r_xz_train.npy')
-        theta0_train_path = path.join(tutorial_dir, 'data/samples/theta0_train.npy')
+        x_train_path = path.join(tutorial_dir, 'data/samples/x_{}.npy'.format(train_filename))
+        y_train_path = path.join(tutorial_dir, 'data/samples/y_{}.npy'.format(train_filename))
+        r_xz_train_path = path.join(tutorial_dir, 'data/samples/r_xz_{}.npy'.format(train_filename))
+        theta0_train_path = path.join(tutorial_dir, 'data/samples/theta0_{}.npy'.format(train_filename))
         result = forge.train(method='alice',
                              x=x_train_path,
                              y=y_train_path,
@@ -387,7 +395,7 @@ def main():
     if rerun_forge_evaluate:
         log_r_hat, _0 = forge.evaluate(
             theta=path.join(tutorial_dir, 'data/samples/mass_width_grid_0.npy'),
-            x=path.join(tutorial_dir, 'data/samples/x_test.npy'),
+            x=path.join(tutorial_dir, 'data/samples/x_{}.npy'.format(test_filename)),
             test_all_combinations=True,
             evaluate_score=False,
             run_on_gpu=True,
@@ -406,10 +414,10 @@ def main():
     logging.info('best_fit {}'.format(best_fit_x_y))
     fig = plt.figure(figsize=(6, 5))
 
-    plt.plot(mass_width_grid_0[:, 0], llr, marker='o', ls=' ')
-    plt.scatter(best_fit_x_y[0], llr[best_fit_i], s=100., color='red', marker='*')
-    plt.xlabel('Mass (GeV)')
-    plt.ylabel('Likelihood Ratio')
+    plt.plot(mass_width_grid_0[:, 0], llr, marker='o', ls=' ', zorder=1)
+    plt.scatter(best_fit_x_y[0], llr[best_fit_i], s=100., color='red', marker='*', zorder=2)
+    plt.xlabel(r'$Mass (GeV)$')
+    plt.ylabel(r'$Likelihood Ratio -2logp(x|\theta)$')
     plt.savefig(path.join(tutorial_dir, 'llr.png'), bbox_inches='tight')
     plt.show()
     logging.info('')
