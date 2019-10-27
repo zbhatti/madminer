@@ -84,7 +84,7 @@ def main():
     setup_logging(path.join(tutorial_dir, 'output.log'))
     logging.info('tutorial directory: {0}'.format(tutorial_dir))
 
-    miner_h5_path = path.join(tutorial_dir,  'data/ttbar_mvm.h5')
+    miner_h5_path = path.join(tutorial_dir,  'data/miner_output.h5')
     miner_h5_path_with_lhe = miner_h5_path.replace('.h5', '_with_data.h5')
     miner_h5_path_shuffled = miner_h5_path.replace('.h5', '_shuffled.h5')
     run_card = path.join(tutorial_dir, 'cards/ttbar_run_card.dat')
