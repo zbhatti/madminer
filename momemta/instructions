@@ -17,19 +17,17 @@ reproducing:
 
 3. copy output and artifacts from madminer for analysis script
     cd ~/codebase/madminer/examples/ttbar2
-    cp models/alice_* ../../momemta/inputs/
+    cp models/alice_* ../../momemta/inputs/alice_wo_smearing/
     cp data/samples/x_test_w_smearing.npy ../../momemta/inputs/
-
 
 4. copy source and compile momemta
     cd ~/util/MoMEMta-1.0.0/build
-    edit source files to reflect new weight output paths
+    confirm source and lua files match experiment setup
     cp ~/codebase/madminer/momemta/ttbar.* ~/util/MoMEMta-1.0.0/examples/ && /opt/cmake-3.14.0-Linux-x86_64/bin/cmake -DPYTHON_BINDINGS=ON -DCMAKE_INSTALL_PREFIX=/home/zbhatti/util/ -DBOOST_ROOT=/home/zbhatti/util/MG5_aMC_v2_6_5/HEPTools/boost/boost_1_59_0/ -DBoost_DEBUG=ON -DEXAMPLES=ON .. && make -j4
     
 5. run momemta
     cd ~/util/MoMEMta-1.0.0/build
-    ./ttbar.exe 2>&1 |tee ~/codebase/madminer/momemta/log10.out
-
+    ./ttbar.exe ~/codebase/madminer/examples/ttbar2/data/miner_output_with_data.h5 ~/codebase/madminer/momemta/inputs/x_test_w_smearing.csv ~/codebase/madminer/momemta/weights11.csv 2>&1 |tee ~/codebase/madminer/momemta/log13.out
 
 
 6. analysis script
