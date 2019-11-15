@@ -4,6 +4,10 @@ from sys import argv
 from collections import namedtuple
 import logging
 
+# headless
+from matplotlib import use
+use("Agg")
+
 from numpy import NaN, isnan
 from random import gauss
 
@@ -182,7 +186,7 @@ class EventRunner:
             )
             i += 1
 
-        for name, definition in obs_particles.iteritems():
+        for name, definition in obs_particles.items():
             proc.add_observable(
                 str('{0}_E'.format(name)),
                 str('{0}.e'.format(definition)),
