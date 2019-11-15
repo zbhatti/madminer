@@ -430,7 +430,13 @@ def run_mg(
         initial_command = initial_command + "; "
 
     # Python 2 support
-    python_call = "python2.7 " if explicit_python_call else ""
+    if explicit_python_call == True:
+        python_call = "python2.7 "
+    elif explicit_python_call:
+        python_call = explicit_python_call
+    else:
+        python_call = ""
+
     _ = call_command(
         initial_command + python_call + mg_directory + "/bin/mg5_aMC " + proc_card_filename, log_file=log_file
     )
