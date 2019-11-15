@@ -2,8 +2,7 @@
 
 #SBATCH --job-name=zbhatti_madminer
 #SBATCH --output=log_%a_%j.log
-#SBATCH --nodes=10
-#SBATCH --ntasks-per-node=10
+#SBATCH --nodes=1
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=32GB
 #SBATCH --time=1-23:00:00
