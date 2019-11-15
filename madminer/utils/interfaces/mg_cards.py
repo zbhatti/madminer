@@ -129,7 +129,7 @@ def export_reweight_card(sample_benchmark, benchmarks, parameters, mg_process_di
         file.write(reweight_card)
 
 
-def export_run_card(template_filename, run_card_filename, systematics=None):
+def export_run_card(template_filename, run_card_filename, systematics=None, override_settings=None):
     # Open parameter card template
     with open(template_filename) as file:
         run_card_template = file.read()
@@ -183,6 +183,10 @@ def export_run_card(template_filename, run_card_filename, systematics=None):
 
         if line_key in entries_to_comment_out:
             run_card_lines[i] = "# {} # Commented out by MadMiner".format(line)
+            continue
+
+        if line_key in override_settings:
+            run_card_lines[i] = "{} = {} # Overriden by MadMiner".format(override_settings[line_key], line_key)
             continue
 
     # Add new entries - sytematics
