@@ -281,7 +281,22 @@ class EventRunner:
         pass
 
 
+def setup_logging():
+    # MadMiner output
+    logging.basicConfig(
+        format='%(asctime)-5.5s %(name)-20.20s %(levelname)-7.7s %(message)s',
+        datefmt='%H:%M',
+        level=logging.DEBUG
+    )
+
+    # Output of all other modules (e.g. matplotlib)
+    for key in logging.Logger.manager.loggerDict:
+        if "madminer" not in key:
+            logging.getLogger(key).setLevel(logging.DEBUG)
+
+
 def main():
+    setup_logging()
     logging.info('args: setup|generate|train few|many worker_id')
     if argv[1] == 'setup':
         EventRunner().build_setup()
