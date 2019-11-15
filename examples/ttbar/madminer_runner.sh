@@ -4,12 +4,12 @@
 #SBATCH --output=log_%a_%j.log
 #SBATCH --nodes=10
 #SBATCH --ntasks-per-node=10
-#SBATCH --cpus-per-task=2
+#SBATCH --cpus-per-task=1
 #SBATCH --mem=32GB
-#SBATCH --time=7-00:00:00
+#SBATCH --time=1-23:00:00
 ##SBATCH --gres=gpu:1
-#SBATCH --mail-user=zb609@nyu.edu
-#SBATCH --mail-type=END
+##SBATCH --mail-user=zb609@nyu.edu
+##SBATCH --mail-type=END
 
 export PATH=$PATH:$HOME/anaconda2/bin
 source $HOME/anaconda2/etc/profile.d/conda.sh
