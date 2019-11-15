@@ -19,4 +19,4 @@ source /scratch/zb609/root_build/bin/thisroot.sh
 
 cd $SCRATCH/madminer/examples/ttbar
 
-python -u batch_madminer_event_runner.py run $1 ${SLURM_ARRAY_TASK_ID}
+python -u batch_madminer_event_runner.py generate $1 ${SLURM_ARRAY_TASK_ID}
