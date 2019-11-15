@@ -278,6 +278,7 @@ class EventRunner:
 
 
 def main():
+    logging.info('args: setup|generate|train few|many worker_id')
     if argv[1] == 'setup':
         EventRunner().build_setup()
 
