@@ -89,6 +89,7 @@ class EventRunner:
         self.high_sample_benchmark_names = [self.wide_expected_benchmark.name]
 
         self.working_directory = '/scratch/zb609/madminer_data'
+        self.config_directory = ''
         self.miner_setup_path = path.join(self.working_directory,  'data/miner_setup.h5')
 
     #  run solo
@@ -117,20 +118,19 @@ class EventRunner:
     # run concurrently
     def generate_events(self, few_or_many, worker_id):
         mg_dir = str('/home/zb609/scratch_dir/MG5_aMC_v2_6_5')
-        event_data_path = self.miner_setup_path.replace('.h5', '_with_data.h5')
-
         working_directory = self.working_directory
+        config_directory = path.dirname(__file__)
 
         # shared inputs:
-        proc_card_path = path.join(working_directory, 'cards/ttbar_proc_card.dat')
-        param_template_path = path.join(working_directory, 'cards/param_card_template.dat')
+        proc_card_path = path.join(config_directory, 'cards/ttbar_proc_card.dat')
+        param_template_path = path.join(config_directory, 'cards/param_card_template.dat')
 
         if few_or_many == 'few':
-            run_card_path = path.join(working_directory, 'cards/ttbar_few_run_card.dat')
+            run_card_path = path.join(config_directory, 'cards/ttbar_few_run_card.dat')
             sample_benchmarks = self.low_sample_benchmark_names
 
         elif few_or_many == 'many':
-            run_card_path = path.join(working_directory, 'cards/ttbar_many_run_card.dat')
+            run_card_path = path.join(config_directory, 'cards/ttbar_many_run_card.dat')
             sample_benchmarks = self.high_sample_benchmark_names
 
         else:
