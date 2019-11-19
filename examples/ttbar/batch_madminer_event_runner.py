@@ -1,5 +1,6 @@
 from os import path
 from sys import argv
+from glob import glob
 
 from collections import namedtuple
 import logging
@@ -8,12 +9,17 @@ import logging
 from matplotlib import use
 use("Agg")
 
-from numpy import NaN, isnan
+from matplotlib import pyplot as plt
+
+import numpy as np
 from random import gauss
 
 from madminer.core import MadMiner
 from madminer.lhe import LHEReader
 from madminer.utils.particle import MadMinerParticle
+from madminer.plotting import plot_distributions
+from madminer.sampling import combine_and_shuffle, SampleAugmenter, benchmark, benchmarks
+from madminer.ml import ParameterizedRatioEstimator
 
 Benchmark = namedtuple('Benchmark', ['mass', 'width', 'name'])
 
@@ -23,9 +29,10 @@ Benchmark = namedtuple('Benchmark', ['mass', 'width', 'name'])
 # invis - missing energy
 def calc_mT(vis, invis):
     mT = (vis.m**2 + 2.*(vis.e * invis.e - vis.pt * invis.pt))**.5
-    if isnan(mT):
+    if np.isnan(mT):
         raise ValueError('mT not determined\nvis: {}\n invis: {}')
     return mT
+
 
 # from proc_card g g > t t~,  t > b  e+ ve, t~ > b~ mu- vm~
 # particles index:                0   1  2        3  4    5
@@ -43,10 +50,10 @@ def mt2(particles, leptons, photons, jets, met):
     visible_sum_2 = bbar + mu
 
     met_1 = MadMinerParticle()
-    met_1.setpxpypze(-visible_sum_1.px, -visible_sum_1.py, NaN, visible_sum_1.pt)
+    met_1.setpxpypze(-visible_sum_1.px, -visible_sum_1.py, np.NaN, visible_sum_1.pt)
 
     met_2 = MadMinerParticle()
-    met_2.setpxpypze(-visible_sum_2.px, -visible_sum_2.py, NaN, visible_sum_2.pt)
+    met_2.setpxpypze(-visible_sum_2.px, -visible_sum_2.py, np.NaN, visible_sum_2.pt)
 
     met_sum = met_1 + met_2
 
@@ -63,8 +70,8 @@ def mt2(particles, leptons, photons, jets, met):
         nu2py = met_sum.py - nu1.py
         nu2e = (nu2px**2 + nu2py**2)**.5
 
-        nu1.setpxpypze(nu1px, nu1py, NaN, nu1e)
-        nu2.setpxpypze(nu2px, nu2py, NaN, nu2e)
+        nu1.setpxpypze(nu1px, nu1py, np.NaN, nu1e)
+        nu2.setpxpypze(nu2px, nu2py, np.NaN, nu2e)
 
         mT_e = calc_mT(visible_sum_1, nu1)
         mT_mu = calc_mT(visible_sum_2, nu2)
@@ -77,12 +84,12 @@ def mt2(particles, leptons, photons, jets, met):
 class EventRunner:
     def __init__(self):
 
-        mass_low, mass_high = (160, 186)  # high is exclusive
+        self.mass_low, self.mass_high = (160, 186)  # high is exclusive
 
-        self.physics_benchmarks = [Benchmark(float(i), 1.5, '{0}_{1}'.format(i, 15)) for i in range(mass_low, mass_high)]
-        expected_benchmark = Benchmark(172.0, 1.5, '172_15')
+        self.physics_benchmarks = [Benchmark(float(i), 1.5, '{0}_{1}'.format(i, 15)) for i in range(self.mass_low, self.mass_high)]
+        self.expected_benchmark = Benchmark(172.0, 1.5, '172_15')
         self.wide_artificial_benchmarks = [Benchmark(float(i), 4.0, '{0}_{1}'.format(i, 40)) for i in
-                                           range(mass_low, mass_high, 5)]
+                                           range(self.mass_low, self.mass_high, 5)]
         self.wide_expected_benchmark = Benchmark(172.5, 4.0, '172.5_40')
 
         self.low_sample_benchmark_names = [cb.name for cb in self.wide_artificial_benchmarks]
@@ -277,8 +284,131 @@ class EventRunner:
         logging.info(proc.observables)
         logging.info(proc.observations.keys())
 
+    # run solo
     def merge_and_train(self):
-        pass
+
+        miner_data_file_patten = '/scratch/zb609/madminer_data/data/miner_lhe_data_*_*.h5'
+        miner_data_shuffled_path = '/scratch/zb609/madminer_data/data/miner_lhe_data_shuffled.h5'
+        n_train_events = 100000
+        n_test_events = 10000
+
+        miner_data_file_paths = glob.glob(miner_data_file_patten)
+        # run sample augmenter - event_data_merged
+
+        logging.info('shuffling LHE files {}'.format(miner_data_file_paths))
+        combine_and_shuffle(miner_data_file_paths, miner_data_shuffled_path)
+
+        logging.info('running SampleAugmenter...')
+        sa = SampleAugmenter(miner_data_shuffled_path)
+        train_result = sa.sample_train_ratio(
+            theta0=benchmarks([b.name for b in self.physics_benchmarks]),
+            theta1=benchmark(self.wide_expected_benchmark.name),
+            n_samples=n_train_events,
+            sample_only_from_closest_benchmark=True,
+            folder=path.join(self.working_directory, 'data/samples'),
+            filename='train',
+        )
+
+        _0 = sa.sample_test(
+            theta=benchmark(self.expected_benchmark.name),
+            n_samples=n_test_events,
+            folder=path.join(self.working_directory, 'data/samples'),
+            filename='test',
+        )
+
+        thetas_benchmarks, xsecs_benchmarks, xsec_errors_benchmarks = sa.cross_sections(
+            theta=benchmarks([b.name for b in self.physics_benchmarks])
+        )
+
+        logging.info(str(xsecs_benchmarks))
+        fig = plt.figure(figsize=(5, 4))
+        sc = plt.scatter(thetas_benchmarks[:, 0], thetas_benchmarks[:, 1], c=xsecs_benchmarks,
+                         s=200., cmap='viridis', vmin=0., lw=2., edgecolor='black', marker='s')
+        plt.errorbar(thetas_benchmarks[:, 0], thetas_benchmarks[:, 1], yerr=xsec_errors_benchmarks, linestyle="None")
+        cb = plt.colorbar(sc)
+
+        plt.savefig(path.join(self.working_directory, 'theta_scatter_plot.png'), bbox_inches='tight')
+
+        # plot observables for shuffled elements, sample 1,000,000 events for example
+        _ = plot_distributions(
+            filename=miner_data_shuffled_path,
+            uncertainties='none',
+            n_bins=20,
+            n_cols=5,
+            normalize=True,
+            parameter_points= ['160_15', '172_15', '185_15', '160_40', '170_40', '185_40'],
+            linestyles='-',
+            sample_only_from_closest_benchmark=True,
+            n_events=1E+6
+        )
+        plt.tight_layout()
+        plt.savefig(path.join(self.working_directory, 'observables_histograms.png'), bbox_inches='tight')
+
+        # forge.train
+        forge = ParameterizedRatioEstimator(n_hidden=(100, 100))
+        logging.info('running forge')
+        x_train_path = path.join(self.working_directory, 'data/samples/x_{}.npy'.format('train'))
+        y_train_path = path.join(self.working_directory, 'data/samples/y_{}.npy'.format('train'))
+        r_xz_train_path = path.join(self.working_directory, 'data/samples/r_xz_{}.npy'.format('train'))
+        theta0_train_path = path.join(self.working_directory, 'data/samples/theta0_{}.npy'.format('train'))
+        result = forge.train(method='alice',
+                             x=x_train_path,
+                             y=y_train_path,
+                             theta=theta0_train_path,
+                             r_xz=r_xz_train_path,
+                             n_epochs=25,
+                             validation_split=0.3,
+                             batch_size=256,
+                             initial_lr=0.001,
+                             scale_inputs=True
+                             )
+
+        forge.save(path.join(self.working_directory, 'models/alice'))
+
+        # Test the model
+        theta_ref = np.array([[c.mass, c.width] for c in self.wide_artificial_benchmarks])
+        np.save(path.join(self.working_directory, 'data/samples/theta_ref.npy'), theta_ref)
+
+        # theta 0
+        mass_bins = np.linspace(self.mass_low, self.mass_high, 2 * (self.mass_high - self.mass_low))
+        width_bins = np.array([1.5, ])  # pick expected value of top width
+        mass, width = np.meshgrid(mass_bins, width_bins)
+        mass_width_grid_0 = np.vstack((mass.flatten(), width.flatten())).T
+        np.save(path.join(self.working_directory, 'data/samples/mass_width_grid_0.npy'), mass_width_grid_0)
+
+        # theta 1
+        mass_bins = np.array([172.5, ])
+        width_bins = np.array([4.0, ])
+        mass, width = np.meshgrid(mass_bins, width_bins)
+        mass_width_grid_1 = np.vstack((mass.flatten(), width.flatten())).T
+        np.save(path.join(self.working_directory, 'data/samples/mass_width_grid_1.npy'), mass_width_grid_1)
+
+        log_r_hat, _0 = forge.evaluate(
+            theta=path.join(self.working_directory, 'data/samples/mass_width_grid_0.npy'),
+            x=path.join(self.working_directory, 'data/samples/x_{}.npy'.format('test')),
+            test_all_combinations=True,
+            evaluate_score=False,
+            run_on_gpu=True,
+        )
+
+        np.save(path.join(self.working_directory, 'data/samples/log_r_hat.npy'), log_r_hat)
+
+        # plot final results
+        mean_log_r_hat = np.mean(log_r_hat, axis=1)
+        llr = -2 * mean_log_r_hat
+        best_fit_i = np.argmin(llr)
+        best_fit_x_y = mass_width_grid_0[best_fit_i]
+
+        logging.info('best_fit {}'.format(best_fit_x_y))
+        fig = plt.figure(figsize=(6, 5))
+
+        plt.plot(mass_width_grid_0[:, 0], llr, marker='o', ls=' ', zorder=1)
+        plt.scatter(best_fit_x_y[0], llr[best_fit_i], s=100., color='red', marker='*', zorder=2)
+        plt.xlabel(r'$Mass (GeV)$')
+        plt.ylabel(r'$Likelihood Ratio -2logp(x|\theta)$')
+        plt.savefig(path.join(self.working_directory, 'llr.png'), bbox_inches='tight')
+        plt.show()
+        logging.info('')
 
 
 def setup_logging():
