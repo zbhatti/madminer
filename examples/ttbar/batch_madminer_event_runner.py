@@ -289,10 +289,12 @@ class EventRunner:
 
         miner_data_file_patten = '/scratch/zb609/madminer_data/data/miner_lhe_data_*_*.h5'
         miner_data_shuffled_path = '/scratch/zb609/madminer_data/data/miner_lhe_data_shuffled.h5'
-        n_train_events = 100000
-        n_test_events = 10000
+        n_train_events = 500000000
+        n_test_events = 100000
 
         miner_data_file_paths = glob(miner_data_file_patten)
+
+        # TODO: new method
         # run sample augmenter - event_data_merged
 
         # logging.info('shuffling LHE files {}'.format(miner_data_file_paths))
@@ -331,20 +333,21 @@ class EventRunner:
 
         # plt.savefig(path.join(self.working_directory, 'theta_scatter_plot.png'), bbox_inches='tight')
 
+        # TODO: new method
         # plot observables for shuffled elements, sample 1,000,000 events for example
-        _ = plot_distributions(
-            filename=miner_data_shuffled_path,
-            uncertainties='none',
-            n_bins=20,
-            n_cols=5,
-            normalize=True,
-            parameter_points=['160_15', '172_15', '185_15', '160_40', '170_40', '185_40'],
-            linestyles='-',
-            sample_only_from_closest_benchmark=True,
-            n_events=1000000,
-        )
-        plt.tight_layout()
-        plt.savefig(path.join(self.working_directory, 'observables_histograms.png'), bbox_inches='tight')
+        # _ = plot_distributions(
+        #     filename=miner_data_shuffled_path,
+        #     uncertainties='none',
+        #     n_bins=20,
+        #     n_cols=5,
+        #     normalize=True,
+        #     parameter_points=['160_15', '172_15', '185_15', '160_40', '170_40', '185_40'],
+        #     linestyles='-',
+        #     sample_only_from_closest_benchmark=True,
+        #     n_events=1000000,
+        # )
+        # plt.tight_layout()
+        # plt.savefig(path.join(self.working_directory, 'observables_histograms.png'), bbox_inches='tight')
 
         # forge.train
         forge = ParameterizedRatioEstimator(n_hidden=(100, 100))
@@ -390,7 +393,7 @@ class EventRunner:
             x=path.join(self.working_directory, 'data/samples/x_{}.npy'.format('test')),
             test_all_combinations=True,
             evaluate_score=False,
-            run_on_gpu=True,
+            run_on_gpu=False,
         )
 
         np.save(path.join(self.working_directory, 'data/samples/log_r_hat.npy'), log_r_hat)
