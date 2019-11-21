@@ -295,39 +295,41 @@ class EventRunner:
         miner_data_file_paths = glob(miner_data_file_patten)
         # run sample augmenter - event_data_merged
 
-        logging.info('shuffling LHE files {}'.format(miner_data_file_paths))
-        combine_and_shuffle(miner_data_file_paths, miner_data_shuffled_path)
+        # logging.info('shuffling LHE files {}'.format(miner_data_file_paths))
+        # combine_and_shuffle(miner_data_file_paths, miner_data_shuffled_path)
 
-        logging.info('running SampleAugmenter...')
-        sa = SampleAugmenter(miner_data_shuffled_path)
-        train_result = sa.sample_train_ratio(
-            theta0=benchmarks([b.name for b in self.physics_benchmarks]),
-            theta1=benchmark(self.wide_expected_benchmark.name),
-            n_samples=n_train_events,
-            sample_only_from_closest_benchmark=True,
-            folder=path.join(self.working_directory, 'data/samples'),
-            filename='train',
-        )
+        # logging.info('running SampleAugmenter...')
 
-        _0 = sa.sample_test(
-            theta=benchmark(self.expected_benchmark.name),
-            n_samples=n_test_events,
-            folder=path.join(self.working_directory, 'data/samples'),
-            filename='test',
-        )
+        # sa = SampleAugmenter(miner_data_shuffled_path)
+        #
+        # train_result = sa.sample_train_ratio(
+        #     theta0=benchmarks([b.name for b in self.physics_benchmarks]),
+        #     theta1=benchmark(self.wide_expected_benchmark.name),
+        #     n_samples=n_train_events,
+        #     sample_only_from_closest_benchmark=True,
+        #     folder=path.join(self.working_directory, 'data/samples'),
+        #     filename='train',
+        # )
 
-        thetas_benchmarks, xsecs_benchmarks, xsec_errors_benchmarks = sa.cross_sections(
-            theta=benchmarks([b.name for b in self.physics_benchmarks])
-        )
+        # _0 = sa.sample_test(
+        #     theta=benchmark(self.expected_benchmark.name),
+        #     n_samples=n_test_events,
+        #     folder=path.join(self.working_directory, 'data/samples'),
+        #     filename='test',
+        # )
 
-        logging.info(str(xsecs_benchmarks))
-        fig = plt.figure(figsize=(5, 4))
-        sc = plt.scatter(thetas_benchmarks[:, 0], thetas_benchmarks[:, 1], c=xsecs_benchmarks,
-                         s=200., cmap='viridis', vmin=0., lw=2., edgecolor='black', marker='s')
-        plt.errorbar(thetas_benchmarks[:, 0], thetas_benchmarks[:, 1], yerr=xsec_errors_benchmarks, linestyle="None")
-        cb = plt.colorbar(sc)
+        # thetas_benchmarks, xsecs_benchmarks, xsec_errors_benchmarks = sa.cross_sections(
+        #     theta=benchmarks([b.name for b in self.physics_benchmarks])
+        # )
 
-        plt.savefig(path.join(self.working_directory, 'theta_scatter_plot.png'), bbox_inches='tight')
+        # logging.info(str(xsecs_benchmarks))
+        # fig = plt.figure(figsize=(5, 4))
+        # sc = plt.scatter(thetas_benchmarks[:, 0], thetas_benchmarks[:, 1], c=xsecs_benchmarks,
+        #                  s=200., cmap='viridis', vmin=0., lw=2., edgecolor='black', marker='s')
+        # plt.errorbar(thetas_benchmarks[:, 0], thetas_benchmarks[:, 1], yerr=xsec_errors_benchmarks, linestyle="None")
+        # cb = plt.colorbar(sc)
+
+        # plt.savefig(path.join(self.working_directory, 'theta_scatter_plot.png'), bbox_inches='tight')
 
         # plot observables for shuffled elements, sample 1,000,000 events for example
         _ = plot_distributions(
@@ -336,10 +338,10 @@ class EventRunner:
             n_bins=20,
             n_cols=5,
             normalize=True,
-            parameter_points= ['160_15', '172_15', '185_15', '160_40', '170_40', '185_40'],
+            parameter_points=['160_15', '172_15', '185_15', '160_40', '170_40', '185_40'],
             linestyles='-',
             sample_only_from_closest_benchmark=True,
-            n_events=1E+6
+            n_events=1000000,
         )
         plt.tight_layout()
         plt.savefig(path.join(self.working_directory, 'observables_histograms.png'), bbox_inches='tight')
