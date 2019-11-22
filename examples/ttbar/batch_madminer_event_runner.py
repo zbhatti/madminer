@@ -289,7 +289,7 @@ class EventRunner:
 
         miner_data_file_patten = '/scratch/zb609/madminer_data/data/miner_lhe_data_*_*.h5'
         miner_data_shuffled_path = '/scratch/zb609/madminer_data/data/miner_lhe_data_shuffled.h5'
-        n_train_events = 500000000
+        n_train_events = 20000000
         n_test_events = 100000
 
         miner_data_file_paths = glob(miner_data_file_patten)
