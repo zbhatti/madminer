@@ -35,3 +35,18 @@ reproducing:
     jupyter-notebook
     http://localhost:8888/notebooks/codebase/madminer/momemta/Momemta%20Ratios%20Analysis.ipynb
     update weights file created by momemta
+
+
+
+For remote:
+2. cp x_test.npy from hpc to local AND export x_test.npy to x_test.csv
+    cd ~/codebase/madminer/momemta
+    scp zb609@prince:~/scratch_dir/madminer_data/data/samples/x_test.npy inputs/
+    python -c 'import numpy as np; x_test = np.load("/home/zbhatti/codebase/madminer/momemta/inputs/x_test.npy"); np.savetxt("/home/zbhatti/codebase/madminer/momemta/inputs/x_test.csv", x_test, delimiter=",")'
+
+3. copy artifacts for analysis script from hpc to local
+    cd ~/codebase/madminer/momemta
+    scp zb609@prince:~/scratch_dir/madminer_data/models/alice_* inputs/alice_hpc/
+    
+/scratch/zb609/madminer_data/models
+    
