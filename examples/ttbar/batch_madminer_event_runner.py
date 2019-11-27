@@ -95,7 +95,7 @@ class EventRunner:
         self.low_sample_benchmark_names = [cb.name for cb in self.wide_artificial_benchmarks]
         self.high_sample_benchmark_names = [self.wide_expected_benchmark.name]
 
-        self.working_directory = '/scratch/zb609/madminer_data'
+        self.working_directory = '/scratch/zb609/madminer_data_2'
         self.config_directory = ''
         self.miner_setup_path = path.join(self.working_directory,  'data/miner_setup.h5')
 
@@ -335,19 +335,19 @@ class EventRunner:
 
         # TODO: new method
         # plot observables for shuffled elements, sample 1,000,000 events for example
-        # _ = plot_distributions(
-        #     filename=miner_data_shuffled_path,
-        #     uncertainties='none',
-        #     n_bins=20,
-        #     n_cols=5,
-        #     normalize=True,
-        #     parameter_points=['160_15', '172_15', '185_15', '160_40', '170_40', '185_40'],
-        #     linestyles='-',
-        #     sample_only_from_closest_benchmark=True,
-        #     n_events=1000000,
-        # )
-        # plt.tight_layout()
-        # plt.savefig(path.join(self.working_directory, 'observables_histograms.png'), bbox_inches='tight')
+        _ = plot_distributions(
+            filename=miner_data_shuffled_path,
+            uncertainties='none',
+            n_bins=20,
+            n_cols=5,
+            normalize=True,
+            parameter_points=['160_15', '172_15', '185_15', '160_40', '170_40', '185_40'],
+            linestyles='-',
+            sample_only_from_closest_benchmark=True,
+            n_events=1000000,
+        )
+        plt.tight_layout()
+        plt.savefig(path.join(self.working_directory, 'observables_histograms.png'), bbox_inches='tight')
 
         # forge.train
         forge = ParameterizedRatioEstimator(n_hidden=(100, 100))
