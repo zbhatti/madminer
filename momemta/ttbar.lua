@@ -13,10 +13,10 @@ end
 
 parameters = {
     energy = 13000.,
-    top_mass = 172., -- changed to match madminer approach
-    top_width = 1.491500,
-    W_mass = 80.419002,
-    W_width = 2.047600
+    top_mass = 172., -- overriden by ttbar.cc
+    top_width = 1.5, -- changed to match madminer approach
+    W_mass = 79.824360, -- changed to match madminer approach 80.419002,
+    W_width =  2.085000, -- changed to match madminer approach 2.047600 
 }
 
 cuba = {
@@ -149,11 +149,11 @@ Looper.looper = {
 
     MatrixElement.ttbar = {
       pdf = 'CT10nlo',
-      pdf_scale = parameter('top_mass'),
+      pdf_scale = 172.5, -- parameter('top_mass'),
 
       matrix_element = 'pp_ttx_fully_leptonic',
       matrix_element_parameters = {
-          card = '../MatrixElements/Cards/param_card.dat',
+          card = '/home/zbhatti/codebase/madminer/momemta/param_card.dat',
       },
 
       override_parameters = {
@@ -166,7 +166,7 @@ Looper.looper = {
         inputs = full_inputs,
         ids = {
           {
-            pdg_id = -13,
+            pdg_id = -11,
             me_index = 1,
           },
 
