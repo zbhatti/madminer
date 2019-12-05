@@ -227,7 +227,7 @@ int main(int argc, char* argv[]) {
             LOG(debug) << "met_pz: "   << metL.Pz();
             
             auto start_time = system_clock::now();
-            std::vector<std::pair<double, double>> weights = weight.computeWeights({muon, electron, bjet1, bjet2}, metL);
+            std::vector<std::pair<double, double>> weights = weight.computeWeights({electron, bjet1, muon, bjet2}, metL);
             auto end_time = system_clock::now();
 
             LOG(debug) << "Result:";

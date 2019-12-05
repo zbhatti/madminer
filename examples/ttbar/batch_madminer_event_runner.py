@@ -381,13 +381,6 @@ class EventRunner:
         mass_width_grid_0 = np.vstack((mass.flatten(), width.flatten())).T
         np.save(path.join(self.working_directory, 'data/samples/mass_width_grid_0.npy'), mass_width_grid_0)
 
-        # theta 1
-        mass_bins = np.array([172.5, ])
-        width_bins = np.array([4.0, ])
-        mass, width = np.meshgrid(mass_bins, width_bins)
-        mass_width_grid_1 = np.vstack((mass.flatten(), width.flatten())).T
-        np.save(path.join(self.working_directory, 'data/samples/mass_width_grid_1.npy'), mass_width_grid_1)
-
         log_r_hat, _0 = forge.evaluate(
             theta=path.join(self.working_directory, 'data/samples/mass_width_grid_0.npy'),
             x=path.join(self.working_directory, 'data/samples/x_{}.npy'.format('test')),

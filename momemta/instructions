@@ -29,7 +29,6 @@ reproducing:
     cd ~/util/MoMEMta-1.0.0/build
     ./ttbar.exe ~/codebase/madminer/examples/ttbar2/data/miner_output_with_data.h5 ~/codebase/madminer/momemta/inputs/x_test_w_smearing.csv ~/codebase/madminer/momemta/weights11.csv 2>&1 |tee ~/codebase/madminer/momemta/log13.out
 
-
 6. analysis script
     cd ~/codebase/madminer/momemta
     jupyter-notebook
@@ -48,5 +47,15 @@ For remote:
     cd ~/codebase/madminer/momemta
     scp zb609@prince:~/scratch_dir/madminer_data/models/alice_* inputs/alice_hpc/
     
-/scratch/zb609/madminer_data/models
+
+
+
+
+
+
+
+- re-run ALL of madminer
+- update forge.train steps and sa to utilize seperate validation.npy
+- print observables from momemta or write them to a file (ie the lorentz vectors)
+
     
