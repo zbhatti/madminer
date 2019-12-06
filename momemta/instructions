@@ -38,6 +38,20 @@ reproducing:
 
 
 For remote:
+0. confirm madminer_runner.sh is running setup/generate/train as necessary
+1. as yourself:
+    git pull origin ttbar_multiple_theta
+    conda activate python-mm-27
+    cd /home/zb609/scratch_dir/madminer/examples/ttbar
+    a. setup:
+        ./madminer_runner.sh
+    
+    b. generate:
+        sbatch --array 1-100 madminer_runner.sh few && sbatch --array 1-100 madminer_runner.sh many
+    
+    c. 
+
+
 2. cp x_test.npy from hpc to local AND export x_test.npy to x_test.csv
     cd ~/codebase/madminer/momemta
     scp zb609@prince:~/scratch_dir/madminer_data/data/samples/x_test.npy inputs/
@@ -47,9 +61,6 @@ For remote:
     cd ~/codebase/madminer/momemta
     scp zb609@prince:~/scratch_dir/madminer_data/models/alice_* inputs/alice_hpc/
     
-
-
-
 
 
 

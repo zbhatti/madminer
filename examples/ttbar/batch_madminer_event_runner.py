@@ -96,7 +96,6 @@ class EventRunner:
         self.high_sample_benchmark_names = [self.wide_expected_benchmark.name]
 
         self.working_directory = '/scratch/zb609/madminer_data_3'
-        self.config_directory = ''
         self.miner_setup_path = path.join(self.working_directory,  'data/miner_setup.h5')
 
     #  run solo
@@ -287,20 +286,20 @@ class EventRunner:
     # run solo
     def merge_and_train(self):
 
-        miner_data_file_patten = '/scratch/zb609/madminer_data/data/miner_lhe_data_*_*.h5'
-        miner_data_shuffled_path = '/scratch/zb609/madminer_data/data/miner_lhe_data_shuffled.h5'
+        miner_data_file_pattern = path.join(self.working_directory, 'data/miner_lhe_data_*_*.h5')
+        miner_data_shuffled_path = path.join(self.working_directory, 'data/miner_lhe_data_shuffled.h5')
         n_train_events = 20000000
         n_test_events = 100000
 
-        miner_data_file_paths = glob(miner_data_file_patten)
+        miner_data_file_paths = glob(miner_data_file_pattern)
 
         # TODO: new method
         # run sample augmenter - event_data_merged
 
-        # logging.info('shuffling LHE files {}'.format(miner_data_file_paths))
-        # combine_and_shuffle(miner_data_file_paths, miner_data_shuffled_path)
+        logging.info('shuffling LHE files {}'.format(miner_data_file_paths))
+        combine_and_shuffle(miner_data_file_paths, miner_data_shuffled_path)
 
-        # logging.info('running SampleAugmenter...')
+        logging.info('running SampleAugmenter...')
 
         sa = SampleAugmenter(miner_data_shuffled_path)
 
@@ -352,10 +351,10 @@ class EventRunner:
         # forge.train
         forge = ParameterizedRatioEstimator(n_hidden=(100, 100))
         logging.info('running forge')
-        x_train_path = path.join(self.working_directory, 'data/samples/x_{}.npy'.format('train'))
-        y_train_path = path.join(self.working_directory, 'data/samples/y_{}.npy'.format('train'))
-        r_xz_train_path = path.join(self.working_directory, 'data/samples/r_xz_{}.npy'.format('train'))
-        theta0_train_path = path.join(self.working_directory, 'data/samples/theta0_{}.npy'.format('train'))
+        x_train_path = path.join(self.working_directory, 'data/samples/x_train.npy')
+        y_train_path = path.join(self.working_directory, 'data/samples/y_train.npy')
+        r_xz_train_path = path.join(self.working_directory, 'data/samples/r_xz_train.npy')
+        theta0_train_path = path.join(self.working_directory, 'data/samples/theta0_train.npy')
         result = forge.train(method='alice',
                              x=x_train_path,
                              y=y_train_path,
@@ -383,7 +382,7 @@ class EventRunner:
 
         log_r_hat, _0 = forge.evaluate(
             theta=path.join(self.working_directory, 'data/samples/mass_width_grid_0.npy'),
-            x=path.join(self.working_directory, 'data/samples/x_{}.npy'.format('test')),
+            x=path.join(self.working_directory, 'data/samples/x_test.npy'),
             test_all_combinations=True,
             evaluate_score=False,
             run_on_gpu=False,
