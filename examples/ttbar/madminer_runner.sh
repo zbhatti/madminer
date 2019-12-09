@@ -3,9 +3,18 @@
 #SBATCH --job-name=zbhatti_madminer
 #SBATCH --output=log_%a_%j.log
 #SBATCH --nodes=1
-#SBATCH --cpus-per-task=4
-#SBATCH --mem=150GB
-#SBATCH --time=20:00:00
+
+## use for generate:
+#SBATCH --mem=16GB
+#SBATCH --time=2-23:00:00
+#SBATCH --cpus-per-task=2
+
+## use for train:
+##SBATCH --mem=150GB
+##SBATCH --time=20:00:00
+##SBATCH --cpus-per-task=8
+
+# unused:
 ##SBATCH --gres=gpu:1
 ##SBATCH --mail-user=zb609@nyu.edu
 ##SBATCH --mail-type=END
