@@ -289,6 +289,7 @@ class EventRunner:
         miner_data_file_pattern = path.join(self.working_directory, 'data/miner_lhe_data_*_*.h5')
         miner_data_shuffled_path = path.join(self.working_directory, 'data/miner_lhe_data_shuffled.h5')
         n_train_events = 20000000
+        n_val_events = 4000000
         n_test_events = 100000
 
         miner_data_file_paths = glob(miner_data_file_pattern)
@@ -308,8 +309,19 @@ class EventRunner:
             theta1=benchmark(self.wide_expected_benchmark.name),
             n_samples=n_train_events,
             sample_only_from_closest_benchmark=True,
+            partition='train',
             folder=path.join(self.working_directory, 'data/samples'),
             filename='train',
+        )
+
+        validation_result = sa.sample_train_ratio(
+            theta0=benchmarks([b.name for b in self.physics_benchmarks]),
+            theta1=benchmark(self.wide_expected_benchmark.name),
+            n_samples=n_val_events,
+            sample_only_from_closest_benchmark=True,
+            partition='validation',
+            folder=path.join(self.working_directory, 'data/samples'),
+            filename='valid',
         )
 
         _0 = sa.sample_test(
@@ -324,29 +336,7 @@ class EventRunner:
         )
 
         logging.info(str(xsecs_benchmarks))
-        fig = plt.figure(figsize=(5, 4))
-        sc = plt.scatter(thetas_benchmarks[:, 0], thetas_benchmarks[:, 1], c=xsecs_benchmarks,
-                         s=200., cmap='viridis', vmin=0., lw=2., edgecolor='black', marker='s')
-        plt.errorbar(thetas_benchmarks[:, 0], thetas_benchmarks[:, 1], yerr=xsec_errors_benchmarks, linestyle="None")
-        cb = plt.colorbar(sc)
-        #
-        plt.savefig(path.join(self.working_directory, 'theta_scatter_plot.png'), bbox_inches='tight')
 
-        # TODO: new method
-        # plot observables for shuffled elements, sample 1,000,000 events for example
-        _ = plot_distributions(
-            filename=miner_data_shuffled_path,
-            uncertainties='none',
-            n_bins=20,
-            n_cols=5,
-            normalize=True,
-            parameter_points=['160_15', '172_15', '185_15', '160_40', '170_40', '185_40'],
-            linestyles='-',
-            sample_only_from_closest_benchmark=True,
-            n_events=1000000,
-        )
-        plt.tight_layout()
-        plt.savefig(path.join(self.working_directory, 'observables_histograms.png'), bbox_inches='tight')
 
         # forge.train
         forge = ParameterizedRatioEstimator(n_hidden=(100, 100))
@@ -355,13 +345,23 @@ class EventRunner:
         y_train_path = path.join(self.working_directory, 'data/samples/y_train.npy')
         r_xz_train_path = path.join(self.working_directory, 'data/samples/r_xz_train.npy')
         theta0_train_path = path.join(self.working_directory, 'data/samples/theta0_train.npy')
+
+        x_validation_path = path.join(self.working_directory, 'data/samples/x_valid.npy')
+        y_validation_path = path.join(self.working_directory, 'data/samples/y_valid.npy')
+        r_xz_validation_path = path.join(self.working_directory, 'data/samples/r_xz_valid.npy')
+        theta0_validation_path = path.join(self.working_directory, 'data/samples/theta0_valid.npy')
+
+
         result = forge.train(method='alice',
                              x=x_train_path,
                              y=y_train_path,
                              theta=theta0_train_path,
                              r_xz=r_xz_train_path,
-                             n_epochs=25,
-                             validation_split=0.3,
+                             x_val=x_train_path,
+                             y_val=y_train_path,
+                             theta_val=theta0_train_path,
+                             r_xz_val=r_xz_train_path,
+                             n_epochs=30,
                              batch_size=256,
                              initial_lr=0.001,
                              scale_inputs=True
@@ -397,14 +397,39 @@ class EventRunner:
         best_fit_x_y = mass_width_grid_0[best_fit_i]
 
         logging.info('best_fit {}'.format(best_fit_x_y))
-        fig = plt.figure(figsize=(6, 5))
 
+        logging.info('plotting...')
+
+        fig = plt.figure(figsize=(5, 4))
+        sc = plt.scatter(thetas_benchmarks[:, 0], thetas_benchmarks[:, 1], c=xsecs_benchmarks,
+                         s=200., cmap='viridis', vmin=0., lw=2., edgecolor='black', marker='s')
+        plt.errorbar(thetas_benchmarks[:, 0], thetas_benchmarks[:, 1], yerr=xsec_errors_benchmarks, linestyle="None")
+        cb = plt.colorbar(sc)
+        #
+        plt.savefig(path.join(self.working_directory, 'theta_scatter_plot.png'), bbox_inches='tight')
+
+        # TODO: new method
+        # plot observables for shuffled elements, sample 1,000,000 events for example
+        _ = plot_distributions(
+            filename=miner_data_shuffled_path,
+            uncertainties='none',
+            n_bins=20,
+            n_cols=5,
+            normalize=True,
+            parameter_points=['160_15', '172_15', '185_15', '160_40', '170_40', '185_40'],
+            linestyles='-',
+            sample_only_from_closest_benchmark=True,
+            n_events=1000000,
+        )
+        plt.tight_layout()
+        plt.savefig(path.join(self.working_directory, 'observables_histograms.png'), bbox_inches='tight')
+
+        fig = plt.figure(figsize=(6, 5))
         plt.plot(mass_width_grid_0[:, 0], llr, marker='o', ls=' ', zorder=1)
         plt.scatter(best_fit_x_y[0], llr[best_fit_i], s=100., color='red', marker='*', zorder=2)
         plt.xlabel(r'$Mass (GeV)$')
         plt.ylabel(r'$Likelihood Ratio -2logp(x|\theta)$')
         plt.savefig(path.join(self.working_directory, 'llr.png'), bbox_inches='tight')
-        plt.show()
         logging.info('')
 
 
