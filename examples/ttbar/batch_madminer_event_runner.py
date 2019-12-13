@@ -343,13 +343,13 @@ class EventRunner:
         logging.info('running forge')
         x_train_path = path.join(self.working_directory, 'data/samples/x_train.npy')
         y_train_path = path.join(self.working_directory, 'data/samples/y_train.npy')
-        r_xz_train_path = path.join(self.working_directory, 'data/samples/r_xz_train.npy')
         theta0_train_path = path.join(self.working_directory, 'data/samples/theta0_train.npy')
+        r_xz_train_path = path.join(self.working_directory, 'data/samples/r_xz_train.npy')
 
         x_validation_path = path.join(self.working_directory, 'data/samples/x_valid.npy')
         y_validation_path = path.join(self.working_directory, 'data/samples/y_valid.npy')
-        r_xz_validation_path = path.join(self.working_directory, 'data/samples/r_xz_valid.npy')
         theta0_validation_path = path.join(self.working_directory, 'data/samples/theta0_valid.npy')
+        r_xz_validation_path = path.join(self.working_directory, 'data/samples/r_xz_valid.npy')
 
 
         result = forge.train(method='alice',
@@ -357,10 +357,10 @@ class EventRunner:
                              y=y_train_path,
                              theta=theta0_train_path,
                              r_xz=r_xz_train_path,
-                             x_val=x_train_path,
-                             y_val=y_train_path,
-                             theta_val=theta0_train_path,
-                             r_xz_val=r_xz_train_path,
+                             x_val=x_validation_path,
+                             y_val=y_validation_path,
+                             theta_val=theta0_validation_path,
+                             r_xz_val=r_xz_validation_path,
                              n_epochs=30,
                              batch_size=256,
                              initial_lr=0.001,
