@@ -44,7 +44,7 @@ For remote:
     conda activate python-mm-27
     cd /home/zb609/scratch_dir/madminer/examples/ttbar
     a. setup:
-        ./madminer_runner.sh
+        python -u batch_madminer_event_runner.py setup
     
     b. generate:
         sbatch --array 1-100 madminer_runner.sh few && sbatch --array 1-100 madminer_runner.sh many
@@ -63,7 +63,7 @@ For remote:
     
 
 
-
+# CLEANUP EXISTING WORK DIRECTORIES
 
 - re-run ALL of madminer
 - update forge.train steps and sa to utilize seperate validation.npy

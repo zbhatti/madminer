@@ -5,14 +5,14 @@
 #SBATCH --nodes=1
 
 ## use for generate:
-#SBATCH --mem=16GB
-#SBATCH --time=2-23:00:00
-#SBATCH --cpus-per-task=2
+##SBATCH --mem=16GB
+##SBATCH --time=2-23:00:00
+##SBATCH --cpus-per-task=2
 
 ## use for train:
-##SBATCH --mem=150GB
-##SBATCH --time=20:00:00
-##SBATCH --cpus-per-task=8
+#SBATCH --mem=150GB
+#SBATCH --time=20:00:00
+#SBATCH --cpus-per-task=4
 
 # unused:
 ##SBATCH --gres=gpu:1
@@ -29,5 +29,5 @@ source /scratch/zb609/root_build/bin/thisroot.sh
 cd $SCRATCH/madminer/examples/ttbar
 
 #python -u batch_madminer_event_runner.py setup
-python -u batch_madminer_event_runner.py generate $1 ${SLURM_ARRAY_TASK_ID}
-#python -u batch_madminer_event_runner.py train
+#python -u batch_madminer_event_runner.py generate $1 ${SLURM_ARRAY_TASK_ID}
+python -u batch_madminer_event_runner.py train
