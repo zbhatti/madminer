@@ -27,7 +27,7 @@ reproducing:
     
 5. run momemta
     cd ~/util/MoMEMta-1.0.0/build
-    ./ttbar.exe ~/codebase/madminer/examples/ttbar2/data/miner_output_with_data.h5 ~/codebase/madminer/momemta/inputs/x_test_w_smearing.csv ~/codebase/madminer/momemta/weights11.csv 2>&1 |tee ~/codebase/madminer/momemta/log13.out
+    ./ttbar.exe ~/codebase/madminer/examples/ttbar2/data/miner_output_with_data.h5 ~/codebase/madminer/momemta/inputs/x_test.csv ~/codebase/madminer/momemta/weights11.csv 2>&1 |tee ~/codebase/madminer/momemta/log13.out
 
 6. analysis script
     cd ~/codebase/madminer/momemta

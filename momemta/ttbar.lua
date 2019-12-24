@@ -151,9 +151,10 @@ Looper.looper = {
       pdf = 'CT10nlo',
       pdf_scale = 172.5, -- parameter('top_mass'),
 
-      matrix_element = 'pp_ttx_fully_leptonic',
+      matrix_element = 'ttbarElectronME',
       matrix_element_parameters = {
-          card = '/home/zbhatti/codebase/madminer/momemta/param_card.dat',
+          -- card = '/home/zbhatti/codebase/madminer/momemta/param_card.dat',
+          card = '/home/zbhatti/codebase/madminer/examples/ttbar/cards/param_card_template.dat',
       },
 
       override_parameters = {
@@ -161,39 +162,36 @@ Looper.looper = {
       },
 
       initialState = 'boost::partons',
-
+        
+    
+      -- mapFinalStates[{5, -11, 12, -5, 13, -14}] see ttbarElectronME/SubProcesses/P1_Sigma_sm_gg_bepvebxmumvmx/P1_Sigma_sm_gg_bepvebxmumvmx.cc 
       particles = {
         inputs = full_inputs,
         ids = {
           {
             pdg_id = -11,
-            me_index = 1,
-          },
-
+            me_index = 2,
+          },  
           {
             pdg_id = 5,
-            me_index = 3,
+            me_index = 1,
           },
-
           {
             pdg_id = 13,
-            me_index = 4,
+            me_index = 5,
           },
-
           {
             pdg_id = -5,
-            me_index = 6,
+            me_index = 4,
           },
-
           {
-            pdg_id = 14,
-            me_index = 2,
+            pdg_id = 12,
+            me_index = 3,
           },
-
           {
             pdg_id = -14,
-            me_index = 5,
-          }
+            me_index = 6,
+          },
         }
       },
 
