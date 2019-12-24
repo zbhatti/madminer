@@ -1,30 +1,3 @@
-/*
- *  MoMEMta: a modular implementation of the Matrix Element Method
- *  Copyright (C) 2016  Universite catholique de Louvain (UCL), Belgium
- *
- *  This program is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
- *
- *  This program is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
- *
- *  You should have received a copy of the GNU General Public License
- *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
-
-// observables: 
-// ['j_0_E', 'j_0_pt', 'j_0_eta', 'j_0_phi', 
-//  'j_1_E', 'j_1_pt', 'j_1_eta', 'j_1_phi', 
-//  'e_0_E', 'e_0_pt', 'e_0_eta', 'e_0_phi',
-//  'mu_0_E', 'mu_0_pt', 'mu_0_eta', 'mu_0_phi', 
-//  'met_pt', 'met_phi'
-//  'm_e_0_j_0', 'm_e_0_j_1', 'm_mu_0_j_0', 'm_mu_0_j_1', 
-//  'mt2' ]
-
 #include <momemta/ConfigurationReader.h>
 #include <momemta/Logging.h>
 #include <momemta/MoMEMta.h>
@@ -35,17 +8,23 @@
 #include <TH1D.h>
 #include <chrono>
 
-// #include <Math/LorentzVector.h>
-// #include <memory>
 
 using namespace std::chrono;
 using namespace momemta;
 using namespace H5;
-// using namespace logging;
-// using namespace std::ifstream;
+
 
 using LorentzVectorM = ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float>>;
 using LorentzVectorE = ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiE4D<float>>;
+
+// observables: 
+// ['j_0_E', 'j_0_pt', 'j_0_eta', 'j_0_phi', 
+//  'j_1_E', 'j_1_pt', 'j_1_eta', 'j_1_phi', 
+//  'e_0_E', 'e_0_pt', 'e_0_eta', 'e_0_phi',
+//  'mu_0_E', 'mu_0_pt', 'mu_0_eta', 'mu_0_phi', 
+//  'met_pt', 'met_phi'
+//  'm_e_0_j_0', 'm_e_0_j_1', 'm_mu_0_j_0', 'm_mu_0_j_1', 
+//  'mt2' ]
 
 void normalizeInput(LorentzVector& p4) {
     if (p4.M() > 0)
@@ -97,7 +76,7 @@ std::vector<std::vector<float>> parse2DCsvFile(std::string inputFileName) {
 
 int main(int argc, char* argv[]) {
 
-    logging::set_level(logging::level::info);
+    logging::set_level(logging::level::debug);
     
     std::string observations_h5_file; // "/home/zbhatti/codebase/madminer/examples/ttbar2/data/madminer_example_mvm_shuffled.h5"
     std::string x_test_csv_file; // "/home/zbhatti/codebase/madminer/momemta/inputs/x_test.csv"
