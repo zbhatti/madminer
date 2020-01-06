@@ -95,7 +95,7 @@ class EventRunner:
         self.low_sample_benchmark_names = [cb.name for cb in self.wide_artificial_benchmarks]
         self.high_sample_benchmark_names = [self.wide_expected_benchmark.name]
 
-        self.working_directory = '/scratch/zb609/madminer_data_3'
+        self.working_directory = '/scratch/zb609/madminer_data_4'
         self.miner_setup_path = path.join(self.working_directory,  'data/miner_setup.h5')
 
     #  run solo
@@ -124,6 +124,7 @@ class EventRunner:
     # run concurrently
     def generate_events(self, few_or_many, worker_id):
         mg_dir = str('/home/zb609/scratch_dir/MG5_aMC_v2_6_5')
+        # mg_dir = str('/home/zbhatti/util/MG5_aMC_v2_6_5')
         working_directory = self.working_directory
         config_directory = path.dirname(__file__)
 
