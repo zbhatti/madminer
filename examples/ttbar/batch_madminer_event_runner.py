@@ -95,7 +95,7 @@ class EventRunner:
         self.low_sample_benchmark_names = [cb.name for cb in self.wide_artificial_benchmarks]
         self.high_sample_benchmark_names = [self.wide_expected_benchmark.name]
 
-        self.working_directory = '/scratch/zb609/madminer_data_4'
+        self.working_directory = '/scratch/zb609/madminer_data_5'
         self.miner_setup_path = path.join(self.working_directory,  'data/miner_setup.h5')
 
     #  run solo
