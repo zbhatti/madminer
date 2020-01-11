@@ -1,4 +1,4 @@
-from os import path
+from os import path, environ
 from sys import argv
 from glob import glob
 
@@ -82,7 +82,7 @@ def mt2(particles, leptons, photons, jets, met):
 
 
 class EventRunner:
-    def __init__(self):
+    def __init__(self, data_dir):
 
         self.mass_low, self.mass_high = (160, 186)  # high is exclusive
 
@@ -95,8 +95,8 @@ class EventRunner:
         self.low_sample_benchmark_names = [cb.name for cb in self.wide_artificial_benchmarks]
         self.high_sample_benchmark_names = [self.wide_expected_benchmark.name]
 
-        self.working_directory = '/scratch/zb609/madminer_data_5'
-        self.miner_setup_path = path.join(self.working_directory,  'data/miner_setup.h5')
+        self.data_dir = data_dir
+        self.miner_setup_path = path.join(self.data_dir,  'data/miner_setup.h5')
 
     #  run solo
     def build_setup(self):
@@ -123,21 +123,20 @@ class EventRunner:
 
     # run concurrently
     def generate_events(self, few_or_many, worker_id):
-        mg_dir = str('/home/zb609/scratch_dir/MG5_aMC_v2_6_5')
-        # mg_dir = str('/home/zbhatti/util/MG5_aMC_v2_6_5')
-        working_directory = self.working_directory
-        config_directory = path.dirname(__file__)
+        mg_dir = environ.get('MADGRAPH_DIR', '/home/zbhatti/util/MG5_aMC_v2_6_5')
+        data_dir = self.data_dir
+        config_dir = path.dirname(__file__)
 
         # shared inputs:
-        proc_card_path = path.join(config_directory, 'cards/ttbar_proc_card.dat')
-        param_template_path = path.join(config_directory, 'cards/param_card_template.dat')
+        proc_card_path = path.join(config_dir, 'cards/ttbar_proc_card.dat')
+        param_template_path = path.join(config_dir, 'cards/param_card_template.dat')
 
         if few_or_many == 'few':
-            run_card_path = path.join(config_directory, 'cards/ttbar_few_run_card.dat')
+            run_card_path = path.join(config_dir, 'cards/ttbar_few_run_card.dat')
             sample_benchmarks = self.low_sample_benchmark_names
 
         elif few_or_many == 'many':
-            run_card_path = path.join(config_directory, 'cards/ttbar_many_run_card.dat')
+            run_card_path = path.join(config_dir, 'cards/ttbar_many_run_card.dat')
             sample_benchmarks = self.high_sample_benchmark_names
 
         else:
@@ -151,9 +150,9 @@ class EventRunner:
             return
 
         # unique outputs:
-        mg_process_directory = path.join(working_directory, 'mg_processes_{}_{}/signal'.format(few_or_many, worker_id))
-        log_directory = path.join(working_directory, 'logs_{}_{}/signal'.format(few_or_many, worker_id))
-        event_data_path = path.join(working_directory, 'data/miner_lhe_data_{}_{}.h5'.format(few_or_many, worker_id))
+        mg_process_directory = path.join(data_dir, 'mg_processes_{}_{}/signal'.format(few_or_many, worker_id))
+        log_directory = path.join(data_dir, 'logs_{}_{}/signal'.format(few_or_many, worker_id))
+        event_data_path = path.join(data_dir, 'data/miner_lhe_data_{}_{}.h5'.format(few_or_many, worker_id))
 
         miner = MadMiner()
         miner.load(self.miner_setup_path)
@@ -183,7 +182,7 @@ class EventRunner:
         proc = LHEReader(self.miner_setup_path)
         i = 1
         for sample_bench in sample_benchmarks:
-            lhe_filename = path.join(working_directory, 'mg_processes_{0}_{1}/signal/Events/run_{2:0>2}/unweighted_events.lhe.gz'.format(few_or_many, worker_id, i))
+            lhe_filename = path.join(data_dir, 'mg_processes_{0}_{1}/signal/Events/run_{2:0>2}/unweighted_events.lhe.gz'.format(few_or_many, worker_id, i))
 
             proc.add_sample(
                 lhe_filename=lhe_filename,
@@ -287,8 +286,8 @@ class EventRunner:
     # run solo
     def merge_and_train(self):
 
-        miner_data_file_pattern = path.join(self.working_directory, 'data/miner_lhe_data_*_*.h5')
-        miner_data_shuffled_path = path.join(self.working_directory, 'data/miner_lhe_data_shuffled.h5')
+        miner_data_file_pattern = path.join(self.data_dir, 'data/miner_lhe_data_*_*.h5')
+        miner_data_shuffled_path = path.join(self.data_dir, 'data/miner_lhe_data_shuffled.h5')
         n_train_events = 20000000
         n_val_events = 4000000
         n_test_events = 100000
@@ -311,7 +310,7 @@ class EventRunner:
             n_samples=n_train_events,
             sample_only_from_closest_benchmark=True,
             partition='train',
-            folder=path.join(self.working_directory, 'data/samples'),
+            folder=path.join(self.data_dir, 'data/samples'),
             filename='train',
         )
 
@@ -321,14 +320,14 @@ class EventRunner:
             n_samples=n_val_events,
             sample_only_from_closest_benchmark=True,
             partition='validation',
-            folder=path.join(self.working_directory, 'data/samples'),
+            folder=path.join(self.data_dir, 'data/samples'),
             filename='valid',
         )
 
         _0 = sa.sample_test(
             theta=benchmark(self.expected_benchmark.name),
             n_samples=n_test_events,
-            folder=path.join(self.working_directory, 'data/samples'),
+            folder=path.join(self.data_dir, 'data/samples'),
             filename='test',
         )
 
@@ -338,20 +337,18 @@ class EventRunner:
 
         logging.info(str(xsecs_benchmarks))
 
-
         # forge.train
         forge = ParameterizedRatioEstimator(n_hidden=(100, 100))
         logging.info('running forge')
-        x_train_path = path.join(self.working_directory, 'data/samples/x_train.npy')
-        y_train_path = path.join(self.working_directory, 'data/samples/y_train.npy')
-        theta0_train_path = path.join(self.working_directory, 'data/samples/theta0_train.npy')
-        r_xz_train_path = path.join(self.working_directory, 'data/samples/r_xz_train.npy')
+        x_train_path = path.join(self.data_dir, 'data/samples/x_train.npy')
+        y_train_path = path.join(self.data_dir, 'data/samples/y_train.npy')
+        theta0_train_path = path.join(self.data_dir, 'data/samples/theta0_train.npy')
+        r_xz_train_path = path.join(self.data_dir, 'data/samples/r_xz_train.npy')
 
-        x_validation_path = path.join(self.working_directory, 'data/samples/x_valid.npy')
-        y_validation_path = path.join(self.working_directory, 'data/samples/y_valid.npy')
-        theta0_validation_path = path.join(self.working_directory, 'data/samples/theta0_valid.npy')
-        r_xz_validation_path = path.join(self.working_directory, 'data/samples/r_xz_valid.npy')
-
+        x_validation_path = path.join(self.data_dir, 'data/samples/x_valid.npy')
+        y_validation_path = path.join(self.data_dir, 'data/samples/y_valid.npy')
+        theta0_validation_path = path.join(self.data_dir, 'data/samples/theta0_valid.npy')
+        r_xz_validation_path = path.join(self.data_dir, 'data/samples/r_xz_valid.npy')
 
         result = forge.train(method='alice',
                              x=x_train_path,
@@ -368,28 +365,28 @@ class EventRunner:
                              scale_inputs=True
                              )
 
-        forge.save(path.join(self.working_directory, 'models/alice'))
+        forge.save(path.join(self.data_dir, 'models/alice'))
 
         # Test the model
         theta_ref = np.array([[c.mass, c.width] for c in self.wide_artificial_benchmarks])
-        np.save(path.join(self.working_directory, 'data/samples/theta_ref.npy'), theta_ref)
+        np.save(path.join(self.data_dir, 'data/samples/theta_ref.npy'), theta_ref)
 
         # theta 0
         mass_bins = np.linspace(self.mass_low, self.mass_high, 2 * (self.mass_high - self.mass_low))
         width_bins = np.array([1.5, ])  # pick expected value of top width
         mass, width = np.meshgrid(mass_bins, width_bins)
         mass_width_grid_0 = np.vstack((mass.flatten(), width.flatten())).T
-        np.save(path.join(self.working_directory, 'data/samples/mass_width_grid_0.npy'), mass_width_grid_0)
+        np.save(path.join(self.data_dir, 'data/samples/mass_width_grid_0.npy'), mass_width_grid_0)
 
         log_r_hat, _0 = forge.evaluate(
-            theta=path.join(self.working_directory, 'data/samples/mass_width_grid_0.npy'),
-            x=path.join(self.working_directory, 'data/samples/x_test.npy'),
+            theta=path.join(self.data_dir, 'data/samples/mass_width_grid_0.npy'),
+            x=path.join(self.data_dir, 'data/samples/x_test.npy'),
             test_all_combinations=True,
             evaluate_score=False,
             run_on_gpu=False,
         )
 
-        np.save(path.join(self.working_directory, 'data/samples/log_r_hat.npy'), log_r_hat)
+        np.save(path.join(self.data_dir, 'data/samples/log_r_hat.npy'), log_r_hat)
 
         # plot final results
         mean_log_r_hat = np.mean(log_r_hat, axis=1)
@@ -407,7 +404,7 @@ class EventRunner:
         plt.errorbar(thetas_benchmarks[:, 0], thetas_benchmarks[:, 1], yerr=xsec_errors_benchmarks, linestyle="None")
         cb = plt.colorbar(sc)
         #
-        plt.savefig(path.join(self.working_directory, 'theta_scatter_plot.png'), bbox_inches='tight')
+        plt.savefig(path.join(self.data_dir, 'theta_scatter_plot.png'), bbox_inches='tight')
 
         # TODO: new method
         # plot observables for shuffled elements, sample 1,000,000 events for example
@@ -423,14 +420,14 @@ class EventRunner:
             n_events=1000000,
         )
         plt.tight_layout()
-        plt.savefig(path.join(self.working_directory, 'observables_histograms.png'), bbox_inches='tight')
+        plt.savefig(path.join(self.data_dir, 'observables_histograms.png'), bbox_inches='tight')
 
         fig = plt.figure(figsize=(6, 5))
         plt.plot(mass_width_grid_0[:, 0], llr, marker='o', ls=' ', zorder=1)
         plt.scatter(best_fit_x_y[0], llr[best_fit_i], s=100., color='red', marker='*', zorder=2)
         plt.xlabel(r'$Mass (GeV)$')
         plt.ylabel(r'$Likelihood Ratio -2logp(x|\theta)$')
-        plt.savefig(path.join(self.working_directory, 'llr.png'), bbox_inches='tight')
+        plt.savefig(path.join(self.data_dir, 'llr.png'), bbox_inches='tight')
         logging.info('')
 
 
@@ -450,17 +447,18 @@ def setup_logging():
 
 def main():
     setup_logging()
-    logging.info('args: setup|generate|train few|many worker_id')
-    if argv[1] == 'setup':
-        EventRunner().build_setup()
+    logging.info('args: [data_dir] {setup, generate {few, many} [worker_id]}, train')
+    working_dir = argv[1]
+    if argv[2] == 'setup':
+        EventRunner(working_dir).build_setup()
 
-    elif argv[1] == 'generate':
-        few_or_many = argv[2]  # few or many
-        worker_id = argv[3]  # 0, 1, 2, ... 99, etc
-        EventRunner().generate_events(few_or_many, worker_id)
+    elif argv[2] == 'generate':
+        few_or_many = argv[3]  # few or many
+        worker_id = argv[4]  # 0, 1, 2, ... 99, etc
+        EventRunner(working_dir).generate_events(few_or_many, worker_id)
 
-    elif argv[1] == 'train':
-        EventRunner().merge_and_train()
+    elif argv[2] == 'train':
+        EventRunner(working_dir).merge_and_train()
 
 
 if __name__ == '__main__':

@@ -27,6 +27,7 @@ conda env list
 source /scratch/zb609/root_build/bin/thisroot.sh
 
 cd $SCRATCH/madminer/examples/ttbar
+export MADGRAPH_DIR=/home/zb609/scratch_dir/MG5_aMC_v2_6_5
 
 # RUN SETUP AS YOURSELF
 # python -u batch_madminer_event_runner.py setup

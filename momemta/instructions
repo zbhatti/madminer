@@ -60,13 +60,4 @@ For remote:
 3. copy artifacts for analysis script from hpc to local
     cd ~/codebase/madminer/momemta
     scp zb609@prince:~/scratch_dir/madminer_data/models/alice_* inputs/alice_hpc/
-    
 
-
-# CLEANUP EXISTING WORK DIRECTORIES
-
-- re-run ALL of madminer
-- update forge.train steps and sa to utilize seperate validation.npy
-- print observables from momemta or write them to a file (ie the lorentz vectors)
-
-    
