@@ -34,11 +34,11 @@ def calc_mT(vis, invis):
     return mT
 
 
-# from proc_card g g > t t~,  t > b  e+ ve, t~ > b~ mu- vm~
-# particles index:                0   1  2        3  4    5
-# particle id:                    5 -11 12       -5 13  -14
+# proc card: generate p p > t t~, (t > w+ b, w+ > mu+ vm), (t~ > w- b~, w- > mu- vm~)
+# particles index:                        2       0   1             5        3   4
+# particle id:                            5      -13  14           -5        13 -14
 def mt2(particles, leptons, photons, jets, met):
-    b, e, ve, bbar, mu, vm = particles
+    antimuon, muon_neutrino, b, muon, antimuon_neutrino, bbar = particles
     n_picks = 1000
     visible_sum_1 = MadMinerParticle()
     visible_sum_1.setpxpypze(0.0, 0.0, 0.0, 0.0)
@@ -46,8 +46,8 @@ def mt2(particles, leptons, photons, jets, met):
     visible_sum_2 = MadMinerParticle()
     visible_sum_2.setpxpypze(0.0, 0.0, 0.0, 0.0)
 
-    visible_sum_1 = b + e
-    visible_sum_2 = bbar + mu
+    visible_sum_1 = b + antimuon
+    visible_sum_2 = bbar + muon
 
     met_1 = MadMinerParticle()
     met_1.setpxpypze(-visible_sum_1.px, -visible_sum_1.py, np.NaN, visible_sum_1.pt)
@@ -73,10 +73,10 @@ def mt2(particles, leptons, photons, jets, met):
         nu1.setpxpypze(nu1px, nu1py, np.NaN, nu1e)
         nu2.setpxpypze(nu2px, nu2py, np.NaN, nu2e)
 
-        mT_e = calc_mT(visible_sum_1, nu1)
+        mT_antimu = calc_mT(visible_sum_1, nu1)
         mT_mu = calc_mT(visible_sum_2, nu2)
 
-        max_mT_list.append(max(mT_mu, mT_e))
+        max_mT_list.append(max(mT_mu, mT_antimu))
 
     return min(max_mT_list)
 
@@ -173,8 +173,8 @@ class EventRunner:
 
         # name: definition
         obs_particles = {
-            'e_0': 'e[0]',
             'mu_0': 'mu[0]',
+            'mu_1': 'mu[1]',
             'j_0': 'j[0]',
             'j_1': 'j[1]',
         }
@@ -235,7 +235,7 @@ class EventRunner:
 
         proc.add_cut('met.pt >= 25.0')
 
-        charged_leptons = ['e_0', 'mu_0']
+        charged_leptons = ['mu_0', 'mu_1']
         bjets = ['j_0', 'j_1']
         for lep in charged_leptons:
             for bj in bjets:
@@ -266,7 +266,7 @@ class EventRunner:
 
             # charged lepton smearing is minimal since semiconductor based detection works well
             proc.set_smearing(
-                pdgids=[11, 13, -11, -13],
+                pdgids=[13, -13],
                 energy_resolution_abs=0.,
                 energy_resolution_rel=0.05,
                 pt_resolution_abs=None,
