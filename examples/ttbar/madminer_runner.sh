@@ -32,5 +32,5 @@ export MADGRAPH_DIR=/home/zb609/scratch_dir/MG5_aMC_v2_6_5
 # RUN SETUP AS YOURSELF
 # python -u batch_madminer_event_runner.py setup
 
-# python -u batch_madminer_event_runner.py generate $1 ${SLURM_ARRAY_TASK_ID}
-python -u batch_madminer_event_runner.py train
+python -u batch_madminer_event_runner.py $1 generate $2 ${SLURM_ARRAY_TASK_ID}
+#python -u batch_madminer_event_runner.py train
