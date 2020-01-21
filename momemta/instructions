@@ -61,3 +61,18 @@ For remote:
     cd ~/codebase/madminer/momemta
     scp zb609@prince:~/scratch_dir/madminer_data/models/alice_* inputs/alice_hpc/
 
+
+discrepencies:
+    - process initial and final states ( no proc card provided anywhere, only the byproduct of mometa-magmee export)
+    - smearing function's sigma for leptons and hadrons ( paper does not detail the actual values chosen so no second comparison point)
+    - WHICH example to try and match - probably paper
+    - previous runs had parton dist func defaulted back to madgraph's default when my config was incorrect
+    - muon vs electron name in lua
+
+next step: 
+    - train
+    - export our own matrix element code via momemta-magmee with our p p > mu mu~ states
+    - change momemta to match new process and run momemta again
+
+    
+

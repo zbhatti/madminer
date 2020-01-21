@@ -448,6 +448,7 @@ def setup_logging():
 def main():
     setup_logging()
     logging.info('args: [data_dir] {setup, generate {few, many} [worker_id]}, train')
+    logging.info('args: {}'.format(argv))
     working_dir = argv[1]
     if argv[2] == 'setup':
         EventRunner(working_dir).build_setup()
