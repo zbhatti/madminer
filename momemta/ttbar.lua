@@ -1,14 +1,14 @@
 -- Note: USE_PERM and USE_TF are defined in the C++ code and injected in lua before parsing this file
 
 -- Register inputs
-local electron = declare_input("electron")
-local muon = declare_input("muon")
+local muon1 = declare_input("muon1")
+local muon0 = declare_input("muon0")
+local bjet0 = declare_input("bjet0")
 local bjet1 = declare_input("bjet1")
-local bjet2 = declare_input("bjet2")
 
 if USE_PERM then
     -- Automatically insert a Permutator module
-    add_reco_permutations(bjet1, bjet2)
+    add_reco_permutations(bjet0, bjet1)
 end
 
 parameters = {
@@ -54,17 +54,17 @@ BreitWignerGenerator.flatter_s256 = {
 if USE_TF then
     GaussianTransferFunctionOnEnergy.tf_p1 = {
         ps_point = add_dimension(),
-        reco_particle = electron.reco_p4,
+        reco_particle = muon1.reco_p4,
         sigma = 0.05, -- comment this out to avoid interpreting madminer inputs as smeared 
     }
-    electron.set_gen_p4("tf_p1::output")
+    muon1.set_gen_p4("tf_p1::output")
 
     GaussianTransferFunctionOnEnergy.tf_p2 = {
         ps_point = add_dimension(),
-        reco_particle = bjet1.reco_p4,
+        reco_particle = bjet0.reco_p4,
         sigma = 0.10, -- comment this out to avoid interpreting madminer inputs as smeared 
     }
-    bjet1.set_gen_p4("tf_p2::output")
+    bjet0.set_gen_p4("tf_p2::output")
 
     -- Example for binned transfer function (only works on ingrid)
     -- BinnedTransferFunctionOnEnergy.tf_p2 = {
@@ -76,17 +76,17 @@ if USE_TF then
 
     GaussianTransferFunctionOnEnergy.tf_p3 = {
         ps_point = add_dimension(),
-        reco_particle = muon.reco_p4,
+        reco_particle = muon0.reco_p4,
         sigma = 0.05, -- comment this out to avoid interpreting madminer inputs as smeared
     }
-    muon.set_gen_p4("tf_p3::output")
+    muon0.set_gen_p4("tf_p3::output")
 
     GaussianTransferFunctionOnEnergy.tf_p4 = {
         ps_point = add_dimension(),
-        reco_particle = bjet2.reco_p4,
+        reco_particle = bjet1.reco_p4,
         sigma = 0.10, -- comment this out to avoid interpreting madminer inputs as smeared 
     }
-    bjet2.set_gen_p4("tf_p4::output")
+    bjet1.set_gen_p4("tf_p4::output")
 
     -- BinnedTransferFunctionOnEnergy.tf_p4 = {
     --     ps_point = add_dimension(),
@@ -98,10 +98,10 @@ end
 
 -- If set_gen_p4 is not called, gen_p4 == reco_p4
 inputs = {
-    electron.gen_p4,
-    bjet1.gen_p4,
-    muon.gen_p4,
-    bjet2.gen_p4
+    muon1.gen_p4,
+    bjet0.gen_p4,
+    muon0.gen_p4,
+    bjet1.gen_p4
 }
 
 StandardPhaseSpace.phaseSpaceOut = {
@@ -151,7 +151,7 @@ Looper.looper = {
       pdf = 'CT10nlo',
       pdf_scale = 172.5, -- parameter('top_mass'),
 
-      matrix_element = 'ttbarElectronME',
+      matrix_element = 'ttbarMuMu_sm_P1_Sigma_sm_gg_mupvmbmumvmxbx',
       matrix_element_parameters = {
           -- card = '/home/zbhatti/codebase/madminer/momemta/param_card.dat',
           card = '/home/zbhatti/codebase/madminer/examples/ttbar/cards/param_card_template.dat',
@@ -162,35 +162,36 @@ Looper.looper = {
       },
 
       initialState = 'boost::partons',
-        
-    
-      -- mapFinalStates[{5, -11, 12, -5, 13, -14}] see ttbarElectronME/SubProcesses/P1_Sigma_sm_gg_bepvebxmumvmx/P1_Sigma_sm_gg_bepvebxmumvmx.cc 
+
+      -- mapFinalStates[{5, -11, 12, -5, 13, -14}] see ttbarElectronME/SubProcesses/P1_Sigma_sm_gg_bepvebxmumvmx/P1_Sigma_sm_gg_bepvebxmumvmx.cc
+      -- mapFinalStates[{-13, 14, 5, 13, -14, -5}] see MatrixElements/ttbarMuMu/SubProcesses/P1_Sigma_sm_gg_mupvmbmumvmxbx/P1_Sigma_sm_gg_mupvmbmumvmxbx.cc
+
       particles = {
         inputs = full_inputs,
         ids = {
           {
-            pdg_id = -11,
-            me_index = 2,
+            pdg_id = -13,
+            me_index = 1,
           },  
           {
             pdg_id = 5,
-            me_index = 1,
-          },
-          {
-            pdg_id = 13,
-            me_index = 5,
-          },
-          {
-            pdg_id = -5,
-            me_index = 4,
-          },
-          {
-            pdg_id = 12,
             me_index = 3,
           },
           {
-            pdg_id = -14,
+            pdg_id = 13,
+            me_index = 4,
+          },
+          {
+            pdg_id = -5,
             me_index = 6,
+          },
+          {
+            pdg_id = 14,
+            me_index = 2,
+          },
+          {
+            pdg_id = -14,
+            me_index = 5,
           },
         }
       },
