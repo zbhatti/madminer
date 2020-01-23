@@ -20,13 +20,13 @@ reproducing:
     cp models/alice_* ../../momemta/inputs/alice_wo_smearing/
     cp data/samples/x_test_w_smearing.npy ../../momemta/inputs/
 
-4. copy source and compile momemta
-    cd ~/util/MoMEMta-1.0.0/build
+4. compile momemta
+    cd ~/codebase/madminer/momemta
     confirm source and lua files match experiment setup
-    cp ~/codebase/madminer/momemta/ttbar.* ~/util/MoMEMta-1.0.0/examples/ && /opt/cmake-3.14.0-Linux-x86_64/bin/cmake -DPYTHON_BINDINGS=ON -DCMAKE_INSTALL_PREFIX=/home/zbhatti/util/ -DBOOST_ROOT=/home/zbhatti/util/MG5_aMC_v2_6_5/HEPTools/boost/boost_1_59_0/ -DBoost_DEBUG=ON -DEXAMPLES=ON .. && make -j4
+    /usr/bin/c++   -Wall -pedantic -Wextra -fcx-fortran-rules -fcx-limited-range -O2 -g -DNDEBUG   ttbar.cc -o ttbar.exe -Wl,-rpath,/home/zbhatti/util/MoMEMta-1.0.0/build:/home/zbhatti/util/root_build/lib /home/zbhatti/util/MoMEMta-1.0.0/build/libmomemta.so.1.0.0 /usr/lib/x86_64-linux-gnu/hdf5/serial/libhdf5_hl_cpp.a /usr/lib/x86_64-linux-gnu/hdf5/serial/libhdf5_cpp.a /usr/lib/x86_64-linux-gnu/hdf5/serial/libhdf5_hl.a /usr/lib/x86_64-linux-gnu/hdf5/serial/libhdf5.a -lpthread -lsz -lz -ldl -lm /home/zbhatti/util/root_build/lib/libCore.so /home/zbhatti/util/root_build/lib/libRIO.so /home/zbhatti/util/root_build/lib/libNet.so /home/zbhatti/util/root_build/lib/libHist.so /home/zbhatti/util/root_build/lib/libGraf.so /home/zbhatti/util/root_build/lib/libGraf3d.so /home/zbhatti/util/root_build/lib/libGpad.so /home/zbhatti/util/root_build/lib/libTree.so /home/zbhatti/util/root_build/lib/libRint.so /home/zbhatti/util/root_build/lib/libPostscript.so /home/zbhatti/util/root_build/lib/libMatrix.so /home/zbhatti/util/root_build/lib/libPhysics.so /home/zbhatti/util/root_build/lib/libMathCore.so /home/zbhatti/util/root_build/lib/libThread.so /home/zbhatti/util/root_build/lib/libGenVector.so -I/home/zbhatti/util/MoMEMta-1.0.0/include -I/home/zbhatti/util/root_build/include -I/usr/include/hdf5/serial
     
 5. run momemta
-    cd ~/util/MoMEMta-1.0.0/build
+    cd ~/codebase/madminer/momemta
     ./ttbar.exe ~/codebase/madminer/examples/ttbar2/data/miner_output_with_data.h5 ~/codebase/madminer/momemta/inputs/x_test.csv ~/codebase/madminer/momemta/weights11.csv 2>&1 |tee ~/codebase/madminer/momemta/log13.out
 
 6. analysis script
@@ -68,6 +68,7 @@ discrepencies:
     - WHICH example to try and match - probably paper
     - previous runs had parton dist func defaulted back to madgraph's default when my config was incorrect
     - muon vs electron name in lua
+    - cannot distinguish muon and antimuon in madminer when using mu[0] and mu[1]
 
 next step: 
     - train
@@ -75,4 +76,24 @@ next step:
     - change momemta to match new process and run momemta again
 
     
+
+# export momemta matrix elements:
+    cd ~/util/MG5_aMC_v2_6_5
+    bin/mg5_aMC
+    generate p p > t t~, (t > w+ b, w+ > mu+ vm), (t~ > w- b~, w- > mu- vm~)
+    output MoMEMta ttbarMuMu
+
+    maybe not needed:
+    cd ttbarMuMu && mkdir build && cd build
+    /opt/cmake-3.14.0-Linux-x86_64/bin/cmake -DMoMEMta_DIR=~/util/MoMEMta-1.0.0/build ..
+    make -j4
+
+    rebuild Momemta, registering the new MatrixElement methods to the central factory
+    cp -r ~/util/MG5_aMC_v2_6_5/ttbarMuMu ~/util/MoMEMta-1.0.0//MatrixElements/
+    cd ~/util/MoMEMta-1.0.0/build
+    make clean
+    edit /home/zbhatti/util/MoMEMta-1.0.0/MatrixElements/ttbarMuMu/CMakeLists.txt to reflect simpler cmake args
+    /opt/cmake-3.14.0-Linux-x86_64/bin/cmake -DPYTHON_BINDINGS=ON -DCMAKE_INSTALL_PREFIX=/home/zbhatti/util/ -DBOOST_ROOT=/home/zbhatti/util/MG5_aMC_v2_6_5/HEPTools/boost/boost_1_59_0/ -DBoost_DEBUG=ON  -DEXAMPLES=ON ..
+    make -j4
+
 

@@ -17,13 +17,13 @@ using namespace H5;
 using LorentzVectorM = ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<float>>;
 using LorentzVectorE = ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiE4D<float>>;
 
-// observables: 
-// ['j_0_E', 'j_0_pt', 'j_0_eta', 'j_0_phi', 
-//  'j_1_E', 'j_1_pt', 'j_1_eta', 'j_1_phi', 
-//  'e_0_E', 'e_0_pt', 'e_0_eta', 'e_0_phi',
-//  'mu_0_E', 'mu_0_pt', 'mu_0_eta', 'mu_0_phi', 
+// miner_lhe_data_shuffled.h5: h['observables']['names'][:]
+// ['j_0_E', 'j_0_pt', 'j_0_eta', 'j_0_phi',
+//  'j_1_E', 'j_1_pt', 'j_1_eta', 'j_1_phi',
+//  'mu_1_E', 'mu_1_pt', 'mu_1_eta', 'mu_1_phi',
+//  'mu_0_E', 'mu_0_pt', 'mu_0_eta', 'mu_0_phi',
 //  'met_pt', 'met_phi'
-//  'm_e_0_j_0', 'm_e_0_j_1', 'm_mu_0_j_0', 'm_mu_0_j_1', 
+//  'm_mu_0_j_0', 'm_mu_0_j_1', 'm_mu_1_j_0', 'm_mu_1_j_1',
 //  'mt2' ]
 
 void normalizeInput(LorentzVector& p4) {
@@ -87,7 +87,7 @@ int main(int argc, char* argv[]) {
     lua_parameters.set("USE_TF", true);
     lua_parameters.set("USE_PERM", true);
 
-    ConfigurationReader configuration("../examples/ttbar.lua", lua_parameters);
+    ConfigurationReader configuration("ttbar.lua", lua_parameters);
 
     // load data structures from h5py
     // look the h5 file over and confirm hardcoded values in this file reflect the latest madminer setup
@@ -158,47 +158,46 @@ int main(int argc, char* argv[]) {
             MoMEMta weight(configuration.freeze());
             
             // LorentzVectorE(pt, eta, phi, E)
-            LorentzVectorE bjet1L   {x_test[i][1], x_test[i][2], x_test[i][3], x_test[i][0]};
-            LorentzVectorE bjet2L   {x_test[i][5], x_test[i][6], x_test[i][7], x_test[i][4]};
-            LorentzVectorE eL       {x_test[i][9], x_test[i][10], x_test[i][11], x_test[i][8]};
-            LorentzVectorE muL      {x_test[i][13], x_test[i][14], x_test[i][15], x_test[i][12]};
+            LorentzVectorE bjet0L   {x_test[i][1], x_test[i][2], x_test[i][3], x_test[i][0]};
+            LorentzVectorE bjet1L   {x_test[i][5], x_test[i][6], x_test[i][7], x_test[i][4]};
+            LorentzVectorE mu1L       {x_test[i][9], x_test[i][10], x_test[i][11], x_test[i][8]};
+            LorentzVectorE mu0L      {x_test[i][13], x_test[i][14], x_test[i][15], x_test[i][12]};
             
             // LorentzVectorM(pt, eta, phi, m)
             LorentzVectorM met_p4M  {x_test[i][16], 0.0, x_test[i][17], 0.0};
             
             // LorentzVector(px, py, pz, E) required for MoMEMta
-            Particle bjet1      {"bjet1",       LorentzVector {bjet1L.Px(), bjet1L.Py(), bjet1L.Pz(), bjet1L.E()}, +5 };
-            Particle bjet2      {"bjet2",       LorentzVector {bjet2L.Px(), bjet2L.Py(), bjet2L.Pz(), bjet2L.E()}, -5 };
-            Particle electron   {"electron",    LorentzVector {eL.Px(), eL.Py(), eL.Pz(), eL.E()}, -11 };
-            Particle muon       {"muon",        LorentzVector {muL.Px(), muL.Py(), muL.Pz(), muL.E()}, +13 };
+            Particle bjet0  {"bjet0",   LorentzVector {bjet0L.Px(), bjet0L.Py(), bjet0L.Pz(), bjet0L.E()}, +5 };
+            Particle bjet1  {"bjet1",   LorentzVector {bjet1L.Px(), bjet1L.Py(), bjet1L.Pz(), bjet1L.E()}, -5 };
+            Particle muon1  {"muon1",   LorentzVector {mu1L.Px(), mu1L.Py(), mu1L.Pz(), mu1L.E()}, -13 };
+            Particle muon0  {"muon0",   LorentzVector {mu0L.Px(), mu0L.Py(), mu0L.Pz(), mu0L.E()}, +13 };
             
+            normalizeInput(bjet0.p4);
             normalizeInput(bjet1.p4);
-            normalizeInput(bjet2.p4);
-            normalizeInput(electron.p4);
-            normalizeInput(muon.p4);
+            normalizeInput(muon1.p4);
+            normalizeInput(muon0.p4);
             
             LorentzVector metL { met_p4M.Px(), met_p4M.Py(), met_p4M.Pz(), met_p4M.E() }; 
             
-            LOG(debug) << "j_0_E: "     << bjet1.p4.E();
-            LOG(debug) << "j_0_px: "    << bjet1.p4.Px();
-            LOG(debug) << "j_0_py: "    << bjet1.p4.Py();
-            LOG(debug) << "j_0_pz: "    << bjet1.p4.Pz();
+            LOG(debug) << "j_0_E: "     << bjet0.p4.E();
+            LOG(debug) << "j_0_px: "    << bjet0.p4.Px();
+            LOG(debug) << "j_0_py: "    << bjet0.p4.Py();
+            LOG(debug) << "j_0_pz: "    << bjet0.p4.Pz();
             
+            LOG(debug) << "j_1_E: "     << bjet1.p4.E();
+            LOG(debug) << "j_1_px: "    << bjet1.p4.Px();
+            LOG(debug) << "j_1_py: "    << bjet1.p4.Py();
+            LOG(debug) << "j_1_pz: "    << bjet1.p4.Pz();
             
-            LOG(debug) << "j_1_E: "     << bjet2.p4.E();
-            LOG(debug) << "j_1_px: "    << bjet2.p4.Px();
-            LOG(debug) << "j_1_py: "    << bjet2.p4.Py();
-            LOG(debug) << "j_1_pz: "    << bjet2.p4.Pz();
+            LOG(debug) << "mu_1_E: "    << muon1.p4.E();
+            LOG(debug) << "mu_1_px: "   << muon1.p4.Px();
+            LOG(debug) << "mu_1_py: "   << muon1.p4.Py();
+            LOG(debug) << "mu_1_pz: "   << muon1.p4.Pz();
             
-            LOG(debug) << "e_0_E: "     << electron.p4.E();
-            LOG(debug) << "e_0_px: "    << electron.p4.Px();
-            LOG(debug) << "e_0_py: "    << electron.p4.Py();
-            LOG(debug) << "e_0_pz: "    << electron.p4.Pz();
-            
-            LOG(debug) << "mu_0_E: "    << muon.p4.E();
-            LOG(debug) << "mu_0_px: "   << muon.p4.Px();
-            LOG(debug) << "mu_0_py: "   << muon.p4.Py();
-            LOG(debug) << "mu_0_pz: "   << muon.p4.Pz();
+            LOG(debug) << "mu_0_E: "    << muon0.p4.E();
+            LOG(debug) << "mu_0_px: "   << muon0.p4.Px();
+            LOG(debug) << "mu_0_py: "   << muon0.p4.Py();
+            LOG(debug) << "mu_0_pz: "   << muon0.p4.Pz();
             
             LOG(debug) << "met_E: "    << metL.E();
             LOG(debug) << "met_px: "   << metL.Px();
@@ -206,7 +205,7 @@ int main(int argc, char* argv[]) {
             LOG(debug) << "met_pz: "   << metL.Pz();
             
             auto start_time = system_clock::now();
-            std::vector<std::pair<double, double>> weights = weight.computeWeights({electron, bjet1, muon, bjet2}, metL);
+            std::vector<std::pair<double, double>> weights = weight.computeWeights({muon1, bjet0, muon0, bjet1}, metL);
             auto end_time = system_clock::now();
 
             LOG(debug) << "Result:";
