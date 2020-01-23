@@ -63,19 +63,10 @@ For remote:
 
 
 discrepencies:
-    - process initial and final states ( no proc card provided anywhere, only the byproduct of mometa-magmee export)
-    - smearing function's sigma for leptons and hadrons ( paper does not detail the actual values chosen so no second comparison point)
-    - WHICH example to try and match - probably paper
-    - previous runs had parton dist func defaulted back to madgraph's default when my config was incorrect
-    - muon vs electron name in lua
     - cannot distinguish muon and antimuon in madminer when using mu[0] and mu[1]
 
 next step: 
-    - train
-    - export our own matrix element code via momemta-magmee with our p p > mu mu~ states
-    - change momemta to match new process and run momemta again
-
-    
+    - re-run train for a self-consistency check
 
 # export momemta matrix elements:
     cd ~/util/MG5_aMC_v2_6_5
@@ -95,5 +86,7 @@ next step:
     edit /home/zbhatti/util/MoMEMta-1.0.0/MatrixElements/ttbarMuMu/CMakeLists.txt to reflect simpler cmake args
     /opt/cmake-3.14.0-Linux-x86_64/bin/cmake -DPYTHON_BINDINGS=ON -DCMAKE_INSTALL_PREFIX=/home/zbhatti/util/ -DBOOST_ROOT=/home/zbhatti/util/MG5_aMC_v2_6_5/HEPTools/boost/boost_1_59_0/ -DBoost_DEBUG=ON  -DEXAMPLES=ON ..
     make -j4
+
+
 
 
