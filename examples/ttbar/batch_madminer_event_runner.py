@@ -294,11 +294,8 @@ class EventRunner:
 
         miner_data_file_paths = glob(miner_data_file_pattern)
 
-        # TODO: new method
-        # run sample augmenter - event_data_merged
-
-        logging.info('shuffling LHE files {}'.format(miner_data_file_paths))
-        combine_and_shuffle(miner_data_file_paths, miner_data_shuffled_path)
+        # logging.info('shuffling LHE files {}'.format(miner_data_file_paths))
+        # combine_and_shuffle(miner_data_file_paths, miner_data_shuffled_path)
 
         logging.info('running SampleAugmenter...')
 
