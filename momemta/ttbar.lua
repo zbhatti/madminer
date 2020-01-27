@@ -9,6 +9,7 @@ local bjet1 = declare_input("bjet1")
 if USE_PERM then
     -- Automatically insert a Permutator module
     add_reco_permutations(bjet0, bjet1)
+    add_reco_permutations(muon1, muon0)
 end
 
 parameters = {

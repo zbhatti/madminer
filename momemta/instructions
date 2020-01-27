@@ -89,4 +89,6 @@ next step:
 
 
 
-
+reco with muons in momemta
+no smearing function anywhere (comment out madgraph)
+try simpler process
