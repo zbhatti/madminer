@@ -154,22 +154,22 @@ class EventRunner:
         log_directory = path.join(data_dir, 'logs_{}_{}/signal'.format(few_or_many, worker_id))
         event_data_path = path.join(data_dir, 'data/miner_lhe_data_{}_{}.h5'.format(few_or_many, worker_id))
 
-        miner = MadMiner()
-        miner.load(self.miner_setup_path)
-
-        miner.run_multiple(
-            sample_benchmarks=sample_benchmarks,
-            mg_directory=mg_dir,
-            mg_process_directory=mg_process_directory,
-            proc_card_file=proc_card_path,
-            param_card_template_file=param_template_path,
-            run_card_files=[run_card_path],
-            log_directory=log_directory,
-            run_card_override={'iseed': worker_id},
-        )
+        # miner = MadMiner()
+        # miner.load(self.miner_setup_path)
+        #
+        # miner.run_multiple(
+        #     sample_benchmarks=sample_benchmarks,
+        #     mg_directory=mg_dir,
+        #     mg_process_directory=mg_process_directory,
+        #     proc_card_file=proc_card_path,
+        #     param_card_template_file=param_template_path,
+        #     run_card_files=[run_card_path],
+        #     log_directory=log_directory,
+        #     run_card_override={'iseed': worker_id},
+        # )
 
         logging.info('running LHEProcessor...')
-        run_smearing = True
+        run_smearing = False
 
         # name: definition
         obs_particles = {
@@ -182,7 +182,7 @@ class EventRunner:
         proc = LHEReader(self.miner_setup_path)
         i = 1
         for sample_bench in sample_benchmarks:
-            lhe_filename = path.join(data_dir, 'mg_processes_{0}_{1}/signal/Events/run_{2:0>2}/unweighted_events.lhe.gz'.format(few_or_many, worker_id, i))
+            lhe_filename = path.join('/scratch/zb609/madminer_data_6', 'mg_processes_{0}_{1}/signal/Events/run_{2:0>2}/unweighted_events.lhe.gz'.format(few_or_many, worker_id, i))
 
             proc.add_sample(
                 lhe_filename=lhe_filename,
