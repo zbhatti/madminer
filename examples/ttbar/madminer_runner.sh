@@ -5,14 +5,14 @@
 #SBATCH --nodes=1
 
 ## use for generate:
-##SBATCH --mem=16GB
-##SBATCH --time=2-23:00:00
-##SBATCH --cpus-per-task=2
+#SBATCH --mem=16GB
+#SBATCH --time=2-23:00:00
+#SBATCH --cpus-per-task=2
 
 ## use for train:
-#SBATCH --mem=150GB
-#SBATCH --time=20:00:00
-#SBATCH --cpus-per-task=4
+##SBATCH --mem=150GB
+##SBATCH --time=20:00:00
+##SBATCH --cpus-per-task=4
 
 # unused:
 ##SBATCH --gres=gpu:1
