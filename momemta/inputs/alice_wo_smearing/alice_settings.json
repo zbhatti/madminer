@@ -1,1 +1,1 @@
-{"n_parameters": 2, "features": null, "activation": "tanh", "n_observables": 23, "estimator_type": "parameterized_ratio", "n_hidden": [100, 100]}
+{"n_parameters": 2, "features": null, "activation": "tanh", "dropout_prob": 0.0, "n_observables": 23, "estimator_type": "parameterized_ratio", "n_hidden": [100, 100]}

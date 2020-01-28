@@ -56,14 +56,14 @@ if USE_TF then
     GaussianTransferFunctionOnEnergy.tf_p1 = {
         ps_point = add_dimension(),
         reco_particle = muon1.reco_p4,
-        sigma = 0.05, -- comment this out to avoid interpreting madminer inputs as smeared 
+--         sigma = 0.05, -- comment this out to avoid interpreting madminer inputs as smeared
     }
     muon1.set_gen_p4("tf_p1::output")
 
     GaussianTransferFunctionOnEnergy.tf_p2 = {
         ps_point = add_dimension(),
         reco_particle = bjet0.reco_p4,
-        sigma = 0.10, -- comment this out to avoid interpreting madminer inputs as smeared 
+--         sigma = 0.10, -- comment this out to avoid interpreting madminer inputs as smeared
     }
     bjet0.set_gen_p4("tf_p2::output")
 
@@ -78,14 +78,14 @@ if USE_TF then
     GaussianTransferFunctionOnEnergy.tf_p3 = {
         ps_point = add_dimension(),
         reco_particle = muon0.reco_p4,
-        sigma = 0.05, -- comment this out to avoid interpreting madminer inputs as smeared
+--         sigma = 0.05, -- comment this out to avoid interpreting madminer inputs as smeared
     }
     muon0.set_gen_p4("tf_p3::output")
 
     GaussianTransferFunctionOnEnergy.tf_p4 = {
         ps_point = add_dimension(),
         reco_particle = bjet1.reco_p4,
-        sigma = 0.10, -- comment this out to avoid interpreting madminer inputs as smeared 
+--         sigma = 0.10, -- comment this out to avoid interpreting madminer inputs as smeared
     }
     bjet1.set_gen_p4("tf_p4::output")
 
