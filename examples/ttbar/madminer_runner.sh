@@ -5,14 +5,14 @@
 #SBATCH --nodes=1
 
 ## use for generate:
-#SBATCH --mem=16GB
-#SBATCH --time=2-23:00:00
-#SBATCH --cpus-per-task=2
+##SBATCH --mem=16GB
+##SBATCH --time=2-23:00:00
+##SBATCH --cpus-per-task=2
 
 ## use for train:
-##SBATCH --mem=150GB
-##SBATCH --time=20:00:00
-##SBATCH --cpus-per-task=4
+#SBATCH --mem=150GB
+#SBATCH --time=20:00:00
+#SBATCH --cpus-per-task=4
 
 # unused:
 ##SBATCH --gres=gpu:1
@@ -32,5 +32,5 @@ export MADGRAPH_DIR=/home/zb609/scratch_dir/MG5_aMC_v2_6_5
 # RUN SETUP AS YOURSELF
 # python -u batch_madminer_event_runner.py setup
 
-python -u batch_madminer_event_runner.py $1 generate $2 ${SLURM_ARRAY_TASK_ID}
-#python -u batch_madminer_event_runner.py $1 train
+#python -u batch_madminer_event_runner.py $1 generate $2 ${SLURM_ARRAY_TASK_ID}
+python -u batch_madminer_event_runner.py $1 train

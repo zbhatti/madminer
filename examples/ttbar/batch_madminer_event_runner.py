@@ -182,7 +182,7 @@ class EventRunner:
         proc = LHEReader(self.miner_setup_path)
         i = 1
         for sample_bench in sample_benchmarks:
-            lhe_filename = path.join('/scratch/zb609/madminer_data_6', 'mg_processes_{0}_{1}/signal/Events/run_{2:0>2}/unweighted_events.lhe.gz'.format(few_or_many, worker_id, i))
+            lhe_filename = path.join(self.data_dir, 'mg_processes_{0}_{1}/signal/Events/run_{2:0>2}/unweighted_events.lhe.gz'.format(few_or_many, worker_id, i))
 
             proc.add_sample(
                 lhe_filename=lhe_filename,
