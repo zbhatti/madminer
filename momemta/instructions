@@ -61,13 +61,6 @@ For remote:
     cd ~/codebase/madminer/momemta
     scp zb609@prince:~/scratch_dir/madminer_data/models/alice_* inputs/alice_hpc/
 
-
-discrepencies:
-    - cannot distinguish muon and antimuon in madminer when using mu[0] and mu[1]
-
-next step: 
-    - re-run train for a self-consistency check
-
 # export momemta matrix elements:
     cd ~/util/MG5_aMC_v2_6_5
     bin/mg5_aMC
@@ -88,7 +81,6 @@ next step:
     make -j4
 
 
-
-reco with muons in momemta
-no smearing function anywhere (comment out madgraph)
-try simpler process
+next step:
+    - increase statistics (double worker count)
+    - massless b
