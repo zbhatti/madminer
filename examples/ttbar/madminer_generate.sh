@@ -6,7 +6,7 @@
 
 ## use for generate:
 #SBATCH --mem=16GB
-#SBATCH --time=2-23:00:00
+#SBATCH --time=4-23:00:00
 #SBATCH --cpus-per-task=2
 
 export PATH=$PATH:$HOME/anaconda2/bin

@@ -112,16 +112,17 @@ class EventRunner:
             lha_id=6,
             parameter_name=str('TOP_MASS'),
         )
-        miner.add_parameter(
-            lha_block=str('DECAY'),
-            lha_id=6,
-            parameter_name=str('TOP_WIDTH'),
-        )
+        # miner.add_parameter(
+        #     lha_block=str('DECAY'),
+        #     lha_id=6,
+        #     parameter_name=str('TOP_WIDTH'),
+        # )
 
         # add scanning points
         # for b in self.physics_benchmarks + self.wide_artificial_benchmarks + [self.wide_expected_benchmark]:
         for b in self.physics_benchmarks + [self.wide_expected_benchmark]:
-            miner.add_benchmark({'TOP_MASS': b.mass, 'TOP_WIDTH': b.width}, b.name)
+            # miner.add_benchmark({'TOP_MASS': b.mass, 'TOP_WIDTH': b.width}, b.name)
+            miner.add_benchmark({'TOP_MASS': b.mass}, b.name)
 
         miner.save(self.miner_setup_path)
 
