@@ -88,11 +88,14 @@ class EventRunner:
 
         self.physics_benchmarks = [Benchmark(float(i), 1.5, '{0}_{1}'.format(i, 15)) for i in range(self.mass_low, self.mass_high)]
         self.expected_benchmark = Benchmark(172.0, 1.5, '172_15')
+
         self.wide_artificial_benchmarks = [Benchmark(float(i), 4.0, '{0}_{1}'.format(i, 40)) for i in
                                            range(self.mass_low, self.mass_high, 5)]
+
         self.wide_expected_benchmark = Benchmark(172.5, 4.0, '172.5_40')
 
-        self.low_sample_benchmark_names = [cb.name for cb in self.wide_artificial_benchmarks]
+        # self.low_sample_benchmark_names = [cb.name for cb in self.wide_artificial_benchmarks]
+        self.low_sample_benchmark_names = [cb.name for cb in self.physics_benchmarks]
         self.high_sample_benchmark_names = [self.wide_expected_benchmark.name]
 
         self.data_dir = data_dir
@@ -116,7 +119,8 @@ class EventRunner:
         )
 
         # add scanning points
-        for b in self.physics_benchmarks + self.wide_artificial_benchmarks + [self.wide_expected_benchmark]:
+        # for b in self.physics_benchmarks + self.wide_artificial_benchmarks + [self.wide_expected_benchmark]:
+        for b in self.physics_benchmarks + [self.wide_expected_benchmark]:
             miner.add_benchmark({'TOP_MASS': b.mass, 'TOP_WIDTH': b.width}, b.name)
 
         miner.save(self.miner_setup_path)
@@ -366,7 +370,8 @@ class EventRunner:
         forge.save(path.join(self.data_dir, 'models/alice'))
 
         # Test the model
-        theta_ref = np.array([[c.mass, c.width] for c in self.wide_artificial_benchmarks])
+        # theta_ref = np.array([[c.mass, c.width] for c in self.wide_artificial_benchmarks])
+        theta_ref = np.array([[c.mass, c.width] for c in self.physics_benchmarks])
         np.save(path.join(self.data_dir, 'data/samples/theta_ref.npy'), theta_ref)
 
         # theta 0
