@@ -382,8 +382,13 @@ class EventRunner:
         mass_width_grid_0 = np.vstack((mass.flatten(), width.flatten())).T
         np.save(path.join(self.data_dir, 'data/samples/mass_width_grid_0.npy'), mass_width_grid_0)
 
+        # theta parameters, no width:
+        mass_grid = np.vstack((mass.flatten(), )).T
+        np.save(path.join(self.data_dir, 'data/samples/mass_grid.npy'), mass_grid)
+
         log_r_hat, _0 = forge.evaluate(
-            theta=path.join(self.data_dir, 'data/samples/mass_width_grid_0.npy'),
+            # theta=path.join(self.data_dir, 'data/samples/mass_width_grid_0.npy'),
+            theta=path.join(self.data_dir, 'data/samples/mass_grid.npy'),
             x=path.join(self.data_dir, 'data/samples/x_test.npy'),
             test_all_combinations=True,
             evaluate_score=False,
@@ -418,7 +423,7 @@ class EventRunner:
             n_bins=20,
             n_cols=5,
             normalize=True,
-            parameter_points=['160_15', '172_15', '185_15', '160_40', '170_40', '185_40'],
+            parameter_points=['160_15', '172_15', '185_15', '165_15', '170_15', '180_15'],
             linestyles='-',
             sample_only_from_closest_benchmark=True,
             n_events=1000000,
