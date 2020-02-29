@@ -44,12 +44,14 @@ For remote:
     conda activate python-mm-27
     cd /home/zb609/scratch_dir/madminer/examples/ttbar
     a. setup:
-        python -u batch_madminer_event_runner.py setup
-    
+        python batch_madminer_event_runner.py ~/scratch_dir/madminer_data_more_benchmarks setup
+
     b. generate:
-        sbatch --array 1-100 madminer_runner.sh few && sbatch --array 1-100 madminer_runner.sh many
+        sbatch --array 1-100 madminer_generate.sh ~/scratch_dir/madminer_data_more_benchmarks few
+        sbatch --array 1-100 madminer_generate.sh ~/scratch_dir/madminer_data_more_benchmarks many
     
-    c. 
+    c. train:
+        
 
 
 2. cp x_test.npy from hpc to local AND export x_test.npy to x_test.csv
