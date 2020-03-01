@@ -300,7 +300,7 @@ class EventRunner:
         miner_data_file_paths = glob(miner_data_file_pattern)
 
         logging.info('shuffling LHE files {}'.format(miner_data_file_paths))
-        combine_and_shuffle(miner_data_file_paths, miner_data_shuffled_path)
+        # combine_and_shuffle(miner_data_file_paths, miner_data_shuffled_path)
 
         logging.info('running SampleAugmenter...')
 
@@ -401,19 +401,17 @@ class EventRunner:
         mean_log_r_hat = np.mean(log_r_hat, axis=1)
         llr = -2 * mean_log_r_hat
         best_fit_i = np.argmin(llr)
-        best_fit_x_y = mass_width_grid_0[best_fit_i]
+        best_fit_x_y = mass_grid[best_fit_i]
 
         logging.info('best_fit {}'.format(best_fit_x_y))
 
         logging.info('plotting...')
 
-        fig = plt.figure(figsize=(5, 4))
-        sc = plt.scatter(thetas_benchmarks[:, 0], thetas_benchmarks[:, 1], c=xsecs_benchmarks,
-                         s=200., cmap='viridis', vmin=0., lw=2., edgecolor='black', marker='s')
-        plt.errorbar(thetas_benchmarks[:, 0], thetas_benchmarks[:, 1], yerr=xsec_errors_benchmarks, linestyle="None")
-        cb = plt.colorbar(sc)
-        #
-        plt.savefig(path.join(self.data_dir, 'theta_scatter_plot.png'), bbox_inches='tight')
+        # fig = plt.figure(figsize=(5, 4))
+        # sc = plt.scatter(thetas_benchmarks[:, 0], thetas_benchmarks[:, 1], c=xsecs_benchmarks, s=200., cmap='viridis', vmin=0., lw=2., edgecolor='black', marker='s')
+        # plt.errorbar(thetas_benchmarks[:, 0], thetas_benchmarks[:, 1], yerr=xsec_errors_benchmarks, linestyle="None")
+        # cb = plt.colorbar(sc)
+        # plt.savefig(path.join(self.data_dir, 'theta_scatter_plot.png'), bbox_inches='tight')
 
         # TODO: new method
         # plot observables for shuffled elements, sample 1,000,000 events for example
@@ -423,7 +421,7 @@ class EventRunner:
             n_bins=20,
             n_cols=5,
             normalize=True,
-            parameter_points=['160_15', '172_15', '185_15', '165_15', '170_15', '180_15'],
+            parameter_points=['160_15', '172_15', '185_15', '165_15', '180_15'],
             linestyles='-',
             sample_only_from_closest_benchmark=True,
             n_events=1000000,
@@ -432,7 +430,7 @@ class EventRunner:
         plt.savefig(path.join(self.data_dir, 'observables_histograms.png'), bbox_inches='tight')
 
         fig = plt.figure(figsize=(6, 5))
-        plt.plot(mass_width_grid_0[:, 0], llr, marker='o', ls=' ', zorder=1)
+        plt.plot(mass_grid[:, 0], llr, marker='o', ls=' ', zorder=1)
         plt.scatter(best_fit_x_y[0], llr[best_fit_i], s=100., color='red', marker='*', zorder=2)
         plt.xlabel(r'$Mass (GeV)$')
         plt.ylabel(r'$Likelihood Ratio -2logp(x|\theta)$')
