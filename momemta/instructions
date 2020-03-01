@@ -51,7 +51,7 @@ For remote:
         sbatch --array 1-100 madminer_generate.sh ~/scratch_dir/madminer_data_more_benchmarks many
     
     c. train:
-        
+        sbatch madminer_train.sh ~/scratch_dir/madminer_data_more_benchmarks/
 
 
 2. cp x_test.npy from hpc to local AND export x_test.npy to x_test.csv
@@ -86,3 +86,7 @@ For remote:
 next step:
     - increase statistics (double worker count)
     - massless b
+
+
+effective_n_samples train and validation: 583088.130478 and 194088.653485
+[146.31157602 144.09187005 150.6417121  167.6823833  176.37128122 174.36185155 179.6060645  184.5731514  195.86662304 200.51869669 202.6738957  205.38791888 208.02198315 213.49147956 218.81563133 223.74025397 224.42511241 228.76538036 237.62929329 242.49154656 241.4219257  244.24820318 248.06005718 248.93464367 246.5951359
