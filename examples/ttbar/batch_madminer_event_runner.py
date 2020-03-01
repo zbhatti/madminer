@@ -305,39 +305,39 @@ class EventRunner:
         logging.info('running SampleAugmenter...')
 
         sa = SampleAugmenter(miner_data_shuffled_path)
-
-        train_result = sa.sample_train_ratio(
-            theta0=benchmarks([b.name for b in self.physics_benchmarks]),
-            theta1=benchmark(self.wide_expected_benchmark.name),
-            n_samples=n_train_events,
-            sample_only_from_closest_benchmark=True,
-            partition='train',
-            folder=path.join(self.data_dir, 'data/samples'),
-            filename='train',
-        )
-
-        validation_result = sa.sample_train_ratio(
-            theta0=benchmarks([b.name for b in self.physics_benchmarks]),
-            theta1=benchmark(self.wide_expected_benchmark.name),
-            n_samples=n_val_events,
-            sample_only_from_closest_benchmark=True,
-            partition='validation',
-            folder=path.join(self.data_dir, 'data/samples'),
-            filename='valid',
-        )
-
-        _0 = sa.sample_test(
-            theta=benchmark(self.expected_benchmark.name),
-            n_samples=n_test_events,
-            folder=path.join(self.data_dir, 'data/samples'),
-            filename='test',
-        )
+        #
+        # train_result = sa.sample_train_ratio(
+        #     theta0=benchmarks([b.name for b in self.physics_benchmarks]),
+        #     theta1=benchmark(self.wide_expected_benchmark.name),
+        #     n_samples=n_train_events,
+        #     sample_only_from_closest_benchmark=True,
+        #     partition='train',
+        #     folder=path.join(self.data_dir, 'data/samples'),
+        #     filename='train',
+        # )
+        #
+        # validation_result = sa.sample_train_ratio(
+        #     theta0=benchmarks([b.name for b in self.physics_benchmarks]),
+        #     theta1=benchmark(self.wide_expected_benchmark.name),
+        #     n_samples=n_val_events,
+        #     sample_only_from_closest_benchmark=True,
+        #     partition='validation',
+        #     folder=path.join(self.data_dir, 'data/samples'),
+        #     filename='valid',
+        # )
+        #
+        # _0 = sa.sample_test(
+        #     theta=benchmark(self.expected_benchmark.name),
+        #     n_samples=n_test_events,
+        #     folder=path.join(self.data_dir, 'data/samples'),
+        #     filename='test',
+        # )
 
         thetas_benchmarks, xsecs_benchmarks, xsec_errors_benchmarks = sa.cross_sections(
             theta=benchmarks([b.name for b in self.physics_benchmarks])
         )
 
-        logging.info('effective_n_samples train and validation: {} and {}'.format(train_result[-1], validation_result[-1]))
+        # logging.info('effective_n_samples train and validation: {} and {}'.format(train_result[-1], validation_result[-1]))
         logging.info(str(xsecs_benchmarks))
 
         # forge.train
