@@ -353,34 +353,34 @@ class EventRunner:
         theta0_validation_path = path.join(self.data_dir, 'data/samples/theta0_valid.npy')
         r_xz_validation_path = path.join(self.data_dir, 'data/samples/r_xz_valid.npy')
 
-        result = forge.train(method='alice',
-                             x=x_train_path,
-                             y=y_train_path,
-                             theta=theta0_train_path,
-                             r_xz=r_xz_train_path,
-                             x_val=x_validation_path,
-                             y_val=y_validation_path,
-                             theta_val=theta0_validation_path,
-                             r_xz_val=r_xz_validation_path,
-                             n_epochs=30,
-                             batch_size=256,
-                             initial_lr=0.001,
-                             scale_inputs=True
-                             )
-
-        forge.save(path.join(self.data_dir, 'models/alice'))
+        # result = forge.train(method='alice',
+        #                      x=x_train_path,
+        #                      y=y_train_path,
+        #                      theta=theta0_train_path,
+        #                      r_xz=r_xz_train_path,
+        #                      x_val=x_validation_path,
+        #                      y_val=y_validation_path,
+        #                      theta_val=theta0_validation_path,
+        #                      r_xz_val=r_xz_validation_path,
+        #                      n_epochs=30,
+        #                      batch_size=256,
+        #                      initial_lr=0.001,
+        #                      scale_inputs=True
+        #                      )
+        #
+        # forge.save(path.join(self.data_dir, 'models/alice'))
 
         # Test the model
         # theta_ref = np.array([[c.mass, c.width] for c in self.wide_artificial_benchmarks])
         theta_ref = np.array([[c.mass, c.width] for c in self.physics_benchmarks])
         np.save(path.join(self.data_dir, 'data/samples/theta_ref.npy'), theta_ref)
 
-        # theta 0
+        # theta parameters with width:
         mass_bins = np.linspace(self.mass_low, self.mass_high, 2 * (self.mass_high - self.mass_low))
         width_bins = np.array([1.5, ])  # pick expected value of top width
         mass, width = np.meshgrid(mass_bins, width_bins)
-        mass_width_grid_0 = np.vstack((mass.flatten(), width.flatten())).T
-        np.save(path.join(self.data_dir, 'data/samples/mass_width_grid_0.npy'), mass_width_grid_0)
+        # mass_width_grid_0 = np.vstack((mass.flatten(), width.flatten())).T
+        # np.save(path.join(self.data_dir, 'data/samples/mass_width_grid_0.npy'), mass_width_grid_0)
 
         # theta parameters, no width:
         mass_grid = np.vstack((mass.flatten(), )).T
