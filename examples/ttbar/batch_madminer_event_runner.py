@@ -341,7 +341,7 @@ class EventRunner:
         logging.info(str(xsecs_benchmarks))
 
         # forge.train
-        forge = ParameterizedRatioEstimator(n_hidden=(100, 100))
+        forge = ParameterizedRatioEstimator(n_hidden=(100, 100), dropout_prob=0.2)
         logging.info('running forge')
         x_train_path = path.join(self.data_dir, 'data/samples/x_train.npy')
         y_train_path = path.join(self.data_dir, 'data/samples/y_train.npy')
@@ -364,7 +364,7 @@ class EventRunner:
                              r_xz_val=r_xz_validation_path,
                              n_epochs=50,
                              batch_size=256,
-                             initial_lr=3e-4,
+                             initial_lr=0.001,
                              final_lr=1e-6,
                              scale_inputs=True
                              )
