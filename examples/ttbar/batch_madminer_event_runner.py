@@ -366,7 +366,8 @@ class EventRunner:
                              batch_size=256,
                              initial_lr=0.001,
                              final_lr=1e-6,
-                             scale_inputs=True
+                             scale_inputs=True,
+                             early_stopping=False,
                              )
 
         forge.save(path.join(self.data_dir, 'models/alice'))
