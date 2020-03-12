@@ -363,7 +363,7 @@ class EventRunner:
                              theta_val=theta0_validation_path,
                              r_xz_val=r_xz_validation_path,
                              n_epochs=50,
-                             batch_size=1000,
+                             batch_size=100,
                              initial_lr=0.001,
                              final_lr=1e-6,
                              scale_inputs=True,
