@@ -43,7 +43,7 @@ class EventRunner:
         expected_mass, expected_width, expected_width_exp = 126.0, 10**np.log10(4E-3), np.log10(4E-3)
 
         self.expected_benchmark = Benchmark(expected_mass, expected_width, expected_width_exp, '126_{:.1E}'.format(expected_width))
-        self.theta0_benchmarks = [Benchmark(expected_mass, 10**t, t, '126_{:.1E}'.format(t)) for t in theta_exp]
+        self.theta0_benchmarks = [Benchmark(expected_mass, 10**t, t, '126_{:.1E}'.format(10**t)) for t in theta_exp]
         self.theta1_benchmark = Benchmark(expected_mass, theta1_width, theta1_width_exp, '126_{:.1E}'.format(theta1_width))
 
         self.low_sample_benchmark_names = [cb.name for cb in self.theta0_benchmarks]
@@ -154,7 +154,6 @@ class EventRunner:
                 str('{0}.pt'.format(definition)),
                 required=True
             )
-            # proc.add_cut('{0}.pt >= 25.0'.format(definition))
 
             # angle in plane perpendicular to collision
             proc.add_observable(
@@ -169,9 +168,6 @@ class EventRunner:
                 str('{0}.phi()'.format(definition)),
                 required=True
             )
-
-        electrons = ['e+', 'e-']
-        muons = ['mu+', 'mu-']
 
         proc.add_observable(
             'mass_e+_e-',
