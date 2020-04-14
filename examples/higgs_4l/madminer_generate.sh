@@ -16,7 +16,7 @@ conda activate python-mm-27
 conda env list
 source /scratch/zb609/root_build/bin/thisroot.sh
 
-cd $SCRATCH/madminer/examples/ttbar
+cd $SCRATCH/madminer/examples/higgs_4l
 export MADGRAPH_DIR=/home/zb609/scratch_dir/MG5_aMC_v2_6_5
 
 # RUN SETUP AS YOURSELF
