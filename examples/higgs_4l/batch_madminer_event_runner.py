@@ -224,6 +224,22 @@ class EventRunner:
         logging.info('shuffling LHE files {}'.format(miner_data_file_paths))
         combine_and_shuffle(miner_data_file_paths, miner_data_shuffled_path)
 
+        # TODO: new method
+        # plot observables for shuffled elements, sample 1,000,000 events for example
+        _ = plot_distributions(
+            filename=miner_data_shuffled_path,
+            uncertainties='none',
+            n_bins=20,
+            n_cols=5,
+            normalize=True,
+            parameter_points=[cb.name for cb in self.theta0_benchmarks[::5]] + [self.theta1_benchmark.name],
+            linestyles='-',
+            sample_only_from_closest_benchmark=True,
+            n_events=1000000,
+        )
+        plt.tight_layout()
+        plt.savefig(path.join(self.data_dir, 'observables_histograms.png'), bbox_inches='tight')
+
         logging.info('running SampleAugmenter...')
 
         sa = SampleAugmenter(miner_data_shuffled_path)
@@ -331,22 +347,6 @@ class EventRunner:
         # plt.errorbar(thetas_benchmarks[:, 0], thetas_benchmarks[:, 1], yerr=xsec_errors_benchmarks, linestyle="None")
         # cb = plt.colorbar(sc)
         # plt.savefig(path.join(self.data_dir, 'theta_scatter_plot.png'), bbox_inches='tight')
-
-        # TODO: new method
-        # plot observables for shuffled elements, sample 1,000,000 events for example
-        _ = plot_distributions(
-            filename=miner_data_shuffled_path,
-            uncertainties='none',
-            n_bins=20,
-            n_cols=5,
-            normalize=True,
-            parameter_points=[cb.name for cb in self.theta0_benchmarks[::5]] + [self.theta1_benchmark.name] + [self.expected_benchmark.name],
-            linestyles='-',
-            sample_only_from_closest_benchmark=True,
-            n_events=1000000,
-        )
-        plt.tight_layout()
-        plt.savefig(path.join(self.data_dir, 'observables_histograms.png'), bbox_inches='tight')
 
         fig = plt.figure(figsize=(6, 5))
         plt.plot(test_grid[:, 0], llr, marker='o', ls=' ', zorder=1)

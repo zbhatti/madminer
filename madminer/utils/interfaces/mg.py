@@ -379,6 +379,7 @@ def run_mg(
 
     # Preparations
     create_missing_folders([mg_process_directory, os.path.dirname(log_file)])
+    create_missing_folders([os.path.join(mg_process_directory, 'Cards')])
     if proc_card_filename is not None:
         create_missing_folders([os.path.dirname(proc_card_filename)])
 
