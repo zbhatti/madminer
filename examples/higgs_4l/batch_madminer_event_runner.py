@@ -66,7 +66,7 @@ class EventRunner:
         )
 
         # add scanning points
-        for b in self.theta0_benchmarks + [self.theta1_benchmark]:
+        for b in self.theta0_benchmarks + [self.theta1_benchmark] + [self.expected_benchmark]:
             miner.add_benchmark({'HIGGS_WIDTH': b.width_exp}, b.name)
 
         miner.save(self.miner_setup_path)
@@ -171,20 +171,19 @@ class EventRunner:
 
         proc.add_observable(
             'mass_e+_e-',
-            'sqrt(({0}.e + {1}.e)**2 - ({0}.pt + {1}.pt)**2)'.format(final_state['e+'], final_state['e-']),
+            '({0} + {1}).m()'.format(final_state['e+'], final_state['e-']),
             required=True,
         )
 
         proc.add_observable(
             'mass_mu+_mu-',
-            'sqrt(({0}.e + {1}.e)**2 - ({0}.pt + {1}.pt)**2)'.format(final_state['mu+'], final_state['mu-']),
+            '({0} + {1}).m()'.format(final_state['mu+'], final_state['mu-']),
             required=True,
         )
 
         proc.add_observable(
             'mass_4l',
-            'sqrt(({0}.e + {1}.e + {2}.e + {3}.e)**2 - ({0}.pt + {1}.pt + {2}.pt + {3}.pt)**2)'.format(
-                final_state['e+'], final_state['e-'], final_state['mu+'], final_state['mu-']),
+            '({0} + {1} + {2} + {3}).m()'.format(final_state['e+'], final_state['e-'], final_state['mu+'], final_state['mu-']),
             required=True,
         )
 
