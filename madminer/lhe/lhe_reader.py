@@ -713,7 +713,7 @@ class LHEReader:
         # No events found?
         if this_observations is None:
             logger.warning("No remaining events in this LHE file, skipping it")
-            return None, None
+            return None, None, None
         logger.debug("Found weights %s in LHE file", list(this_weights.keys()))
 
         # Sanity checks

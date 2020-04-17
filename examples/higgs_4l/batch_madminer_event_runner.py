@@ -171,19 +171,19 @@ class EventRunner:
 
         proc.add_observable(
             'mass_e+_e-',
-            '({0} + {1}).m()'.format(final_state['e+'], final_state['e-']),
+            '({0} + {1}).m'.format(final_state['e+'], final_state['e-']),
             required=True,
         )
 
         proc.add_observable(
             'mass_mu+_mu-',
-            '({0} + {1}).m()'.format(final_state['mu+'], final_state['mu-']),
+            '({0} + {1}).m'.format(final_state['mu+'], final_state['mu-']),
             required=True,
         )
 
         proc.add_observable(
             'mass_4l',
-            '({0} + {1} + {2} + {3}).m()'.format(final_state['e+'], final_state['e-'], final_state['mu+'], final_state['mu-']),
+            '({0} + {1} + {2} + {3}).m'.format(final_state['e+'], final_state['e-'], final_state['mu+'], final_state['mu-']),
             required=True,
         )
 
