@@ -221,64 +221,65 @@ class EventRunner:
         miner_data_file_paths = glob(miner_data_file_pattern)
 
         logging.info('shuffling LHE files {}'.format(miner_data_file_paths))
-        combine_and_shuffle(miner_data_file_paths, miner_data_shuffled_path)
+        # combine_and_shuffle(miner_data_file_paths, miner_data_shuffled_path)
 
         # TODO: new method
         # plot observables for shuffled elements, sample 1,000,000 events for example
-        _ = plot_distributions(
-            filename=miner_data_shuffled_path,
-            uncertainties='none',
-            n_bins=20,
-            n_cols=5,
-            normalize=True,
-            parameter_points=[cb.name for cb in self.theta0_benchmarks[::5]] + [self.theta1_benchmark.name],
-            linestyles='-',
-            sample_only_from_closest_benchmark=True,
-            n_events=1000000,
-        )
-        plt.tight_layout()
-        plt.savefig(path.join(self.data_dir, 'observables_histograms.png'), bbox_inches='tight')
+        # _ = plot_distributions(
+        #     filename=miner_data_shuffled_path,
+        #     uncertainties='none',
+        #     n_bins=20,
+        #     n_cols=5,
+        #     normalize=True,
+        #     parameter_points=[cb.name for cb in self.theta0_benchmarks[::5]] + [self.theta1_benchmark.name],
+        #     linestyles='-',
+        #     sample_only_from_closest_benchmark=True,
+        #     n_events=1000000,
+        # )
+        # plt.tight_layout()
+        # plt.savefig(path.join(self.data_dir, 'observables_histograms.png'), bbox_inches='tight')
 
         logging.info('running SampleAugmenter...')
 
-        sa = SampleAugmenter(miner_data_shuffled_path)
-
-        train_result = sa.sample_train_ratio(
-            theta0=benchmarks([b.name for b in self.theta0_benchmarks]),
-            theta1=benchmark(self.theta1_benchmark.name),
-            n_samples=n_train_events,
-            sample_only_from_closest_benchmark=True,
-            partition='train',
-            folder=path.join(self.data_dir, 'data/samples'),
-            filename='train',
-        )
-
-        validation_result = sa.sample_train_ratio(
-            theta0=benchmarks([b.name for b in self.theta0_benchmarks]),
-            theta1=benchmark(self.theta1_benchmark.name),
-            n_samples=n_val_events,
-            sample_only_from_closest_benchmark=True,
-            partition='validation',
-            folder=path.join(self.data_dir, 'data/samples'),
-            filename='valid',
-        )
-
-        _0 = sa.sample_test(
-            theta=benchmark(self.expected_benchmark.name),
-            n_samples=n_test_events,
-            folder=path.join(self.data_dir, 'data/samples'),
-            filename='test',
-        )
-
-        thetas_benchmarks, xsecs_benchmarks, xsec_errors_benchmarks = sa.cross_sections(
-            theta=benchmarks([b.name for b in self.theta0_benchmarks])
-        )
-
-        logging.info('effective_n_samples train and validation: {} and {}'.format(train_result[-1], validation_result[-1]))
-        logging.info(str(xsecs_benchmarks))
+        # sa = SampleAugmenter(miner_data_shuffled_path)
+        #
+        # train_result = sa.sample_train_ratio(
+        #     theta0=benchmarks([b.name for b in self.theta0_benchmarks]),
+        #     theta1=benchmark(self.theta1_benchmark.name),
+        #     n_samples=n_train_events,
+        #     sample_only_from_closest_benchmark=True,
+        #     partition='train',
+        #     folder=path.join(self.data_dir, 'data/samples'),
+        #     filename='train',
+        # )
+        #
+        # validation_result = sa.sample_train_ratio(
+        #     theta0=benchmarks([b.name for b in self.theta0_benchmarks]),
+        #     theta1=benchmark(self.theta1_benchmark.name),
+        #     n_samples=n_val_events,
+        #     sample_only_from_closest_benchmark=True,
+        #     partition='validation',
+        #     folder=path.join(self.data_dir, 'data/samples'),
+        #     filename='valid',
+        # )
+        #
+        # _0 = sa.sample_test(
+        #     theta=benchmark(self.expected_benchmark.name),
+        #     n_samples=n_test_events,
+        #     folder=path.join(self.data_dir, 'data/samples'),
+        #     filename='test',
+        # )
+        #
+        # thetas_benchmarks, xsecs_benchmarks, xsec_errors_benchmarks = sa.cross_sections(
+        #     theta=benchmarks([b.name for b in self.theta0_benchmarks])
+        # )
+        #
+        # logging.info('effective_n_samples train and validation: {} and {}'.format(train_result[-1], validation_result[-1]))
+        # logging.info(str(xsecs_benchmarks))
 
         # forge.train
         forge = ParameterizedRatioEstimator(n_hidden=(100, 100))
+        forge.load(path.join(self.data_dir, 'models/alice'))
         logging.info('running forge')
         x_train_path = path.join(self.data_dir, 'data/samples/x_train.npy')
         y_train_path = path.join(self.data_dir, 'data/samples/y_train.npy')
@@ -290,23 +291,23 @@ class EventRunner:
         theta0_validation_path = path.join(self.data_dir, 'data/samples/theta0_valid.npy')
         r_xz_validation_path = path.join(self.data_dir, 'data/samples/r_xz_valid.npy')
 
-        result = forge.train(method='alice',
-                             x=x_train_path,
-                             y=y_train_path,
-                             theta=theta0_train_path,
-                             r_xz=r_xz_train_path,
-                             x_val=x_validation_path,
-                             y_val=y_validation_path,
-                             theta_val=theta0_validation_path,
-                             r_xz_val=r_xz_validation_path,
-                             n_epochs=50,
-                             batch_size=100,
-                             initial_lr=0.001,
-                             final_lr=1e-6,
-                             scale_inputs=True,
-                             )
-
-        forge.save(path.join(self.data_dir, 'models/alice'))
+        # result = forge.train(method='alice',
+        #                      x=x_train_path,
+        #                      y=y_train_path,
+        #                      theta=theta0_train_path,
+        #                      r_xz=r_xz_train_path,
+        #                      x_val=x_validation_path,
+        #                      y_val=y_validation_path,
+        #                      theta_val=theta0_validation_path,
+        #                      r_xz_val=r_xz_validation_path,
+        #                      n_epochs=50,
+        #                      batch_size=100,
+        #                      initial_lr=0.001,
+        #                      final_lr=1e-6,
+        #                      scale_inputs=True,
+        #                      )
+        #
+        # forge.save(path.join(self.data_dir, 'models/alice'))
 
         # Test the model
         theta_ref = np.array([[c.mass, c.width] for c in self.theta0_benchmarks])
@@ -326,7 +327,6 @@ class EventRunner:
             x=path.join(self.data_dir, 'data/samples/x_test.npy'),
             test_all_combinations=True,
             evaluate_score=False,
-            run_on_gpu=False,
         )
 
         np.save(path.join(self.data_dir, 'data/samples/log_r_hat.npy'), log_r_hat)
