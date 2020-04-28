@@ -211,6 +211,7 @@ class EventRunner:
 
         logging.info(proc.observables)
         logging.info(proc.observations.keys())
+        logging.info('finished generate_events')
 
     # run solo
     def merge_and_train(self):
@@ -372,7 +373,7 @@ class EventRunner:
         plt.ylabel(r'$Likelihood Ratio -2logp(x|\theta)$')
         plt.xscale('log')
         plt.savefig(path.join(self.data_dir, 'llr.png'), bbox_inches='tight')
-        logging.info('')
+        logging.info('finished merge_and_train')
 
 
 def setup_logging():
