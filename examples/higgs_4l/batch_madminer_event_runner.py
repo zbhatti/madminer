@@ -255,7 +255,7 @@ class EventRunner:
             linestyles='-',
             sample_only_from_closest_benchmark=True,
             n_events=1000000,
-            quantiles_for_range=(0.025, 0.9),
+            quantiles_for_range=(0.025, 0.85),
         )
         plt.tight_layout()
         plt.savefig(path.join(self.data_dir, 'mass_4l_histogram.png'), bbox_inches='tight')
@@ -302,7 +302,7 @@ class EventRunner:
 
         # forge.train
         forge = ParameterizedRatioEstimator(n_hidden=(100, 100))
-        forge.load(path.join(self.data_dir, 'models/alice'))
+        # forge.load(path.join(self.data_dir, 'models/alice'))
         logging.info('running forge')
         x_train_path = path.join(self.data_dir, 'data/samples/x_train.npy')
         y_train_path = path.join(self.data_dir, 'data/samples/y_train.npy')
@@ -323,7 +323,7 @@ class EventRunner:
                              y_val=y_validation_path,
                              theta_val=theta0_validation_path,
                              r_xz_val=r_xz_validation_path,
-                             n_epochs=50,
+                             n_epochs=30,
                              batch_size=100,
                              initial_lr=0.001,
                              final_lr=1e-6,
