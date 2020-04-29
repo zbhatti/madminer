@@ -225,7 +225,7 @@ class EventRunner:
         miner_data_file_paths = glob(miner_data_file_pattern)
 
         logging.info('shuffling LHE files {}'.format(miner_data_file_paths))
-        combine_and_shuffle(miner_data_file_paths, miner_data_shuffled_path)
+        # combine_and_shuffle(miner_data_file_paths, miner_data_shuffled_path)
 
         sa = SampleAugmenter(miner_data_shuffled_path)
         set(sa.observables.keys())
@@ -299,6 +299,11 @@ class EventRunner:
         )
 
         logging.info('effective_n_samples train and validation: {} and {}'.format(train_result[-1], validation_result[-1]))
+        self.plot_n_effective(train_result[1], train_result[-1], validation_result[1], validation_result[-1])
+
+        np.save(path.join(self.data_dir, 'data/samples/train_n_effective.npy'), np.column_stack((train_result[1], train_result[-1])))
+        np.save(path.join(self.data_dir, 'data/samples/val_n_effective.npy'), np.column_stack((validation_result[1], validation_result[-1])))
+
         logging.info(str(xsecs_benchmarks))
 
         # forge.train
@@ -375,6 +380,17 @@ class EventRunner:
         plt.savefig(path.join(self.data_dir, 'llr.png'), bbox_inches='tight')
         logging.info('finished merge_and_train')
 
+    def plot_n_effective(self, train_theta, train_effective, val_theta, val_effective):
+        fig = plt.figure(figsize=(6, 5))
+        plt.plot(10**train_theta[:, 0], train_effective, color='red', marker='o', label='train', ls=' ')
+        plt.plot(10**val_theta[:, 0], val_effective, color='blue', marker='o', label='val', ls=' ')
+        plt.legend()
+        plt.xlabel(r'$Width (GeV)$')
+        plt.ylabel(r'$n_effective$')
+        plt.xscale('log')
+        plt.yscale('log')
+        plt.savefig(path.join(self.data_dir, 'n_effective.png'), bbox_inches='tight')
+        plt.clf()
 
 def setup_logging():
     # MadMiner output
