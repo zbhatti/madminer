@@ -306,10 +306,10 @@ class EventRunner:
 
         logging.info(str(xsecs_benchmarks))
 
-        # forge.train
-        forge = ParameterizedRatioEstimator(n_hidden=(100, 100))
-        # forge.load(path.join(self.data_dir, 'models/alice'))
-        logging.info('running forge')
+        # ratio_estimator.train
+        ratio_estimator = ParameterizedRatioEstimator(n_hidden=(100, 100))
+        # ratio_estimator.load(path.join(self.data_dir, 'models/alice'))
+        logging.info('running ratio_estimator')
         x_train_path = path.join(self.data_dir, 'data/samples/x_train.npy')
         y_train_path = path.join(self.data_dir, 'data/samples/y_train.npy')
         theta0_train_path = path.join(self.data_dir, 'data/samples/theta0_train.npy')
@@ -320,7 +320,7 @@ class EventRunner:
         theta0_validation_path = path.join(self.data_dir, 'data/samples/theta0_valid.npy')
         r_xz_validation_path = path.join(self.data_dir, 'data/samples/r_xz_valid.npy')
 
-        result = forge.train(method='alice',
+        result = ratio_estimator.train(method='alice',
                              x=x_train_path,
                              y=y_train_path,
                              theta=theta0_train_path,
@@ -336,7 +336,7 @@ class EventRunner:
                              scale_inputs=True,
                              )
 
-        forge.save(path.join(self.data_dir, 'models/alice'))
+        ratio_estimator.save(path.join(self.data_dir, 'models/alice'))
 
         # Test the model
         theta_ref = np.array([[c.mass, c.width] for c in self.theta0_benchmarks])
@@ -351,7 +351,7 @@ class EventRunner:
         test_grid = np.vstack((width.flatten(), )).T
         np.save(path.join(self.data_dir, 'data/samples/test_grid.npy'), test_grid)
 
-        log_r_hat, _0 = forge.evaluate(
+        log_r_hat, _0 = ratio_estimator.evaluate_log_likelihood_ratio(
             theta=path.join(self.data_dir, 'data/samples/test_grid.npy'),
             x=path.join(self.data_dir, 'data/samples/x_test.npy'),
             test_all_combinations=True,
@@ -392,6 +392,39 @@ class EventRunner:
         plt.savefig(path.join(self.data_dir, 'n_effective.png'), bbox_inches='tight')
         plt.clf()
 
+    def extract_ground_truth(self):
+        # load sample augmenter
+        n_test_events = 100
+        miner_data_shuffled_path = path.join(self.data_dir, 'data/miner_lhe_data_shuffled.h5')
+        sa = SampleAugmenter(miner_data_shuffled_path)
+
+        test_result = sa.sample_train_ratio(
+            theta0=benchmarks([b.name for b in self.theta0_benchmarks]),
+            theta1=benchmark(self.theta1_benchmark.name),
+            n_samples=2 * n_test_events,
+            sample_only_from_closest_benchmark=True,
+            partition='test',
+            folder=path.join(self.data_dir, 'data/samples'),
+            filename='test_truth',
+        )
+        x, theta0, theta1, y, r_xz, t_xz, n_effective = test_result
+        ground_truth_log_likelihood_ratio = np.log(r_xz)
+        # ...
+
+        # load ratio_estimator
+        ratio_estimator = ParameterizedRatioEstimator(n_hidden=(100, 100))
+        ratio_estimator.load(path.join(self.data_dir, 'models/alice'))
+
+        estimated_log_likelihood_ratio, _ = ratio_estimator.evaluate_log_likelihood_ratio(
+            x=path.join(self.data_dir, 'data/samples/x_test_truth.npy'),
+            theta=theta0,
+            test_all_combinations=False
+        )
+
+        # Compare estimated_log_likelihood_ratio to ground_truth_log_likelihood_ratio
+        import pdb; pdb.set_trace()
+
+
 def setup_logging():
     # MadMiner output
     logging.basicConfig(
@@ -422,6 +455,8 @@ def main():
     elif argv[2] == 'train':
         EventRunner(working_dir).merge_and_train()
 
+    elif argv[2] == 'ground_truth':
+        EventRunner(working_dir).extract_ground_truth()
 
 if __name__ == '__main__':
     main()
