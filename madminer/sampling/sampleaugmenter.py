@@ -591,7 +591,7 @@ class SampleAugmenter(DataAnalyzer):
         parsed_nu0s = self._parse_nu(nu0, len(parsed_theta0s))
         parsed_nu1s = self._parse_nu(nu1, len(parsed_theta1s))
         sets = self._build_sets([parsed_theta0s, parsed_theta1s], [parsed_nu0s, parsed_nu1s])
-        
+
         n_samples_per_theta = min(n_samples_per_theta0, n_samples_per_theta1)
 
         # Start for theta0

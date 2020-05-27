@@ -394,7 +394,7 @@ class EventRunner:
 
     def extract_ground_truth(self):
         # load sample augmenter
-        n_test_events = 100
+        n_test_events = 100000
         miner_data_shuffled_path = path.join(self.data_dir, 'data/miner_lhe_data_shuffled.h5')
         sa = SampleAugmenter(miner_data_shuffled_path)
 
@@ -421,8 +421,12 @@ class EventRunner:
             test_all_combinations=False
         )
 
-        # Compare estimated_log_likelihood_ratio to ground_truth_log_likelihood_ratio
-        import pdb; pdb.set_trace()
+        fig = plt.figure(figsize=(6, 5))
+        plt.scatter(ground_truth_log_likelihood_ratio, estimated_log_likelihood_ratio)
+        plt.xlabel('ground truth')
+        plt.ylabel('estimated')
+        plt.savefig(path.join(self.data_dir, 'ground_truth_estimated_comparison.png'))
+        plt.clf()
 
 
 def setup_logging():
