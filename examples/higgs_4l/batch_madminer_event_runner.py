@@ -394,7 +394,7 @@ class EventRunner:
 
     def extract_ground_truth(self):
         # load sample augmenter
-        n_test_events = 10000
+        n_test_events = 1000
         miner_data_shuffled_path = path.join(self.data_dir, 'data/miner_lhe_data_shuffled.h5')
         sa = SampleAugmenter(miner_data_shuffled_path)
 
