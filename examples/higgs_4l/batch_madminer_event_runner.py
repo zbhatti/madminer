@@ -422,7 +422,7 @@ class EventRunner:
         )
 
         fig = plt.figure(figsize=(6, 5))
-        plt.scatter(ground_truth_log_likelihood_ratio, estimated_log_likelihood_ratio)
+        plt.scatter(ground_truth_log_likelihood_ratio, estimated_log_likelihood_ratio, s=10, alpha=0.5)
         plt.xlabel('ground truth')
         plt.ylabel('estimated')
         plt.savefig(path.join(self.data_dir, 'ground_truth_estimated_comparison.png'))
