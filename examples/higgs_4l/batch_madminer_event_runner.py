@@ -397,36 +397,39 @@ class EventRunner:
         n_test_events = 1000
         miner_data_shuffled_path = path.join(self.data_dir, 'data/miner_lhe_data_shuffled.h5')
         sa = SampleAugmenter(miner_data_shuffled_path)
+        n_benchmarks = len(self.theta0_benchmarks)
+        theta0_benchmarks_sublist = [self.theta0_benchmarks[0], self.theta0_benchmarks[n_benchmarks/2], self.theta0_benchmarks[-1]]
 
-        test_result = sa.sample_train_ratio(
-            theta0=benchmarks([b.name for b in self.theta0_benchmarks]),
-            theta1=benchmark(self.theta1_benchmark.name),
-            n_samples=2 * n_test_events,
-            sample_only_from_closest_benchmark=True,
-            partition='test',
-            folder=path.join(self.data_dir, 'data/samples'),
-            filename='test_truth',
-        )
-        x, theta0, theta1, y, r_xz, t_xz, n_effective = test_result
-        ground_truth_log_likelihood_ratio = np.log(r_xz)
-        # ...
+        for theta0_benchmark in theta0_benchmarks_sublist:
+            test_result = sa.sample_train_ratio(
+                # theta0=benchmarks([b.name for b in self.theta0_benchmarks]),
+                theta0=benchmark(theta0_benchmark.name),
+                theta1=benchmark(self.theta1_benchmark.name),
+                n_samples=n_test_events,
+                sample_only_from_closest_benchmark=True,
+                partition='test',
+                folder=path.join(self.data_dir, 'data/samples'),
+                filename='test_truth',
+            )
+            x, theta0, theta1, y, r_xz, t_xz, n_effective = test_result
+            ground_truth_log_likelihood_ratio = np.log(r_xz)
 
-        # load ratio_estimator
-        ratio_estimator = ParameterizedRatioEstimator(n_hidden=(100, 100))
-        ratio_estimator.load(path.join(self.data_dir, 'models/alice'))
+            ratio_estimator = ParameterizedRatioEstimator(n_hidden=(100, 100))
+            ratio_estimator.load(path.join(self.data_dir, 'models/alice'))
 
-        estimated_log_likelihood_ratio, _ = ratio_estimator.evaluate_log_likelihood_ratio(
-            x=path.join(self.data_dir, 'data/samples/x_test_truth.npy'),
-            theta=theta0,
-            test_all_combinations=False
-        )
+            estimated_log_likelihood_ratio, _ = ratio_estimator.evaluate_log_likelihood_ratio(
+                x=path.join(self.data_dir, 'data/samples/x_test_truth.npy'),
+                theta=theta0,
+                test_all_combinations=False
+            )
 
-        fig = plt.figure(figsize=(6, 5))
-        plt.scatter(ground_truth_log_likelihood_ratio, estimated_log_likelihood_ratio, s=10, alpha=0.5)
-        plt.xlabel('ground truth')
-        plt.ylabel('estimated')
-        plt.savefig(path.join(self.data_dir, 'ground_truth_estimated_comparison.png'))
-        plt.clf()
+            fig = plt.figure(figsize=(6, 5))
+            plt.scatter(ground_truth_log_likelihood_ratio, estimated_log_likelihood_ratio, s=10, alpha=0.5)
+            plt.xlabel('ground truth')
+            plt.ylabel('estimated')
+            plt.title('theta0: {}'.format(theta0_benchmark.name))
+            plt.savefig(path.join(self.data_dir, 'ground_truth_estimated_comparison_{}.png'.format(theta0_benchmark.name)))
+            plt.clf()
 
 
 def setup_logging():
