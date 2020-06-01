@@ -399,8 +399,11 @@ class EventRunner:
         sa = SampleAugmenter(miner_data_shuffled_path)
         n_benchmarks = len(self.theta0_benchmarks)
         theta0_benchmarks_sublist = [self.theta0_benchmarks[0], self.theta0_benchmarks[n_benchmarks/2], self.theta0_benchmarks[-1]]
+        colors = ['b', 'g', 'r']
+        fig = plt.figure(figsize=(6, 5))
+        ax1 = fig.add_subplot(111)
 
-        for theta0_benchmark in theta0_benchmarks_sublist:
+        for idx, theta0_benchmark in enumerate(theta0_benchmarks_sublist):
             test_result = sa.sample_train_ratio(
                 # theta0=benchmarks([b.name for b in self.theta0_benchmarks]),
                 theta0=benchmark(theta0_benchmark.name),
@@ -423,13 +426,13 @@ class EventRunner:
                 test_all_combinations=False
             )
 
-            fig = plt.figure(figsize=(6, 5))
-            plt.scatter(ground_truth_log_likelihood_ratio, estimated_log_likelihood_ratio, s=10, alpha=0.5)
-            plt.xlabel('ground truth')
-            plt.ylabel('estimated')
-            plt.title('theta0: {}'.format(theta0_benchmark.name))
-            plt.savefig(path.join(self.data_dir, 'ground_truth_estimated_comparison_{}.png'.format(theta0_benchmark.name)))
-            plt.clf()
+            ax1.scatter(ground_truth_log_likelihood_ratio, estimated_log_likelihood_ratio, s=10, alpha=0.5, c=colors[idx], label=theta0_benchmark.name)
+
+        plt.xlabel('ground truth')
+        plt.ylabel('estimated')
+        plt.legend()
+        plt.savefig(path.join(self.data_dir, 'ground_truth_estimated_comparison.png'))
+        plt.clf()
 
 
 def setup_logging():
