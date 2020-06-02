@@ -421,7 +421,8 @@ class EventRunner:
             ratio_estimator.load(path.join(self.data_dir, 'models/alice'))
 
             estimated_log_likelihood_ratio, _ = ratio_estimator.evaluate_log_likelihood_ratio(
-                x=path.join(self.data_dir, 'data/samples/x_test_truth.npy'),
+                # x=path.join(self.data_dir, 'data/samples/x_test_truth.npy'),
+                x=x,
                 theta=theta0,
                 test_all_combinations=False
             )
@@ -432,6 +433,47 @@ class EventRunner:
         plt.ylabel('estimated')
         plt.legend()
         plt.savefig(path.join(self.data_dir, 'ground_truth_estimated_comparison.png'))
+        plt.clf()
+
+        # plot two series based on values of y
+        test_result = sa.sample_train_ratio(
+            theta0=benchmarks([b.name for b in self.theta0_benchmarks]),
+            theta1=benchmark(self.theta1_benchmark.name),
+            n_samples=n_test_events,
+            sample_only_from_closest_benchmark=True,
+            partition='test',
+            folder=path.join(self.data_dir, 'data/samples'),
+            filename='test_truth',
+        )
+        x, theta0, theta1, y, r_xz, t_xz, n_effective = test_result
+        ground_truth_log_likelihood_ratio_y_1 = np.log(r_xz[np.array(y, dtype=bool)])
+        ground_truth_log_likelihood_ratio_y_0 = np.log(r_xz[np.array(0**y, dtype=bool)])
+        x_y_1 = x[np.array(y, dtype=bool)]
+        x_y_0 = x[np.array(0**y, dtype=bool)]
+
+        ratio_estimator = ParameterizedRatioEstimator(n_hidden=(100, 100))
+        ratio_estimator.load(path.join(self.data_dir, 'models/alice'))
+
+        estimated_log_likelihood_ratio_y_1, _ = ratio_estimator.evaluate_log_likelihood_ratio(
+            # x=path.join(self.data_dir, 'data/samples/x_test_truth.npy'),
+            x=x_y_1,
+            theta=theta0,
+            test_all_combinations=False
+        )
+
+        estimated_log_likelihood_ratio_y_0, _ = ratio_estimator.evaluate_log_likelihood_ratio(
+            # x=path.join(self.data_dir, 'data/samples/x_test_truth.npy'),
+            x=x_y_0,
+            theta=theta0,
+            test_all_combinations=False
+        )
+
+        fig = plt.figure(figsize=(6, 5))
+        ax1 = fig.add_subplot(111)
+        ax1.scatter(ground_truth_log_likelihood_ratio_y_1, estimated_log_likelihood_ratio_y_1, s=10, alpha=0.5, c='b', label='y=1')
+        ax1.scatter(ground_truth_log_likelihood_ratio_y_0, estimated_log_likelihood_ratio_y_0, s=10, alpha=0.5, c='g', label='y=0')
+        plt.legend()
+        plt.savefig(path.join(self.data_dir, 'ground_truth_estimated_comparison_filtered_y.png'))
         plt.clf()
 
 
