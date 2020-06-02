@@ -446,10 +446,11 @@ class EventRunner:
             filename='test_truth',
         )
         x, theta0, theta1, y, r_xz, t_xz, n_effective = test_result
-        ground_truth_log_likelihood_ratio_y_1 = np.log(r_xz[np.array(y, dtype=bool)])
-        ground_truth_log_likelihood_ratio_y_0 = np.log(r_xz[np.array(0**y, dtype=bool)])
-        x_y_1 = x[np.array(y, dtype=bool)]
-        x_y_0 = x[np.array(0**y, dtype=bool)]
+
+        ground_truth_log_likelihood_ratio_y_1 = np.log(r_xz[np.array(y[:, 0], dtype=bool)])
+        ground_truth_log_likelihood_ratio_y_0 = np.log(r_xz[np.array(0**y[:, 0], dtype=bool)])
+        x_y_1 = x[np.array(y[:, 0], dtype=bool)]
+        x_y_0 = x[np.array(0**y[:, 0], dtype=bool)]
 
         ratio_estimator = ParameterizedRatioEstimator(n_hidden=(100, 100))
         ratio_estimator.load(path.join(self.data_dir, 'models/alice'))
