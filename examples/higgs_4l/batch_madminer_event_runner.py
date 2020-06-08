@@ -10,9 +10,7 @@ from matplotlib import use
 use("Agg")
 
 from matplotlib import pyplot as plt
-
 import numpy as np
-from random import gauss
 
 from madminer.core import MadMiner
 from madminer.lhe import LHEReader
