@@ -35,7 +35,6 @@ def plot_distributions(
     n_cols=3,
     quantiles_for_range=(0.025, 0.975),
     sample_only_from_closest_benchmark=True,
-    sa=None,
 ):
     """
     Plots one-dimensional histograms of observables in a MadMiner file for a given set of benchmarks.
@@ -129,7 +128,7 @@ def plot_distributions(
     """
 
     # Load data
-    sa = sa if sa else SampleAugmenter(filename, include_nuisance_parameters=True)
+    sa = SampleAugmenter(filename, include_nuisance_parameters=True)
     if uncertainties == "nuisance":
         nuisance_morpher = NuisanceMorpher(
             sa.nuisance_parameters, list(sa.benchmarks.keys()), reference_benchmark=sa.reference_benchmark
