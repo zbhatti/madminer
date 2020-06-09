@@ -1,9 +1,9 @@
 #!/bin/bash
 
-#SBATCH --job-name=jupyterTest2
+#SBATCH --job-name=madminerJupyter
 #SBATCH --nodes=1
-#SBATCH --cpus-per-task=2
-#SBATCH --mem=8GB
+#SBATCH --cpus-per-task=1
+#SBATCH --mem=16GB
 #SBATCH --time=12:00:00
 
 module purge
@@ -57,4 +57,4 @@ if [ "$SLURM_JOBTMP" != "" ]; then
     export XDG_RUNTIME_DIR=$SLURM_JOBTMP
 fi
 
-jupyter notebook --no-browser --port $port --notebook-dir=$(pwd)
+jupyter notebook --debug --no-browser --port $port --notebook-dir=$(pwd)
