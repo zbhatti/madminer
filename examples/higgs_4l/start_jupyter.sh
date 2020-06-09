@@ -7,7 +7,7 @@
 #SBATCH --time=12:00:00
 
 module purge
-module load jupyter-kernels/py2.7
+#module load jupyter-kernels/py2.7
 #module load jupyter-kernels/py3.5
 
 export PATH=$PATH:$HOME/anaconda2/bin
