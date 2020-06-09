@@ -8,7 +8,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 
-def ratio_mse_num(s_hat, log_r_hat, t0_hat, t1_hat, y_true, r_true, t0_true, t1_true, log_r_clip=10.0):
+def ratio_mse_num(s_hat, log_r_hat, t0_hat, t1_hat, y_true, r_true, t0_true, t1_true, log_r_clip=20.0):
     r_true = torch.clamp(r_true, np.exp(-log_r_clip), np.exp(log_r_clip))
     log_r_hat = torch.clamp(log_r_hat, -log_r_clip, log_r_clip)
 
@@ -16,7 +16,7 @@ def ratio_mse_num(s_hat, log_r_hat, t0_hat, t1_hat, y_true, r_true, t0_true, t1_
     return MSELoss()((1.0 - y_true) * inverse_r_hat, (1.0 - y_true) * (1.0 / r_true))
 
 
-def ratio_mse_den(s_hat, log_r_hat, t0_hat, t1_hat, y_true, r_true, t0_true, t1_true, log_r_clip=10.0):
+def ratio_mse_den(s_hat, log_r_hat, t0_hat, t1_hat, y_true, r_true, t0_true, t1_true, log_r_clip=20.0):
     r_true = torch.clamp(r_true, np.exp(-log_r_clip), np.exp(log_r_clip))
     log_r_hat = torch.clamp(log_r_hat, -log_r_clip, log_r_clip)
 
@@ -24,7 +24,7 @@ def ratio_mse_den(s_hat, log_r_hat, t0_hat, t1_hat, y_true, r_true, t0_true, t1_
     return MSELoss()(y_true * r_hat, y_true * r_true)
 
 
-def ratio_mse(s_hat, log_r_hat, t0_hat, t1_hat, y_true, r_true, t0_true, t1_true, log_r_clip=10.0):
+def ratio_mse(s_hat, log_r_hat, t0_hat, t1_hat, y_true, r_true, t0_true, t1_true, log_r_clip=20.0):
     return ratio_mse_num(
         s_hat, log_r_hat, t0_hat, t1_hat, y_true, r_true, t0_true, t1_true, log_r_clip
     ) + ratio_mse_den(s_hat, log_r_hat, t0_hat, t1_hat, y_true, r_true, t0_true, t1_true, log_r_clip)
