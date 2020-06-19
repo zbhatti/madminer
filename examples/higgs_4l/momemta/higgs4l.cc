@@ -7,6 +7,7 @@
 #include <fstream>
 #include <TH1D.h>
 #include <chrono>
+#include <cmath>
 
 using namespace std::chrono;
 using namespace momemta;
@@ -88,10 +89,10 @@ int main(int argc, char* argv[]) {
 
 
     ParameterSet lua_parameters;
-    lua_parameters.set("USE_TF", true);
+    lua_parameters.set("USE_TF", false);
     lua_parameters.set("USE_PERM", true);
 
-    ConfigurationReader configuration("ttbar.lua", lua_parameters);
+    ConfigurationReader configuration("higgs4l_alex.lua", lua_parameters);
 
     // load data structures from h5py
     // look the h5 file over and confirm hardcoded values in this file reflect the latest madminer setup
@@ -123,7 +124,7 @@ int main(int argc, char* argv[]) {
 
     LOG(info) << "o_benchmarks: " << o_benchmarks;
 
-    const int rows = 15;
+    const int rows = 5;
 
     // generate x_test.csv with python:
     // python -c 'import numpy as np; x_test = np.load("/home/zbhatti/codebase/madminer/examples/ttbar2/data/samples/x_test.npy");
@@ -150,8 +151,6 @@ int main(int argc, char* argv[]) {
     }
     outputFile << std::endl;
 
-    return 0;
-
     // loop over events in the numpy file from madminer and add particle lorentz vectors:
     for(int i=0; i < rows; i++){
         std::vector<float> eventWeights;
@@ -164,7 +163,7 @@ int main(int argc, char* argv[]) {
             LOG(info) << "calculating higgs width at " << higgsWidth;
 
             // Change higgs width
-            configuration.getGlobalParameters().set("higgs_width", higgsWidth);
+            configuration.getGlobalParameters().set("higgs_width", pow(10.0, higgsWidth));
             MoMEMta weight(configuration.freeze());
 
             // LorentzVectorE(pt, eta, phi, E)
@@ -174,10 +173,10 @@ int main(int argc, char* argv[]) {
             LorentzVectorE positronL    {x_test[i][13], x_test[i][14], x_test[i][15], x_test[i][12]};
 
             // LorentzVector(px, py, pz, E) required for MoMEMta
-            Particle electron   {"electron",    LorentzVector {electron.Px(), electron.Py(), electron.Pz(), electron.E()}, 11 };
-            Particle muon       {"muon",        LorentzVector {muon.Px(), muon.Py(), muon.Pz(), muon.E()}, 13 };
-            Particle antimuon   {"antimuon",    LorentzVector {antimuon.Px(), antimuon.Py(), antimuon.Pz(), antimuon.E()}, -13 };
-            Particle positron   {"positron",    LorentzVector {positron.Px(), positron.Py(), positron.Pz(), positron.E()}, -11 };
+            Particle electron   {"electron",    LorentzVector {electronL.Px(), electronL.Py(), electronL.Pz(), electronL.E()}, 11 };
+            Particle muon       {"muon",        LorentzVector {muonL.Px(), muonL.Py(), muonL.Pz(), muonL.E()}, 13 };
+            Particle antimuon   {"antimuon",    LorentzVector {antimuonL.Px(), antimuonL.Py(), antimuonL.Pz(), antimuonL.E()}, -13 };
+            Particle positron   {"positron",    LorentzVector {positronL.Px(), positronL.Py(), positronL.Pz(), positronL.E()}, -11 };
 
             normalizeInput(electron.p4);
             normalizeInput(muon.p4);
@@ -205,7 +204,7 @@ int main(int argc, char* argv[]) {
             LOG(debug) << "e+_pz: "   << positron.p4.Pz();
 
             auto start_time = system_clock::now();
-            std::vector<std::pair<double, double>> weights = weight.computeWeights({electron, muon, antimuon, positron}, metL);
+            std::vector<std::pair<double, double>> weights = weight.computeWeights({electron, muon, antimuon, positron});
             auto end_time = system_clock::now();
 
             LOG(debug) << "Result:";
@@ -226,8 +225,10 @@ int main(int argc, char* argv[]) {
                 eventWeights.push_back(dmem->Integral());
             }
             else {
-                LOG(error) << "BAD WEIGHT CALCULATED: " << i << "weight: "<< higgsWidth;
-                eventWeights.push_back(0.0);
+                LOG(error) << "BAD WEIGHT CALCULATED: " << i << "; at point: "<< higgsWidth;
+//                eventWeights.push_back(0.0);
+                Value<TH1D> dmem = weight.getPool().get<TH1D>(dmemInputTag);
+                eventWeights.push_back(dmem->Integral());
             }
 
             LOG(info) << "Weight computed in " << std::chrono::duration_cast<milliseconds>(end_time - start_time).count() << "ms";

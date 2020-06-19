@@ -13,7 +13,7 @@ local positron = declare_input("positron")
 -- end
 
 parameters = {
---     energy = 13000.,
+    energy = 13000.,
 --     top_mass = 172., -- overriden by ttbar.cc
 --     top_width = 1.5, -- changed to match madminer approach
 --     W_mass = 79.824360, -- changed to match madminer approach 80.419002,
@@ -26,32 +26,32 @@ cuba = {
     verbosity = 3,
 }
 
-BreitWignerGenerator.flatter_s13 = {
-    -- add_dimension() generates an input tag of type `cuba::ps_points/i`
-    -- where `i` is automatically incremented each time the function is called.
-    -- This function allows MoMEMta to track how many dimensions are needed for the integration.
-    ps_point = add_dimension(),
-    mass = parameter('W_mass'),
-    width = parameter('W_width')
-}
-
-BreitWignerGenerator.flatter_s134 = {
-    ps_point = add_dimension(),
-    mass = parameter('top_mass'),
-    width = parameter('top_width')
-}
-
-BreitWignerGenerator.flatter_s25 = {
-    ps_point = add_dimension(),
-    mass = parameter('W_mass'),
-    width = parameter('W_width')
-}
-
-BreitWignerGenerator.flatter_s256 = {
-    ps_point = add_dimension(),
-    mass = parameter('top_mass'),
-    width = parameter('top_width')
-}
+-- BreitWignerGenerator.flatter_s13 = {
+--     -- add_dimension() generates an input tag of type `cuba::ps_points/i`
+--     -- where `i` is automatically incremented each time the function is called.
+--     -- This function allows MoMEMta to track how many dimensions are needed for the integration.
+--     ps_point = add_dimension(),
+--     mass = parameter('W_mass'),
+--     width = parameter('W_width')
+-- }
+--
+-- BreitWignerGenerator.flatter_s134 = {
+--     ps_point = add_dimension(),
+--     mass = parameter('top_mass'),
+--     width = parameter('top_width')
+-- }
+--
+-- BreitWignerGenerator.flatter_s25 = {
+--     ps_point = add_dimension(),
+--     mass = parameter('W_mass'),
+--     width = parameter('W_width')
+-- }
+--
+-- BreitWignerGenerator.flatter_s256 = {
+--     ps_point = add_dimension(),
+--     mass = parameter('top_mass'),
+--     width = parameter('top_width')
+-- }
 
 if USE_TF then
     GaussianTransferFunctionOnEnergy.tf_p1 = {
@@ -70,13 +70,6 @@ if USE_TF then
     }
     muon.set_gen_p4("tf_p2::output")
 
-    -- Example for binned transfer function (only works on ingrid)
-    -- BinnedTransferFunctionOnEnergy.tf_p2 = {
-    --     ps_point = add_dimension(),
-    --     reco_particle = 'input::particles/2',
-    --     file = '/home/fynu/swertz/tests_MEM/binnedTF/TF_generator/Control_plots_hh_TF.root',
-    --     th2_name = 'Binned_Egen_DeltaE_Norm_jet',
-    -- }
 
     GaussianTransferFunctionOnEnergy.tf_p3 = {
         ps_point = add_dimension(),
@@ -94,20 +87,14 @@ if USE_TF then
     }
     positron.set_gen_p4("tf_p4::output")
 
-    -- BinnedTransferFunctionOnEnergy.tf_p4 = {
-    --     ps_point = add_dimension(),
-    --     reco_particle = 'input::particles/4',
-    --     file = '/home/fynu/swertz/tests_MEM/binnedTF/TF_generator/Control_plots_hh_TF.root',
-    --     th2_name = 'Binned_Egen_DeltaE_Norm_jet',
-    -- }
 end
 
 -- If set_gen_p4 is not called, gen_p4 == reco_p4
 inputs = {
-    electron.gen_p4,
-    muon.gen_p4,
-    antimuon.gen_p4,
-    positron.gen_p4
+    electron.reco_p4,
+    muon.reco_p4,
+    antimuon.reco_p4,
+    positron.reco_p4
 }
 
 StandardPhaseSpace.phaseSpaceOut = {
@@ -116,42 +103,46 @@ StandardPhaseSpace.phaseSpaceOut = {
 
 -- Declare module before the permutator to test read-access in the pool
 -- for non-existant values.
-BlockD.blockd = {
-    p3 = inputs[1],
-    p4 = inputs[2],
-    p5 = inputs[3],
-    p6 = inputs[4],
-
-    pT_is_met = true,
-
-    s13 = 'flatter_s13::s',
-    s134 = 'flatter_s134::s',
-    s25 = 'flatter_s25::s',
-    s256 = 'flatter_s256::s',
-}
+-- BlockD.blockd = {
+--     p3 = inputs[1],
+--     p4 = inputs[2],
+--     p5 = inputs[3],
+--     p6 = inputs[4],
+--
+--     pT_is_met = true,
+--
+--     s13 = 'flatter_s13::s',
+--     s134 = 'flatter_s134::s',
+--     s25 = 'flatter_s25::s',
+--     s256 = 'flatter_s256::s',
+-- }
 
 -- Loop over block solutions
 
-Looper.looper = {
-    solutions = "blockd::solutions",
-    path = Path("boost", "higgs4l", "dmem", "integrand")
-}
+-- Looper.looper = {
+--     solutions = "blockd::solutions",
+--     path = Path("boost", "higgs4l", "dmem", "integrand")
+-- }
 
     -- Block D produce solutions with two particles
-    full_inputs = copy_and_append(inputs, {'looper::particles/1', 'looper::particles/2'})
+--     full_inputs = copy_and_append(inputs, {'looper::particles/1', 'looper::particles/2'})
 
-    BuildInitialState.boost = {
-        do_transverse_boost = true,
-        particles = full_inputs
-    }
+--     BuildInitialState.boost = {
+--         do_transverse_boost = true,
+--         particles = full_inputs
+--     }
 
-    jacobians = {'flatter_s13::jacobian', 'flatter_s134::jacobian', 'flatter_s25::jacobian', 'flatter_s256::jacobian'}
+--     jacobians = {'flatter_s13::jacobian', 'flatter_s134::jacobian', 'flatter_s25::jacobian', 'flatter_s256::jacobian'}
 
-    if USE_TF then
-        append(jacobians, {'tf_p1::TF_times_jacobian', 'tf_p2::TF_times_jacobian', 'tf_p3::TF_times_jacobian', 'tf_p4::TF_times_jacobian'})
-    end
+--     if USE_TF then
+--         append(jacobians, {'tf_p1::TF_times_jacobian', 'tf_p2::TF_times_jacobian', 'tf_p3::TF_times_jacobian', 'tf_p4::TF_times_jacobian'})
+--     end
 
-    append(jacobians, {'phaseSpaceOut::phase_space', 'looper::jacobian'})
+--     append(jacobians, {'phaseSpaceOut::phase_space', 'looper::jacobian'})
+
+    BuildInitialState.initial_state = {
+    particles = inputs,
+}
 
     MatrixElement.higgs4l = {
       pdf = 'CT10nlo',
@@ -160,7 +151,7 @@ Looper.looper = {
       matrix_element = 'higgs4l_sm__hgg_plugin_P1_Sigma_sm__hgg_plugin_gg_epemmupmum',
       matrix_element_parameters = {
           -- card = '/home/zbhatti/codebase/madminer/momemta/param_card.dat',
-          card = '/home/zbhatti/codebase/madminer/examples/higgs4l/cards/param_card_template.dat',
+          card = '/home/zbhatti/codebase/madminer/examples/higgs_4l/cards/param_card_template.dat',
       },
 
       -- variables defined in MatrixElements .cc file
@@ -168,13 +159,13 @@ Looper.looper = {
           mdl_WH = parameter('higgs_width'),
       },
 
-      initialState = 'boost::partons',
-
+--       initialState = 'boost::partons',
+      initialState = "initial_state::partons",
       -- mapFinalStates[{-13, 14, 5, 13, -14, -5}] see MatrixElements/ttbarMuMu/SubProcesses/P1_Sigma_sm_gg_mupvmbmumvmxbx/P1_Sigma_sm_gg_mupvmbmumvmxbx.cc
       -- mapFinalStates[{-11, 11, -13, 13}] see MatrixElements/higgs4l/SubProcesses/P1_Sigma_sm__hgg_plugin_gg_epemmupmum/P1_Sigma_sm__hgg_plugin_gg_epemmupmum.cc
 
       particles = {
-        inputs = full_inputs,
+        inputs = inputs,
         ids = {
           {
             pdg_id = 11,
@@ -195,7 +186,7 @@ Looper.looper = {
         }
       },
 
-      jacobians = jacobians
+--       jacobians = jacobians
     }
 
     DMEM.dmem = {
@@ -204,7 +195,7 @@ Looper.looper = {
       n_bins = 500,
 
       ps_weight = 'cuba::ps_weight',
-      particles = full_inputs,
+      particles = inputs,
       me_output = 'higgs4l::output',
     }
 
@@ -213,4 +204,5 @@ Looper.looper = {
     }
 
 -- End of loop
-integrand("integrand::sum")
+-- integrand("integrand::sum")
+integrand("higgs4l::output")
