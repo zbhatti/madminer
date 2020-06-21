@@ -110,10 +110,10 @@ int main(int argc, char* argv[]) {
 
     H5::H5File m_h5File = H5File(observations_h5_file, H5F_ACC_RDONLY);
     DataSet benchValsSet = m_h5File.openDataSet("/benchmarks/values");
-    const int n_artificial_benchmarks = 7;
-    const int expected_value_benchmark_position = 12;
+//    const int n_artificial_benchmarks = 7;
+//    const int expected_value_benchmark_position = 12;
     const int theta1_index = 21;
-    int theta0_indices[6] = {0, 4, 8, 12, 16, 20};
+    int theta0_indices[12] = {0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22}; // 22 is expected
     int n_theta0_benchmarks = sizeof(theta0_indices)/sizeof(theta0_indices[0]);
 
     DataSpace benchValsSpace = benchValsSet.getSpace();
@@ -124,7 +124,7 @@ int main(int argc, char* argv[]) {
 
     LOG(info) << "o_benchmarks: " << o_benchmarks;
 
-    const int rows = 5;
+    const int rows = 100;
 
     // generate x_test.csv with python:
     // python -c 'import numpy as np; x_test = np.load("/home/zbhatti/codebase/madminer/examples/ttbar2/data/samples/x_test.npy");
@@ -132,7 +132,7 @@ int main(int argc, char* argv[]) {
 
     std::vector<std::vector<float>> x_test = parse2DCsvFile(x_test_csv_file);
 
-    float benchmarksValues[o_benchmarks][2];
+    float benchmarksValues[o_benchmarks][1];
     benchValsSet.read(&benchmarksValues[0], PredType::NATIVE_FLOAT, benchValsSpace);
     benchValsSet.close();
 
@@ -143,11 +143,12 @@ int main(int argc, char* argv[]) {
     LOG(info) << benchmarksValues[o_benchmarks -1][0];
     LOG(info) << "****End****";
 
+    float theta1_higgs_width = pow(10.0, benchmarksValues[theta1_index][0]);
+
     std::ofstream outputFile;
     outputFile.open(weight_output_file);
-
     for (int k=0; k < n_theta0_benchmarks; k++){
-        outputFile << benchmarksValues[k][0] << ",";
+        outputFile << pow(10.0, benchmarksValues[theta0_indices[k]][0]) << ",";
     }
     outputFile << std::endl;
 
@@ -156,94 +157,113 @@ int main(int argc, char* argv[]) {
         std::vector<float> eventWeights;
         LOG(info) << "calculating event " << i << "/" << rows;
 
+        // LorentzVectorE(pt, eta, phi, E)
+        LorentzVectorE electronL    {x_test[i][1], x_test[i][2], x_test[i][3], x_test[i][0]};
+        LorentzVectorE muonL        {x_test[i][5], x_test[i][6], x_test[i][7], x_test[i][4]};
+        LorentzVectorE antimuonL    {x_test[i][9], x_test[i][10], x_test[i][11], x_test[i][8]};
+        LorentzVectorE positronL    {x_test[i][13], x_test[i][14], x_test[i][15], x_test[i][12]};
+
+        // LorentzVector(px, py, pz, E) required for MoMEMta
+        Particle electron   {"electron",    LorentzVector {electronL.Px(), electronL.Py(), electronL.Pz(), electronL.E()}, 11 };
+        Particle muon       {"muon",        LorentzVector {muonL.Px(), muonL.Py(), muonL.Pz(), muonL.E()}, 13 };
+        Particle antimuon   {"antimuon",    LorentzVector {antimuonL.Px(), antimuonL.Py(), antimuonL.Pz(), antimuonL.E()}, -13 };
+        Particle positron   {"positron",    LorentzVector {positronL.Px(), positronL.Py(), positronL.Pz(), positronL.E()}, -11 };
+
+        normalizeInput(electron.p4);
+        normalizeInput(muon.p4);
+        normalizeInput(antimuon.p4);
+        normalizeInput(positron.p4);
+
+        LOG(debug) << "e-_E: "     << electron.p4.E();
+        LOG(debug) << "e-_px: "    << electron.p4.Px();
+        LOG(debug) << "e-_py: "    << electron.p4.Py();
+        LOG(debug) << "e-_pz: "    << electron.p4.Pz();
+
+        LOG(debug) << "m-_E: "     << muon.p4.E();
+        LOG(debug) << "m-_px: "    << muon.p4.Px();
+        LOG(debug) << "m-_py: "    << muon.p4.Py();
+        LOG(debug) << "m-_pz: "    << muon.p4.Pz();
+
+        LOG(debug) << "mu+_E: "    << antimuon.p4.E();
+        LOG(debug) << "mu+_px: "   << antimuon.p4.Px();
+        LOG(debug) << "mu+_py: "   << antimuon.p4.Py();
+        LOG(debug) << "mu+_pz: "   << antimuon.p4.Pz();
+
+        LOG(debug) << "e+_E: "    << positron.p4.E();
+        LOG(debug) << "e+_px: "   << positron.p4.Px();
+        LOG(debug) << "e+_py: "   << positron.p4.Py();
+        LOG(debug) << "e+_pz: "   << positron.p4.Pz();
+
+        // calculate weight for theta1 choice:
+        LOG(info) << "calculating theta1 higgs width at " << theta1_higgs_width;
+        configuration.getGlobalParameters().set("higgs_width", theta1_higgs_width);
+        MoMEMta weight(configuration.freeze());
+        std::vector<std::pair<double, double>> weights = weight.computeWeights({electron, muon, antimuon, positron});
+
+        double weight_val = weights.back().first;
+        double weight_err = weights.back().second;
+
+        LOG(debug) << "Result: " << weights.back().first << " +- " << weights.back().second;
+        float theta1_weight = weights.back().first;
+
         // loop over theta0 choices:
         for (int j=0; j < n_theta0_benchmarks; j++){
-
-            float higgsWidth =  benchmarksValues[j][0];
-            LOG(info) << "calculating higgs width at " << higgsWidth;
+            float higgs_width_exp = benchmarksValues[theta0_indices[j]][0];
+            float higgs_width = pow(10.0, higgs_width_exp);;
+            LOG(info) << "calculating theta0 higgs width at " << higgs_width;
 
             // Change higgs width
-            configuration.getGlobalParameters().set("higgs_width", pow(10.0, higgsWidth));
+            configuration.getGlobalParameters().set("higgs_width", higgs_width);
             MoMEMta weight(configuration.freeze());
 
-            // LorentzVectorE(pt, eta, phi, E)
-            LorentzVectorE electronL    {x_test[i][1], x_test[i][2], x_test[i][3], x_test[i][0]};
-            LorentzVectorE muonL        {x_test[i][5], x_test[i][6], x_test[i][7], x_test[i][4]};
-            LorentzVectorE antimuonL    {x_test[i][9], x_test[i][10], x_test[i][11], x_test[i][8]};
-            LorentzVectorE positronL    {x_test[i][13], x_test[i][14], x_test[i][15], x_test[i][12]};
+//            auto start_time = system_clock::now();
+            weights = weight.computeWeights({electron, muon, antimuon, positron});
+//            auto end_time = system_clock::now();
 
-            // LorentzVector(px, py, pz, E) required for MoMEMta
-            Particle electron   {"electron",    LorentzVector {electronL.Px(), electronL.Py(), electronL.Pz(), electronL.E()}, 11 };
-            Particle muon       {"muon",        LorentzVector {muonL.Px(), muonL.Py(), muonL.Pz(), muonL.E()}, 13 };
-            Particle antimuon   {"antimuon",    LorentzVector {antimuonL.Px(), antimuonL.Py(), antimuonL.Pz(), antimuonL.E()}, -13 };
-            Particle positron   {"positron",    LorentzVector {positronL.Px(), positronL.Py(), positronL.Pz(), positronL.E()}, -11 };
+            weight_val = weights.back().first;
+            weight_err = weights.back().second;
 
-            normalizeInput(electron.p4);
-            normalizeInput(muon.p4);
-            normalizeInput(antimuon.p4);
-            normalizeInput(positron.p4);
+            LOG(debug) << "Result: " << weight_val << " +- " << weight_err;
 
-            LOG(debug) << "e-_E: "     << electron.p4.E();
-            LOG(debug) << "e-_px: "    << electron.p4.Px();
-            LOG(debug) << "e-_py: "    << electron.p4.Py();
-            LOG(debug) << "e-_pz: "    << electron.p4.Pz();
+            eventWeights.push_back(weight_val);
 
-            LOG(debug) << "m-_E: "     << muon.p4.E();
-            LOG(debug) << "m-_px: "    << muon.p4.Px();
-            LOG(debug) << "m-_py: "    << muon.p4.Py();
-            LOG(debug) << "m-_pz: "    << muon.p4.Pz();
+//            LOG(debug) << "Integration status: " << (int) weight.getIntegrationStatus();
+//
+//            InputTag dmemInputTag {"dmem", "hist"};
+//            bool exists = weight.getPool().exists(dmemInputTag);
+//
+//            LOG(debug) << "Hist in pool: " << exists;
+//
+//            if (exists) {
+//                Value<TH1D> dmem = weight.getPool().get<TH1D>(dmemInputTag);
+//                LOG(debug) << "DMEM integral: " << dmem->Integral();
+////                eventWeights.push_back(dmem->Integral());
+//                eventWeights.push_back(weight_val);
+//            }
+//            else {
+//                LOG(error) << "BAD WEIGHT CALCULATED: " << i << "; at point: "<< higgs_width;
+////                eventWeights.push_back(0.0);
+//                Value<TH1D> dmem = weight.getPool().get<TH1D>(dmemInputTag);
+////                eventWeights.push_back(dmem->Integral());
+//                eventWeights.push_back(weight_val);
+//            }
 
-            LOG(debug) << "mu+_E: "    << antimuon.p4.E();
-            LOG(debug) << "mu+_px: "   << antimuon.p4.Px();
-            LOG(debug) << "mu+_py: "   << antimuon.p4.Py();
-            LOG(debug) << "mu+_pz: "   << antimuon.p4.Pz();
+//            LOG(info) << "Weight computed in " << std::chrono::duration_cast<milliseconds>(end_time - start_time).count() << "ms";
+            LOG(info) << "finished computing weight: " << higgs_width ;
 
-            LOG(debug) << "e+_E: "    << positron.p4.E();
-            LOG(debug) << "e+_px: "   << positron.p4.Px();
-            LOG(debug) << "e+_py: "   << positron.p4.Py();
-            LOG(debug) << "e+_pz: "   << positron.p4.Pz();
-
-            auto start_time = system_clock::now();
-            std::vector<std::pair<double, double>> weights = weight.computeWeights({electron, muon, antimuon, positron});
-            auto end_time = system_clock::now();
-
-            LOG(debug) << "Result:";
-            for (const auto& r: weights) {
-                LOG(debug) << r.first << " +- " << r.second;
-            }
-
-            LOG(debug) << "Integration status: " << (int) weight.getIntegrationStatus();
-
-            InputTag dmemInputTag {"dmem", "hist"};
-            bool exists = weight.getPool().exists(dmemInputTag);
-
-            LOG(debug) << "Hist in pool: " << exists;
-
-            if (exists) {
-                Value<TH1D> dmem = weight.getPool().get<TH1D>(dmemInputTag);
-                LOG(debug) << "DMEM integral: " << dmem->Integral();
-                eventWeights.push_back(dmem->Integral());
-            }
-            else {
-                LOG(error) << "BAD WEIGHT CALCULATED: " << i << "; at point: "<< higgsWidth;
-//                eventWeights.push_back(0.0);
-                Value<TH1D> dmem = weight.getPool().get<TH1D>(dmemInputTag);
-                eventWeights.push_back(dmem->Integral());
-            }
-
-            LOG(info) << "Weight computed in " << std::chrono::duration_cast<milliseconds>(end_time - start_time).count() << "ms";
-            LOG(info) << "finished computing weight: " << j ;
         }
         LOG(info) << "finished computing event: " << i ;
 
         std::vector<float> weightRatios;
-        for (int k=0; k < n_theta0_benchmarks; k++){
-            LOG(info) << "weight: " << eventWeights[k];
+        for (int j=0; j < n_theta0_benchmarks; j++){
+            LOG(info) << "weight: " << eventWeights[j];
+            float weightRatio = eventWeights[j]/theta1_weight;
+            weightRatios.push_back(weightRatio);
 
-            outputFile << eventWeights[k] << ",";
+//            outputFile << eventWeights[k] << ",";
+            outputFile << weightRatio << ",";
 
-            weightRatios.push_back(eventWeights[k]/eventWeights[theta1_index]);
-            LOG(info) << "ratio: " << weightRatios[k];
+            LOG(info) << "ratio: " << weightRatios[j];
         }
         outputFile << std::endl;
 

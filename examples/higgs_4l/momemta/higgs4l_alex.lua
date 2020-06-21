@@ -35,6 +35,7 @@ MatrixElement.h_ZZ_4l = {
         mdl_WH = parameter('higgs_width'),
     },
 
+    -- mapFinalStates[{-11, 11, -13, 13}] see MatrixElements/higgs4l/SubProcesses/P1_Sigma_sm__hgg_plugin_gg_epemmupmum/P1_Sigma_sm__hgg_plugin_gg_epemmupmum.cc
     particles = {
         inputs = inputs,
         ids = {
