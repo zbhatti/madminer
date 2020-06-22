@@ -113,7 +113,7 @@ int main(int argc, char* argv[]) {
 //    const int n_artificial_benchmarks = 7;
 //    const int expected_value_benchmark_position = 12;
     const int theta1_index = 21;
-    int theta0_indices[12] = {0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22}; // 22 is expected
+    int theta0_indices[11] = {0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
     int n_theta0_benchmarks = sizeof(theta0_indices)/sizeof(theta0_indices[0]);
 
     DataSpace benchValsSpace = benchValsSet.getSpace();
@@ -124,7 +124,7 @@ int main(int argc, char* argv[]) {
 
     LOG(info) << "o_benchmarks: " << o_benchmarks;
 
-    const int rows = 100;
+    const int rows = 300;
 
     // generate x_test.csv with python:
     // python -c 'import numpy as np; x_test = np.load("/home/zbhatti/codebase/madminer/examples/ttbar2/data/samples/x_test.npy");
