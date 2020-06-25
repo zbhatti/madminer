@@ -43,6 +43,20 @@ void normalizeInput(LorentzVector& p4) {
     };
 }
 
+std::vector<std::string> split_str(std::string s, char delimiter) {
+
+   std::vector<std::string> result;
+   std::stringstream s_stream(s);
+   while(s_stream.good()) {
+      std::string substr;
+      getline(s_stream, substr, delimiter);
+      result.push_back(substr);
+   }
+
+   return result;
+
+}
+
 // https://waterprogramming.wordpress.com/2017/08/20/reading-csv-files-in-c
 std::vector<std::vector<float>> parse2DCsvFile(std::string inputFileName) {
 
@@ -84,9 +98,11 @@ int main(int argc, char* argv[]) {
     logging::set_level(logging::level::debug);
 
     std::string observations_h5_file; // "/home/zbhatti/codebase/madminer/examples/ttbar2/data/madminer_example_mvm_shuffled.h5"
-    std::string x_test_csv_file; // "/home/zbhatti/codebase/madminer/momemta/inputs/x_test.csv"
-    std::string weight_output_file; // "/home/zbhatti/codebase/madminer/momemta/weights10.csv"
-
+    std::string x_test_csv_file; // "/home/zbhatti/codebase/madminer/momemta/inputs/x_test_4.csv"
+    std::string weight_output_directory; // "/home/zbhatti/codebase/madminer/momemta/"
+    std::string theta_index_csv; // "4.csv"
+    std::string weight_output_prefix = "weights_";
+    std::string weight_output_file;
 
     ParameterSet lua_parameters;
     lua_parameters.set("USE_TF", false);
@@ -100,20 +116,26 @@ int main(int argc, char* argv[]) {
     // h['benchmarks']['names'][:]
 
     if (argc < 4) { // We expect 3 arguments: the program name, the source path and the destination path
-        std::cerr << "Usage: " << argv[0] << "observations_h5_file x_test_csv_file weight_output_file" << std::endl;
+        std::cerr << "Usage: " << argv[0] << "observations_h5_file x_test_csv_file weight_output_directory/" << std::endl;
         return 1;
     }
 
     observations_h5_file = argv[1];
     x_test_csv_file = argv[2];
-    weight_output_file = argv[3];
+    weight_output_directory = argv[3]; //
+
+    if (weight_output_directory.back() != '/'){
+        std::cerr << "expect a trailing / in weight output directory" << weight_output_directory << std::endl;
+        return 1;
+    }
+
+    theta_index_csv = split_str(x_test_csv_file, '_').back();
+    weight_output_file = weight_output_directory + weight_output_prefix + theta_index_csv;
+
+    int theta0_index = std::stoi(split_str(theta_index_csv, '.')[0]);
 
     H5::H5File m_h5File = H5File(observations_h5_file, H5F_ACC_RDONLY);
     DataSet benchValsSet = m_h5File.openDataSet("/benchmarks/values");
-
-    const int theta1_index = 21;
-    int theta0_indices[11] = {0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
-    int n_theta0_benchmarks = sizeof(theta0_indices)/sizeof(theta0_indices[0]);
 
     DataSpace benchValsSpace = benchValsSet.getSpace();
 
@@ -123,7 +145,7 @@ int main(int argc, char* argv[]) {
 
     LOG(info) << "o_benchmarks: " << o_benchmarks;
 
-    const int rows = 300;
+//    const int rows = 300;
 
     // generate x_test.csv with python:
     // python -c 'import numpy as np; x_test = np.load("/home/zbhatti/codebase/madminer/examples/ttbar2/data/samples/x_test.npy");
@@ -138,23 +160,21 @@ int main(int argc, char* argv[]) {
     LOG(info) << "****Sample of benchmark values****";
     LOG(info) << benchmarksValues[0][0];
     LOG(info) << benchmarksValues[5][0];
-    LOG(info) << benchmarksValues[theta1_index][0];
     LOG(info) << benchmarksValues[o_benchmarks -1][0];
     LOG(info) << "****End****";
 
-    float theta1_higgs_width = pow(10.0, benchmarksValues[theta1_index][0]);
+    const float theta1_higgs_width = 1.0;
+    float theta0_higgs_width_exp = benchmarksValues[theta0_index][0];
+    float theta0_higgs_width = pow(10.0, theta0_higgs_width_exp);
 
     std::ofstream outputFile;
     outputFile.open(weight_output_file);
-    for (int k=0; k < n_theta0_benchmarks; k++){
-        outputFile << pow(10.0, benchmarksValues[theta0_indices[k]][0]) << ",";
-    }
-    outputFile << std::endl;
+    outputFile << theta0_higgs_width << std::endl;
 
     // loop over events in the numpy file from madminer and add particle lorentz vectors:
-    for(int i=0; i < rows; i++){
+    for(int i=0; i < x_test.size(); i++){
         std::vector<float> eventWeights;
-        LOG(info) << "calculating event " << i << "/" << rows;
+        LOG(info) << "calculating event " << i << "/" << x_test.size();
 
         // LorentzVectorE(pt, eta, phi, E)
         LorentzVectorE electronL    {x_test[i][1], x_test[i][2], x_test[i][3], x_test[i][0]};
@@ -196,75 +216,33 @@ int main(int argc, char* argv[]) {
         // calculate weight for theta1 choice:
         LOG(info) << "calculating theta1 higgs width at " << theta1_higgs_width;
         configuration.getGlobalParameters().set("higgs_width", theta1_higgs_width);
-        MoMEMta weight(configuration.freeze());
-        std::vector<std::pair<double, double>> weights = weight.computeWeights({electron, muon, antimuon, positron});
+        MoMEMta weight1(configuration.freeze());
+        std::vector<std::pair<double, double>> weights1 = weight1.computeWeights({electron, muon, antimuon, positron});
 
-        double weight_val = weights.back().first;
-        double weight_err = weights.back().second;
+        double weight_val = weights1.back().first;
+        double weight_err = weights1.back().second;
 
-        LOG(debug) << "Result: " << weights.back().first << " +- " << weights.back().second;
-        float theta1_weight = weights.back().first;
+        LOG(debug) << "Result: " << weight_val << " +- " << weight_err;
+        float theta1_weight = weight_val;
 
-        // loop over theta0 choices:
-        for (int j=0; j < n_theta0_benchmarks; j++){
-            float higgs_width_exp = benchmarksValues[theta0_indices[j]][0];
-            float higgs_width = pow(10.0, higgs_width_exp);;
-            LOG(info) << "calculating theta0 higgs width at " << higgs_width;
+        // calculate weight for theta0 choice:
+        LOG(info) << "calculating theta0 higgs width at " << theta0_higgs_width;
+        configuration.getGlobalParameters().set("higgs_width", theta0_higgs_width);
+        MoMEMta weight0(configuration.freeze());
+        std::vector<std::pair<double, double>> weights0 = weight0.computeWeights({electron, muon, antimuon, positron});
 
-            // Change higgs width
-            configuration.getGlobalParameters().set("higgs_width", higgs_width);
-            MoMEMta weight(configuration.freeze());
+        weight_val = weights0.back().first;
+        weight_err = weights0.back().second;
+        LOG(debug) << "Result: " << weight_val << " +- " << weight_err;
+        float theta0_weight = weight_val;
 
-//            auto start_time = system_clock::now();
-            weights = weight.computeWeights({electron, muon, antimuon, positron});
-//            auto end_time = system_clock::now();
+        // calculate ratio
+        float weightRatio = theta0_weight/theta1_weight;
+        LOG(info) << "ratio: " << weightRatio;
 
-            weight_val = weights.back().first;
-            weight_err = weights.back().second;
-
-            LOG(debug) << "Result: " << weight_val << " +- " << weight_err;
-
-            eventWeights.push_back(weight_val);
-
-//            LOG(debug) << "Integration status: " << (int) weight.getIntegrationStatus();
-//
-//            InputTag dmemInputTag {"dmem", "hist"};
-//            bool exists = weight.getPool().exists(dmemInputTag);
-//
-//            LOG(debug) << "Hist in pool: " << exists;
-//
-//            if (exists) {
-//                Value<TH1D> dmem = weight.getPool().get<TH1D>(dmemInputTag);
-//                LOG(debug) << "DMEM integral: " << dmem->Integral();
-////                eventWeights.push_back(dmem->Integral());
-//                eventWeights.push_back(weight_val);
-//            }
-//            else {
-//                LOG(error) << "BAD WEIGHT CALCULATED: " << i << "; at point: "<< higgs_width;
-////                eventWeights.push_back(0.0);
-//                Value<TH1D> dmem = weight.getPool().get<TH1D>(dmemInputTag);
-////                eventWeights.push_back(dmem->Integral());
-//                eventWeights.push_back(weight_val);
-//            }
-
-//            LOG(info) << "Weight computed in " << std::chrono::duration_cast<milliseconds>(end_time - start_time).count() << "ms";
-            LOG(info) << "finished computing weight: " << higgs_width ;
-
-        }
-        LOG(info) << "finished computing event: " << i ;
-
-        std::vector<float> weightRatios;
-        for (int j=0; j < n_theta0_benchmarks; j++){
-            LOG(info) << "weight: " << eventWeights[j];
-            float weightRatio = eventWeights[j]/theta1_weight;
-            weightRatios.push_back(weightRatio);
-
-//            outputFile << eventWeights[k] << ",";
-            outputFile << weightRatio << ",";
-
-            LOG(info) << "ratio: " << weightRatios[j];
-        }
-        outputFile << std::endl;
+        // write to weight file
+        outputFile << weightRatio << std::endl;
+        LOG(info) << "finished computing event: " << i;
 
     }
     outputFile.close();
