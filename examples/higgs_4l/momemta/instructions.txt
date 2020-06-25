@@ -1,0 +1,13 @@
+
+
+cp test files from remote to laptop via file browser
+
+python -c 'import numpy as np; x_test = np.load("/scratch/madminer_data_higgs4l/data/samples/x_test.npy"); np.savetxt("/scratch/madminer_data_higgs4l/data/samples/x_test.csv", x_test, delimiter=",")'
+
+
+
+cd ~/codebase/madminer/examples/higgs_4l/momemta
+
+/usr/bin/c++   -Wall -pedantic -Wextra -fcx-fortran-rules -fcx-limited-range -O2 -g -DNDEBUG higgs4l.cc -o higgs4l.exe -Wl,-rpath,/home/zbhatti/util/MoMEMta-1.0.0/build:/home/zbhatti/util/root_build/lib /home/zbhatti/util/MoMEMta-1.0.0/build/libmomemta.so.1.0.0 /usr/lib/x86_64-linux-gnu/hdf5/serial/libhdf5_hl_cpp.a /usr/lib/x86_64-linux-gnu/hdf5/serial/libhdf5_cpp.a /usr/lib/x86_64-linux-gnu/hdf5/serial/libhdf5_hl.a /usr/lib/x86_64-linux-gnu/hdf5/serial/libhdf5.a -lpthread -lsz -lz -ldl -lm /home/zbhatti/util/root_build/lib/libCore.so /home/zbhatti/util/root_build/lib/libRIO.so /home/zbhatti/util/root_build/lib/libNet.so /home/zbhatti/util/root_build/lib/libHist.so /home/zbhatti/util/root_build/lib/libGraf.so /home/zbhatti/util/root_build/lib/libGraf3d.so /home/zbhatti/util/root_build/lib/libGpad.so /home/zbhatti/util/root_build/lib/libTree.so /home/zbhatti/util/root_build/lib/libRint.so /home/zbhatti/util/root_build/lib/libPostscript.so /home/zbhatti/util/root_build/lib/libMatrix.so /home/zbhatti/util/root_build/lib/libPhysics.so /home/zbhatti/util/root_build/lib/libMathCore.so /home/zbhatti/util/root_build/lib/libThread.so /home/zbhatti/util/root_build/lib/libGenVector.so -I/home/zbhatti/util/MoMEMta-1.0.0/include -I/home/zbhatti/util/root_build/include -I/usr/include/hdf5/serial
+
+./higgs4l.exe /scratch/madminer_data/data/miner_lhe_data_shuffled.h5 /scratch/madminer_data_higgs4l/data/samples/x_test.csv ~/codebase/madminer/examples/higgs_4l/momemta/weights1.csv 2>&1 |tee ~/codebase/madminer/examples/higgs_4l/momemta/log1.out
