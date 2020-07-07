@@ -50,6 +50,7 @@ class DataAnalyzer(object):
             self.n_events_backgrounds,
         ) = load_madminer_settings(filename, include_nuisance_benchmarks=include_nuisance_parameters)
 
+        self.reference_benchmark = '172_15'
         self.n_parameters = len(self.parameters)
         self.n_benchmarks = len(self.benchmarks)
         self.n_benchmarks_phys = np.sum(np.logical_not(self.benchmark_is_nuisance))

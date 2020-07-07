@@ -1,0 +1,2768 @@
+1: [2019-10-13 11:23:08.285] [info] o_benchmarks: 33
+2: [2019-10-13 11:23:08.371] [info] ****Sample of benchmark values****
+3: [2019-10-13 11:23:08.372] [info] 160
+4: [2019-10-13 11:23:08.372] [info] 165
+5: [2019-10-13 11:23:08.372] [info] 172
+6: [2019-10-13 11:23:08.372] [info] 172.5
+7: [2019-10-13 11:23:08.372] [info] ****End****
+8: [2019-10-13 11:23:08.372] [info] calculating event 0/15
+9: [2019-10-13 11:23:08.372] [info] calculating top_mass at 160
+10: [2019-10-13 11:23:08.550] [info] Number of expected inputs: 4
+11: [2019-10-13 11:23:08.551] [info] Number of dimensions for integration: 9
+12: [2019-10-13 11:23:44.741] [info] Weight computed in 36190ms
+13: [2019-10-13 11:23:44.741] [info] finished computing weight: 0
+14: [2019-10-13 11:23:44.741] [info] calculating top_mass at 161
+15: [2019-10-13 11:23:44.749] [info] Number of expected inputs: 4
+16: [2019-10-13 11:23:44.749] [info] Number of dimensions for integration: 9
+17: [2019-10-13 11:24:21.646] [info] Weight computed in 36896ms
+18: [2019-10-13 11:24:21.646] [info] finished computing weight: 1
+19: [2019-10-13 11:24:21.646] [info] calculating top_mass at 162
+20: [2019-10-13 11:24:21.654] [info] Number of expected inputs: 4
+21: [2019-10-13 11:24:21.654] [info] Number of dimensions for integration: 9
+22: [2019-10-13 11:24:59.353] [info] Weight computed in 37698ms
+23: [2019-10-13 11:24:59.353] [info] finished computing weight: 2
+24: [2019-10-13 11:24:59.353] [info] calculating top_mass at 163
+25: [2019-10-13 11:24:59.361] [info] Number of expected inputs: 4
+26: [2019-10-13 11:24:59.361] [info] Number of dimensions for integration: 9
+27: [2019-10-13 11:25:38.111] [info] Weight computed in 38750ms
+28: [2019-10-13 11:25:38.111] [info] finished computing weight: 3
+29: [2019-10-13 11:25:38.111] [info] calculating top_mass at 164
+30: [2019-10-13 11:25:38.119] [info] Number of expected inputs: 4
+31: [2019-10-13 11:25:38.119] [info] Number of dimensions for integration: 9
+32: [2019-10-13 11:26:17.127] [info] Weight computed in 39007ms
+33: [2019-10-13 11:26:17.127] [info] finished computing weight: 4
+34: [2019-10-13 11:26:17.127] [info] calculating top_mass at 165
+35: [2019-10-13 11:26:17.135] [info] Number of expected inputs: 4
+36: [2019-10-13 11:26:17.135] [info] Number of dimensions for integration: 9
+37: [2019-10-13 11:26:57.771] [info] Weight computed in 40636ms
+38: [2019-10-13 11:26:57.771] [info] finished computing weight: 5
+39: [2019-10-13 11:26:57.771] [info] calculating top_mass at 166
+40: [2019-10-13 11:26:57.779] [info] Number of expected inputs: 4
+41: [2019-10-13 11:26:57.779] [info] Number of dimensions for integration: 9
+42: [2019-10-13 11:27:38.475] [info] Weight computed in 40696ms
+43: [2019-10-13 11:27:38.475] [info] finished computing weight: 6
+44: [2019-10-13 11:27:38.475] [info] calculating top_mass at 167
+45: [2019-10-13 11:27:38.483] [info] Number of expected inputs: 4
+46: [2019-10-13 11:27:38.483] [info] Number of dimensions for integration: 9
+47: [2019-10-13 11:28:20.200] [info] Weight computed in 41716ms
+48: [2019-10-13 11:28:20.200] [info] finished computing weight: 7
+49: [2019-10-13 11:28:20.200] [info] calculating top_mass at 168
+50: [2019-10-13 11:28:20.208] [info] Number of expected inputs: 4
+51: [2019-10-13 11:28:20.208] [info] Number of dimensions for integration: 9
+52: [2019-10-13 11:29:02.000] [info] Weight computed in 41791ms
+53: [2019-10-13 11:29:02.000] [info] finished computing weight: 8
+54: [2019-10-13 11:29:02.000] [info] calculating top_mass at 169
+55: [2019-10-13 11:29:02.008] [info] Number of expected inputs: 4
+56: [2019-10-13 11:29:02.008] [info] Number of dimensions for integration: 9
+57: [2019-10-13 11:29:43.523] [info] Weight computed in 41515ms
+58: [2019-10-13 11:29:43.523] [info] finished computing weight: 9
+59: [2019-10-13 11:29:43.523] [info] calculating top_mass at 170
+60: [2019-10-13 11:29:43.531] [info] Number of expected inputs: 4
+61: [2019-10-13 11:29:43.531] [info] Number of dimensions for integration: 9
+62: [2019-10-13 11:30:25.294] [info] Weight computed in 41763ms
+63: [2019-10-13 11:30:25.294] [info] finished computing weight: 10
+64: [2019-10-13 11:30:25.295] [info] calculating top_mass at 171
+65: [2019-10-13 11:30:25.303] [info] Number of expected inputs: 4
+66: [2019-10-13 11:30:25.303] [info] Number of dimensions for integration: 9
+67: [2019-10-13 11:31:07.004] [info] Weight computed in 41701ms
+68: [2019-10-13 11:31:07.004] [info] finished computing weight: 11
+69: [2019-10-13 11:31:07.004] [info] calculating top_mass at 172
+70: [2019-10-13 11:31:07.012] [info] Number of expected inputs: 4
+71: [2019-10-13 11:31:07.012] [info] Number of dimensions for integration: 9
+72: [2019-10-13 11:31:48.558] [info] Weight computed in 41545ms
+73: [2019-10-13 11:31:48.558] [info] finished computing weight: 12
+74: [2019-10-13 11:31:48.558] [info] calculating top_mass at 173
+75: [2019-10-13 11:31:48.566] [info] Number of expected inputs: 4
+76: [2019-10-13 11:31:48.566] [info] Number of dimensions for integration: 9
+77: [2019-10-13 11:32:29.561] [info] Weight computed in 40994ms
+78: [2019-10-13 11:32:29.561] [info] finished computing weight: 13
+79: [2019-10-13 11:32:29.561] [info] calculating top_mass at 174
+80: [2019-10-13 11:32:29.569] [info] Number of expected inputs: 4
+81: [2019-10-13 11:32:29.569] [info] Number of dimensions for integration: 9
+82: [2019-10-13 11:33:10.500] [info] Weight computed in 40931ms
+83: [2019-10-13 11:33:10.500] [info] finished computing weight: 14
+84: [2019-10-13 11:33:10.500] [info] calculating top_mass at 175
+85: [2019-10-13 11:33:10.508] [info] Number of expected inputs: 4
+86: [2019-10-13 11:33:10.508] [info] Number of dimensions for integration: 9
+87: [2019-10-13 11:33:51.163] [info] Weight computed in 40654ms
+88: [2019-10-13 11:33:51.163] [info] finished computing weight: 15
+89: [2019-10-13 11:33:51.163] [info] calculating top_mass at 176
+90: [2019-10-13 11:33:51.171] [info] Number of expected inputs: 4
+91: [2019-10-13 11:33:51.171] [info] Number of dimensions for integration: 9
+92: [2019-10-13 11:34:31.821] [info] Weight computed in 40649ms
+93: [2019-10-13 11:34:31.821] [info] finished computing weight: 16
+94: [2019-10-13 11:34:31.821] [info] calculating top_mass at 177
+95: [2019-10-13 11:34:31.829] [info] Number of expected inputs: 4
+96: [2019-10-13 11:34:31.829] [info] Number of dimensions for integration: 9
+97: [2019-10-13 11:35:11.835] [info] Weight computed in 40006ms
+98: [2019-10-13 11:35:11.835] [info] finished computing weight: 17
+99: [2019-10-13 11:35:11.836] [info] calculating top_mass at 178
+100: [2019-10-13 11:35:11.843] [info] Number of expected inputs: 4
+101: [2019-10-13 11:35:11.843] [info] Number of dimensions for integration: 9
+102: [2019-10-13 11:35:51.502] [info] Weight computed in 39658ms
+103: [2019-10-13 11:35:51.502] [info] finished computing weight: 18
+104: [2019-10-13 11:35:51.503] [info] calculating top_mass at 179
+105: [2019-10-13 11:35:51.510] [info] Number of expected inputs: 4
+106: [2019-10-13 11:35:51.510] [info] Number of dimensions for integration: 9
+107: [2019-10-13 11:36:31.787] [info] Weight computed in 40276ms
+108: [2019-10-13 11:36:31.787] [info] finished computing weight: 19
+109: [2019-10-13 11:36:31.787] [info] calculating top_mass at 180
+110: [2019-10-13 11:36:31.796] [info] Number of expected inputs: 4
+111: [2019-10-13 11:36:31.796] [info] Number of dimensions for integration: 9
+112: [2019-10-13 11:37:11.229] [info] Weight computed in 39433ms
+113: [2019-10-13 11:37:11.229] [info] finished computing weight: 20
+114: [2019-10-13 11:37:11.229] [info] calculating top_mass at 181
+115: [2019-10-13 11:37:11.237] [info] Number of expected inputs: 4
+116: [2019-10-13 11:37:11.237] [info] Number of dimensions for integration: 9
+117: [2019-10-13 11:37:50.152] [info] Weight computed in 38914ms
+118: [2019-10-13 11:37:50.152] [info] finished computing weight: 21
+119: [2019-10-13 11:37:50.152] [info] calculating top_mass at 182
+120: [2019-10-13 11:37:50.160] [info] Number of expected inputs: 4
+121: [2019-10-13 11:37:50.160] [info] Number of dimensions for integration: 9
+122: [2019-10-13 11:38:29.126] [info] Weight computed in 38965ms
+123: [2019-10-13 11:38:29.126] [info] finished computing weight: 22
+124: [2019-10-13 11:38:29.126] [info] calculating top_mass at 183
+125: [2019-10-13 11:38:29.134] [info] Number of expected inputs: 4
+126: [2019-10-13 11:38:29.134] [info] Number of dimensions for integration: 9
+127: [2019-10-13 11:39:07.308] [info] Weight computed in 38174ms
+128: [2019-10-13 11:39:07.308] [info] finished computing weight: 23
+129: [2019-10-13 11:39:07.309] [info] calculating top_mass at 184
+130: [2019-10-13 11:39:07.317] [info] Number of expected inputs: 4
+131: [2019-10-13 11:39:07.317] [info] Number of dimensions for integration: 9
+132: [2019-10-13 11:39:45.399] [info] Weight computed in 38082ms
+133: [2019-10-13 11:39:45.399] [info] finished computing weight: 24
+134: [2019-10-13 11:39:45.400] [info] calculating top_mass at 185
+135: [2019-10-13 11:39:45.407] [info] Number of expected inputs: 4
+136: [2019-10-13 11:39:45.407] [info] Number of dimensions for integration: 9
+137: [2019-10-13 11:40:23.249] [info] Weight computed in 37841ms
+138: [2019-10-13 11:40:23.249] [info] finished computing weight: 25
+139: [2019-10-13 11:40:23.249] [info] finished computing event: 0
+140: [2019-10-13 11:40:23.250] [info] weight: 4.5075e-21
+141: [2019-10-13 11:40:23.250] [info] ratio: 0.257907
+142: [2019-10-13 11:40:23.250] [info] weight: 5.05874e-21
+143: [2019-10-13 11:40:23.250] [info] ratio: 0.289448
+144: [2019-10-13 11:40:23.250] [info] weight: 5.68587e-21
+145: [2019-10-13 11:40:23.250] [info] ratio: 0.32533
+146: [2019-10-13 11:40:23.250] [info] weight: 6.36465e-21
+147: [2019-10-13 11:40:23.250] [info] ratio: 0.364168
+148: [2019-10-13 11:40:23.250] [info] weight: 7.19095e-21
+149: [2019-10-13 11:40:23.250] [info] ratio: 0.411447
+150: [2019-10-13 11:40:23.250] [info] weight: 7.99863e-21
+151: [2019-10-13 11:40:23.250] [info] ratio: 0.45766
+152: [2019-10-13 11:40:23.250] [info] weight: 9.26439e-21
+153: [2019-10-13 11:40:23.250] [info] ratio: 0.530084
+154: [2019-10-13 11:40:23.250] [info] weight: 9.96703e-21
+155: [2019-10-13 11:40:23.250] [info] ratio: 0.570287
+156: [2019-10-13 11:40:23.250] [info] weight: 1.12044e-20
+157: [2019-10-13 11:40:23.250] [info] ratio: 0.641083
+158: [2019-10-13 11:40:23.250] [info] weight: 1.26354e-20
+159: [2019-10-13 11:40:23.250] [info] ratio: 0.722965
+160: [2019-10-13 11:40:23.250] [info] weight: 1.4126e-20
+161: [2019-10-13 11:40:23.250] [info] ratio: 0.808255
+162: [2019-10-13 11:40:23.250] [info] weight: 1.57407e-20
+163: [2019-10-13 11:40:23.250] [info] ratio: 0.900639
+164: [2019-10-13 11:40:23.250] [info] weight: 1.74772e-20
+165: [2019-10-13 11:40:23.250] [info] ratio: 1
+166: [2019-10-13 11:40:23.250] [info] weight: 1.92956e-20
+167: [2019-10-13 11:40:23.250] [info] ratio: 1.10404
+168: [2019-10-13 11:40:23.250] [info] weight: 2.1113e-20
+169: [2019-10-13 11:40:23.250] [info] ratio: 1.20803
+170: [2019-10-13 11:40:23.250] [info] weight: 2.3285e-20
+171: [2019-10-13 11:40:23.250] [info] ratio: 1.3323
+172: [2019-10-13 11:40:23.250] [info] weight: 2.46765e-20
+173: [2019-10-13 11:40:23.250] [info] ratio: 1.41193
+174: [2019-10-13 11:40:23.250] [info] weight: 2.59555e-20
+175: [2019-10-13 11:40:23.250] [info] ratio: 1.48511
+176: [2019-10-13 11:40:23.250] [info] weight: 2.71552e-20
+177: [2019-10-13 11:40:23.250] [info] ratio: 1.55375
+178: [2019-10-13 11:40:23.250] [info] weight: 2.7889e-20
+179: [2019-10-13 11:40:23.250] [info] ratio: 1.59573
+180: [2019-10-13 11:40:23.250] [info] weight: 2.82613e-20
+181: [2019-10-13 11:40:23.250] [info] ratio: 1.61704
+182: [2019-10-13 11:40:23.250] [info] weight: 2.8125e-20
+183: [2019-10-13 11:40:23.250] [info] ratio: 1.60924
+184: [2019-10-13 11:40:23.250] [info] weight: 2.78313e-20
+185: [2019-10-13 11:40:23.250] [info] ratio: 1.59243
+186: [2019-10-13 11:40:23.250] [info] weight: 2.71631e-20
+187: [2019-10-13 11:40:23.250] [info] ratio: 1.5542
+188: [2019-10-13 11:40:23.250] [info] weight: 2.53159e-20
+189: [2019-10-13 11:40:23.250] [info] ratio: 1.44851
+190: [2019-10-13 11:40:23.250] [info] weight: 2.36176e-20
+191: [2019-10-13 11:40:23.250] [info] ratio: 1.35134
+192: [2019-10-13 11:40:23.250] [info] calculating event 1/15
+193: [2019-10-13 11:40:23.250] [info] calculating top_mass at 160
+194: [2019-10-13 11:40:23.258] [info] Number of expected inputs: 4
+195: [2019-10-13 11:40:23.258] [info] Number of dimensions for integration: 9
+196: [2019-10-13 11:40:43.087] [info] Weight computed in 19829ms
+197: [2019-10-13 11:40:43.087] [info] finished computing weight: 0
+198: [2019-10-13 11:40:43.087] [info] calculating top_mass at 161
+199: [2019-10-13 11:40:43.095] [info] Number of expected inputs: 4
+200: [2019-10-13 11:40:43.095] [info] Number of dimensions for integration: 9
+201: [2019-10-13 11:41:02.849] [info] Weight computed in 19753ms
+202: [2019-10-13 11:41:02.849] [info] finished computing weight: 1
+203: [2019-10-13 11:41:02.849] [info] calculating top_mass at 162
+204: [2019-10-13 11:41:02.857] [info] Number of expected inputs: 4
+205: [2019-10-13 11:41:02.857] [info] Number of dimensions for integration: 9
+206: [2019-10-13 11:41:22.803] [info] Weight computed in 19945ms
+207: [2019-10-13 11:41:22.803] [info] finished computing weight: 2
+208: [2019-10-13 11:41:22.803] [info] calculating top_mass at 163
+209: [2019-10-13 11:41:22.811] [info] Number of expected inputs: 4
+210: [2019-10-13 11:41:22.811] [info] Number of dimensions for integration: 9
+211: [2019-10-13 11:41:42.909] [info] Weight computed in 20098ms
+212: [2019-10-13 11:41:42.909] [info] finished computing weight: 3
+213: [2019-10-13 11:41:42.910] [info] calculating top_mass at 164
+214: [2019-10-13 11:41:42.917] [info] Number of expected inputs: 4
+215: [2019-10-13 11:41:42.917] [info] Number of dimensions for integration: 9
+216: [2019-10-13 11:42:02.916] [info] Weight computed in 19998ms
+217: [2019-10-13 11:42:02.916] [info] finished computing weight: 4
+218: [2019-10-13 11:42:02.916] [info] calculating top_mass at 165
+219: [2019-10-13 11:42:02.924] [info] Number of expected inputs: 4
+220: [2019-10-13 11:42:02.924] [info] Number of dimensions for integration: 9
+221: [2019-10-13 11:42:22.599] [info] Weight computed in 19674ms
+222: [2019-10-13 11:42:22.599] [info] finished computing weight: 5
+223: [2019-10-13 11:42:22.599] [info] calculating top_mass at 166
+224: [2019-10-13 11:42:22.607] [info] Number of expected inputs: 4
+225: [2019-10-13 11:42:22.607] [info] Number of dimensions for integration: 9
+226: [2019-10-13 11:42:42.527] [info] Weight computed in 19919ms
+227: [2019-10-13 11:42:42.527] [info] finished computing weight: 6
+228: [2019-10-13 11:42:42.527] [info] calculating top_mass at 167
+229: [2019-10-13 11:42:42.535] [info] Number of expected inputs: 4
+230: [2019-10-13 11:42:42.535] [info] Number of dimensions for integration: 9
+231: [2019-10-13 11:43:01.767] [info] Weight computed in 19231ms
+232: [2019-10-13 11:43:01.767] [info] finished computing weight: 7
+233: [2019-10-13 11:43:01.767] [info] calculating top_mass at 168
+234: [2019-10-13 11:43:01.775] [info] Number of expected inputs: 4
+235: [2019-10-13 11:43:01.775] [info] Number of dimensions for integration: 9
+236: [2019-10-13 11:43:20.983] [info] Weight computed in 19207ms
+237: [2019-10-13 11:43:20.983] [info] finished computing weight: 8
+238: [2019-10-13 11:43:20.983] [info] calculating top_mass at 169
+239: [2019-10-13 11:43:20.991] [info] Number of expected inputs: 4
+240: [2019-10-13 11:43:20.991] [info] Number of dimensions for integration: 9
+241: [2019-10-13 11:43:39.926] [info] Weight computed in 18935ms
+242: [2019-10-13 11:43:39.926] [info] finished computing weight: 9
+243: [2019-10-13 11:43:39.927] [info] calculating top_mass at 170
+244: [2019-10-13 11:43:39.934] [info] Number of expected inputs: 4
+245: [2019-10-13 11:43:39.934] [info] Number of dimensions for integration: 9
+246: [2019-10-13 11:43:58.751] [info] Weight computed in 18816ms
+247: [2019-10-13 11:43:58.751] [info] finished computing weight: 10
+248: [2019-10-13 11:43:58.751] [info] calculating top_mass at 171
+249: [2019-10-13 11:43:58.759] [info] Number of expected inputs: 4
+250: [2019-10-13 11:43:58.759] [info] Number of dimensions for integration: 9
+251: [2019-10-13 11:44:17.548] [info] Weight computed in 18788ms
+252: [2019-10-13 11:44:17.548] [info] finished computing weight: 11
+253: [2019-10-13 11:44:17.548] [info] calculating top_mass at 172
+254: [2019-10-13 11:44:17.556] [info] Number of expected inputs: 4
+255: [2019-10-13 11:44:17.556] [info] Number of dimensions for integration: 9
+256: [2019-10-13 11:44:36.074] [info] Weight computed in 18518ms
+257: [2019-10-13 11:44:36.074] [info] finished computing weight: 12
+258: [2019-10-13 11:44:36.074] [info] calculating top_mass at 173
+259: [2019-10-13 11:44:36.082] [info] Number of expected inputs: 4
+260: [2019-10-13 11:44:36.082] [info] Number of dimensions for integration: 9
+261: [2019-10-13 11:44:54.405] [info] Weight computed in 18322ms
+262: [2019-10-13 11:44:54.405] [info] finished computing weight: 13
+263: [2019-10-13 11:44:54.405] [info] calculating top_mass at 174
+264: [2019-10-13 11:44:54.413] [info] Number of expected inputs: 4
+265: [2019-10-13 11:44:54.413] [info] Number of dimensions for integration: 9
+266: [2019-10-13 11:45:12.491] [info] Weight computed in 18077ms
+267: [2019-10-13 11:45:12.491] [info] finished computing weight: 14
+268: [2019-10-13 11:45:12.491] [info] calculating top_mass at 175
+269: [2019-10-13 11:45:12.499] [info] Number of expected inputs: 4
+270: [2019-10-13 11:45:12.499] [info] Number of dimensions for integration: 9
+271: [2019-10-13 11:45:29.959] [info] Weight computed in 17460ms
+272: [2019-10-13 11:45:29.959] [info] finished computing weight: 15
+273: [2019-10-13 11:45:29.960] [info] calculating top_mass at 176
+274: [2019-10-13 11:45:29.967] [info] Number of expected inputs: 4
+275: [2019-10-13 11:45:29.968] [info] Number of dimensions for integration: 9
+276: [2019-10-13 11:45:47.188] [info] Weight computed in 17220ms
+277: [2019-10-13 11:45:47.188] [info] finished computing weight: 16
+278: [2019-10-13 11:45:47.189] [info] calculating top_mass at 177
+279: [2019-10-13 11:45:47.196] [info] Number of expected inputs: 4
+280: [2019-10-13 11:45:47.196] [info] Number of dimensions for integration: 9
+281: [2019-10-13 11:46:04.127] [info] Weight computed in 16930ms
+282: [2019-10-13 11:46:04.127] [info] finished computing weight: 17
+283: [2019-10-13 11:46:04.127] [info] calculating top_mass at 178
+284: [2019-10-13 11:46:04.135] [info] Number of expected inputs: 4
+285: [2019-10-13 11:46:04.135] [info] Number of dimensions for integration: 9
+286: [2019-10-13 11:46:21.442] [info] Weight computed in 17307ms
+287: [2019-10-13 11:46:21.442] [info] finished computing weight: 18
+288: [2019-10-13 11:46:21.442] [info] calculating top_mass at 179
+289: [2019-10-13 11:46:21.450] [info] Number of expected inputs: 4
+290: [2019-10-13 11:46:21.450] [info] Number of dimensions for integration: 9
+291: [2019-10-13 11:46:38.376] [info] Weight computed in 16925ms
+292: [2019-10-13 11:46:38.376] [info] finished computing weight: 19
+293: [2019-10-13 11:46:38.377] [info] calculating top_mass at 180
+294: [2019-10-13 11:46:38.385] [info] Number of expected inputs: 4
+295: [2019-10-13 11:46:38.385] [info] Number of dimensions for integration: 9
+296: [2019-10-13 11:46:54.834] [info] Weight computed in 16448ms
+297: [2019-10-13 11:46:54.834] [info] finished computing weight: 20
+298: [2019-10-13 11:46:54.834] [info] calculating top_mass at 181
+299: [2019-10-13 11:46:54.842] [info] Number of expected inputs: 4
+300: [2019-10-13 11:46:54.842] [info] Number of dimensions for integration: 9
+301: [2019-10-13 11:47:11.519] [info] Weight computed in 16677ms
+302: [2019-10-13 11:47:11.519] [info] finished computing weight: 21
+303: [2019-10-13 11:47:11.520] [info] calculating top_mass at 182
+304: [2019-10-13 11:47:11.527] [info] Number of expected inputs: 4
+305: [2019-10-13 11:47:11.527] [info] Number of dimensions for integration: 9
+306: [2019-10-13 11:47:27.502] [info] Weight computed in 15974ms
+307: [2019-10-13 11:47:27.502] [info] finished computing weight: 22
+308: [2019-10-13 11:47:27.502] [info] calculating top_mass at 183
+309: [2019-10-13 11:47:27.510] [info] Number of expected inputs: 4
+310: [2019-10-13 11:47:27.510] [info] Number of dimensions for integration: 9
+311: [2019-10-13 11:47:43.430] [info] Weight computed in 15919ms
+312: [2019-10-13 11:47:43.430] [info] finished computing weight: 23
+313: [2019-10-13 11:47:43.430] [info] calculating top_mass at 184
+314: [2019-10-13 11:47:43.438] [info] Number of expected inputs: 4
+315: [2019-10-13 11:47:43.438] [info] Number of dimensions for integration: 9
+316: [2019-10-13 11:47:58.772] [info] Weight computed in 15333ms
+317: [2019-10-13 11:47:58.772] [info] finished computing weight: 24
+318: [2019-10-13 11:47:58.772] [info] calculating top_mass at 185
+319: [2019-10-13 11:47:58.780] [info] Number of expected inputs: 4
+320: [2019-10-13 11:47:58.780] [info] Number of dimensions for integration: 9
+321: [2019-10-13 11:48:14.287] [info] Weight computed in 15506ms
+322: [2019-10-13 11:48:14.287] [info] finished computing weight: 25
+323: [2019-10-13 11:48:14.287] [info] finished computing event: 1
+324: [2019-10-13 11:48:14.287] [info] weight: 3.23829e-20
+325: [2019-10-13 11:48:14.287] [info] ratio: 2.66392
+326: [2019-10-13 11:48:14.287] [info] weight: 3.10521e-20
+327: [2019-10-13 11:48:14.287] [info] ratio: 2.55444
+328: [2019-10-13 11:48:14.287] [info] weight: 2.92079e-20
+329: [2019-10-13 11:48:14.287] [info] ratio: 2.40273
+330: [2019-10-13 11:48:14.287] [info] weight: 2.731e-20
+331: [2019-10-13 11:48:14.287] [info] ratio: 2.24661
+332: [2019-10-13 11:48:14.287] [info] weight: 2.57761e-20
+333: [2019-10-13 11:48:14.287] [info] ratio: 2.12042
+334: [2019-10-13 11:48:14.287] [info] weight: 2.37872e-20
+335: [2019-10-13 11:48:14.287] [info] ratio: 1.95681
+336: [2019-10-13 11:48:14.287] [info] weight: 2.19883e-20
+337: [2019-10-13 11:48:14.287] [info] ratio: 1.80882
+338: [2019-10-13 11:48:14.287] [info] weight: 2.02085e-20
+339: [2019-10-13 11:48:14.287] [info] ratio: 1.66241
+340: [2019-10-13 11:48:14.287] [info] weight: 1.82948e-20
+341: [2019-10-13 11:48:14.287] [info] ratio: 1.50499
+342: [2019-10-13 11:48:14.287] [info] weight: 1.6546e-20
+343: [2019-10-13 11:48:14.287] [info] ratio: 1.36112
+344: [2019-10-13 11:48:14.287] [info] weight: 1.51345e-20
+345: [2019-10-13 11:48:14.287] [info] ratio: 1.24501
+346: [2019-10-13 11:48:14.287] [info] weight: 1.35072e-20
+347: [2019-10-13 11:48:14.287] [info] ratio: 1.11115
+348: [2019-10-13 11:48:14.287] [info] weight: 1.21561e-20
+349: [2019-10-13 11:48:14.287] [info] ratio: 1
+350: [2019-10-13 11:48:14.287] [info] weight: 1.0757e-20
+351: [2019-10-13 11:48:14.287] [info] ratio: 0.884902
+352: [2019-10-13 11:48:14.287] [info] weight: 9.67046e-21
+353: [2019-10-13 11:48:14.287] [info] ratio: 0.79552
+354: [2019-10-13 11:48:14.287] [info] weight: 8.51259e-21
+355: [2019-10-13 11:48:14.287] [info] ratio: 0.700271
+356: [2019-10-13 11:48:14.287] [info] weight: 7.75437e-21
+357: [2019-10-13 11:48:14.287] [info] ratio: 0.637897
+358: [2019-10-13 11:48:14.287] [info] weight: 6.79197e-21
+359: [2019-10-13 11:48:14.287] [info] ratio: 0.558727
+360: [2019-10-13 11:48:14.287] [info] weight: 6.0727e-21
+361: [2019-10-13 11:48:14.287] [info] ratio: 0.499559
+362: [2019-10-13 11:48:14.287] [info] weight: 5.17172e-21
+363: [2019-10-13 11:48:14.287] [info] ratio: 0.425441
+364: [2019-10-13 11:48:14.287] [info] weight: 4.65048e-21
+365: [2019-10-13 11:48:14.287] [info] ratio: 0.382562
+366: [2019-10-13 11:48:14.287] [info] weight: 4.11721e-21
+367: [2019-10-13 11:48:14.287] [info] ratio: 0.338694
+368: [2019-10-13 11:48:14.287] [info] weight: 3.56022e-21
+369: [2019-10-13 11:48:14.287] [info] ratio: 0.292875
+370: [2019-10-13 11:48:14.287] [info] weight: 3.23162e-21
+371: [2019-10-13 11:48:14.287] [info] ratio: 0.265842
+372: [2019-10-13 11:48:14.287] [info] weight: 2.83289e-21
+373: [2019-10-13 11:48:14.287] [info] ratio: 0.233042
+374: [2019-10-13 11:48:14.287] [info] weight: 2.46997e-21
+375: [2019-10-13 11:48:14.287] [info] ratio: 0.203187
+376: [2019-10-13 11:48:14.287] [info] calculating event 2/15
+377: [2019-10-13 11:48:14.287] [info] calculating top_mass at 160
+378: [2019-10-13 11:48:14.295] [info] Number of expected inputs: 4
+379: [2019-10-13 11:48:14.295] [info] Number of dimensions for integration: 9
+380: [2019-10-13 11:48:40.072] [info] Weight computed in 25776ms
+381: [2019-10-13 11:48:40.072] [info] finished computing weight: 0
+382: [2019-10-13 11:48:40.072] [info] calculating top_mass at 161
+383: [2019-10-13 11:48:40.080] [info] Number of expected inputs: 4
+384: [2019-10-13 11:48:40.080] [info] Number of dimensions for integration: 9
+385: [2019-10-13 11:49:05.921] [info] Weight computed in 25840ms
+386: [2019-10-13 11:49:05.921] [info] finished computing weight: 1
+387: [2019-10-13 11:49:05.921] [info] calculating top_mass at 162
+388: [2019-10-13 11:49:05.929] [info] Number of expected inputs: 4
+389: [2019-10-13 11:49:05.929] [info] Number of dimensions for integration: 9
+390: [2019-10-13 11:49:31.935] [info] Weight computed in 26006ms
+391: [2019-10-13 11:49:31.935] [info] finished computing weight: 2
+392: [2019-10-13 11:49:31.936] [info] calculating top_mass at 163
+393: [2019-10-13 11:49:31.943] [info] Number of expected inputs: 4
+394: [2019-10-13 11:49:31.943] [info] Number of dimensions for integration: 9
+395: [2019-10-13 11:49:57.977] [info] Weight computed in 26033ms
+396: [2019-10-13 11:49:57.977] [info] finished computing weight: 3
+397: [2019-10-13 11:49:57.977] [info] calculating top_mass at 164
+398: [2019-10-13 11:49:57.985] [info] Number of expected inputs: 4
+399: [2019-10-13 11:49:57.985] [info] Number of dimensions for integration: 9
+400: [2019-10-13 11:50:24.225] [info] Weight computed in 26239ms
+401: [2019-10-13 11:50:24.225] [info] finished computing weight: 4
+402: [2019-10-13 11:50:24.225] [info] calculating top_mass at 165
+403: [2019-10-13 11:50:24.233] [info] Number of expected inputs: 4
+404: [2019-10-13 11:50:24.233] [info] Number of dimensions for integration: 9
+405: [2019-10-13 11:50:50.343] [info] Weight computed in 26110ms
+406: [2019-10-13 11:50:50.343] [info] finished computing weight: 5
+407: [2019-10-13 11:50:50.344] [info] calculating top_mass at 166
+408: [2019-10-13 11:50:50.351] [info] Number of expected inputs: 4
+409: [2019-10-13 11:50:50.351] [info] Number of dimensions for integration: 9
+410: [2019-10-13 11:51:16.550] [info] Weight computed in 26198ms
+411: [2019-10-13 11:51:16.550] [info] finished computing weight: 6
+412: [2019-10-13 11:51:16.550] [info] calculating top_mass at 167
+413: [2019-10-13 11:51:16.558] [info] Number of expected inputs: 4
+414: [2019-10-13 11:51:16.558] [info] Number of dimensions for integration: 9
+415: [2019-10-13 11:51:42.820] [info] Weight computed in 26262ms
+416: [2019-10-13 11:51:42.820] [info] finished computing weight: 7
+417: [2019-10-13 11:51:42.820] [info] calculating top_mass at 168
+418: [2019-10-13 11:51:42.828] [info] Number of expected inputs: 4
+419: [2019-10-13 11:51:42.828] [info] Number of dimensions for integration: 9
+420: [2019-10-13 11:52:09.105] [info] Weight computed in 26276ms
+421: [2019-10-13 11:52:09.105] [info] finished computing weight: 8
+422: [2019-10-13 11:52:09.105] [info] calculating top_mass at 169
+423: [2019-10-13 11:52:09.113] [info] Number of expected inputs: 4
+424: [2019-10-13 11:52:09.113] [info] Number of dimensions for integration: 9
+425: [2019-10-13 11:52:35.537] [info] Weight computed in 26423ms
+426: [2019-10-13 11:52:35.537] [info] finished computing weight: 9
+427: [2019-10-13 11:52:35.537] [info] calculating top_mass at 170
+428: [2019-10-13 11:52:35.545] [info] Number of expected inputs: 4
+429: [2019-10-13 11:52:35.545] [info] Number of dimensions for integration: 9
+430: [2019-10-13 11:53:01.891] [info] Weight computed in 26345ms
+431: [2019-10-13 11:53:01.891] [info] finished computing weight: 10
+432: [2019-10-13 11:53:01.891] [info] calculating top_mass at 171
+433: [2019-10-13 11:53:01.899] [info] Number of expected inputs: 4
+434: [2019-10-13 11:53:01.899] [info] Number of dimensions for integration: 9
+435: [2019-10-13 11:53:28.215] [info] Weight computed in 26315ms
+436: [2019-10-13 11:53:28.215] [info] finished computing weight: 11
+437: [2019-10-13 11:53:28.215] [info] calculating top_mass at 172
+438: [2019-10-13 11:53:28.222] [info] Number of expected inputs: 4
+439: [2019-10-13 11:53:28.222] [info] Number of dimensions for integration: 9
+440: [2019-10-13 11:53:51.994] [info] Weight computed in 23771ms
+441: [2019-10-13 11:53:51.994] [info] finished computing weight: 12
+442: [2019-10-13 11:53:51.994] [info] calculating top_mass at 173
+443: [2019-10-13 11:53:52.001] [info] Number of expected inputs: 4
+444: [2019-10-13 11:53:52.001] [info] Number of dimensions for integration: 9
+445: [2019-10-13 11:54:13.070] [info] Weight computed in 21068ms
+446: [2019-10-13 11:54:13.070] [info] finished computing weight: 13
+447: [2019-10-13 11:54:13.070] [info] calculating top_mass at 174
+448: [2019-10-13 11:54:13.078] [info] Number of expected inputs: 4
+449: [2019-10-13 11:54:13.078] [info] Number of dimensions for integration: 9
+450: [2019-10-13 11:54:31.808] [info] Weight computed in 18730ms
+451: [2019-10-13 11:54:31.808] [info] finished computing weight: 14
+452: [2019-10-13 11:54:31.808] [info] calculating top_mass at 175
+453: [2019-10-13 11:54:31.816] [info] Number of expected inputs: 4
+454: [2019-10-13 11:54:31.816] [info] Number of dimensions for integration: 9
+455: [2019-10-13 11:54:50.389] [info] Weight computed in 18572ms
+456: [2019-10-13 11:54:50.389] [info] finished computing weight: 15
+457: [2019-10-13 11:54:50.389] [info] calculating top_mass at 176
+458: [2019-10-13 11:54:50.397] [info] Number of expected inputs: 4
+459: [2019-10-13 11:54:50.397] [info] Number of dimensions for integration: 9
+460: [2019-10-13 11:55:07.584] [info] Weight computed in 17187ms
+461: [2019-10-13 11:55:07.584] [info] finished computing weight: 16
+462: [2019-10-13 11:55:07.584] [info] calculating top_mass at 177
+463: [2019-10-13 11:55:07.592] [info] Number of expected inputs: 4
+464: [2019-10-13 11:55:07.592] [info] Number of dimensions for integration: 9
+465: [2019-10-13 11:55:28.720] [info] Weight computed in 21128ms
+466: [2019-10-13 11:55:28.720] [info] finished computing weight: 17
+467: [2019-10-13 11:55:28.721] [info] calculating top_mass at 178
+468: [2019-10-13 11:55:28.729] [info] Number of expected inputs: 4
+469: [2019-10-13 11:55:28.729] [info] Number of dimensions for integration: 9
+470: [2019-10-13 11:55:49.828] [info] Weight computed in 21098ms
+471: [2019-10-13 11:55:49.828] [info] finished computing weight: 18
+472: [2019-10-13 11:55:49.828] [info] calculating top_mass at 179
+473: [2019-10-13 11:55:49.835] [info] Number of expected inputs: 4
+474: [2019-10-13 11:55:49.835] [info] Number of dimensions for integration: 9
+475: [2019-10-13 11:56:09.638] [info] Weight computed in 19802ms
+476: [2019-10-13 11:56:09.638] [info] finished computing weight: 19
+477: [2019-10-13 11:56:09.638] [info] calculating top_mass at 180
+478: [2019-10-13 11:56:09.646] [info] Number of expected inputs: 4
+479: [2019-10-13 11:56:09.646] [info] Number of dimensions for integration: 9
+480: [2019-10-13 11:56:26.780] [info] Weight computed in 17133ms
+481: [2019-10-13 11:56:26.780] [info] finished computing weight: 20
+482: [2019-10-13 11:56:26.780] [info] calculating top_mass at 181
+483: [2019-10-13 11:56:26.787] [info] Number of expected inputs: 4
+484: [2019-10-13 11:56:26.788] [info] Number of dimensions for integration: 9
+485: [2019-10-13 11:56:50.677] [info] Weight computed in 23888ms
+486: [2019-10-13 11:56:50.677] [info] finished computing weight: 21
+487: [2019-10-13 11:56:50.677] [info] calculating top_mass at 182
+488: [2019-10-13 11:56:50.685] [info] Number of expected inputs: 4
+489: [2019-10-13 11:56:50.685] [info] Number of dimensions for integration: 9
+490: [2019-10-13 11:57:10.405] [info] Weight computed in 19720ms
+491: [2019-10-13 11:57:10.405] [info] finished computing weight: 22
+492: [2019-10-13 11:57:10.406] [info] calculating top_mass at 183
+493: [2019-10-13 11:57:10.413] [info] Number of expected inputs: 4
+494: [2019-10-13 11:57:10.413] [info] Number of dimensions for integration: 9
+495: [2019-10-13 11:57:34.149] [info] Weight computed in 23735ms
+496: [2019-10-13 11:57:34.149] [info] finished computing weight: 23
+497: [2019-10-13 11:57:34.149] [info] calculating top_mass at 184
+498: [2019-10-13 11:57:34.157] [info] Number of expected inputs: 4
+499: [2019-10-13 11:57:34.157] [info] Number of dimensions for integration: 9
+500: [2019-10-13 11:57:53.869] [info] Weight computed in 19712ms
+501: [2019-10-13 11:57:53.870] [info] finished computing weight: 24
+502: [2019-10-13 11:57:53.870] [info] calculating top_mass at 185
+503: [2019-10-13 11:57:53.878] [info] Number of expected inputs: 4
+504: [2019-10-13 11:57:53.878] [info] Number of dimensions for integration: 9
+505: [2019-10-13 11:58:12.261] [info] Weight computed in 18383ms
+506: [2019-10-13 11:58:12.261] [info] finished computing weight: 25
+507: [2019-10-13 11:58:12.261] [info] finished computing event: 2
+508: [2019-10-13 11:58:12.261] [info] weight: 3.56989e-20
+509: [2019-10-13 11:58:12.261] [info] ratio: 1.33313
+510: [2019-10-13 11:58:12.261] [info] weight: 3.52989e-20
+511: [2019-10-13 11:58:12.261] [info] ratio: 1.31819
+512: [2019-10-13 11:58:12.261] [info] weight: 3.49232e-20
+513: [2019-10-13 11:58:12.261] [info] ratio: 1.30416
+514: [2019-10-13 11:58:12.261] [info] weight: 3.45815e-20
+515: [2019-10-13 11:58:12.261] [info] ratio: 1.2914
+516: [2019-10-13 11:58:12.261] [info] weight: 3.41139e-20
+517: [2019-10-13 11:58:12.261] [info] ratio: 1.27394
+518: [2019-10-13 11:58:12.261] [info] weight: 3.36422e-20
+519: [2019-10-13 11:58:12.261] [info] ratio: 1.25632
+520: [2019-10-13 11:58:12.261] [info] weight: 3.33344e-20
+521: [2019-10-13 11:58:12.261] [info] ratio: 1.24483
+522: [2019-10-13 11:58:12.261] [info] weight: 3.26174e-20
+523: [2019-10-13 11:58:12.261] [info] ratio: 1.21805
+524: [2019-10-13 11:58:12.261] [info] weight: 3.20877e-20
+525: [2019-10-13 11:58:12.261] [info] ratio: 1.19827
+526: [2019-10-13 11:58:12.261] [info] weight: 3.15281e-20
+527: [2019-10-13 11:58:12.261] [info] ratio: 1.17737
+528: [2019-10-13 11:58:12.261] [info] weight: 3.09579e-20
+529: [2019-10-13 11:58:12.261] [info] ratio: 1.15608
+530: [2019-10-13 11:58:12.261] [info] weight: 3.03976e-20
+531: [2019-10-13 11:58:12.261] [info] ratio: 1.13516
+532: [2019-10-13 11:58:12.261] [info] weight: 2.67783e-20
+533: [2019-10-13 11:58:12.261] [info] ratio: 1
+534: [2019-10-13 11:58:12.261] [info] weight: 2.33474e-20
+535: [2019-10-13 11:58:12.261] [info] ratio: 0.871877
+536: [2019-10-13 11:58:12.261] [info] weight: 2.00067e-20
+537: [2019-10-13 11:58:12.261] [info] ratio: 0.747124
+538: [2019-10-13 11:58:12.261] [info] weight: 1.95988e-20
+539: [2019-10-13 11:58:12.261] [info] ratio: 0.73189
+540: [2019-10-13 11:58:12.261] [info] weight: 1.78251e-20
+541: [2019-10-13 11:58:12.261] [info] ratio: 0.665654
+542: [2019-10-13 11:58:12.261] [info] weight: 2.14762e-20
+543: [2019-10-13 11:58:12.261] [info] ratio: 0.801999
+544: [2019-10-13 11:58:12.261] [info] weight: 2.10215e-20
+545: [2019-10-13 11:58:12.261] [info] ratio: 0.78502
+546: [2019-10-13 11:58:12.261] [info] weight: 1.92927e-20
+547: [2019-10-13 11:58:12.261] [info] ratio: 0.720458
+548: [2019-10-13 11:58:12.261] [info] weight: 1.63879e-20
+549: [2019-10-13 11:58:12.261] [info] ratio: 0.611984
+550: [2019-10-13 11:58:12.261] [info] weight: 2.21855e-20
+551: [2019-10-13 11:58:12.261] [info] ratio: 0.828489
+552: [2019-10-13 11:58:12.261] [info] weight: 1.81134e-20
+553: [2019-10-13 11:58:12.261] [info] ratio: 0.676422
+554: [2019-10-13 11:58:12.261] [info] weight: 2.12771e-20
+555: [2019-10-13 11:58:12.261] [info] ratio: 0.794566
+556: [2019-10-13 11:58:12.261] [info] weight: 1.73617e-20
+557: [2019-10-13 11:58:12.261] [info] ratio: 0.64835
+558: [2019-10-13 11:58:12.261] [info] weight: 1.58682e-20
+559: [2019-10-13 11:58:12.261] [info] ratio: 0.592578
+560: [2019-10-13 11:58:12.261] [info] calculating event 3/15
+561: [2019-10-13 11:58:12.261] [info] calculating top_mass at 160
+562: [2019-10-13 11:58:12.269] [info] Number of expected inputs: 4
+563: [2019-10-13 11:58:12.269] [info] Number of dimensions for integration: 9
+564: [2019-10-13 11:58:33.124] [info] Weight computed in 20854ms
+565: [2019-10-13 11:58:33.124] [info] finished computing weight: 0
+566: [2019-10-13 11:58:33.124] [info] calculating top_mass at 161
+567: [2019-10-13 11:58:33.132] [info] Number of expected inputs: 4
+568: [2019-10-13 11:58:33.132] [info] Number of dimensions for integration: 9
+569: [2019-10-13 11:58:54.256] [info] Weight computed in 21123ms
+570: [2019-10-13 11:58:54.256] [info] finished computing weight: 1
+571: [2019-10-13 11:58:54.256] [info] calculating top_mass at 162
+572: [2019-10-13 11:58:54.264] [info] Number of expected inputs: 4
+573: [2019-10-13 11:58:54.264] [info] Number of dimensions for integration: 9
+574: [2019-10-13 11:59:15.437] [info] Weight computed in 21172ms
+575: [2019-10-13 11:59:15.437] [info] finished computing weight: 2
+576: [2019-10-13 11:59:15.437] [info] calculating top_mass at 163
+577: [2019-10-13 11:59:15.444] [info] Number of expected inputs: 4
+578: [2019-10-13 11:59:15.444] [info] Number of dimensions for integration: 9
+579: [2019-10-13 11:59:36.830] [info] Weight computed in 21385ms
+580: [2019-10-13 11:59:36.830] [info] finished computing weight: 3
+581: [2019-10-13 11:59:36.830] [info] calculating top_mass at 164
+582: [2019-10-13 11:59:36.838] [info] Number of expected inputs: 4
+583: [2019-10-13 11:59:36.838] [info] Number of dimensions for integration: 9
+584: [2019-10-13 11:59:58.234] [info] Weight computed in 21396ms
+585: [2019-10-13 11:59:58.234] [info] finished computing weight: 4
+586: [2019-10-13 11:59:58.235] [info] calculating top_mass at 165
+587: [2019-10-13 11:59:58.242] [info] Number of expected inputs: 4
+588: [2019-10-13 11:59:58.242] [info] Number of dimensions for integration: 9
+589: [2019-10-13 12:00:19.796] [info] Weight computed in 21553ms
+590: [2019-10-13 12:00:19.796] [info] finished computing weight: 5
+591: [2019-10-13 12:00:19.796] [info] calculating top_mass at 166
+592: [2019-10-13 12:00:19.804] [info] Number of expected inputs: 4
+593: [2019-10-13 12:00:19.804] [info] Number of dimensions for integration: 9
+594: [2019-10-13 12:00:41.306] [info] Weight computed in 21502ms
+595: [2019-10-13 12:00:41.306] [info] finished computing weight: 6
+596: [2019-10-13 12:00:41.307] [info] calculating top_mass at 167
+597: [2019-10-13 12:00:41.314] [info] Number of expected inputs: 4
+598: [2019-10-13 12:00:41.314] [info] Number of dimensions for integration: 9
+599: [2019-10-13 12:01:02.987] [info] Weight computed in 21671ms
+600: [2019-10-13 12:01:02.987] [info] finished computing weight: 7
+601: [2019-10-13 12:01:02.987] [info] calculating top_mass at 168
+602: [2019-10-13 12:01:02.994] [info] Number of expected inputs: 4
+603: [2019-10-13 12:01:02.994] [info] Number of dimensions for integration: 9
+604: [2019-10-13 12:01:24.749] [info] Weight computed in 21754ms
+605: [2019-10-13 12:01:24.749] [info] finished computing weight: 8
+606: [2019-10-13 12:01:24.749] [info] calculating top_mass at 169
+607: [2019-10-13 12:01:24.757] [info] Number of expected inputs: 4
+608: [2019-10-13 12:01:24.757] [info] Number of dimensions for integration: 9
+609: [2019-10-13 12:01:46.606] [info] Weight computed in 21849ms
+610: [2019-10-13 12:01:46.606] [info] finished computing weight: 9
+611: [2019-10-13 12:01:46.607] [info] calculating top_mass at 170
+612: [2019-10-13 12:01:46.615] [info] Number of expected inputs: 4
+613: [2019-10-13 12:01:46.615] [info] Number of dimensions for integration: 9
+614: [2019-10-13 12:02:08.600] [info] Weight computed in 21985ms
+615: [2019-10-13 12:02:08.600] [info] finished computing weight: 10
+616: [2019-10-13 12:02:08.600] [info] calculating top_mass at 171
+617: [2019-10-13 12:02:08.608] [info] Number of expected inputs: 4
+618: [2019-10-13 12:02:08.608] [info] Number of dimensions for integration: 9
+619: [2019-10-13 12:02:30.376] [info] Weight computed in 21767ms
+620: [2019-10-13 12:02:30.376] [info] finished computing weight: 11
+621: [2019-10-13 12:02:30.376] [info] calculating top_mass at 172
+622: [2019-10-13 12:02:30.384] [info] Number of expected inputs: 4
+623: [2019-10-13 12:02:30.384] [info] Number of dimensions for integration: 9
+624: [2019-10-13 12:02:52.357] [info] Weight computed in 21972ms
+625: [2019-10-13 12:02:52.357] [info] finished computing weight: 12
+626: [2019-10-13 12:02:52.357] [info] calculating top_mass at 173
+627: [2019-10-13 12:02:52.365] [info] Number of expected inputs: 4
+628: [2019-10-13 12:02:52.365] [info] Number of dimensions for integration: 9
+629: [2019-10-13 12:03:14.298] [info] Weight computed in 21933ms
+630: [2019-10-13 12:03:14.298] [info] finished computing weight: 13
+631: [2019-10-13 12:03:14.298] [info] calculating top_mass at 174
+632: [2019-10-13 12:03:14.306] [info] Number of expected inputs: 4
+633: [2019-10-13 12:03:14.306] [info] Number of dimensions for integration: 9
+634: [2019-10-13 12:03:36.313] [info] Weight computed in 22006ms
+635: [2019-10-13 12:03:36.313] [info] finished computing weight: 14
+636: [2019-10-13 12:03:36.314] [info] calculating top_mass at 175
+637: [2019-10-13 12:03:36.321] [info] Number of expected inputs: 4
+638: [2019-10-13 12:03:36.321] [info] Number of dimensions for integration: 9
+639: [2019-10-13 12:03:58.351] [info] Weight computed in 22029ms
+640: [2019-10-13 12:03:58.351] [info] finished computing weight: 15
+641: [2019-10-13 12:03:58.351] [info] calculating top_mass at 176
+642: [2019-10-13 12:03:58.359] [info] Number of expected inputs: 4
+643: [2019-10-13 12:03:58.359] [info] Number of dimensions for integration: 9
+644: [2019-10-13 12:04:20.281] [info] Weight computed in 21921ms
+645: [2019-10-13 12:04:20.281] [info] finished computing weight: 16
+646: [2019-10-13 12:04:20.281] [info] calculating top_mass at 177
+647: [2019-10-13 12:04:20.289] [info] Number of expected inputs: 4
+648: [2019-10-13 12:04:20.289] [info] Number of dimensions for integration: 9
+649: [2019-10-13 12:04:42.346] [info] Weight computed in 22057ms
+650: [2019-10-13 12:04:42.346] [info] finished computing weight: 17
+651: [2019-10-13 12:04:42.346] [info] calculating top_mass at 178
+652: [2019-10-13 12:04:42.354] [info] Number of expected inputs: 4
+653: [2019-10-13 12:04:42.354] [info] Number of dimensions for integration: 9
+654: [2019-10-13 12:05:04.634] [info] Weight computed in 22279ms
+655: [2019-10-13 12:05:04.634] [info] finished computing weight: 18
+656: [2019-10-13 12:05:04.634] [info] calculating top_mass at 179
+657: [2019-10-13 12:05:04.641] [info] Number of expected inputs: 4
+658: [2019-10-13 12:05:04.641] [info] Number of dimensions for integration: 9
+659: [2019-10-13 12:05:26.710] [info] Weight computed in 22068ms
+660: [2019-10-13 12:05:26.710] [info] finished computing weight: 19
+661: [2019-10-13 12:05:26.710] [info] calculating top_mass at 180
+662: [2019-10-13 12:05:26.717] [info] Number of expected inputs: 4
+663: [2019-10-13 12:05:26.717] [info] Number of dimensions for integration: 9
+664: [2019-10-13 12:05:49.028] [info] Weight computed in 22310ms
+665: [2019-10-13 12:05:49.028] [info] finished computing weight: 20
+666: [2019-10-13 12:05:49.028] [info] calculating top_mass at 181
+667: [2019-10-13 12:05:49.036] [info] Number of expected inputs: 4
+668: [2019-10-13 12:05:49.036] [info] Number of dimensions for integration: 9
+669: [2019-10-13 12:06:11.214] [info] Weight computed in 22177ms
+670: [2019-10-13 12:06:11.214] [info] finished computing weight: 21
+671: [2019-10-13 12:06:11.214] [info] calculating top_mass at 182
+672: [2019-10-13 12:06:11.222] [info] Number of expected inputs: 4
+673: [2019-10-13 12:06:11.222] [info] Number of dimensions for integration: 9
+674: [2019-10-13 12:06:33.310] [info] Weight computed in 22088ms
+675: [2019-10-13 12:06:33.310] [info] finished computing weight: 22
+676: [2019-10-13 12:06:33.310] [info] calculating top_mass at 183
+677: [2019-10-13 12:06:33.317] [info] Number of expected inputs: 4
+678: [2019-10-13 12:06:33.317] [info] Number of dimensions for integration: 9
+679: [2019-10-13 12:06:55.599] [info] Weight computed in 22281ms
+680: [2019-10-13 12:06:55.599] [info] finished computing weight: 23
+681: [2019-10-13 12:06:55.599] [info] calculating top_mass at 184
+682: [2019-10-13 12:06:55.606] [info] Number of expected inputs: 4
+683: [2019-10-13 12:06:55.606] [info] Number of dimensions for integration: 9
+684: [2019-10-13 12:07:17.831] [info] Weight computed in 22224ms
+685: [2019-10-13 12:07:17.831] [info] finished computing weight: 24
+686: [2019-10-13 12:07:17.831] [info] calculating top_mass at 185
+687: [2019-10-13 12:07:17.839] [info] Number of expected inputs: 4
+688: [2019-10-13 12:07:17.839] [info] Number of dimensions for integration: 9
+689: [2019-10-13 12:07:40.028] [info] Weight computed in 22189ms
+690: [2019-10-13 12:07:40.028] [info] finished computing weight: 25
+691: [2019-10-13 12:07:40.029] [info] finished computing event: 3
+692: [2019-10-13 12:07:40.029] [info] weight: 8.04636e-21
+693: [2019-10-13 12:07:40.029] [info] ratio: 0.404742
+694: [2019-10-13 12:07:40.029] [info] weight: 8.96706e-21
+695: [2019-10-13 12:07:40.029] [info] ratio: 0.451055
+696: [2019-10-13 12:07:40.029] [info] weight: 9.94772e-21
+697: [2019-10-13 12:07:40.029] [info] ratio: 0.500383
+698: [2019-10-13 12:07:40.029] [info] weight: 1.09044e-20
+699: [2019-10-13 12:07:40.029] [info] ratio: 0.548505
+700: [2019-10-13 12:07:40.029] [info] weight: 1.19626e-20
+701: [2019-10-13 12:07:40.029] [info] ratio: 0.601736
+702: [2019-10-13 12:07:40.029] [info] weight: 1.29499e-20
+703: [2019-10-13 12:07:40.029] [info] ratio: 0.651395
+704: [2019-10-13 12:07:40.029] [info] weight: 1.39862e-20
+705: [2019-10-13 12:07:40.029] [info] ratio: 0.703525
+706: [2019-10-13 12:07:40.029] [info] weight: 1.49806e-20
+707: [2019-10-13 12:07:40.029] [info] ratio: 0.753543
+708: [2019-10-13 12:07:40.029] [info] weight: 1.60474e-20
+709: [2019-10-13 12:07:40.029] [info] ratio: 0.807208
+710: [2019-10-13 12:07:40.029] [info] weight: 1.70672e-20
+711: [2019-10-13 12:07:40.029] [info] ratio: 0.858502
+712: [2019-10-13 12:07:40.029] [info] weight: 1.80309e-20
+713: [2019-10-13 12:07:40.029] [info] ratio: 0.906976
+714: [2019-10-13 12:07:40.029] [info] weight: 1.89981e-20
+715: [2019-10-13 12:07:40.029] [info] ratio: 0.955632
+716: [2019-10-13 12:07:40.029] [info] weight: 1.98802e-20
+717: [2019-10-13 12:07:40.029] [info] ratio: 1
+718: [2019-10-13 12:07:40.029] [info] weight: 2.07338e-20
+719: [2019-10-13 12:07:40.029] [info] ratio: 1.04294
+720: [2019-10-13 12:07:40.029] [info] weight: 2.15414e-20
+721: [2019-10-13 12:07:40.029] [info] ratio: 1.08356
+722: [2019-10-13 12:07:40.029] [info] weight: 2.23055e-20
+723: [2019-10-13 12:07:40.029] [info] ratio: 1.12199
+724: [2019-10-13 12:07:40.029] [info] weight: 2.27475e-20
+725: [2019-10-13 12:07:40.029] [info] ratio: 1.14423
+726: [2019-10-13 12:07:40.029] [info] weight: 2.31549e-20
+727: [2019-10-13 12:07:40.029] [info] ratio: 1.16472
+728: [2019-10-13 12:07:40.029] [info] weight: 2.34557e-20
+729: [2019-10-13 12:07:40.029] [info] ratio: 1.17985
+730: [2019-10-13 12:07:40.029] [info] weight: 2.3692e-20
+731: [2019-10-13 12:07:40.029] [info] ratio: 1.19174
+732: [2019-10-13 12:07:40.029] [info] weight: 2.37253e-20
+733: [2019-10-13 12:07:40.029] [info] ratio: 1.19341
+734: [2019-10-13 12:07:40.029] [info] weight: 2.38761e-20
+735: [2019-10-13 12:07:40.029] [info] ratio: 1.201
+736: [2019-10-13 12:07:40.029] [info] weight: 2.34546e-20
+737: [2019-10-13 12:07:40.029] [info] ratio: 1.1798
+738: [2019-10-13 12:07:40.029] [info] weight: 2.31033e-20
+739: [2019-10-13 12:07:40.029] [info] ratio: 1.16213
+740: [2019-10-13 12:07:40.029] [info] weight: 2.26091e-20
+741: [2019-10-13 12:07:40.029] [info] ratio: 1.13727
+742: [2019-10-13 12:07:40.029] [info] weight: 2.2066e-20
+743: [2019-10-13 12:07:40.029] [info] ratio: 1.10995
+744: [2019-10-13 12:07:40.029] [info] calculating event 4/15
+745: [2019-10-13 12:07:40.029] [info] calculating top_mass at 160
+746: [2019-10-13 12:07:40.037] [info] Number of expected inputs: 4
+747: [2019-10-13 12:07:40.037] [info] Number of dimensions for integration: 9
+748: [2019-10-13 12:07:58.146] [info] Weight computed in 18109ms
+749: [2019-10-13 12:07:58.146] [info] finished computing weight: 0
+750: [2019-10-13 12:07:58.146] [info] calculating top_mass at 161
+751: [2019-10-13 12:07:58.154] [info] Number of expected inputs: 4
+752: [2019-10-13 12:07:58.154] [info] Number of dimensions for integration: 9
+753: [2019-10-13 12:08:16.746] [info] Weight computed in 18592ms
+754: [2019-10-13 12:08:16.746] [info] finished computing weight: 1
+755: [2019-10-13 12:08:16.747] [info] calculating top_mass at 162
+756: [2019-10-13 12:08:16.754] [info] Number of expected inputs: 4
+757: [2019-10-13 12:08:16.754] [info] Number of dimensions for integration: 9
+758: [2019-10-13 12:08:35.457] [info] Weight computed in 18702ms
+759: [2019-10-13 12:08:35.457] [info] finished computing weight: 2
+760: [2019-10-13 12:08:35.457] [info] calculating top_mass at 163
+761: [2019-10-13 12:08:35.464] [info] Number of expected inputs: 4
+762: [2019-10-13 12:08:35.464] [info] Number of dimensions for integration: 9
+763: [2019-10-13 12:08:54.473] [info] Weight computed in 19008ms
+764: [2019-10-13 12:08:54.473] [info] finished computing weight: 3
+765: [2019-10-13 12:08:54.474] [info] calculating top_mass at 164
+766: [2019-10-13 12:08:54.481] [info] Number of expected inputs: 4
+767: [2019-10-13 12:08:54.481] [info] Number of dimensions for integration: 9
+768: [2019-10-13 12:09:13.809] [info] Weight computed in 19327ms
+769: [2019-10-13 12:09:13.809] [info] finished computing weight: 4
+770: [2019-10-13 12:09:13.809] [info] calculating top_mass at 165
+771: [2019-10-13 12:09:13.817] [info] Number of expected inputs: 4
+772: [2019-10-13 12:09:13.817] [info] Number of dimensions for integration: 9
+773: [2019-10-13 12:09:33.823] [info] Weight computed in 20006ms
+774: [2019-10-13 12:09:33.823] [info] finished computing weight: 5
+775: [2019-10-13 12:09:33.823] [info] calculating top_mass at 166
+776: [2019-10-13 12:09:33.831] [info] Number of expected inputs: 4
+777: [2019-10-13 12:09:33.831] [info] Number of dimensions for integration: 9
+778: [2019-10-13 12:09:53.969] [info] Weight computed in 20137ms
+779: [2019-10-13 12:09:53.969] [info] finished computing weight: 6
+780: [2019-10-13 12:09:53.969] [info] calculating top_mass at 167
+781: [2019-10-13 12:09:53.977] [info] Number of expected inputs: 4
+782: [2019-10-13 12:09:53.977] [info] Number of dimensions for integration: 9
+783: [2019-10-13 12:10:14.409] [info] Weight computed in 20432ms
+784: [2019-10-13 12:10:14.409] [info] finished computing weight: 7
+785: [2019-10-13 12:10:14.409] [info] calculating top_mass at 168
+786: [2019-10-13 12:10:14.417] [info] Number of expected inputs: 4
+787: [2019-10-13 12:10:14.417] [info] Number of dimensions for integration: 9
+788: [2019-10-13 12:10:35.729] [info] Weight computed in 21311ms
+789: [2019-10-13 12:10:35.729] [info] finished computing weight: 8
+790: [2019-10-13 12:10:35.729] [info] calculating top_mass at 169
+791: [2019-10-13 12:10:35.736] [info] Number of expected inputs: 4
+792: [2019-10-13 12:10:35.737] [info] Number of dimensions for integration: 9
+793: [2019-10-13 12:10:57.363] [info] Weight computed in 21626ms
+794: [2019-10-13 12:10:57.363] [info] finished computing weight: 9
+795: [2019-10-13 12:10:57.363] [info] calculating top_mass at 170
+796: [2019-10-13 12:10:57.371] [info] Number of expected inputs: 4
+797: [2019-10-13 12:10:57.371] [info] Number of dimensions for integration: 9
+798: [2019-10-13 12:11:19.407] [info] Weight computed in 22035ms
+799: [2019-10-13 12:11:19.407] [info] finished computing weight: 10
+800: [2019-10-13 12:11:19.407] [info] calculating top_mass at 171
+801: [2019-10-13 12:11:19.414] [info] Number of expected inputs: 4
+802: [2019-10-13 12:11:19.414] [info] Number of dimensions for integration: 9
+803: [2019-10-13 12:11:41.939] [info] Weight computed in 22524ms
+804: [2019-10-13 12:11:41.939] [info] finished computing weight: 11
+805: [2019-10-13 12:11:41.939] [info] calculating top_mass at 172
+806: [2019-10-13 12:11:41.947] [info] Number of expected inputs: 4
+807: [2019-10-13 12:11:41.947] [info] Number of dimensions for integration: 9
+808: [2019-10-13 12:12:05.075] [info] Weight computed in 23128ms
+809: [2019-10-13 12:12:05.075] [info] finished computing weight: 12
+810: [2019-10-13 12:12:05.076] [info] calculating top_mass at 173
+811: [2019-10-13 12:12:05.083] [info] Number of expected inputs: 4
+812: [2019-10-13 12:12:05.083] [info] Number of dimensions for integration: 9
+813: [2019-10-13 12:12:28.876] [info] Weight computed in 23792ms
+814: [2019-10-13 12:12:28.876] [info] finished computing weight: 13
+815: [2019-10-13 12:12:28.877] [info] calculating top_mass at 174
+816: [2019-10-13 12:12:28.884] [info] Number of expected inputs: 4
+817: [2019-10-13 12:12:28.884] [info] Number of dimensions for integration: 9
+818: [2019-10-13 12:12:53.099] [info] Weight computed in 24214ms
+819: [2019-10-13 12:12:53.099] [info] finished computing weight: 14
+820: [2019-10-13 12:12:53.099] [info] calculating top_mass at 175
+821: [2019-10-13 12:12:53.106] [info] Number of expected inputs: 4
+822: [2019-10-13 12:12:53.106] [info] Number of dimensions for integration: 9
+823: [2019-10-13 12:13:17.772] [info] Weight computed in 24665ms
+824: [2019-10-13 12:13:17.772] [info] finished computing weight: 15
+825: [2019-10-13 12:13:17.773] [info] calculating top_mass at 176
+826: [2019-10-13 12:13:17.781] [info] Number of expected inputs: 4
+827: [2019-10-13 12:13:17.781] [info] Number of dimensions for integration: 9
+828: [2019-10-13 12:13:42.991] [info] Weight computed in 25210ms
+829: [2019-10-13 12:13:42.991] [info] finished computing weight: 16
+830: [2019-10-13 12:13:42.991] [info] calculating top_mass at 177
+831: [2019-10-13 12:13:42.999] [info] Number of expected inputs: 4
+832: [2019-10-13 12:13:42.999] [info] Number of dimensions for integration: 9
+833: [2019-10-13 12:14:08.521] [info] Weight computed in 25521ms
+834: [2019-10-13 12:14:08.521] [info] finished computing weight: 17
+835: [2019-10-13 12:14:08.521] [info] calculating top_mass at 178
+836: [2019-10-13 12:14:08.528] [info] Number of expected inputs: 4
+837: [2019-10-13 12:14:08.528] [info] Number of dimensions for integration: 9
+838: [2019-10-13 12:14:34.535] [info] Weight computed in 26006ms
+839: [2019-10-13 12:14:34.535] [info] finished computing weight: 18
+840: [2019-10-13 12:14:34.535] [info] calculating top_mass at 179
+841: [2019-10-13 12:14:34.543] [info] Number of expected inputs: 4
+842: [2019-10-13 12:14:34.543] [info] Number of dimensions for integration: 9
+843: [2019-10-13 12:15:00.559] [info] Weight computed in 26015ms
+844: [2019-10-13 12:15:00.559] [info] finished computing weight: 19
+845: [2019-10-13 12:15:00.559] [info] calculating top_mass at 180
+846: [2019-10-13 12:15:00.566] [info] Number of expected inputs: 4
+847: [2019-10-13 12:15:00.566] [info] Number of dimensions for integration: 9
+848: [2019-10-13 12:15:27.251] [info] Weight computed in 26684ms
+849: [2019-10-13 12:15:27.251] [info] finished computing weight: 20
+850: [2019-10-13 12:15:27.251] [info] calculating top_mass at 181
+851: [2019-10-13 12:15:27.259] [info] Number of expected inputs: 4
+852: [2019-10-13 12:15:27.259] [info] Number of dimensions for integration: 9
+853: [2019-10-13 12:15:54.114] [info] Weight computed in 26854ms
+854: [2019-10-13 12:15:54.114] [info] finished computing weight: 21
+855: [2019-10-13 12:15:54.114] [info] calculating top_mass at 182
+856: [2019-10-13 12:15:54.122] [info] Number of expected inputs: 4
+857: [2019-10-13 12:15:54.122] [info] Number of dimensions for integration: 9
+858: [2019-10-13 12:16:21.429] [info] Weight computed in 27306ms
+859: [2019-10-13 12:16:21.429] [info] finished computing weight: 22
+860: [2019-10-13 12:16:21.429] [info] calculating top_mass at 183
+861: [2019-10-13 12:16:21.437] [info] Number of expected inputs: 4
+862: [2019-10-13 12:16:21.437] [info] Number of dimensions for integration: 9
+863: [2019-10-13 12:16:48.866] [info] Weight computed in 27429ms
+864: [2019-10-13 12:16:48.866] [info] finished computing weight: 23
+865: [2019-10-13 12:16:48.866] [info] calculating top_mass at 184
+866: [2019-10-13 12:16:48.874] [info] Number of expected inputs: 4
+867: [2019-10-13 12:16:48.874] [info] Number of dimensions for integration: 9
+868: [2019-10-13 12:17:16.784] [info] Weight computed in 27910ms
+869: [2019-10-13 12:17:16.784] [info] finished computing weight: 24
+870: [2019-10-13 12:17:16.784] [info] calculating top_mass at 185
+871: [2019-10-13 12:17:16.792] [info] Number of expected inputs: 4
+872: [2019-10-13 12:17:16.792] [info] Number of dimensions for integration: 9
+873: [2019-10-13 12:17:44.677] [info] Weight computed in 27884ms
+874: [2019-10-13 12:17:44.677] [info] finished computing weight: 25
+875: [2019-10-13 12:17:44.677] [info] finished computing event: 4
+876: [2019-10-13 12:17:44.677] [info] weight: 9.08105e-20
+877: [2019-10-13 12:17:44.677] [info] ratio: 0.613791
+878: [2019-10-13 12:17:44.677] [info] weight: 9.54136e-20
+879: [2019-10-13 12:17:44.677] [info] ratio: 0.644903
+880: [2019-10-13 12:17:44.677] [info] weight: 1.01245e-19
+881: [2019-10-13 12:17:44.677] [info] ratio: 0.68432
+882: [2019-10-13 12:17:44.677] [info] weight: 1.05064e-19
+883: [2019-10-13 12:17:44.677] [info] ratio: 0.710132
+884: [2019-10-13 12:17:44.677] [info] weight: 1.12605e-19
+885: [2019-10-13 12:17:44.677] [info] ratio: 0.761097
+886: [2019-10-13 12:17:44.677] [info] weight: 1.18755e-19
+887: [2019-10-13 12:17:44.677] [info] ratio: 0.802669
+888: [2019-10-13 12:17:44.677] [info] weight: 1.21131e-19
+889: [2019-10-13 12:17:44.677] [info] ratio: 0.818726
+890: [2019-10-13 12:17:44.677] [info] weight: 1.25692e-19
+891: [2019-10-13 12:17:44.677] [info] ratio: 0.849559
+892: [2019-10-13 12:17:44.677] [info] weight: 1.3067e-19
+893: [2019-10-13 12:17:44.677] [info] ratio: 0.883199
+894: [2019-10-13 12:17:44.677] [info] weight: 1.3691e-19
+895: [2019-10-13 12:17:44.677] [info] ratio: 0.925382
+896: [2019-10-13 12:17:44.677] [info] weight: 1.41433e-19
+897: [2019-10-13 12:17:44.677] [info] ratio: 0.955949
+898: [2019-10-13 12:17:44.677] [info] weight: 1.45403e-19
+899: [2019-10-13 12:17:44.677] [info] ratio: 0.982783
+900: [2019-10-13 12:17:44.677] [info] weight: 1.4795e-19
+901: [2019-10-13 12:17:44.677] [info] ratio: 1
+902: [2019-10-13 12:17:44.677] [info] weight: 1.53177e-19
+903: [2019-10-13 12:17:44.677] [info] ratio: 1.03533
+904: [2019-10-13 12:17:44.677] [info] weight: 1.58344e-19
+905: [2019-10-13 12:17:44.677] [info] ratio: 1.07025
+906: [2019-10-13 12:17:44.677] [info] weight: 1.6188e-19
+907: [2019-10-13 12:17:44.677] [info] ratio: 1.09415
+908: [2019-10-13 12:17:44.677] [info] weight: 1.62723e-19
+909: [2019-10-13 12:17:44.677] [info] ratio: 1.09985
+910: [2019-10-13 12:17:44.677] [info] weight: 1.62642e-19
+911: [2019-10-13 12:17:44.677] [info] ratio: 1.0993
+912: [2019-10-13 12:17:44.677] [info] weight: 1.65013e-19
+913: [2019-10-13 12:17:44.677] [info] ratio: 1.11533
+914: [2019-10-13 12:17:44.677] [info] weight: 1.65346e-19
+915: [2019-10-13 12:17:44.677] [info] ratio: 1.11758
+916: [2019-10-13 12:17:44.677] [info] weight: 1.66076e-19
+917: [2019-10-13 12:17:44.677] [info] ratio: 1.12251
+918: [2019-10-13 12:17:44.677] [info] weight: 1.66046e-19
+919: [2019-10-13 12:17:44.677] [info] ratio: 1.12231
+920: [2019-10-13 12:17:44.677] [info] weight: 1.60761e-19
+921: [2019-10-13 12:17:44.677] [info] ratio: 1.08659
+922: [2019-10-13 12:17:44.677] [info] weight: 1.59756e-19
+923: [2019-10-13 12:17:44.677] [info] ratio: 1.07979
+924: [2019-10-13 12:17:44.677] [info] weight: 1.54436e-19
+925: [2019-10-13 12:17:44.677] [info] ratio: 1.04383
+926: [2019-10-13 12:17:44.677] [info] weight: 1.51735e-19
+927: [2019-10-13 12:17:44.677] [info] ratio: 1.02558
+928: [2019-10-13 12:17:44.677] [info] calculating event 5/15
+929: [2019-10-13 12:17:44.677] [info] calculating top_mass at 160
+930: [2019-10-13 12:17:44.686] [info] Number of expected inputs: 4
+931: [2019-10-13 12:17:44.686] [info] Number of dimensions for integration: 9
+932: [2019-10-13 12:17:54.743] [info] Weight computed in 10057ms
+933: [2019-10-13 12:17:54.743] [info] finished computing weight: 0
+934: [2019-10-13 12:17:54.743] [info] calculating top_mass at 161
+935: [2019-10-13 12:17:54.751] [info] Number of expected inputs: 4
+936: [2019-10-13 12:17:54.751] [info] Number of dimensions for integration: 9
+937: [2019-10-13 12:18:05.229] [info] Weight computed in 10477ms
+938: [2019-10-13 12:18:05.229] [info] finished computing weight: 1
+939: [2019-10-13 12:18:05.229] [info] calculating top_mass at 162
+940: [2019-10-13 12:18:05.237] [info] Number of expected inputs: 4
+941: [2019-10-13 12:18:05.237] [info] Number of dimensions for integration: 9
+942: [2019-10-13 12:18:16.044] [info] Weight computed in 10806ms
+943: [2019-10-13 12:18:16.044] [info] finished computing weight: 2
+944: [2019-10-13 12:18:16.044] [info] calculating top_mass at 163
+945: [2019-10-13 12:18:16.051] [info] Number of expected inputs: 4
+946: [2019-10-13 12:18:16.051] [info] Number of dimensions for integration: 9
+947: [2019-10-13 12:18:27.000] [info] Weight computed in 10948ms
+948: [2019-10-13 12:18:27.000] [info] finished computing weight: 3
+949: [2019-10-13 12:18:27.001] [info] calculating top_mass at 164
+950: [2019-10-13 12:18:27.008] [info] Number of expected inputs: 4
+951: [2019-10-13 12:18:27.008] [info] Number of dimensions for integration: 9
+952: [2019-10-13 12:18:38.502] [info] Weight computed in 11493ms
+953: [2019-10-13 12:18:38.502] [info] finished computing weight: 4
+954: [2019-10-13 12:18:38.502] [info] calculating top_mass at 165
+955: [2019-10-13 12:18:38.510] [info] Number of expected inputs: 4
+956: [2019-10-13 12:18:38.510] [info] Number of dimensions for integration: 9
+957: [2019-10-13 12:18:50.411] [info] Weight computed in 11900ms
+958: [2019-10-13 12:18:50.411] [info] finished computing weight: 5
+959: [2019-10-13 12:18:50.411] [info] calculating top_mass at 166
+960: [2019-10-13 12:18:50.418] [info] Number of expected inputs: 4
+961: [2019-10-13 12:18:50.418] [info] Number of dimensions for integration: 9
+962: [2019-10-13 12:19:02.706] [info] Weight computed in 12287ms
+963: [2019-10-13 12:19:02.706] [info] finished computing weight: 6
+964: [2019-10-13 12:19:02.706] [info] calculating top_mass at 167
+965: [2019-10-13 12:19:02.714] [info] Number of expected inputs: 4
+966: [2019-10-13 12:19:02.714] [info] Number of dimensions for integration: 9
+967: [2019-10-13 12:19:15.662] [info] Weight computed in 12948ms
+968: [2019-10-13 12:19:15.662] [info] finished computing weight: 7
+969: [2019-10-13 12:19:15.662] [info] calculating top_mass at 168
+970: [2019-10-13 12:19:15.670] [info] Number of expected inputs: 4
+971: [2019-10-13 12:19:15.670] [info] Number of dimensions for integration: 9
+972: [2019-10-13 12:19:28.795] [info] Weight computed in 13125ms
+973: [2019-10-13 12:19:28.795] [info] finished computing weight: 8
+974: [2019-10-13 12:19:28.795] [info] calculating top_mass at 169
+975: [2019-10-13 12:19:28.803] [info] Number of expected inputs: 4
+976: [2019-10-13 12:19:28.803] [info] Number of dimensions for integration: 9
+977: [2019-10-13 12:19:42.157] [info] Weight computed in 13354ms
+978: [2019-10-13 12:19:42.157] [info] finished computing weight: 9
+979: [2019-10-13 12:19:42.157] [info] calculating top_mass at 170
+980: [2019-10-13 12:19:42.165] [info] Number of expected inputs: 4
+981: [2019-10-13 12:19:42.165] [info] Number of dimensions for integration: 9
+982: [2019-10-13 12:19:56.039] [info] Weight computed in 13873ms
+983: [2019-10-13 12:19:56.039] [info] finished computing weight: 10
+984: [2019-10-13 12:19:56.039] [info] calculating top_mass at 171
+985: [2019-10-13 12:19:56.047] [info] Number of expected inputs: 4
+986: [2019-10-13 12:19:56.047] [info] Number of dimensions for integration: 9
+987: [2019-10-13 12:20:10.713] [info] Weight computed in 14665ms
+988: [2019-10-13 12:20:10.713] [info] finished computing weight: 11
+989: [2019-10-13 12:20:10.713] [info] calculating top_mass at 172
+990: [2019-10-13 12:20:10.721] [info] Number of expected inputs: 4
+991: [2019-10-13 12:20:10.721] [info] Number of dimensions for integration: 9
+992: [2019-10-13 12:20:25.344] [info] Weight computed in 14623ms
+993: [2019-10-13 12:20:25.344] [info] finished computing weight: 12
+994: [2019-10-13 12:20:25.344] [info] calculating top_mass at 173
+995: [2019-10-13 12:20:25.352] [info] Number of expected inputs: 4
+996: [2019-10-13 12:20:25.352] [info] Number of dimensions for integration: 9
+997: [2019-10-13 12:20:40.429] [info] Weight computed in 15077ms
+998: [2019-10-13 12:20:40.429] [info] finished computing weight: 13
+999: [2019-10-13 12:20:40.429] [info] calculating top_mass at 174
+1000: [2019-10-13 12:20:40.437] [info] Number of expected inputs: 4
+1001: [2019-10-13 12:20:40.437] [info] Number of dimensions for integration: 9
+1002: [2019-10-13 12:20:56.108] [info] Weight computed in 15670ms
+1003: [2019-10-13 12:20:56.108] [info] finished computing weight: 14
+1004: [2019-10-13 12:20:56.108] [info] calculating top_mass at 175
+1005: [2019-10-13 12:20:56.116] [info] Number of expected inputs: 4
+1006: [2019-10-13 12:20:56.116] [info] Number of dimensions for integration: 9
+1007: [2019-10-13 12:21:12.104] [info] Weight computed in 15987ms
+1008: [2019-10-13 12:21:12.104] [info] finished computing weight: 15
+1009: [2019-10-13 12:21:12.104] [info] calculating top_mass at 176
+1010: [2019-10-13 12:21:12.112] [info] Number of expected inputs: 4
+1011: [2019-10-13 12:21:12.112] [info] Number of dimensions for integration: 9
+1012: [2019-10-13 12:21:28.421] [info] Weight computed in 16308ms
+1013: [2019-10-13 12:21:28.421] [info] finished computing weight: 16
+1014: [2019-10-13 12:21:28.421] [info] calculating top_mass at 177
+1015: [2019-10-13 12:21:28.429] [info] Number of expected inputs: 4
+1016: [2019-10-13 12:21:28.429] [info] Number of dimensions for integration: 9
+1017: [2019-10-13 12:21:45.149] [info] Weight computed in 16719ms
+1018: [2019-10-13 12:21:45.149] [info] finished computing weight: 17
+1019: [2019-10-13 12:21:45.149] [info] calculating top_mass at 178
+1020: [2019-10-13 12:21:45.156] [info] Number of expected inputs: 4
+1021: [2019-10-13 12:21:45.156] [info] Number of dimensions for integration: 9
+1022: [2019-10-13 12:22:02.197] [info] Weight computed in 17040ms
+1023: [2019-10-13 12:22:02.197] [info] finished computing weight: 18
+1024: [2019-10-13 12:22:02.197] [info] calculating top_mass at 179
+1025: [2019-10-13 12:22:02.205] [info] Number of expected inputs: 4
+1026: [2019-10-13 12:22:02.205] [info] Number of dimensions for integration: 9
+1027: [2019-10-13 12:22:19.559] [info] Weight computed in 17353ms
+1028: [2019-10-13 12:22:19.559] [info] finished computing weight: 19
+1029: [2019-10-13 12:22:19.559] [info] calculating top_mass at 180
+1030: [2019-10-13 12:22:19.567] [info] Number of expected inputs: 4
+1031: [2019-10-13 12:22:19.567] [info] Number of dimensions for integration: 9
+1032: [2019-10-13 12:22:37.324] [info] Weight computed in 17757ms
+1033: [2019-10-13 12:22:37.324] [info] finished computing weight: 20
+1034: [2019-10-13 12:22:37.324] [info] calculating top_mass at 181
+1035: [2019-10-13 12:22:37.332] [info] Number of expected inputs: 4
+1036: [2019-10-13 12:22:37.332] [info] Number of dimensions for integration: 9
+1037: [2019-10-13 12:22:55.372] [info] Weight computed in 18040ms
+1038: [2019-10-13 12:22:55.372] [info] finished computing weight: 21
+1039: [2019-10-13 12:22:55.372] [info] calculating top_mass at 182
+1040: [2019-10-13 12:22:55.380] [info] Number of expected inputs: 4
+1041: [2019-10-13 12:22:55.380] [info] Number of dimensions for integration: 9
+1042: [2019-10-13 12:23:13.707] [info] Weight computed in 18326ms
+1043: [2019-10-13 12:23:13.707] [info] finished computing weight: 22
+1044: [2019-10-13 12:23:13.707] [info] calculating top_mass at 183
+1045: [2019-10-13 12:23:13.714] [info] Number of expected inputs: 4
+1046: [2019-10-13 12:23:13.714] [info] Number of dimensions for integration: 9
+1047: [2019-10-13 12:23:32.520] [info] Weight computed in 18805ms
+1048: [2019-10-13 12:23:32.520] [info] finished computing weight: 23
+1049: [2019-10-13 12:23:32.520] [info] calculating top_mass at 184
+1050: [2019-10-13 12:23:32.528] [info] Number of expected inputs: 4
+1051: [2019-10-13 12:23:32.528] [info] Number of dimensions for integration: 9
+1052: [2019-10-13 12:23:51.788] [info] Weight computed in 19260ms
+1053: [2019-10-13 12:23:51.788] [info] finished computing weight: 24
+1054: [2019-10-13 12:23:51.789] [info] calculating top_mass at 185
+1055: [2019-10-13 12:23:51.797] [info] Number of expected inputs: 4
+1056: [2019-10-13 12:23:51.797] [info] Number of dimensions for integration: 9
+1057: [2019-10-13 12:24:11.262] [info] Weight computed in 19465ms
+1058: [2019-10-13 12:24:11.262] [info] finished computing weight: 25
+1059: [2019-10-13 12:24:11.263] [info] finished computing event: 5
+1060: [2019-10-13 12:24:11.263] [info] weight: 2.50055e-21
+1061: [2019-10-13 12:24:11.263] [info] ratio: 0.129435
+1062: [2019-10-13 12:24:11.263] [info] weight: 3.22476e-21
+1063: [2019-10-13 12:24:11.263] [info] ratio: 0.166922
+1064: [2019-10-13 12:24:11.263] [info] weight: 3.94679e-21
+1065: [2019-10-13 12:24:11.263] [info] ratio: 0.204297
+1066: [2019-10-13 12:24:11.263] [info] weight: 4.97785e-21
+1067: [2019-10-13 12:24:11.263] [info] ratio: 0.257667
+1068: [2019-10-13 12:24:11.263] [info] weight: 6.08444e-21
+1069: [2019-10-13 12:24:11.263] [info] ratio: 0.314947
+1070: [2019-10-13 12:24:11.263] [info] weight: 7.33336e-21
+1071: [2019-10-13 12:24:11.263] [info] ratio: 0.379595
+1072: [2019-10-13 12:24:11.263] [info] weight: 8.72864e-21
+1073: [2019-10-13 12:24:11.263] [info] ratio: 0.451818
+1074: [2019-10-13 12:24:11.263] [info] weight: 1.06754e-20
+1075: [2019-10-13 12:24:11.263] [info] ratio: 0.552585
+1076: [2019-10-13 12:24:11.263] [info] weight: 1.21767e-20
+1077: [2019-10-13 12:24:11.263] [info] ratio: 0.630296
+1078: [2019-10-13 12:24:11.263] [info] weight: 1.3786e-20
+1079: [2019-10-13 12:24:11.263] [info] ratio: 0.713599
+1080: [2019-10-13 12:24:11.263] [info] weight: 1.55344e-20
+1081: [2019-10-13 12:24:11.263] [info] ratio: 0.804104
+1082: [2019-10-13 12:24:11.263] [info] weight: 1.74499e-20
+1083: [2019-10-13 12:24:11.263] [info] ratio: 0.903252
+1084: [2019-10-13 12:24:11.263] [info] weight: 1.93189e-20
+1085: [2019-10-13 12:24:11.263] [info] ratio: 1
+1086: [2019-10-13 12:24:11.263] [info] weight: 2.13916e-20
+1087: [2019-10-13 12:24:11.263] [info] ratio: 1.10729
+1088: [2019-10-13 12:24:11.263] [info] weight: 2.33972e-20
+1089: [2019-10-13 12:24:11.263] [info] ratio: 1.2111
+1090: [2019-10-13 12:24:11.263] [info] weight: 2.51737e-20
+1091: [2019-10-13 12:24:11.263] [info] ratio: 1.30306
+1092: [2019-10-13 12:24:11.263] [info] weight: 2.74174e-20
+1093: [2019-10-13 12:24:11.263] [info] ratio: 1.4192
+1094: [2019-10-13 12:24:11.263] [info] weight: 2.93803e-20
+1095: [2019-10-13 12:24:11.263] [info] ratio: 1.5208
+1096: [2019-10-13 12:24:11.263] [info] weight: 3.14504e-20
+1097: [2019-10-13 12:24:11.263] [info] ratio: 1.62796
+1098: [2019-10-13 12:24:11.263] [info] weight: 3.33501e-20
+1099: [2019-10-13 12:24:11.263] [info] ratio: 1.72629
+1100: [2019-10-13 12:24:11.263] [info] weight: 3.51665e-20
+1101: [2019-10-13 12:24:11.263] [info] ratio: 1.82031
+1102: [2019-10-13 12:24:11.263] [info] weight: 3.69954e-20
+1103: [2019-10-13 12:24:11.263] [info] ratio: 1.91498
+1104: [2019-10-13 12:24:11.263] [info] weight: 3.89071e-20
+1105: [2019-10-13 12:24:11.263] [info] ratio: 2.01394
+1106: [2019-10-13 12:24:11.263] [info] weight: 4.07323e-20
+1107: [2019-10-13 12:24:11.263] [info] ratio: 2.10841
+1108: [2019-10-13 12:24:11.263] [info] weight: 4.24609e-20
+1109: [2019-10-13 12:24:11.263] [info] ratio: 2.19789
+1110: [2019-10-13 12:24:11.263] [info] weight: 4.40939e-20
+1111: [2019-10-13 12:24:11.263] [info] ratio: 2.28242
+1112: [2019-10-13 12:24:11.263] [info] calculating event 6/15
+1113: [2019-10-13 12:24:11.263] [info] calculating top_mass at 160
+1114: [2019-10-13 12:24:11.271] [info] Number of expected inputs: 4
+1115: [2019-10-13 12:24:11.271] [info] Number of dimensions for integration: 9
+1116: [2019-10-13 12:24:23.341] [info] Weight computed in 12070ms
+1117: [2019-10-13 12:24:23.341] [info] finished computing weight: 0
+1118: [2019-10-13 12:24:23.342] [info] calculating top_mass at 161
+1119: [2019-10-13 12:24:23.349] [info] Number of expected inputs: 4
+1120: [2019-10-13 12:24:23.349] [info] Number of dimensions for integration: 9
+1121: [2019-10-13 12:24:35.845] [info] Weight computed in 12495ms
+1122: [2019-10-13 12:24:35.845] [info] finished computing weight: 1
+1123: [2019-10-13 12:24:35.845] [info] calculating top_mass at 162
+1124: [2019-10-13 12:24:35.853] [info] Number of expected inputs: 4
+1125: [2019-10-13 12:24:35.853] [info] Number of dimensions for integration: 9
+1126: [2019-10-13 12:24:48.499] [info] Weight computed in 12646ms
+1127: [2019-10-13 12:24:48.499] [info] finished computing weight: 2
+1128: [2019-10-13 12:24:48.500] [info] calculating top_mass at 163
+1129: [2019-10-13 12:24:48.507] [info] Number of expected inputs: 4
+1130: [2019-10-13 12:24:48.507] [info] Number of dimensions for integration: 9
+1131: [2019-10-13 12:25:01.580] [info] Weight computed in 13072ms
+1132: [2019-10-13 12:25:01.580] [info] finished computing weight: 3
+1133: [2019-10-13 12:25:01.580] [info] calculating top_mass at 164
+1134: [2019-10-13 12:25:01.587] [info] Number of expected inputs: 4
+1135: [2019-10-13 12:25:01.587] [info] Number of dimensions for integration: 9
+1136: [2019-10-13 12:25:14.712] [info] Weight computed in 13124ms
+1137: [2019-10-13 12:25:14.713] [info] finished computing weight: 4
+1138: [2019-10-13 12:25:14.713] [info] calculating top_mass at 165
+1139: [2019-10-13 12:25:14.720] [info] Number of expected inputs: 4
+1140: [2019-10-13 12:25:14.720] [info] Number of dimensions for integration: 9
+1141: [2019-10-13 12:25:27.752] [info] Weight computed in 13031ms
+1142: [2019-10-13 12:25:27.752] [info] finished computing weight: 5
+1143: [2019-10-13 12:25:27.752] [info] calculating top_mass at 166
+1144: [2019-10-13 12:25:27.760] [info] Number of expected inputs: 4
+1145: [2019-10-13 12:25:27.760] [info] Number of dimensions for integration: 9
+1146: [2019-10-13 12:25:41.584] [info] Weight computed in 13823ms
+1147: [2019-10-13 12:25:41.584] [info] finished computing weight: 6
+1148: [2019-10-13 12:25:41.584] [info] calculating top_mass at 167
+1149: [2019-10-13 12:25:41.592] [info] Number of expected inputs: 4
+1150: [2019-10-13 12:25:41.592] [info] Number of dimensions for integration: 9
+1151: [2019-10-13 12:25:56.786] [info] Weight computed in 15194ms
+1152: [2019-10-13 12:25:56.786] [info] finished computing weight: 7
+1153: [2019-10-13 12:25:56.786] [info] calculating top_mass at 168
+1154: [2019-10-13 12:25:56.794] [info] Number of expected inputs: 4
+1155: [2019-10-13 12:25:56.794] [info] Number of dimensions for integration: 9
+1156: [2019-10-13 12:26:10.772] [info] Weight computed in 13977ms
+1157: [2019-10-13 12:26:10.772] [info] finished computing weight: 8
+1158: [2019-10-13 12:26:10.772] [info] calculating top_mass at 169
+1159: [2019-10-13 12:26:10.780] [info] Number of expected inputs: 4
+1160: [2019-10-13 12:26:10.780] [info] Number of dimensions for integration: 9
+1161: [2019-10-13 12:26:25.179] [info] Weight computed in 14399ms
+1162: [2019-10-13 12:26:25.179] [info] finished computing weight: 9
+1163: [2019-10-13 12:26:25.180] [info] calculating top_mass at 170
+1164: [2019-10-13 12:26:25.187] [info] Number of expected inputs: 4
+1165: [2019-10-13 12:26:25.187] [info] Number of dimensions for integration: 9
+1166: [2019-10-13 12:26:39.397] [info] Weight computed in 14209ms
+1167: [2019-10-13 12:26:39.397] [info] finished computing weight: 10
+1168: [2019-10-13 12:26:39.397] [info] calculating top_mass at 171
+1169: [2019-10-13 12:26:39.405] [info] Number of expected inputs: 4
+1170: [2019-10-13 12:26:39.405] [info] Number of dimensions for integration: 9
+1171: [2019-10-13 12:26:53.860] [info] Weight computed in 14454ms
+1172: [2019-10-13 12:26:53.860] [info] finished computing weight: 11
+1173: [2019-10-13 12:26:53.860] [info] calculating top_mass at 172
+1174: [2019-10-13 12:26:53.868] [info] Number of expected inputs: 4
+1175: [2019-10-13 12:26:53.868] [info] Number of dimensions for integration: 9
+1176: [2019-10-13 12:27:08.393] [info] Weight computed in 14525ms
+1177: [2019-10-13 12:27:08.393] [info] finished computing weight: 12
+1178: [2019-10-13 12:27:08.393] [info] calculating top_mass at 173
+1179: [2019-10-13 12:27:08.401] [info] Number of expected inputs: 4
+1180: [2019-10-13 12:27:08.401] [info] Number of dimensions for integration: 9
+1181: [2019-10-13 12:27:23.140] [info] Weight computed in 14738ms
+1182: [2019-10-13 12:27:23.140] [info] finished computing weight: 13
+1183: [2019-10-13 12:27:23.140] [info] calculating top_mass at 174
+1184: [2019-10-13 12:27:23.147] [info] Number of expected inputs: 4
+1185: [2019-10-13 12:27:23.147] [info] Number of dimensions for integration: 9
+1186: [2019-10-13 12:27:37.726] [info] Weight computed in 14578ms
+1187: [2019-10-13 12:27:37.726] [info] finished computing weight: 14
+1188: [2019-10-13 12:27:37.726] [info] calculating top_mass at 175
+1189: [2019-10-13 12:27:37.734] [info] Number of expected inputs: 4
+1190: [2019-10-13 12:27:37.734] [info] Number of dimensions for integration: 9
+1191: [2019-10-13 12:27:52.396] [info] Weight computed in 14662ms
+1192: [2019-10-13 12:27:52.396] [info] finished computing weight: 15
+1193: [2019-10-13 12:27:52.397] [info] calculating top_mass at 176
+1194: [2019-10-13 12:27:52.404] [info] Number of expected inputs: 4
+1195: [2019-10-13 12:27:52.404] [info] Number of dimensions for integration: 9
+1196: [2019-10-13 12:28:07.459] [info] Weight computed in 15054ms
+1197: [2019-10-13 12:28:07.459] [info] finished computing weight: 16
+1198: [2019-10-13 12:28:07.459] [info] calculating top_mass at 177
+1199: [2019-10-13 12:28:07.467] [info] Number of expected inputs: 4
+1200: [2019-10-13 12:28:07.467] [info] Number of dimensions for integration: 9
+1201: [2019-10-13 12:28:22.658] [info] Weight computed in 15190ms
+1202: [2019-10-13 12:28:22.658] [info] finished computing weight: 17
+1203: [2019-10-13 12:28:22.659] [info] calculating top_mass at 178
+1204: [2019-10-13 12:28:22.667] [info] Number of expected inputs: 4
+1205: [2019-10-13 12:28:22.667] [info] Number of dimensions for integration: 9
+1206: [2019-10-13 12:28:37.920] [info] Weight computed in 15253ms
+1207: [2019-10-13 12:28:37.920] [info] finished computing weight: 18
+1208: [2019-10-13 12:28:37.921] [info] calculating top_mass at 179
+1209: [2019-10-13 12:28:37.928] [info] Number of expected inputs: 4
+1210: [2019-10-13 12:28:37.928] [info] Number of dimensions for integration: 9
+1211: [2019-10-13 12:28:53.400] [info] Weight computed in 15471ms
+1212: [2019-10-13 12:28:53.400] [info] finished computing weight: 19
+1213: [2019-10-13 12:28:53.400] [info] calculating top_mass at 180
+1214: [2019-10-13 12:28:53.408] [info] Number of expected inputs: 4
+1215: [2019-10-13 12:28:53.408] [info] Number of dimensions for integration: 9
+1216: [2019-10-13 12:29:08.952] [info] Weight computed in 15543ms
+1217: [2019-10-13 12:29:08.952] [info] finished computing weight: 20
+1218: [2019-10-13 12:29:08.952] [info] calculating top_mass at 181
+1219: [2019-10-13 12:29:08.960] [info] Number of expected inputs: 4
+1220: [2019-10-13 12:29:08.960] [info] Number of dimensions for integration: 9
+1221: [2019-10-13 12:29:24.583] [info] Weight computed in 15622ms
+1222: [2019-10-13 12:29:24.583] [info] finished computing weight: 21
+1223: [2019-10-13 12:29:24.583] [info] calculating top_mass at 182
+1224: [2019-10-13 12:29:24.591] [info] Number of expected inputs: 4
+1225: [2019-10-13 12:29:24.591] [info] Number of dimensions for integration: 9
+1226: [2019-10-13 12:29:40.468] [info] Weight computed in 15876ms
+1227: [2019-10-13 12:29:40.468] [info] finished computing weight: 22
+1228: [2019-10-13 12:29:40.468] [info] calculating top_mass at 183
+1229: [2019-10-13 12:29:40.476] [info] Number of expected inputs: 4
+1230: [2019-10-13 12:29:40.476] [info] Number of dimensions for integration: 9
+1231: [2019-10-13 12:29:56.487] [info] Weight computed in 16010ms
+1232: [2019-10-13 12:29:56.487] [info] finished computing weight: 23
+1233: [2019-10-13 12:29:56.487] [info] calculating top_mass at 184
+1234: [2019-10-13 12:29:56.494] [info] Number of expected inputs: 4
+1235: [2019-10-13 12:29:56.494] [info] Number of dimensions for integration: 9
+1236: [2019-10-13 12:30:12.536] [info] Weight computed in 16041ms
+1237: [2019-10-13 12:30:12.536] [info] finished computing weight: 24
+1238: [2019-10-13 12:30:12.537] [info] calculating top_mass at 185
+1239: [2019-10-13 12:30:12.544] [info] Number of expected inputs: 4
+1240: [2019-10-13 12:30:12.544] [info] Number of dimensions for integration: 9
+1241: [2019-10-13 12:30:28.681] [info] Weight computed in 16135ms
+1242: [2019-10-13 12:30:28.681] [info] finished computing weight: 25
+1243: [2019-10-13 12:30:28.681] [info] finished computing event: 6
+1244: [2019-10-13 12:30:28.681] [info] weight: 2.72132e-21
+1245: [2019-10-13 12:30:28.681] [info] ratio: 0.182578
+1246: [2019-10-13 12:30:28.681] [info] weight: 3.63035e-21
+1247: [2019-10-13 12:30:28.681] [info] ratio: 0.243566
+1248: [2019-10-13 12:30:28.681] [info] weight: 4.64398e-21
+1249: [2019-10-13 12:30:28.681] [info] ratio: 0.311572
+1250: [2019-10-13 12:30:28.681] [info] weight: 5.84069e-21
+1251: [2019-10-13 12:30:28.681] [info] ratio: 0.391862
+1252: [2019-10-13 12:30:28.681] [info] weight: 7.18573e-21
+1253: [2019-10-13 12:30:28.681] [info] ratio: 0.482103
+1254: [2019-10-13 12:30:28.681] [info] weight: 8.33223e-21
+1255: [2019-10-13 12:30:28.681] [info] ratio: 0.559023
+1256: [2019-10-13 12:30:28.681] [info] weight: 9.39764e-21
+1257: [2019-10-13 12:30:28.681] [info] ratio: 0.630503
+1258: [2019-10-13 12:30:28.681] [info] weight: 1.06356e-20
+1259: [2019-10-13 12:30:28.681] [info] ratio: 0.713558
+1260: [2019-10-13 12:30:28.681] [info] weight: 1.21791e-20
+1261: [2019-10-13 12:30:28.681] [info] ratio: 0.817118
+1262: [2019-10-13 12:30:28.681] [info] weight: 1.31512e-20
+1263: [2019-10-13 12:30:28.681] [info] ratio: 0.882335
+1264: [2019-10-13 12:30:28.681] [info] weight: 1.35988e-20
+1265: [2019-10-13 12:30:28.681] [info] ratio: 0.912368
+1266: [2019-10-13 12:30:28.681] [info] weight: 1.44103e-20
+1267: [2019-10-13 12:30:28.681] [info] ratio: 0.966809
+1268: [2019-10-13 12:30:28.681] [info] weight: 1.4905e-20
+1269: [2019-10-13 12:30:28.681] [info] ratio: 1
+1270: [2019-10-13 12:30:28.681] [info] weight: 1.49872e-20
+1271: [2019-10-13 12:30:28.681] [info] ratio: 1.00551
+1272: [2019-10-13 12:30:28.681] [info] weight: 1.4856e-20
+1273: [2019-10-13 12:30:28.681] [info] ratio: 0.996716
+1274: [2019-10-13 12:30:28.681] [info] weight: 1.49966e-20
+1275: [2019-10-13 12:30:28.681] [info] ratio: 1.00615
+1276: [2019-10-13 12:30:28.681] [info] weight: 1.46439e-20
+1277: [2019-10-13 12:30:28.681] [info] ratio: 0.982481
+1278: [2019-10-13 12:30:28.681] [info] weight: 1.43652e-20
+1279: [2019-10-13 12:30:28.681] [info] ratio: 0.963782
+1280: [2019-10-13 12:30:28.681] [info] weight: 1.38014e-20
+1281: [2019-10-13 12:30:28.681] [info] ratio: 0.92596
+1282: [2019-10-13 12:30:28.681] [info] weight: 1.33997e-20
+1283: [2019-10-13 12:30:28.681] [info] ratio: 0.899009
+1284: [2019-10-13 12:30:28.681] [info] weight: 1.28209e-20
+1285: [2019-10-13 12:30:28.681] [info] ratio: 0.860174
+1286: [2019-10-13 12:30:28.681] [info] weight: 1.26012e-20
+1287: [2019-10-13 12:30:28.681] [info] ratio: 0.845438
+1288: [2019-10-13 12:30:28.681] [info] weight: 1.1553e-20
+1289: [2019-10-13 12:30:28.681] [info] ratio: 0.775112
+1290: [2019-10-13 12:30:28.681] [info] weight: 1.09216e-20
+1291: [2019-10-13 12:30:28.681] [info] ratio: 0.732751
+1292: [2019-10-13 12:30:28.681] [info] weight: 1.02647e-20
+1293: [2019-10-13 12:30:28.681] [info] ratio: 0.688673
+1294: [2019-10-13 12:30:28.681] [info] weight: 9.75873e-21
+1295: [2019-10-13 12:30:28.681] [info] ratio: 0.654729
+1296: [2019-10-13 12:30:28.681] [info] calculating event 7/15
+1297: [2019-10-13 12:30:28.681] [info] calculating top_mass at 160
+1298: [2019-10-13 12:30:28.689] [info] Number of expected inputs: 4
+1299: [2019-10-13 12:30:28.689] [info] Number of dimensions for integration: 9
+1300: [2019-10-13 12:30:43.088] [info] Weight computed in 14398ms
+1301: [2019-10-13 12:30:43.088] [info] finished computing weight: 0
+1302: [2019-10-13 12:30:43.089] [info] calculating top_mass at 161
+1303: [2019-10-13 12:30:43.097] [info] Number of expected inputs: 4
+1304: [2019-10-13 12:30:43.097] [info] Number of dimensions for integration: 9
+1305: [2019-10-13 12:30:57.582] [info] Weight computed in 14485ms
+1306: [2019-10-13 12:30:57.582] [info] finished computing weight: 1
+1307: [2019-10-13 12:30:57.582] [info] calculating top_mass at 162
+1308: [2019-10-13 12:30:57.590] [info] Number of expected inputs: 4
+1309: [2019-10-13 12:30:57.590] [info] Number of dimensions for integration: 9
+1310: [2019-10-13 12:31:12.521] [info] Weight computed in 14930ms
+1311: [2019-10-13 12:31:12.521] [info] finished computing weight: 2
+1312: [2019-10-13 12:31:12.521] [info] calculating top_mass at 163
+1313: [2019-10-13 12:31:12.529] [info] Number of expected inputs: 4
+1314: [2019-10-13 12:31:12.529] [info] Number of dimensions for integration: 9
+1315: [2019-10-13 12:31:27.552] [info] Weight computed in 15022ms
+1316: [2019-10-13 12:31:27.552] [info] finished computing weight: 3
+1317: [2019-10-13 12:31:27.552] [info] calculating top_mass at 164
+1318: [2019-10-13 12:31:27.560] [info] Number of expected inputs: 4
+1319: [2019-10-13 12:31:27.560] [info] Number of dimensions for integration: 9
+1320: [2019-10-13 12:31:42.678] [info] Weight computed in 15117ms
+1321: [2019-10-13 12:31:42.678] [info] finished computing weight: 4
+1322: [2019-10-13 12:31:42.678] [info] calculating top_mass at 165
+1323: [2019-10-13 12:31:42.686] [info] Number of expected inputs: 4
+1324: [2019-10-13 12:31:42.686] [info] Number of dimensions for integration: 9
+1325: [2019-10-13 12:31:58.035] [info] Weight computed in 15348ms
+1326: [2019-10-13 12:31:58.035] [info] finished computing weight: 5
+1327: [2019-10-13 12:31:58.035] [info] calculating top_mass at 166
+1328: [2019-10-13 12:31:58.043] [info] Number of expected inputs: 4
+1329: [2019-10-13 12:31:58.043] [info] Number of dimensions for integration: 9
+1330: [2019-10-13 12:32:13.709] [info] Weight computed in 15666ms
+1331: [2019-10-13 12:32:13.709] [info] finished computing weight: 6
+1332: [2019-10-13 12:32:13.710] [info] calculating top_mass at 167
+1333: [2019-10-13 12:32:13.717] [info] Number of expected inputs: 4
+1334: [2019-10-13 12:32:13.717] [info] Number of dimensions for integration: 9
+1335: [2019-10-13 12:32:29.429] [info] Weight computed in 15711ms
+1336: [2019-10-13 12:32:29.429] [info] finished computing weight: 7
+1337: [2019-10-13 12:32:29.429] [info] calculating top_mass at 168
+1338: [2019-10-13 12:32:29.437] [info] Number of expected inputs: 4
+1339: [2019-10-13 12:32:29.437] [info] Number of dimensions for integration: 9
+1340: [2019-10-13 12:32:45.009] [info] Weight computed in 15572ms
+1341: [2019-10-13 12:32:45.010] [info] finished computing weight: 8
+1342: [2019-10-13 12:32:45.010] [info] calculating top_mass at 169
+1343: [2019-10-13 12:32:45.018] [info] Number of expected inputs: 4
+1344: [2019-10-13 12:32:45.018] [info] Number of dimensions for integration: 9
+1345: [2019-10-13 12:33:00.887] [info] Weight computed in 15869ms
+1346: [2019-10-13 12:33:00.887] [info] finished computing weight: 9
+1347: [2019-10-13 12:33:00.887] [info] calculating top_mass at 170
+1348: [2019-10-13 12:33:00.895] [info] Number of expected inputs: 4
+1349: [2019-10-13 12:33:00.895] [info] Number of dimensions for integration: 9
+1350: [2019-10-13 12:33:16.931] [info] Weight computed in 16035ms
+1351: [2019-10-13 12:33:16.931] [info] finished computing weight: 10
+1352: [2019-10-13 12:33:16.931] [info] calculating top_mass at 171
+1353: [2019-10-13 12:33:16.940] [info] Number of expected inputs: 4
+1354: [2019-10-13 12:33:16.940] [info] Number of dimensions for integration: 9
+1355: [2019-10-13 12:33:33.021] [info] Weight computed in 16081ms
+1356: [2019-10-13 12:33:33.022] [info] finished computing weight: 11
+1357: [2019-10-13 12:33:33.022] [info] calculating top_mass at 172
+1358: [2019-10-13 12:33:33.030] [info] Number of expected inputs: 4
+1359: [2019-10-13 12:33:33.030] [info] Number of dimensions for integration: 9
+1360: [2019-10-13 12:33:49.231] [info] Weight computed in 16201ms
+1361: [2019-10-13 12:33:49.231] [info] finished computing weight: 12
+1362: [2019-10-13 12:33:49.232] [info] calculating top_mass at 173
+1363: [2019-10-13 12:33:49.239] [info] Number of expected inputs: 4
+1364: [2019-10-13 12:33:49.239] [info] Number of dimensions for integration: 9
+1365: [2019-10-13 12:34:05.637] [info] Weight computed in 16397ms
+1366: [2019-10-13 12:34:05.637] [info] finished computing weight: 13
+1367: [2019-10-13 12:34:05.637] [info] calculating top_mass at 174
+1368: [2019-10-13 12:34:05.645] [info] Number of expected inputs: 4
+1369: [2019-10-13 12:34:05.645] [info] Number of dimensions for integration: 9
+1370: [2019-10-13 12:34:21.881] [info] Weight computed in 16236ms
+1371: [2019-10-13 12:34:21.881] [info] finished computing weight: 14
+1372: [2019-10-13 12:34:21.882] [info] calculating top_mass at 175
+1373: [2019-10-13 12:34:21.889] [info] Number of expected inputs: 4
+1374: [2019-10-13 12:34:21.889] [info] Number of dimensions for integration: 9
+1375: [2019-10-13 12:34:38.153] [info] Weight computed in 16263ms
+1376: [2019-10-13 12:34:38.153] [info] finished computing weight: 15
+1377: [2019-10-13 12:34:38.154] [info] calculating top_mass at 176
+1378: [2019-10-13 12:34:38.161] [info] Number of expected inputs: 4
+1379: [2019-10-13 12:34:38.161] [info] Number of dimensions for integration: 9
+1380: [2019-10-13 12:34:53.971] [info] Weight computed in 15808ms
+1381: [2019-10-13 12:34:53.971] [info] finished computing weight: 16
+1382: [2019-10-13 12:34:53.971] [info] calculating top_mass at 177
+1383: [2019-10-13 12:34:53.979] [info] Number of expected inputs: 4
+1384: [2019-10-13 12:34:53.979] [info] Number of dimensions for integration: 9
+1385: [2019-10-13 12:35:10.029] [info] Weight computed in 16050ms
+1386: [2019-10-13 12:35:10.029] [info] finished computing weight: 17
+1387: [2019-10-13 12:35:10.030] [info] calculating top_mass at 178
+1388: [2019-10-13 12:35:10.037] [info] Number of expected inputs: 4
+1389: [2019-10-13 12:35:10.037] [info] Number of dimensions for integration: 9
+1390: [2019-10-13 12:35:26.294] [info] Weight computed in 16256ms
+1391: [2019-10-13 12:35:26.294] [info] finished computing weight: 18
+1392: [2019-10-13 12:35:26.294] [info] calculating top_mass at 179
+1393: [2019-10-13 12:35:26.302] [info] Number of expected inputs: 4
+1394: [2019-10-13 12:35:26.302] [info] Number of dimensions for integration: 9
+1395: [2019-10-13 12:35:41.710] [info] Weight computed in 15407ms
+1396: [2019-10-13 12:35:41.710] [info] finished computing weight: 19
+1397: [2019-10-13 12:35:41.710] [info] calculating top_mass at 180
+1398: [2019-10-13 12:35:41.718] [info] Number of expected inputs: 4
+1399: [2019-10-13 12:35:41.718] [info] Number of dimensions for integration: 9
+1400: [2019-10-13 12:35:57.109] [info] Weight computed in 15390ms
+1401: [2019-10-13 12:35:57.109] [info] finished computing weight: 20
+1402: [2019-10-13 12:35:57.109] [info] calculating top_mass at 181
+1403: [2019-10-13 12:35:57.117] [info] Number of expected inputs: 4
+1404: [2019-10-13 12:35:57.117] [info] Number of dimensions for integration: 9
+1405: [2019-10-13 12:36:12.455] [info] Weight computed in 15337ms
+1406: [2019-10-13 12:36:12.455] [info] finished computing weight: 21
+1407: [2019-10-13 12:36:12.455] [info] calculating top_mass at 182
+1408: [2019-10-13 12:36:12.463] [info] Number of expected inputs: 4
+1409: [2019-10-13 12:36:12.463] [info] Number of dimensions for integration: 9
+1410: [2019-10-13 12:36:27.836] [info] Weight computed in 15372ms
+1411: [2019-10-13 12:36:27.836] [info] finished computing weight: 22
+1412: [2019-10-13 12:36:27.836] [info] calculating top_mass at 183
+1413: [2019-10-13 12:36:27.844] [info] Number of expected inputs: 4
+1414: [2019-10-13 12:36:27.844] [info] Number of dimensions for integration: 9
+1415: [2019-10-13 12:36:42.819] [info] Weight computed in 14974ms
+1416: [2019-10-13 12:36:42.819] [info] finished computing weight: 23
+1417: [2019-10-13 12:36:42.819] [info] calculating top_mass at 184
+1418: [2019-10-13 12:36:42.827] [info] Number of expected inputs: 4
+1419: [2019-10-13 12:36:42.827] [info] Number of dimensions for integration: 9
+1420: [2019-10-13 12:36:57.580] [info] Weight computed in 14753ms
+1421: [2019-10-13 12:36:57.580] [info] finished computing weight: 24
+1422: [2019-10-13 12:36:57.580] [info] calculating top_mass at 185
+1423: [2019-10-13 12:36:57.588] [info] Number of expected inputs: 4
+1424: [2019-10-13 12:36:57.588] [info] Number of dimensions for integration: 9
+1425: [2019-10-13 12:37:12.393] [info] Weight computed in 14804ms
+1426: [2019-10-13 12:37:12.393] [info] finished computing weight: 25
+1427: [2019-10-13 12:37:12.393] [info] finished computing event: 7
+1428: [2019-10-13 12:37:12.393] [info] weight: 5.5726e-20
+1429: [2019-10-13 12:37:12.393] [info] ratio: 0.681205
+1430: [2019-10-13 12:37:12.393] [info] weight: 6.11233e-20
+1431: [2019-10-13 12:37:12.393] [info] ratio: 0.747181
+1432: [2019-10-13 12:37:12.393] [info] weight: 6.4592e-20
+1433: [2019-10-13 12:37:12.393] [info] ratio: 0.789585
+1434: [2019-10-13 12:37:12.393] [info] weight: 6.84419e-20
+1435: [2019-10-13 12:37:12.393] [info] ratio: 0.836646
+1436: [2019-10-13 12:37:12.393] [info] weight: 7.21889e-20
+1437: [2019-10-13 12:37:12.393] [info] ratio: 0.88245
+1438: [2019-10-13 12:37:12.393] [info] weight: 7.48604e-20
+1439: [2019-10-13 12:37:12.393] [info] ratio: 0.915107
+1440: [2019-10-13 12:37:12.393] [info] weight: 7.73345e-20
+1441: [2019-10-13 12:37:12.393] [info] ratio: 0.94535
+1442: [2019-10-13 12:37:12.393] [info] weight: 7.85328e-20
+1443: [2019-10-13 12:37:12.393] [info] ratio: 0.959999
+1444: [2019-10-13 12:37:12.393] [info] weight: 8.05411e-20
+1445: [2019-10-13 12:37:12.393] [info] ratio: 0.984549
+1446: [2019-10-13 12:37:12.393] [info] weight: 8.16603e-20
+1447: [2019-10-13 12:37:12.393] [info] ratio: 0.99823
+1448: [2019-10-13 12:37:12.393] [info] weight: 8.24203e-20
+1449: [2019-10-13 12:37:12.393] [info] ratio: 1.00752
+1450: [2019-10-13 12:37:12.393] [info] weight: 8.22799e-20
+1451: [2019-10-13 12:37:12.393] [info] ratio: 1.0058
+1452: [2019-10-13 12:37:12.393] [info] weight: 8.18051e-20
+1453: [2019-10-13 12:37:12.393] [info] ratio: 1
+1454: [2019-10-13 12:37:12.393] [info] weight: 8.18934e-20
+1455: [2019-10-13 12:37:12.393] [info] ratio: 1.00108
+1456: [2019-10-13 12:37:12.393] [info] weight: 8.1351e-20
+1457: [2019-10-13 12:37:12.393] [info] ratio: 0.994449
+1458: [2019-10-13 12:37:12.393] [info] weight: 7.94815e-20
+1459: [2019-10-13 12:37:12.393] [info] ratio: 0.971597
+1460: [2019-10-13 12:37:12.393] [info] weight: 7.9027e-20
+1461: [2019-10-13 12:37:12.393] [info] ratio: 0.96604
+1462: [2019-10-13 12:37:12.393] [info] weight: 7.62307e-20
+1463: [2019-10-13 12:37:12.393] [info] ratio: 0.931857
+1464: [2019-10-13 12:37:12.393] [info] weight: 7.55247e-20
+1465: [2019-10-13 12:37:12.393] [info] ratio: 0.923227
+1466: [2019-10-13 12:37:12.393] [info] weight: 7.39426e-20
+1467: [2019-10-13 12:37:12.393] [info] ratio: 0.903888
+1468: [2019-10-13 12:37:12.393] [info] weight: 7.12227e-20
+1469: [2019-10-13 12:37:12.393] [info] ratio: 0.870639
+1470: [2019-10-13 12:37:12.393] [info] weight: 6.81003e-20
+1471: [2019-10-13 12:37:12.393] [info] ratio: 0.83247
+1472: [2019-10-13 12:37:12.393] [info] weight: 6.59909e-20
+1473: [2019-10-13 12:37:12.393] [info] ratio: 0.806684
+1474: [2019-10-13 12:37:12.393] [info] weight: 6.28123e-20
+1475: [2019-10-13 12:37:12.393] [info] ratio: 0.767828
+1476: [2019-10-13 12:37:12.393] [info] weight: 5.88916e-20
+1477: [2019-10-13 12:37:12.393] [info] ratio: 0.719901
+1478: [2019-10-13 12:37:12.393] [info] weight: 5.52221e-20
+1479: [2019-10-13 12:37:12.393] [info] ratio: 0.675045
+1480: [2019-10-13 12:37:12.393] [info] calculating event 8/15
+1481: [2019-10-13 12:37:12.393] [info] calculating top_mass at 160
+1482: [2019-10-13 12:37:12.401] [info] Number of expected inputs: 4
+1483: [2019-10-13 12:37:12.401] [info] Number of dimensions for integration: 9
+1484: [2019-10-13 12:37:28.766] [info] Weight computed in 16364ms
+1485: [2019-10-13 12:37:28.766] [info] finished computing weight: 0
+1486: [2019-10-13 12:37:28.766] [info] calculating top_mass at 161
+1487: [2019-10-13 12:37:28.774] [info] Number of expected inputs: 4
+1488: [2019-10-13 12:37:28.774] [info] Number of dimensions for integration: 9
+1489: [2019-10-13 12:37:45.417] [info] Weight computed in 16642ms
+1490: [2019-10-13 12:37:45.417] [info] finished computing weight: 1
+1491: [2019-10-13 12:37:45.417] [info] calculating top_mass at 162
+1492: [2019-10-13 12:37:45.425] [info] Number of expected inputs: 4
+1493: [2019-10-13 12:37:45.425] [info] Number of dimensions for integration: 9
+1494: [2019-10-13 12:38:03.696] [info] Weight computed in 18271ms
+1495: [2019-10-13 12:38:03.696] [info] finished computing weight: 2
+1496: [2019-10-13 12:38:03.696] [info] calculating top_mass at 163
+1497: [2019-10-13 12:38:03.704] [info] Number of expected inputs: 4
+1498: [2019-10-13 12:38:03.704] [info] Number of dimensions for integration: 9
+1499: [2019-10-13 12:38:23.335] [info] Weight computed in 19630ms
+1500: [2019-10-13 12:38:23.335] [info] finished computing weight: 3
+1501: [2019-10-13 12:38:23.335] [info] calculating top_mass at 164
+1502: [2019-10-13 12:38:23.343] [info] Number of expected inputs: 4
+1503: [2019-10-13 12:38:23.343] [info] Number of dimensions for integration: 9
+1504: [2019-10-13 12:38:42.820] [info] Weight computed in 19477ms
+1505: [2019-10-13 12:38:42.820] [info] finished computing weight: 4
+1506: [2019-10-13 12:38:42.820] [info] calculating top_mass at 165
+1507: [2019-10-13 12:38:42.828] [info] Number of expected inputs: 4
+1508: [2019-10-13 12:38:42.828] [info] Number of dimensions for integration: 9
+1509: [2019-10-13 12:39:03.415] [info] Weight computed in 20586ms
+1510: [2019-10-13 12:39:03.415] [info] finished computing weight: 5
+1511: [2019-10-13 12:39:03.415] [info] calculating top_mass at 166
+1512: [2019-10-13 12:39:03.422] [info] Number of expected inputs: 4
+1513: [2019-10-13 12:39:03.422] [info] Number of dimensions for integration: 9
+1514: [2019-10-13 12:39:24.064] [info] Weight computed in 20641ms
+1515: [2019-10-13 12:39:24.064] [info] finished computing weight: 6
+1516: [2019-10-13 12:39:24.064] [info] calculating top_mass at 167
+1517: [2019-10-13 12:39:24.072] [info] Number of expected inputs: 4
+1518: [2019-10-13 12:39:24.072] [info] Number of dimensions for integration: 9
+1519: [2019-10-13 12:39:45.305] [info] Weight computed in 21233ms
+1520: [2019-10-13 12:39:45.305] [info] finished computing weight: 7
+1521: [2019-10-13 12:39:45.305] [info] calculating top_mass at 168
+1522: [2019-10-13 12:39:45.313] [info] Number of expected inputs: 4
+1523: [2019-10-13 12:39:45.313] [info] Number of dimensions for integration: 9
+1524: [2019-10-13 12:40:07.633] [info] Weight computed in 22319ms
+1525: [2019-10-13 12:40:07.633] [info] finished computing weight: 8
+1526: [2019-10-13 12:40:07.633] [info] calculating top_mass at 169
+1527: [2019-10-13 12:40:07.641] [info] Number of expected inputs: 4
+1528: [2019-10-13 12:40:07.641] [info] Number of dimensions for integration: 9
+1529: [2019-10-13 12:40:30.966] [info] Weight computed in 23325ms
+1530: [2019-10-13 12:40:30.966] [info] finished computing weight: 9
+1531: [2019-10-13 12:40:30.966] [info] calculating top_mass at 170
+1532: [2019-10-13 12:40:30.974] [info] Number of expected inputs: 4
+1533: [2019-10-13 12:40:30.974] [info] Number of dimensions for integration: 9
+1534: [2019-10-13 12:40:54.867] [info] Weight computed in 23892ms
+1535: [2019-10-13 12:40:54.867] [info] finished computing weight: 10
+1536: [2019-10-13 12:40:54.867] [info] calculating top_mass at 171
+1537: [2019-10-13 12:40:54.875] [info] Number of expected inputs: 4
+1538: [2019-10-13 12:40:54.875] [info] Number of dimensions for integration: 9
+1539: [2019-10-13 12:41:19.130] [info] Weight computed in 24254ms
+1540: [2019-10-13 12:41:19.130] [info] finished computing weight: 11
+1541: [2019-10-13 12:41:19.130] [info] calculating top_mass at 172
+1542: [2019-10-13 12:41:19.138] [info] Number of expected inputs: 4
+1543: [2019-10-13 12:41:19.138] [info] Number of dimensions for integration: 9
+1544: [2019-10-13 12:41:43.722] [info] Weight computed in 24584ms
+1545: [2019-10-13 12:41:43.722] [info] finished computing weight: 12
+1546: [2019-10-13 12:41:43.723] [info] calculating top_mass at 173
+1547: [2019-10-13 12:41:43.731] [info] Number of expected inputs: 4
+1548: [2019-10-13 12:41:43.731] [info] Number of dimensions for integration: 9
+1549: [2019-10-13 12:42:09.600] [info] Weight computed in 25869ms
+1550: [2019-10-13 12:42:09.600] [info] finished computing weight: 13
+1551: [2019-10-13 12:42:09.600] [info] calculating top_mass at 174
+1552: [2019-10-13 12:42:09.608] [info] Number of expected inputs: 4
+1553: [2019-10-13 12:42:09.608] [info] Number of dimensions for integration: 9
+1554: [2019-10-13 12:42:35.741] [info] Weight computed in 26132ms
+1555: [2019-10-13 12:42:35.741] [info] finished computing weight: 14
+1556: [2019-10-13 12:42:35.741] [info] calculating top_mass at 175
+1557: [2019-10-13 12:42:35.749] [info] Number of expected inputs: 4
+1558: [2019-10-13 12:42:35.749] [info] Number of dimensions for integration: 9
+1559: [2019-10-13 12:43:02.781] [info] Weight computed in 27031ms
+1560: [2019-10-13 12:43:02.781] [info] finished computing weight: 15
+1561: [2019-10-13 12:43:02.781] [info] calculating top_mass at 176
+1562: [2019-10-13 12:43:02.789] [info] Number of expected inputs: 4
+1563: [2019-10-13 12:43:02.789] [info] Number of dimensions for integration: 9
+1564: [2019-10-13 12:43:29.749] [info] Weight computed in 26960ms
+1565: [2019-10-13 12:43:29.749] [info] finished computing weight: 16
+1566: [2019-10-13 12:43:29.750] [info] calculating top_mass at 177
+1567: [2019-10-13 12:43:29.758] [info] Number of expected inputs: 4
+1568: [2019-10-13 12:43:29.758] [info] Number of dimensions for integration: 9
+1569: [2019-10-13 12:43:57.530] [info] Weight computed in 27772ms
+1570: [2019-10-13 12:43:57.530] [info] finished computing weight: 17
+1571: [2019-10-13 12:43:57.530] [info] calculating top_mass at 178
+1572: [2019-10-13 12:43:57.538] [info] Number of expected inputs: 4
+1573: [2019-10-13 12:43:57.538] [info] Number of dimensions for integration: 9
+1574: [2019-10-13 12:44:25.783] [info] Weight computed in 28244ms
+1575: [2019-10-13 12:44:25.783] [info] finished computing weight: 18
+1576: [2019-10-13 12:44:25.783] [info] calculating top_mass at 179
+1577: [2019-10-13 12:44:25.791] [info] Number of expected inputs: 4
+1578: [2019-10-13 12:44:25.791] [info] Number of dimensions for integration: 9
+1579: [2019-10-13 12:44:54.552] [info] Weight computed in 28760ms
+1580: [2019-10-13 12:44:54.552] [info] finished computing weight: 19
+1581: [2019-10-13 12:44:54.552] [info] calculating top_mass at 180
+1582: [2019-10-13 12:44:54.560] [info] Number of expected inputs: 4
+1583: [2019-10-13 12:44:54.560] [info] Number of dimensions for integration: 9
+1584: [2019-10-13 12:45:23.582] [info] Weight computed in 29021ms
+1585: [2019-10-13 12:45:23.582] [info] finished computing weight: 20
+1586: [2019-10-13 12:45:23.582] [info] calculating top_mass at 181
+1587: [2019-10-13 12:45:23.590] [info] Number of expected inputs: 4
+1588: [2019-10-13 12:45:23.590] [info] Number of dimensions for integration: 9
+1589: [2019-10-13 12:45:52.735] [info] Weight computed in 29145ms
+1590: [2019-10-13 12:45:52.735] [info] finished computing weight: 21
+1591: [2019-10-13 12:45:52.735] [info] calculating top_mass at 182
+1592: [2019-10-13 12:45:52.743] [info] Number of expected inputs: 4
+1593: [2019-10-13 12:45:52.743] [info] Number of dimensions for integration: 9
+1594: [2019-10-13 12:46:22.455] [info] Weight computed in 29711ms
+1595: [2019-10-13 12:46:22.455] [info] finished computing weight: 22
+1596: [2019-10-13 12:46:22.455] [info] calculating top_mass at 183
+1597: [2019-10-13 12:46:22.463] [info] Number of expected inputs: 4
+1598: [2019-10-13 12:46:22.463] [info] Number of dimensions for integration: 9
+1599: [2019-10-13 12:46:52.021] [info] Weight computed in 29557ms
+1600: [2019-10-13 12:46:52.021] [info] finished computing weight: 23
+1601: [2019-10-13 12:46:52.021] [info] calculating top_mass at 184
+1602: [2019-10-13 12:46:52.029] [info] Number of expected inputs: 4
+1603: [2019-10-13 12:46:52.029] [info] Number of dimensions for integration: 9
+1604: [2019-10-13 12:47:22.014] [info] Weight computed in 29984ms
+1605: [2019-10-13 12:47:22.014] [info] finished computing weight: 24
+1606: [2019-10-13 12:47:22.014] [info] calculating top_mass at 185
+1607: [2019-10-13 12:47:22.021] [info] Number of expected inputs: 4
+1608: [2019-10-13 12:47:22.021] [info] Number of dimensions for integration: 9
+1609: [2019-10-13 12:47:52.585] [info] Weight computed in 30563ms
+1610: [2019-10-13 12:47:52.585] [info] finished computing weight: 25
+1611: [2019-10-13 12:47:52.585] [info] finished computing event: 8
+1612: [2019-10-13 12:47:52.585] [info] weight: 5.27405e-21
+1613: [2019-10-13 12:47:52.585] [info] ratio: 0.140848
+1614: [2019-10-13 12:47:52.585] [info] weight: 6.90273e-21
+1615: [2019-10-13 12:47:52.585] [info] ratio: 0.184343
+1616: [2019-10-13 12:47:52.585] [info] weight: 8.51363e-21
+1617: [2019-10-13 12:47:52.585] [info] ratio: 0.227363
+1618: [2019-10-13 12:47:52.585] [info] weight: 1.0703e-20
+1619: [2019-10-13 12:47:52.585] [info] ratio: 0.285832
+1620: [2019-10-13 12:47:52.585] [info] weight: 1.31502e-20
+1621: [2019-10-13 12:47:52.585] [info] ratio: 0.351185
+1622: [2019-10-13 12:47:52.585] [info] weight: 1.52689e-20
+1623: [2019-10-13 12:47:52.585] [info] ratio: 0.407769
+1624: [2019-10-13 12:47:52.585] [info] weight: 1.82456e-20
+1625: [2019-10-13 12:47:52.585] [info] ratio: 0.487264
+1626: [2019-10-13 12:47:52.585] [info] weight: 2.12176e-20
+1627: [2019-10-13 12:47:52.585] [info] ratio: 0.566634
+1628: [2019-10-13 12:47:52.585] [info] weight: 2.40644e-20
+1629: [2019-10-13 12:47:52.585] [info] ratio: 0.642658
+1630: [2019-10-13 12:47:52.585] [info] weight: 2.71589e-20
+1631: [2019-10-13 12:47:52.585] [info] ratio: 0.7253
+1632: [2019-10-13 12:47:52.585] [info] weight: 3.03176e-20
+1633: [2019-10-13 12:47:52.585] [info] ratio: 0.809656
+1634: [2019-10-13 12:47:52.585] [info] weight: 3.35598e-20
+1635: [2019-10-13 12:47:52.585] [info] ratio: 0.896239
+1636: [2019-10-13 12:47:52.585] [info] weight: 3.74451e-20
+1637: [2019-10-13 12:47:52.585] [info] ratio: 1
+1638: [2019-10-13 12:47:52.585] [info] weight: 4.01791e-20
+1639: [2019-10-13 12:47:52.585] [info] ratio: 1.07301
+1640: [2019-10-13 12:47:52.585] [info] weight: 4.3236e-20
+1641: [2019-10-13 12:47:52.585] [info] ratio: 1.15465
+1642: [2019-10-13 12:47:52.585] [info] weight: 4.67724e-20
+1643: [2019-10-13 12:47:52.585] [info] ratio: 1.24909
+1644: [2019-10-13 12:47:52.585] [info] weight: 4.93948e-20
+1645: [2019-10-13 12:47:52.585] [info] ratio: 1.31913
+1646: [2019-10-13 12:47:52.585] [info] weight: 5.24006e-20
+1647: [2019-10-13 12:47:52.585] [info] ratio: 1.3994
+1648: [2019-10-13 12:47:52.585] [info] weight: 5.49632e-20
+1649: [2019-10-13 12:47:52.585] [info] ratio: 1.46783
+1650: [2019-10-13 12:47:52.585] [info] weight: 5.71625e-20
+1651: [2019-10-13 12:47:52.585] [info] ratio: 1.52657
+1652: [2019-10-13 12:47:52.585] [info] weight: 5.99976e-20
+1653: [2019-10-13 12:47:52.585] [info] ratio: 1.60228
+1654: [2019-10-13 12:47:52.585] [info] weight: 6.14509e-20
+1655: [2019-10-13 12:47:52.585] [info] ratio: 1.64109
+1656: [2019-10-13 12:47:52.585] [info] weight: 6.33171e-20
+1657: [2019-10-13 12:47:52.585] [info] ratio: 1.69093
+1658: [2019-10-13 12:47:52.585] [info] weight: 6.53907e-20
+1659: [2019-10-13 12:47:52.585] [info] ratio: 1.74631
+1660: [2019-10-13 12:47:52.585] [info] weight: 6.75027e-20
+1661: [2019-10-13 12:47:52.585] [info] ratio: 1.80271
+1662: [2019-10-13 12:47:52.585] [info] weight: 7.04914e-20
+1663: [2019-10-13 12:47:52.585] [info] ratio: 1.88253
+1664: [2019-10-13 12:47:52.585] [info] calculating event 9/15
+1665: [2019-10-13 12:47:52.585] [info] calculating top_mass at 160
+1666: [2019-10-13 12:47:52.594] [info] Number of expected inputs: 4
+1667: [2019-10-13 12:47:52.594] [info] Number of dimensions for integration: 9
+1668: [2019-10-13 12:48:00.261] [info] Weight computed in 7667ms
+1669: [2019-10-13 12:48:00.261] [info] finished computing weight: 0
+1670: [2019-10-13 12:48:00.261] [info] calculating top_mass at 161
+1671: [2019-10-13 12:48:00.269] [info] Number of expected inputs: 4
+1672: [2019-10-13 12:48:00.269] [info] Number of dimensions for integration: 9
+1673: [2019-10-13 12:48:08.318] [info] Weight computed in 8049ms
+1674: [2019-10-13 12:48:08.318] [info] finished computing weight: 1
+1675: [2019-10-13 12:48:08.318] [info] calculating top_mass at 162
+1676: [2019-10-13 12:48:08.326] [info] Number of expected inputs: 4
+1677: [2019-10-13 12:48:08.326] [info] Number of dimensions for integration: 9
+1678: [2019-10-13 12:48:16.376] [info] Weight computed in 8049ms
+1679: [2019-10-13 12:48:16.376] [info] finished computing weight: 2
+1680: [2019-10-13 12:48:16.376] [info] calculating top_mass at 163
+1681: [2019-10-13 12:48:16.383] [info] Number of expected inputs: 4
+1682: [2019-10-13 12:48:16.383] [info] Number of dimensions for integration: 9
+1683: [2019-10-13 12:48:24.589] [info] Weight computed in 8205ms
+1684: [2019-10-13 12:48:24.589] [info] finished computing weight: 3
+1685: [2019-10-13 12:48:24.589] [info] calculating top_mass at 164
+1686: [2019-10-13 12:48:24.597] [info] Number of expected inputs: 4
+1687: [2019-10-13 12:48:24.597] [info] Number of dimensions for integration: 9
+1688: [2019-10-13 12:48:33.033] [info] Weight computed in 8436ms
+1689: [2019-10-13 12:48:33.033] [info] finished computing weight: 4
+1690: [2019-10-13 12:48:33.033] [info] calculating top_mass at 165
+1691: [2019-10-13 12:48:33.041] [info] Number of expected inputs: 4
+1692: [2019-10-13 12:48:33.041] [info] Number of dimensions for integration: 9
+1693: [2019-10-13 12:48:41.598] [info] Weight computed in 8556ms
+1694: [2019-10-13 12:48:41.598] [info] finished computing weight: 5
+1695: [2019-10-13 12:48:41.598] [info] calculating top_mass at 166
+1696: [2019-10-13 12:48:41.606] [info] Number of expected inputs: 4
+1697: [2019-10-13 12:48:41.606] [info] Number of dimensions for integration: 9
+1698: [2019-10-13 12:48:50.465] [info] Weight computed in 8859ms
+1699: [2019-10-13 12:48:50.465] [info] finished computing weight: 6
+1700: [2019-10-13 12:48:50.465] [info] calculating top_mass at 167
+1701: [2019-10-13 12:48:50.473] [info] Number of expected inputs: 4
+1702: [2019-10-13 12:48:50.473] [info] Number of dimensions for integration: 9
+1703: [2019-10-13 12:48:59.137] [info] Weight computed in 8663ms
+1704: [2019-10-13 12:48:59.137] [info] finished computing weight: 7
+1705: [2019-10-13 12:48:59.137] [info] calculating top_mass at 168
+1706: [2019-10-13 12:48:59.145] [info] Number of expected inputs: 4
+1707: [2019-10-13 12:48:59.145] [info] Number of dimensions for integration: 9
+1708: [2019-10-13 12:49:07.856] [info] Weight computed in 8711ms
+1709: [2019-10-13 12:49:07.856] [info] finished computing weight: 8
+1710: [2019-10-13 12:49:07.856] [info] calculating top_mass at 169
+1711: [2019-10-13 12:49:07.864] [info] Number of expected inputs: 4
+1712: [2019-10-13 12:49:07.864] [info] Number of dimensions for integration: 9
+1713: [2019-10-13 12:49:16.772] [info] Weight computed in 8908ms
+1714: [2019-10-13 12:49:16.772] [info] finished computing weight: 9
+1715: [2019-10-13 12:49:16.772] [info] calculating top_mass at 170
+1716: [2019-10-13 12:49:16.780] [info] Number of expected inputs: 4
+1717: [2019-10-13 12:49:16.780] [info] Number of dimensions for integration: 9
+1718: [2019-10-13 12:49:25.965] [info] Weight computed in 9184ms
+1719: [2019-10-13 12:49:25.965] [info] finished computing weight: 10
+1720: [2019-10-13 12:49:25.965] [info] calculating top_mass at 171
+1721: [2019-10-13 12:49:25.972] [info] Number of expected inputs: 4
+1722: [2019-10-13 12:49:25.972] [info] Number of dimensions for integration: 9
+1723: [2019-10-13 12:49:34.913] [info] Weight computed in 8940ms
+1724: [2019-10-13 12:49:34.913] [info] finished computing weight: 11
+1725: [2019-10-13 12:49:34.913] [info] calculating top_mass at 172
+1726: [2019-10-13 12:49:34.921] [info] Number of expected inputs: 4
+1727: [2019-10-13 12:49:34.921] [info] Number of dimensions for integration: 9
+1728: [2019-10-13 12:49:43.789] [info] Weight computed in 8868ms
+1729: [2019-10-13 12:49:43.789] [info] finished computing weight: 12
+1730: [2019-10-13 12:49:43.790] [info] calculating top_mass at 173
+1731: [2019-10-13 12:49:43.797] [info] Number of expected inputs: 4
+1732: [2019-10-13 12:49:43.797] [info] Number of dimensions for integration: 9
+1733: [2019-10-13 12:49:52.690] [info] Weight computed in 8892ms
+1734: [2019-10-13 12:49:52.690] [info] finished computing weight: 13
+1735: [2019-10-13 12:49:52.690] [info] calculating top_mass at 174
+1736: [2019-10-13 12:49:52.698] [info] Number of expected inputs: 4
+1737: [2019-10-13 12:49:52.698] [info] Number of dimensions for integration: 9
+1738: [2019-10-13 12:50:01.482] [info] Weight computed in 8783ms
+1739: [2019-10-13 12:50:01.482] [info] finished computing weight: 14
+1740: [2019-10-13 12:50:01.482] [info] calculating top_mass at 175
+1741: [2019-10-13 12:50:01.489] [info] Number of expected inputs: 4
+1742: [2019-10-13 12:50:01.489] [info] Number of dimensions for integration: 9
+1743: [2019-10-13 12:50:10.093] [info] Weight computed in 8603ms
+1744: [2019-10-13 12:50:10.093] [info] finished computing weight: 15
+1745: [2019-10-13 12:50:10.093] [info] calculating top_mass at 176
+1746: [2019-10-13 12:50:10.101] [info] Number of expected inputs: 4
+1747: [2019-10-13 12:50:10.101] [info] Number of dimensions for integration: 9
+1748: [2019-10-13 12:50:18.664] [info] Weight computed in 8562ms
+1749: [2019-10-13 12:50:18.664] [info] finished computing weight: 16
+1750: [2019-10-13 12:50:18.664] [info] calculating top_mass at 177
+1751: [2019-10-13 12:50:18.671] [info] Number of expected inputs: 4
+1752: [2019-10-13 12:50:18.671] [info] Number of dimensions for integration: 9
+1753: [2019-10-13 12:50:27.283] [info] Weight computed in 8611ms
+1754: [2019-10-13 12:50:27.283] [info] finished computing weight: 17
+1755: [2019-10-13 12:50:27.284] [info] calculating top_mass at 178
+1756: [2019-10-13 12:50:27.291] [info] Number of expected inputs: 4
+1757: [2019-10-13 12:50:27.291] [info] Number of dimensions for integration: 9
+1758: [2019-10-13 12:50:36.003] [info] Weight computed in 8711ms
+1759: [2019-10-13 12:50:36.003] [info] finished computing weight: 18
+1760: [2019-10-13 12:50:36.003] [info] calculating top_mass at 179
+1761: [2019-10-13 12:50:36.010] [info] Number of expected inputs: 4
+1762: [2019-10-13 12:50:36.010] [info] Number of dimensions for integration: 9
+1763: [2019-10-13 12:50:44.246] [info] Weight computed in 8235ms
+1764: [2019-10-13 12:50:44.246] [info] finished computing weight: 19
+1765: [2019-10-13 12:50:44.246] [info] calculating top_mass at 180
+1766: [2019-10-13 12:50:44.253] [info] Number of expected inputs: 4
+1767: [2019-10-13 12:50:44.253] [info] Number of dimensions for integration: 9
+1768: [2019-10-13 12:50:52.577] [info] Weight computed in 8323ms
+1769: [2019-10-13 12:50:52.577] [info] finished computing weight: 20
+1770: [2019-10-13 12:50:52.577] [info] calculating top_mass at 181
+1771: [2019-10-13 12:50:52.585] [info] Number of expected inputs: 4
+1772: [2019-10-13 12:50:52.585] [info] Number of dimensions for integration: 9
+1773: [2019-10-13 12:51:00.716] [info] Weight computed in 8130ms
+1774: [2019-10-13 12:51:00.716] [info] finished computing weight: 21
+1775: [2019-10-13 12:51:00.716] [info] calculating top_mass at 182
+1776: [2019-10-13 12:51:00.724] [info] Number of expected inputs: 4
+1777: [2019-10-13 12:51:00.724] [info] Number of dimensions for integration: 9
+1778: [2019-10-13 12:51:08.910] [info] Weight computed in 8186ms
+1779: [2019-10-13 12:51:08.910] [info] finished computing weight: 22
+1780: [2019-10-13 12:51:08.910] [info] calculating top_mass at 183
+1781: [2019-10-13 12:51:08.918] [info] Number of expected inputs: 4
+1782: [2019-10-13 12:51:08.918] [info] Number of dimensions for integration: 9
+1783: [2019-10-13 12:51:16.947] [info] Weight computed in 8028ms
+1784: [2019-10-13 12:51:16.947] [info] finished computing weight: 23
+1785: [2019-10-13 12:51:16.947] [info] calculating top_mass at 184
+1786: [2019-10-13 12:51:16.954] [info] Number of expected inputs: 4
+1787: [2019-10-13 12:51:16.954] [info] Number of dimensions for integration: 9
+1788: [2019-10-13 12:51:25.027] [info] Weight computed in 8072ms
+1789: [2019-10-13 12:51:25.027] [info] finished computing weight: 24
+1790: [2019-10-13 12:51:25.027] [info] calculating top_mass at 185
+1791: [2019-10-13 12:51:25.035] [info] Number of expected inputs: 4
+1792: [2019-10-13 12:51:25.035] [info] Number of dimensions for integration: 9
+1793: [2019-10-13 12:51:33.006] [info] Weight computed in 7970ms
+1794: [2019-10-13 12:51:33.006] [info] finished computing weight: 25
+1795: [2019-10-13 12:51:33.006] [info] finished computing event: 9
+1796: [2019-10-13 12:51:33.006] [info] weight: 1.40829e-20
+1797: [2019-10-13 12:51:33.006] [info] ratio: 0.297264
+1798: [2019-10-13 12:51:33.006] [info] weight: 1.66514e-20
+1799: [2019-10-13 12:51:33.006] [info] ratio: 0.351481
+1800: [2019-10-13 12:51:33.006] [info] weight: 2.00645e-20
+1801: [2019-10-13 12:51:33.006] [info] ratio: 0.423525
+1802: [2019-10-13 12:51:33.006] [info] weight: 2.34551e-20
+1803: [2019-10-13 12:51:33.006] [info] ratio: 0.495095
+1804: [2019-10-13 12:51:33.006] [info] weight: 2.76574e-20
+1805: [2019-10-13 12:51:33.006] [info] ratio: 0.583797
+1806: [2019-10-13 12:51:33.006] [info] weight: 3.14852e-20
+1807: [2019-10-13 12:51:33.006] [info] ratio: 0.664595
+1808: [2019-10-13 12:51:33.006] [info] weight: 3.47376e-20
+1809: [2019-10-13 12:51:33.006] [info] ratio: 0.733247
+1810: [2019-10-13 12:51:33.006] [info] weight: 3.77855e-20
+1811: [2019-10-13 12:51:33.006] [info] ratio: 0.797582
+1812: [2019-10-13 12:51:33.006] [info] weight: 4.10663e-20
+1813: [2019-10-13 12:51:33.006] [info] ratio: 0.866835
+1814: [2019-10-13 12:51:33.006] [info] weight: 4.32198e-20
+1815: [2019-10-13 12:51:33.006] [info] ratio: 0.91229
+1816: [2019-10-13 12:51:33.006] [info] weight: 4.64434e-20
+1817: [2019-10-13 12:51:33.006] [info] ratio: 0.980335
+1818: [2019-10-13 12:51:33.006] [info] weight: 4.7603e-20
+1819: [2019-10-13 12:51:33.006] [info] ratio: 1.00481
+1820: [2019-10-13 12:51:33.006] [info] weight: 4.7375e-20
+1821: [2019-10-13 12:51:33.006] [info] ratio: 1
+1822: [2019-10-13 12:51:33.006] [info] weight: 4.68389e-20
+1823: [2019-10-13 12:51:33.006] [info] ratio: 0.988683
+1824: [2019-10-13 12:51:33.006] [info] weight: 4.60322e-20
+1825: [2019-10-13 12:51:33.006] [info] ratio: 0.971656
+1826: [2019-10-13 12:51:33.006] [info] weight: 4.59915e-20
+1827: [2019-10-13 12:51:33.006] [info] ratio: 0.970796
+1828: [2019-10-13 12:51:33.006] [info] weight: 4.56074e-20
+1829: [2019-10-13 12:51:33.006] [info] ratio: 0.96269
+1830: [2019-10-13 12:51:33.006] [info] weight: 4.18957e-20
+1831: [2019-10-13 12:51:33.006] [info] ratio: 0.884342
+1832: [2019-10-13 12:51:33.006] [info] weight: 4.02689e-20
+1833: [2019-10-13 12:51:33.007] [info] ratio: 0.850002
+1834: [2019-10-13 12:51:33.007] [info] weight: 3.65053e-20
+1835: [2019-10-13 12:51:33.007] [info] ratio: 0.770561
+1836: [2019-10-13 12:51:33.007] [info] weight: 3.35215e-20
+1837: [2019-10-13 12:51:33.007] [info] ratio: 0.707578
+1838: [2019-10-13 12:51:33.007] [info] weight: 3.08946e-20
+1839: [2019-10-13 12:51:33.007] [info] ratio: 0.652129
+1840: [2019-10-13 12:51:33.007] [info] weight: 2.71643e-20
+1841: [2019-10-13 12:51:33.007] [info] ratio: 0.573389
+1842: [2019-10-13 12:51:33.007] [info] weight: 2.46945e-20
+1843: [2019-10-13 12:51:33.007] [info] ratio: 0.521255
+1844: [2019-10-13 12:51:33.007] [info] weight: 2.22007e-20
+1845: [2019-10-13 12:51:33.007] [info] ratio: 0.468617
+1846: [2019-10-13 12:51:33.007] [info] weight: 1.96472e-20
+1847: [2019-10-13 12:51:33.007] [info] ratio: 0.414717
+1848: [2019-10-13 12:51:33.007] [info] calculating event 10/15
+1849: [2019-10-13 12:51:33.007] [info] calculating top_mass at 160
+1850: [2019-10-13 12:51:33.014] [info] Number of expected inputs: 4
+1851: [2019-10-13 12:51:33.014] [info] Number of dimensions for integration: 9
+1852: [2019-10-13 12:51:48.120] [info] Weight computed in 15105ms
+1853: [2019-10-13 12:51:48.120] [info] finished computing weight: 0
+1854: [2019-10-13 12:51:48.120] [info] calculating top_mass at 161
+1855: [2019-10-13 12:51:48.128] [info] Number of expected inputs: 4
+1856: [2019-10-13 12:51:48.128] [info] Number of dimensions for integration: 9
+1857: [2019-10-13 12:52:04.228] [info] Weight computed in 16099ms
+1858: [2019-10-13 12:52:04.228] [info] finished computing weight: 1
+1859: [2019-10-13 12:52:04.228] [info] calculating top_mass at 162
+1860: [2019-10-13 12:52:04.235] [info] Number of expected inputs: 4
+1861: [2019-10-13 12:52:04.235] [info] Number of dimensions for integration: 9
+1862: [2019-10-13 12:52:21.371] [info] Weight computed in 17135ms
+1863: [2019-10-13 12:52:21.371] [info] finished computing weight: 2
+1864: [2019-10-13 12:52:21.371] [info] calculating top_mass at 163
+1865: [2019-10-13 12:52:21.379] [info] Number of expected inputs: 4
+1866: [2019-10-13 12:52:21.379] [info] Number of dimensions for integration: 9
+1867: [2019-10-13 12:52:39.100] [info] Weight computed in 17720ms
+1868: [2019-10-13 12:52:39.100] [info] finished computing weight: 3
+1869: [2019-10-13 12:52:39.100] [info] calculating top_mass at 164
+1870: [2019-10-13 12:52:39.108] [info] Number of expected inputs: 4
+1871: [2019-10-13 12:52:39.108] [info] Number of dimensions for integration: 9
+1872: [2019-10-13 12:52:57.495] [info] Weight computed in 18387ms
+1873: [2019-10-13 12:52:57.495] [info] finished computing weight: 4
+1874: [2019-10-13 12:52:57.495] [info] calculating top_mass at 165
+1875: [2019-10-13 12:52:57.503] [info] Number of expected inputs: 4
+1876: [2019-10-13 12:52:57.503] [info] Number of dimensions for integration: 9
+1877: [2019-10-13 12:53:16.680] [info] Weight computed in 19177ms
+1878: [2019-10-13 12:53:16.680] [info] finished computing weight: 5
+1879: [2019-10-13 12:53:16.680] [info] calculating top_mass at 166
+1880: [2019-10-13 12:53:16.688] [info] Number of expected inputs: 4
+1881: [2019-10-13 12:53:16.688] [info] Number of dimensions for integration: 9
+1882: [2019-10-13 12:53:36.557] [info] Weight computed in 19868ms
+1883: [2019-10-13 12:53:36.557] [info] finished computing weight: 6
+1884: [2019-10-13 12:53:36.557] [info] calculating top_mass at 167
+1885: [2019-10-13 12:53:36.565] [info] Number of expected inputs: 4
+1886: [2019-10-13 12:53:36.565] [info] Number of dimensions for integration: 9
+1887: [2019-10-13 12:53:56.987] [info] Weight computed in 20422ms
+1888: [2019-10-13 12:53:56.987] [info] finished computing weight: 7
+1889: [2019-10-13 12:53:56.987] [info] calculating top_mass at 168
+1890: [2019-10-13 12:53:56.995] [info] Number of expected inputs: 4
+1891: [2019-10-13 12:53:56.995] [info] Number of dimensions for integration: 9
+1892: [2019-10-13 12:54:17.931] [info] Weight computed in 20935ms
+1893: [2019-10-13 12:54:17.931] [info] finished computing weight: 8
+1894: [2019-10-13 12:54:17.931] [info] calculating top_mass at 169
+1895: [2019-10-13 12:54:17.938] [info] Number of expected inputs: 4
+1896: [2019-10-13 12:54:17.938] [info] Number of dimensions for integration: 9
+1897: [2019-10-13 12:54:39.222] [info] Weight computed in 21283ms
+1898: [2019-10-13 12:54:39.222] [info] finished computing weight: 9
+1899: [2019-10-13 12:54:39.222] [info] calculating top_mass at 170
+1900: [2019-10-13 12:54:39.230] [info] Number of expected inputs: 4
+1901: [2019-10-13 12:54:39.230] [info] Number of dimensions for integration: 9
+1902: [2019-10-13 12:55:00.793] [info] Weight computed in 21562ms
+1903: [2019-10-13 12:55:00.793] [info] finished computing weight: 10
+1904: [2019-10-13 12:55:00.793] [info] calculating top_mass at 171
+1905: [2019-10-13 12:55:00.801] [info] Number of expected inputs: 4
+1906: [2019-10-13 12:55:00.801] [info] Number of dimensions for integration: 9
+1907: [2019-10-13 12:55:22.600] [info] Weight computed in 21798ms
+1908: [2019-10-13 12:55:22.600] [info] finished computing weight: 11
+1909: [2019-10-13 12:55:22.600] [info] calculating top_mass at 172
+1910: [2019-10-13 12:55:22.607] [info] Number of expected inputs: 4
+1911: [2019-10-13 12:55:22.607] [info] Number of dimensions for integration: 9
+1912: [2019-10-13 12:55:44.864] [info] Weight computed in 22256ms
+1913: [2019-10-13 12:55:44.864] [info] finished computing weight: 12
+1914: [2019-10-13 12:55:44.864] [info] calculating top_mass at 173
+1915: [2019-10-13 12:55:44.872] [info] Number of expected inputs: 4
+1916: [2019-10-13 12:55:44.872] [info] Number of dimensions for integration: 9
+1917: [2019-10-13 12:56:07.432] [info] Weight computed in 22559ms
+1918: [2019-10-13 12:56:07.432] [info] finished computing weight: 13
+1919: [2019-10-13 12:56:07.432] [info] calculating top_mass at 174
+1920: [2019-10-13 12:56:07.439] [info] Number of expected inputs: 4
+1921: [2019-10-13 12:56:07.439] [info] Number of dimensions for integration: 9
+1922: [2019-10-13 12:56:30.024] [info] Weight computed in 22584ms
+1923: [2019-10-13 12:56:30.024] [info] finished computing weight: 14
+1924: [2019-10-13 12:56:30.024] [info] calculating top_mass at 175
+1925: [2019-10-13 12:56:30.032] [info] Number of expected inputs: 4
+1926: [2019-10-13 12:56:30.032] [info] Number of dimensions for integration: 9
+1927: [2019-10-13 12:56:52.686] [info] Weight computed in 22654ms
+1928: [2019-10-13 12:56:52.686] [info] finished computing weight: 15
+1929: [2019-10-13 12:56:52.686] [info] calculating top_mass at 176
+1930: [2019-10-13 12:56:52.694] [info] Number of expected inputs: 4
+1931: [2019-10-13 12:56:52.694] [info] Number of dimensions for integration: 9
+1932: [2019-10-13 12:57:15.629] [info] Weight computed in 22934ms
+1933: [2019-10-13 12:57:15.629] [info] finished computing weight: 16
+1934: [2019-10-13 12:57:15.629] [info] calculating top_mass at 177
+1935: [2019-10-13 12:57:15.636] [info] Number of expected inputs: 4
+1936: [2019-10-13 12:57:15.636] [info] Number of dimensions for integration: 9
+1937: [2019-10-13 12:57:38.756] [info] Weight computed in 23119ms
+1938: [2019-10-13 12:57:38.756] [info] finished computing weight: 17
+1939: [2019-10-13 12:57:38.757] [info] calculating top_mass at 178
+1940: [2019-10-13 12:57:38.764] [info] Number of expected inputs: 4
+1941: [2019-10-13 12:57:38.764] [info] Number of dimensions for integration: 9
+1942: [2019-10-13 12:58:02.172] [info] Weight computed in 23407ms
+1943: [2019-10-13 12:58:02.172] [info] finished computing weight: 18
+1944: [2019-10-13 12:58:02.172] [info] calculating top_mass at 179
+1945: [2019-10-13 12:58:02.180] [info] Number of expected inputs: 4
+1946: [2019-10-13 12:58:02.180] [info] Number of dimensions for integration: 9
+1947: [2019-10-13 12:58:25.751] [info] Weight computed in 23570ms
+1948: [2019-10-13 12:58:25.751] [info] finished computing weight: 19
+1949: [2019-10-13 12:58:25.751] [info] calculating top_mass at 180
+1950: [2019-10-13 12:58:25.759] [info] Number of expected inputs: 4
+1951: [2019-10-13 12:58:25.759] [info] Number of dimensions for integration: 9
+1952: [2019-10-13 12:58:49.302] [info] Weight computed in 23543ms
+1953: [2019-10-13 12:58:49.302] [info] finished computing weight: 20
+1954: [2019-10-13 12:58:49.302] [info] calculating top_mass at 181
+1955: [2019-10-13 12:58:49.310] [info] Number of expected inputs: 4
+1956: [2019-10-13 12:58:49.310] [info] Number of dimensions for integration: 9
+1957: [2019-10-13 12:59:13.011] [info] Weight computed in 23700ms
+1958: [2019-10-13 12:59:13.011] [info] finished computing weight: 21
+1959: [2019-10-13 12:59:13.011] [info] calculating top_mass at 182
+1960: [2019-10-13 12:59:13.018] [info] Number of expected inputs: 4
+1961: [2019-10-13 12:59:13.018] [info] Number of dimensions for integration: 9
+1962: [2019-10-13 12:59:36.858] [info] Weight computed in 23839ms
+1963: [2019-10-13 12:59:36.858] [info] finished computing weight: 22
+1964: [2019-10-13 12:59:36.858] [info] calculating top_mass at 183
+1965: [2019-10-13 12:59:36.866] [info] Number of expected inputs: 4
+1966: [2019-10-13 12:59:36.866] [info] Number of dimensions for integration: 9
+1967: [2019-10-13 13:00:00.813] [info] Weight computed in 23946ms
+1968: [2019-10-13 13:00:00.813] [info] finished computing weight: 23
+1969: [2019-10-13 13:00:00.813] [info] calculating top_mass at 184
+1970: [2019-10-13 13:00:00.820] [info] Number of expected inputs: 4
+1971: [2019-10-13 13:00:00.820] [info] Number of dimensions for integration: 9
+1972: [2019-10-13 13:00:24.782] [info] Weight computed in 23961ms
+1973: [2019-10-13 13:00:24.782] [info] finished computing weight: 24
+1974: [2019-10-13 13:00:24.782] [info] calculating top_mass at 185
+1975: [2019-10-13 13:00:24.790] [info] Number of expected inputs: 4
+1976: [2019-10-13 13:00:24.790] [info] Number of dimensions for integration: 9
+1977: [2019-10-13 13:00:48.599] [info] Weight computed in 23808ms
+1978: [2019-10-13 13:00:48.599] [info] finished computing weight: 25
+1979: [2019-10-13 13:00:48.599] [info] finished computing event: 10
+1980: [2019-10-13 13:00:48.599] [info] weight: 2.33836e-20
+1981: [2019-10-13 13:00:48.599] [info] ratio: 0.227376
+1982: [2019-10-13 13:00:48.599] [info] weight: 2.90213e-20
+1983: [2019-10-13 13:00:48.599] [info] ratio: 0.282195
+1984: [2019-10-13 13:00:48.599] [info] weight: 3.60723e-20
+1985: [2019-10-13 13:00:48.599] [info] ratio: 0.350757
+1986: [2019-10-13 13:00:48.599] [info] weight: 4.3357e-20
+1987: [2019-10-13 13:00:48.599] [info] ratio: 0.421593
+1988: [2019-10-13 13:00:48.599] [info] weight: 5.15775e-20
+1989: [2019-10-13 13:00:48.599] [info] ratio: 0.501526
+1990: [2019-10-13 13:00:48.599] [info] weight: 5.87849e-20
+1991: [2019-10-13 13:00:48.599] [info] ratio: 0.571609
+1992: [2019-10-13 13:00:48.599] [info] weight: 6.77906e-20
+1993: [2019-10-13 13:00:48.599] [info] ratio: 0.659178
+1994: [2019-10-13 13:00:48.599] [info] weight: 7.56968e-20
+1995: [2019-10-13 13:00:48.599] [info] ratio: 0.736056
+1996: [2019-10-13 13:00:48.599] [info] weight: 8.24602e-20
+1997: [2019-10-13 13:00:48.599] [info] ratio: 0.801821
+1998: [2019-10-13 13:00:48.599] [info] weight: 8.97774e-20
+1999: [2019-10-13 13:00:48.599] [info] ratio: 0.872972
+2000: [2019-10-13 13:00:48.599] [info] weight: 9.46535e-20
+2001: [2019-10-13 13:00:48.599] [info] ratio: 0.920386
+2002: [2019-10-13 13:00:48.599] [info] weight: 9.9782e-20
+2003: [2019-10-13 13:00:48.599] [info] ratio: 0.970254
+2004: [2019-10-13 13:00:48.599] [info] weight: 1.02841e-19
+2005: [2019-10-13 13:00:48.599] [info] ratio: 1
+2006: [2019-10-13 13:00:48.599] [info] weight: 1.05004e-19
+2007: [2019-10-13 13:00:48.599] [info] ratio: 1.02103
+2008: [2019-10-13 13:00:48.599] [info] weight: 1.07332e-19
+2009: [2019-10-13 13:00:48.599] [info] ratio: 1.04366
+2010: [2019-10-13 13:00:48.599] [info] weight: 1.08235e-19
+2011: [2019-10-13 13:00:48.599] [info] ratio: 1.05245
+2012: [2019-10-13 13:00:48.599] [info] weight: 1.10501e-19
+2013: [2019-10-13 13:00:48.599] [info] ratio: 1.07448
+2014: [2019-10-13 13:00:48.599] [info] weight: 1.11802e-19
+2015: [2019-10-13 13:00:48.599] [info] ratio: 1.08714
+2016: [2019-10-13 13:00:48.599] [info] weight: 1.12163e-19
+2017: [2019-10-13 13:00:48.599] [info] ratio: 1.09065
+2018: [2019-10-13 13:00:48.599] [info] weight: 1.14531e-19
+2019: [2019-10-13 13:00:48.599] [info] ratio: 1.11367
+2020: [2019-10-13 13:00:48.599] [info] weight: 1.16548e-19
+2021: [2019-10-13 13:00:48.599] [info] ratio: 1.13329
+2022: [2019-10-13 13:00:48.599] [info] weight: 1.15737e-19
+2023: [2019-10-13 13:00:48.599] [info] ratio: 1.12539
+2024: [2019-10-13 13:00:48.599] [info] weight: 1.16972e-19
+2025: [2019-10-13 13:00:48.599] [info] ratio: 1.1374
+2026: [2019-10-13 13:00:48.599] [info] weight: 1.15077e-19
+2027: [2019-10-13 13:00:48.599] [info] ratio: 1.11897
+2028: [2019-10-13 13:00:48.599] [info] weight: 1.13325e-19
+2029: [2019-10-13 13:00:48.599] [info] ratio: 1.10194
+2030: [2019-10-13 13:00:48.599] [info] weight: 1.1276e-19
+2031: [2019-10-13 13:00:48.599] [info] ratio: 1.09645
+2032: [2019-10-13 13:00:48.599] [info] calculating event 11/15
+2033: [2019-10-13 13:00:48.599] [info] calculating top_mass at 160
+2034: [2019-10-13 13:00:48.607] [info] Number of expected inputs: 4
+2035: [2019-10-13 13:00:48.607] [info] Number of dimensions for integration: 9
+2036: [2019-10-13 13:01:03.071] [info] Weight computed in 14464ms
+2037: [2019-10-13 13:01:03.071] [info] finished computing weight: 0
+2038: [2019-10-13 13:01:03.072] [info] calculating top_mass at 161
+2039: [2019-10-13 13:01:03.079] [info] Number of expected inputs: 4
+2040: [2019-10-13 13:01:03.079] [info] Number of dimensions for integration: 9
+2041: [2019-10-13 13:01:17.907] [info] Weight computed in 14827ms
+2042: [2019-10-13 13:01:17.907] [info] finished computing weight: 1
+2043: [2019-10-13 13:01:17.907] [info] calculating top_mass at 162
+2044: [2019-10-13 13:01:17.915] [info] Number of expected inputs: 4
+2045: [2019-10-13 13:01:17.915] [info] Number of dimensions for integration: 9
+2046: [2019-10-13 13:01:33.168] [info] Weight computed in 15253ms
+2047: [2019-10-13 13:01:33.168] [info] finished computing weight: 2
+2048: [2019-10-13 13:01:33.168] [info] calculating top_mass at 163
+2049: [2019-10-13 13:01:33.176] [info] Number of expected inputs: 4
+2050: [2019-10-13 13:01:33.176] [info] Number of dimensions for integration: 9
+2051: [2019-10-13 13:01:49.009] [info] Weight computed in 15832ms
+2052: [2019-10-13 13:01:49.009] [info] finished computing weight: 3
+2053: [2019-10-13 13:01:49.009] [info] calculating top_mass at 164
+2054: [2019-10-13 13:01:49.016] [info] Number of expected inputs: 4
+2055: [2019-10-13 13:01:49.016] [info] Number of dimensions for integration: 9
+2056: [2019-10-13 13:02:05.491] [info] Weight computed in 16474ms
+2057: [2019-10-13 13:02:05.491] [info] finished computing weight: 4
+2058: [2019-10-13 13:02:05.491] [info] calculating top_mass at 165
+2059: [2019-10-13 13:02:05.499] [info] Number of expected inputs: 4
+2060: [2019-10-13 13:02:05.499] [info] Number of dimensions for integration: 9
+2061: [2019-10-13 13:02:22.332] [info] Weight computed in 16833ms
+2062: [2019-10-13 13:02:22.332] [info] finished computing weight: 5
+2063: [2019-10-13 13:02:22.332] [info] calculating top_mass at 166
+2064: [2019-10-13 13:02:22.340] [info] Number of expected inputs: 4
+2065: [2019-10-13 13:02:22.340] [info] Number of dimensions for integration: 9
+2066: [2019-10-13 13:02:39.821] [info] Weight computed in 17480ms
+2067: [2019-10-13 13:02:39.821] [info] finished computing weight: 6
+2068: [2019-10-13 13:02:39.821] [info] calculating top_mass at 167
+2069: [2019-10-13 13:02:39.828] [info] Number of expected inputs: 4
+2070: [2019-10-13 13:02:39.828] [info] Number of dimensions for integration: 9
+2071: [2019-10-13 13:02:57.752] [info] Weight computed in 17922ms
+2072: [2019-10-13 13:02:57.752] [info] finished computing weight: 7
+2073: [2019-10-13 13:02:57.752] [info] calculating top_mass at 168
+2074: [2019-10-13 13:02:57.760] [info] Number of expected inputs: 4
+2075: [2019-10-13 13:02:57.760] [info] Number of dimensions for integration: 9
+2076: [2019-10-13 13:03:16.384] [info] Weight computed in 18624ms
+2077: [2019-10-13 13:03:16.384] [info] finished computing weight: 8
+2078: [2019-10-13 13:03:16.384] [info] calculating top_mass at 169
+2079: [2019-10-13 13:03:16.392] [info] Number of expected inputs: 4
+2080: [2019-10-13 13:03:16.392] [info] Number of dimensions for integration: 9
+2081: [2019-10-13 13:03:35.797] [info] Weight computed in 19404ms
+2082: [2019-10-13 13:03:35.797] [info] finished computing weight: 9
+2083: [2019-10-13 13:03:35.797] [info] calculating top_mass at 170
+2084: [2019-10-13 13:03:35.804] [info] Number of expected inputs: 4
+2085: [2019-10-13 13:03:35.804] [info] Number of dimensions for integration: 9
+2086: [2019-10-13 13:03:55.648] [info] Weight computed in 19843ms
+2087: [2019-10-13 13:03:55.648] [info] finished computing weight: 10
+2088: [2019-10-13 13:03:55.648] [info] calculating top_mass at 171
+2089: [2019-10-13 13:03:55.656] [info] Number of expected inputs: 4
+2090: [2019-10-13 13:03:55.656] [info] Number of dimensions for integration: 9
+2091: [2019-10-13 13:04:16.118] [info] Weight computed in 20462ms
+2092: [2019-10-13 13:04:16.118] [info] finished computing weight: 11
+2093: [2019-10-13 13:04:16.118] [info] calculating top_mass at 172
+2094: [2019-10-13 13:04:16.126] [info] Number of expected inputs: 4
+2095: [2019-10-13 13:04:16.126] [info] Number of dimensions for integration: 9
+2096: [2019-10-13 13:04:37.412] [info] Weight computed in 21285ms
+2097: [2019-10-13 13:04:37.412] [info] finished computing weight: 12
+2098: [2019-10-13 13:04:37.412] [info] calculating top_mass at 173
+2099: [2019-10-13 13:04:37.420] [info] Number of expected inputs: 4
+2100: [2019-10-13 13:04:37.420] [info] Number of dimensions for integration: 9
+2101: [2019-10-13 13:04:59.246] [info] Weight computed in 21826ms
+2102: [2019-10-13 13:04:59.246] [info] finished computing weight: 13
+2103: [2019-10-13 13:04:59.246] [info] calculating top_mass at 174
+2104: [2019-10-13 13:04:59.254] [info] Number of expected inputs: 4
+2105: [2019-10-13 13:04:59.254] [info] Number of dimensions for integration: 9
+2106: [2019-10-13 13:05:21.509] [info] Weight computed in 22254ms
+2107: [2019-10-13 13:05:21.509] [info] finished computing weight: 14
+2108: [2019-10-13 13:05:21.509] [info] calculating top_mass at 175
+2109: [2019-10-13 13:05:21.517] [info] Number of expected inputs: 4
+2110: [2019-10-13 13:05:21.517] [info] Number of dimensions for integration: 9
+2111: [2019-10-13 13:05:44.205] [info] Weight computed in 22688ms
+2112: [2019-10-13 13:05:44.205] [info] finished computing weight: 15
+2113: [2019-10-13 13:05:44.205] [info] calculating top_mass at 176
+2114: [2019-10-13 13:05:44.213] [info] Number of expected inputs: 4
+2115: [2019-10-13 13:05:44.213] [info] Number of dimensions for integration: 9
+2116: [2019-10-13 13:06:07.348] [info] Weight computed in 23135ms
+2117: [2019-10-13 13:06:07.348] [info] finished computing weight: 16
+2118: [2019-10-13 13:06:07.348] [info] calculating top_mass at 177
+2119: [2019-10-13 13:06:07.356] [info] Number of expected inputs: 4
+2120: [2019-10-13 13:06:07.356] [info] Number of dimensions for integration: 9
+2121: [2019-10-13 13:06:31.107] [info] Weight computed in 23750ms
+2122: [2019-10-13 13:06:31.107] [info] finished computing weight: 17
+2123: [2019-10-13 13:06:31.107] [info] calculating top_mass at 178
+2124: [2019-10-13 13:06:31.114] [info] Number of expected inputs: 4
+2125: [2019-10-13 13:06:31.114] [info] Number of dimensions for integration: 9
+2126: [2019-10-13 13:06:54.914] [info] Weight computed in 23799ms
+2127: [2019-10-13 13:06:54.914] [info] finished computing weight: 18
+2128: [2019-10-13 13:06:54.914] [info] calculating top_mass at 179
+2129: [2019-10-13 13:06:54.922] [info] Number of expected inputs: 4
+2130: [2019-10-13 13:06:54.922] [info] Number of dimensions for integration: 9
+2131: [2019-10-13 13:07:19.099] [info] Weight computed in 24176ms
+2132: [2019-10-13 13:07:19.099] [info] finished computing weight: 19
+2133: [2019-10-13 13:07:19.099] [info] calculating top_mass at 180
+2134: [2019-10-13 13:07:19.107] [info] Number of expected inputs: 4
+2135: [2019-10-13 13:07:19.107] [info] Number of dimensions for integration: 9
+2136: [2019-10-13 13:07:43.539] [info] Weight computed in 24432ms
+2137: [2019-10-13 13:07:43.539] [info] finished computing weight: 20
+2138: [2019-10-13 13:07:43.539] [info] calculating top_mass at 181
+2139: [2019-10-13 13:07:43.547] [info] Number of expected inputs: 4
+2140: [2019-10-13 13:07:43.547] [info] Number of dimensions for integration: 9
+2141: [2019-10-13 13:08:08.210] [info] Weight computed in 24663ms
+2142: [2019-10-13 13:08:08.210] [info] finished computing weight: 21
+2143: [2019-10-13 13:08:08.210] [info] calculating top_mass at 182
+2144: [2019-10-13 13:08:08.218] [info] Number of expected inputs: 4
+2145: [2019-10-13 13:08:08.218] [info] Number of dimensions for integration: 9
+2146: [2019-10-13 13:08:33.090] [info] Weight computed in 24872ms
+2147: [2019-10-13 13:08:33.090] [info] finished computing weight: 22
+2148: [2019-10-13 13:08:33.090] [info] calculating top_mass at 183
+2149: [2019-10-13 13:08:33.098] [info] Number of expected inputs: 4
+2150: [2019-10-13 13:08:33.098] [info] Number of dimensions for integration: 9
+2151: [2019-10-13 13:08:56.852] [info] Weight computed in 23753ms
+2152: [2019-10-13 13:08:56.852] [info] finished computing weight: 23
+2153: [2019-10-13 13:08:56.852] [info] calculating top_mass at 184
+2154: [2019-10-13 13:08:56.860] [info] Number of expected inputs: 4
+2155: [2019-10-13 13:08:56.860] [info] Number of dimensions for integration: 9
+2156: [2019-10-13 13:09:21.961] [info] Weight computed in 25101ms
+2157: [2019-10-13 13:09:21.961] [info] finished computing weight: 24
+2158: [2019-10-13 13:09:21.962] [info] calculating top_mass at 185
+2159: [2019-10-13 13:09:21.969] [info] Number of expected inputs: 4
+2160: [2019-10-13 13:09:21.969] [info] Number of dimensions for integration: 9
+2161: [2019-10-13 13:09:47.255] [info] Weight computed in 25285ms
+2162: [2019-10-13 13:09:47.255] [info] finished computing weight: 25
+2163: [2019-10-13 13:09:47.255] [info] finished computing event: 11
+2164: [2019-10-13 13:09:47.255] [info] weight: 1.99002e-21
+2165: [2019-10-13 13:09:47.255] [info] ratio: 0.979829
+2166: [2019-10-13 13:09:47.255] [info] weight: 2.2174e-21
+2167: [2019-10-13 13:09:47.255] [info] ratio: 1.09178
+2168: [2019-10-13 13:09:47.255] [info] weight: 2.31958e-21
+2169: [2019-10-13 13:09:47.255] [info] ratio: 1.14209
+2170: [2019-10-13 13:09:47.255] [info] weight: 2.41947e-21
+2171: [2019-10-13 13:09:47.255] [info] ratio: 1.19127
+2172: [2019-10-13 13:09:47.255] [info] weight: 2.49937e-21
+2173: [2019-10-13 13:09:47.255] [info] ratio: 1.23062
+2174: [2019-10-13 13:09:47.255] [info] weight: 2.52513e-21
+2175: [2019-10-13 13:09:47.255] [info] ratio: 1.2433
+2176: [2019-10-13 13:09:47.255] [info] weight: 2.53569e-21
+2177: [2019-10-13 13:09:47.255] [info] ratio: 1.2485
+2178: [2019-10-13 13:09:47.255] [info] weight: 2.49578e-21
+2179: [2019-10-13 13:09:47.255] [info] ratio: 1.22885
+2180: [2019-10-13 13:09:47.255] [info] weight: 2.43139e-21
+2181: [2019-10-13 13:09:47.255] [info] ratio: 1.19714
+2182: [2019-10-13 13:09:47.255] [info] weight: 2.35687e-21
+2183: [2019-10-13 13:09:47.255] [info] ratio: 1.16045
+2184: [2019-10-13 13:09:47.255] [info] weight: 2.25656e-21
+2185: [2019-10-13 13:09:47.255] [info] ratio: 1.11107
+2186: [2019-10-13 13:09:47.255] [info] weight: 2.14791e-21
+2187: [2019-10-13 13:09:47.255] [info] ratio: 1.05757
+2188: [2019-10-13 13:09:47.255] [info] weight: 2.03099e-21
+2189: [2019-10-13 13:09:47.255] [info] ratio: 1
+2190: [2019-10-13 13:09:47.255] [info] weight: 1.92368e-21
+2191: [2019-10-13 13:09:47.255] [info] ratio: 0.947164
+2192: [2019-10-13 13:09:47.255] [info] weight: 1.81068e-21
+2193: [2019-10-13 13:09:47.255] [info] ratio: 0.891526
+2194: [2019-10-13 13:09:47.255] [info] weight: 1.70117e-21
+2195: [2019-10-13 13:09:47.255] [info] ratio: 0.837606
+2196: [2019-10-13 13:09:47.255] [info] weight: 1.59722e-21
+2197: [2019-10-13 13:09:47.255] [info] ratio: 0.786426
+2198: [2019-10-13 13:09:47.255] [info] weight: 1.49651e-21
+2199: [2019-10-13 13:09:47.255] [info] ratio: 0.736837
+2200: [2019-10-13 13:09:47.255] [info] weight: 1.40405e-21
+2201: [2019-10-13 13:09:47.255] [info] ratio: 0.691315
+2202: [2019-10-13 13:09:47.255] [info] weight: 1.31276e-21
+2203: [2019-10-13 13:09:47.255] [info] ratio: 0.646364
+2204: [2019-10-13 13:09:47.255] [info] weight: 1.22734e-21
+2205: [2019-10-13 13:09:47.255] [info] ratio: 0.604304
+2206: [2019-10-13 13:09:47.255] [info] weight: 1.14831e-21
+2207: [2019-10-13 13:09:47.255] [info] ratio: 0.565394
+2208: [2019-10-13 13:09:47.255] [info] weight: 1.07304e-21
+2209: [2019-10-13 13:09:47.255] [info] ratio: 0.528335
+2210: [2019-10-13 13:09:47.255] [info] weight: 9.5007e-22
+2211: [2019-10-13 13:09:47.255] [info] ratio: 0.467786
+2212: [2019-10-13 13:09:47.255] [info] weight: 9.34845e-22
+2213: [2019-10-13 13:09:47.255] [info] ratio: 0.46029
+2214: [2019-10-13 13:09:47.255] [info] weight: 8.75668e-22
+2215: [2019-10-13 13:09:47.255] [info] ratio: 0.431153
+2216: [2019-10-13 13:09:47.255] [info] calculating event 12/15
+2217: [2019-10-13 13:09:47.255] [info] calculating top_mass at 160
+2218: [2019-10-13 13:09:47.263] [info] Number of expected inputs: 4
+2219: [2019-10-13 13:09:47.263] [info] Number of dimensions for integration: 9
+2220: [2019-10-13 13:10:03.345] [info] Weight computed in 16082ms
+2221: [2019-10-13 13:10:03.345] [info] finished computing weight: 0
+2222: [2019-10-13 13:10:03.345] [info] calculating top_mass at 161
+2223: [2019-10-13 13:10:03.352] [info] Number of expected inputs: 4
+2224: [2019-10-13 13:10:03.352] [info] Number of dimensions for integration: 9
+2225: [2019-10-13 13:10:20.364] [info] Weight computed in 17011ms
+2226: [2019-10-13 13:10:20.364] [info] finished computing weight: 1
+2227: [2019-10-13 13:10:20.364] [info] calculating top_mass at 162
+2228: [2019-10-13 13:10:20.372] [info] Number of expected inputs: 4
+2229: [2019-10-13 13:10:20.372] [info] Number of dimensions for integration: 9
+2230: [2019-10-13 13:10:37.895] [info] Weight computed in 17522ms
+2231: [2019-10-13 13:10:37.895] [info] finished computing weight: 2
+2232: [2019-10-13 13:10:37.895] [info] calculating top_mass at 163
+2233: [2019-10-13 13:10:37.902] [info] Number of expected inputs: 4
+2234: [2019-10-13 13:10:37.902] [info] Number of dimensions for integration: 9
+2235: [2019-10-13 13:10:56.162] [info] Weight computed in 18259ms
+2236: [2019-10-13 13:10:56.162] [info] finished computing weight: 3
+2237: [2019-10-13 13:10:56.163] [info] calculating top_mass at 164
+2238: [2019-10-13 13:10:56.170] [info] Number of expected inputs: 4
+2239: [2019-10-13 13:10:56.170] [info] Number of dimensions for integration: 9
+2240: [2019-10-13 13:11:15.039] [info] Weight computed in 18868ms
+2241: [2019-10-13 13:11:15.039] [info] finished computing weight: 4
+2242: [2019-10-13 13:11:15.039] [info] calculating top_mass at 165
+2243: [2019-10-13 13:11:15.047] [info] Number of expected inputs: 4
+2244: [2019-10-13 13:11:15.047] [info] Number of dimensions for integration: 9
+2245: [2019-10-13 13:11:34.728] [info] Weight computed in 19681ms
+2246: [2019-10-13 13:11:34.728] [info] finished computing weight: 5
+2247: [2019-10-13 13:11:34.729] [info] calculating top_mass at 166
+2248: [2019-10-13 13:11:34.736] [info] Number of expected inputs: 4
+2249: [2019-10-13 13:11:34.736] [info] Number of dimensions for integration: 9
+2250: [2019-10-13 13:11:54.837] [info] Weight computed in 20100ms
+2251: [2019-10-13 13:11:54.837] [info] finished computing weight: 6
+2252: [2019-10-13 13:11:54.837] [info] calculating top_mass at 167
+2253: [2019-10-13 13:11:54.844] [info] Number of expected inputs: 4
+2254: [2019-10-13 13:11:54.844] [info] Number of dimensions for integration: 9
+2255: [2019-10-13 13:12:15.584] [info] Weight computed in 20739ms
+2256: [2019-10-13 13:12:15.584] [info] finished computing weight: 7
+2257: [2019-10-13 13:12:15.584] [info] calculating top_mass at 168
+2258: [2019-10-13 13:12:15.592] [info] Number of expected inputs: 4
+2259: [2019-10-13 13:12:15.592] [info] Number of dimensions for integration: 9
+2260: [2019-10-13 13:12:36.624] [info] Weight computed in 21031ms
+2261: [2019-10-13 13:12:36.624] [info] finished computing weight: 8
+2262: [2019-10-13 13:12:36.624] [info] calculating top_mass at 169
+2263: [2019-10-13 13:12:36.632] [info] Number of expected inputs: 4
+2264: [2019-10-13 13:12:36.632] [info] Number of dimensions for integration: 9
+2265: [2019-10-13 13:12:58.285] [info] Weight computed in 21653ms
+2266: [2019-10-13 13:12:58.285] [info] finished computing weight: 9
+2267: [2019-10-13 13:12:58.285] [info] calculating top_mass at 170
+2268: [2019-10-13 13:12:58.293] [info] Number of expected inputs: 4
+2269: [2019-10-13 13:12:58.293] [info] Number of dimensions for integration: 9
+2270: [2019-10-13 13:13:20.179] [info] Weight computed in 21886ms
+2271: [2019-10-13 13:13:20.179] [info] finished computing weight: 10
+2272: [2019-10-13 13:13:20.179] [info] calculating top_mass at 171
+2273: [2019-10-13 13:13:20.187] [info] Number of expected inputs: 4
+2274: [2019-10-13 13:13:20.187] [info] Number of dimensions for integration: 9
+2275: [2019-10-13 13:13:42.450] [info] Weight computed in 22262ms
+2276: [2019-10-13 13:13:42.450] [info] finished computing weight: 11
+2277: [2019-10-13 13:13:42.450] [info] calculating top_mass at 172
+2278: [2019-10-13 13:13:42.458] [info] Number of expected inputs: 4
+2279: [2019-10-13 13:13:42.458] [info] Number of dimensions for integration: 9
+2280: [2019-10-13 13:14:04.914] [info] Weight computed in 22456ms
+2281: [2019-10-13 13:14:04.914] [info] finished computing weight: 12
+2282: [2019-10-13 13:14:04.914] [info] calculating top_mass at 173
+2283: [2019-10-13 13:14:04.922] [info] Number of expected inputs: 4
+2284: [2019-10-13 13:14:04.922] [info] Number of dimensions for integration: 9
+2285: [2019-10-13 13:14:27.598] [info] Weight computed in 22675ms
+2286: [2019-10-13 13:14:27.598] [info] finished computing weight: 13
+2287: [2019-10-13 13:14:27.598] [info] calculating top_mass at 174
+2288: [2019-10-13 13:14:27.605] [info] Number of expected inputs: 4
+2289: [2019-10-13 13:14:27.605] [info] Number of dimensions for integration: 9
+2290: [2019-10-13 13:14:50.651] [info] Weight computed in 23045ms
+2291: [2019-10-13 13:14:50.651] [info] finished computing weight: 14
+2292: [2019-10-13 13:14:50.651] [info] calculating top_mass at 175
+2293: [2019-10-13 13:14:50.659] [info] Number of expected inputs: 4
+2294: [2019-10-13 13:14:50.659] [info] Number of dimensions for integration: 9
+2295: [2019-10-13 13:15:13.733] [info] Weight computed in 23074ms
+2296: [2019-10-13 13:15:13.733] [info] finished computing weight: 15
+2297: [2019-10-13 13:15:13.734] [info] calculating top_mass at 176
+2298: [2019-10-13 13:15:13.741] [info] Number of expected inputs: 4
+2299: [2019-10-13 13:15:13.741] [info] Number of dimensions for integration: 9
+2300: [2019-10-13 13:15:37.013] [info] Weight computed in 23271ms
+2301: [2019-10-13 13:15:37.013] [info] finished computing weight: 16
+2302: [2019-10-13 13:15:37.013] [info] calculating top_mass at 177
+2303: [2019-10-13 13:15:37.021] [info] Number of expected inputs: 4
+2304: [2019-10-13 13:15:37.021] [info] Number of dimensions for integration: 9
+2305: [2019-10-13 13:16:00.321] [info] Weight computed in 23299ms
+2306: [2019-10-13 13:16:00.321] [info] finished computing weight: 17
+2307: [2019-10-13 13:16:00.321] [info] calculating top_mass at 178
+2308: [2019-10-13 13:16:00.329] [info] Number of expected inputs: 4
+2309: [2019-10-13 13:16:00.329] [info] Number of dimensions for integration: 9
+2310: [2019-10-13 13:16:23.626] [info] Weight computed in 23296ms
+2311: [2019-10-13 13:16:23.626] [info] finished computing weight: 18
+2312: [2019-10-13 13:16:23.626] [info] calculating top_mass at 179
+2313: [2019-10-13 13:16:23.633] [info] Number of expected inputs: 4
+2314: [2019-10-13 13:16:23.633] [info] Number of dimensions for integration: 9
+2315: [2019-10-13 13:16:47.072] [info] Weight computed in 23438ms
+2316: [2019-10-13 13:16:47.072] [info] finished computing weight: 19
+2317: [2019-10-13 13:16:47.072] [info] calculating top_mass at 180
+2318: [2019-10-13 13:16:47.080] [info] Number of expected inputs: 4
+2319: [2019-10-13 13:16:47.080] [info] Number of dimensions for integration: 9
+2320: [2019-10-13 13:17:10.466] [info] Weight computed in 23386ms
+2321: [2019-10-13 13:17:10.466] [info] finished computing weight: 20
+2322: [2019-10-13 13:17:10.467] [info] calculating top_mass at 181
+2323: [2019-10-13 13:17:10.474] [info] Number of expected inputs: 4
+2324: [2019-10-13 13:17:10.474] [info] Number of dimensions for integration: 9
+2325: [2019-10-13 13:17:34.127] [info] Weight computed in 23652ms
+2326: [2019-10-13 13:17:34.127] [info] finished computing weight: 21
+2327: [2019-10-13 13:17:34.127] [info] calculating top_mass at 182
+2328: [2019-10-13 13:17:34.134] [info] Number of expected inputs: 4
+2329: [2019-10-13 13:17:34.134] [info] Number of dimensions for integration: 9
+2330: [2019-10-13 13:17:57.908] [info] Weight computed in 23773ms
+2331: [2019-10-13 13:17:57.908] [info] finished computing weight: 22
+2332: [2019-10-13 13:17:57.908] [info] calculating top_mass at 183
+2333: [2019-10-13 13:17:57.916] [info] Number of expected inputs: 4
+2334: [2019-10-13 13:17:57.916] [info] Number of dimensions for integration: 9
+2335: [2019-10-13 13:18:21.670] [info] Weight computed in 23754ms
+2336: [2019-10-13 13:18:21.670] [info] finished computing weight: 23
+2337: [2019-10-13 13:18:21.670] [info] calculating top_mass at 184
+2338: [2019-10-13 13:18:21.678] [info] Number of expected inputs: 4
+2339: [2019-10-13 13:18:21.678] [info] Number of dimensions for integration: 9
+2340: [2019-10-13 13:18:45.322] [info] Weight computed in 23643ms
+2341: [2019-10-13 13:18:45.322] [info] finished computing weight: 24
+2342: [2019-10-13 13:18:45.322] [info] calculating top_mass at 185
+2343: [2019-10-13 13:18:45.330] [info] Number of expected inputs: 4
+2344: [2019-10-13 13:18:45.330] [info] Number of dimensions for integration: 9
+2345: [2019-10-13 13:19:08.996] [info] Weight computed in 23666ms
+2346: [2019-10-13 13:19:08.996] [info] finished computing weight: 25
+2347: [2019-10-13 13:19:08.996] [info] finished computing event: 12
+2348: [2019-10-13 13:19:08.996] [info] weight: 1.07736e-21
+2349: [2019-10-13 13:19:08.996] [info] ratio: 0.32863
+2350: [2019-10-13 13:19:08.996] [info] weight: 1.2393e-21
+2351: [2019-10-13 13:19:08.996] [info] ratio: 0.378028
+2352: [2019-10-13 13:19:08.996] [info] weight: 1.41486e-21
+2353: [2019-10-13 13:19:08.996] [info] ratio: 0.431579
+2354: [2019-10-13 13:19:08.996] [info] weight: 1.58728e-21
+2355: [2019-10-13 13:19:08.996] [info] ratio: 0.484173
+2356: [2019-10-13 13:19:08.996] [info] weight: 1.77728e-21
+2357: [2019-10-13 13:19:08.996] [info] ratio: 0.542129
+2358: [2019-10-13 13:19:08.996] [info] weight: 1.96469e-21
+2359: [2019-10-13 13:19:08.996] [info] ratio: 0.599295
+2360: [2019-10-13 13:19:08.996] [info] weight: 2.1466e-21
+2361: [2019-10-13 13:19:08.996] [info] ratio: 0.654785
+2362: [2019-10-13 13:19:08.996] [info] weight: 2.33757e-21
+2363: [2019-10-13 13:19:08.996] [info] ratio: 0.713037
+2364: [2019-10-13 13:19:08.996] [info] weight: 2.52619e-21
+2365: [2019-10-13 13:19:08.996] [info] ratio: 0.770572
+2366: [2019-10-13 13:19:08.996] [info] weight: 2.71263e-21
+2367: [2019-10-13 13:19:08.996] [info] ratio: 0.827441
+2368: [2019-10-13 13:19:08.996] [info] weight: 2.94651e-21
+2369: [2019-10-13 13:19:08.996] [info] ratio: 0.898784
+2370: [2019-10-13 13:19:08.996] [info] weight: 3.10253e-21
+2371: [2019-10-13 13:19:08.996] [info] ratio: 0.946375
+2372: [2019-10-13 13:19:08.996] [info] weight: 3.27833e-21
+2373: [2019-10-13 13:19:08.996] [info] ratio: 1
+2374: [2019-10-13 13:19:08.996] [info] weight: 3.44647e-21
+2375: [2019-10-13 13:19:08.996] [info] ratio: 1.05129
+2376: [2019-10-13 13:19:08.996] [info] weight: 3.6042e-21
+2377: [2019-10-13 13:19:08.996] [info] ratio: 1.0994
+2378: [2019-10-13 13:19:08.996] [info] weight: 3.76336e-21
+2379: [2019-10-13 13:19:08.996] [info] ratio: 1.14795
+2380: [2019-10-13 13:19:08.996] [info] weight: 3.9133e-21
+2381: [2019-10-13 13:19:08.996] [info] ratio: 1.19369
+2382: [2019-10-13 13:19:08.996] [info] weight: 4.04732e-21
+2383: [2019-10-13 13:19:08.996] [info] ratio: 1.23457
+2384: [2019-10-13 13:19:08.996] [info] weight: 4.17357e-21
+2385: [2019-10-13 13:19:08.996] [info] ratio: 1.27308
+2386: [2019-10-13 13:19:08.996] [info] weight: 4.27623e-21
+2387: [2019-10-13 13:19:08.996] [info] ratio: 1.30439
+2388: [2019-10-13 13:19:08.996] [info] weight: 4.386e-21
+2389: [2019-10-13 13:19:08.997] [info] ratio: 1.33788
+2390: [2019-10-13 13:19:08.997] [info] weight: 4.44118e-21
+2391: [2019-10-13 13:19:08.997] [info] ratio: 1.35471
+2392: [2019-10-13 13:19:08.997] [info] weight: 4.50124e-21
+2393: [2019-10-13 13:19:08.997] [info] ratio: 1.37303
+2394: [2019-10-13 13:19:08.997] [info] weight: 4.5486e-21
+2395: [2019-10-13 13:19:08.997] [info] ratio: 1.38747
+2396: [2019-10-13 13:19:08.997] [info] weight: 4.56958e-21
+2397: [2019-10-13 13:19:08.997] [info] ratio: 1.39387
+2398: [2019-10-13 13:19:08.997] [info] weight: 4.59814e-21
+2399: [2019-10-13 13:19:08.997] [info] ratio: 1.40259
+2400: [2019-10-13 13:19:08.997] [info] calculating event 13/15
+2401: [2019-10-13 13:19:08.997] [info] calculating top_mass at 160
+2402: [2019-10-13 13:19:09.004] [info] Number of expected inputs: 4
+2403: [2019-10-13 13:19:09.004] [info] Number of dimensions for integration: 9
+2404: [2019-10-13 13:19:32.015] [info] Weight computed in 23010ms
+2405: [2019-10-13 13:19:32.015] [info] finished computing weight: 0
+2406: [2019-10-13 13:19:32.015] [info] calculating top_mass at 161
+2407: [2019-10-13 13:19:32.023] [info] Number of expected inputs: 4
+2408: [2019-10-13 13:19:32.023] [info] Number of dimensions for integration: 9
+2409: [2019-10-13 13:19:56.540] [info] Weight computed in 24517ms
+2410: [2019-10-13 13:19:56.540] [info] finished computing weight: 1
+2411: [2019-10-13 13:19:56.541] [info] calculating top_mass at 162
+2412: [2019-10-13 13:19:56.548] [info] Number of expected inputs: 4
+2413: [2019-10-13 13:19:56.548] [info] Number of dimensions for integration: 9
+2414: [2019-10-13 13:20:22.218] [info] Weight computed in 25669ms
+2415: [2019-10-13 13:20:22.218] [info] finished computing weight: 2
+2416: [2019-10-13 13:20:22.218] [info] calculating top_mass at 163
+2417: [2019-10-13 13:20:22.226] [info] Number of expected inputs: 4
+2418: [2019-10-13 13:20:22.226] [info] Number of dimensions for integration: 9
+2419: [2019-10-13 13:20:48.687] [info] Weight computed in 26460ms
+2420: [2019-10-13 13:20:48.687] [info] finished computing weight: 3
+2421: [2019-10-13 13:20:48.687] [info] calculating top_mass at 164
+2422: [2019-10-13 13:20:48.695] [info] Number of expected inputs: 4
+2423: [2019-10-13 13:20:48.695] [info] Number of dimensions for integration: 9
+2424: [2019-10-13 13:21:16.721] [info] Weight computed in 28025ms
+2425: [2019-10-13 13:21:16.721] [info] finished computing weight: 4
+2426: [2019-10-13 13:21:16.721] [info] calculating top_mass at 165
+2427: [2019-10-13 13:21:16.728] [info] Number of expected inputs: 4
+2428: [2019-10-13 13:21:16.728] [info] Number of dimensions for integration: 9
+2429: [2019-10-13 13:21:45.755] [info] Weight computed in 29026ms
+2430: [2019-10-13 13:21:45.755] [info] finished computing weight: 5
+2431: [2019-10-13 13:21:45.756] [info] calculating top_mass at 166
+2432: [2019-10-13 13:21:45.763] [info] Number of expected inputs: 4
+2433: [2019-10-13 13:21:45.763] [info] Number of dimensions for integration: 9
+2434: [2019-10-13 13:22:16.116] [info] Weight computed in 30352ms
+2435: [2019-10-13 13:22:16.116] [info] finished computing weight: 6
+2436: [2019-10-13 13:22:16.116] [info] calculating top_mass at 167
+2437: [2019-10-13 13:22:16.124] [info] Number of expected inputs: 4
+2438: [2019-10-13 13:22:16.124] [info] Number of dimensions for integration: 9
+2439: [2019-10-13 13:22:47.420] [info] Weight computed in 31296ms
+2440: [2019-10-13 13:22:47.420] [info] finished computing weight: 7
+2441: [2019-10-13 13:22:47.420] [info] calculating top_mass at 168
+2442: [2019-10-13 13:22:47.428] [info] Number of expected inputs: 4
+2443: [2019-10-13 13:22:47.428] [info] Number of dimensions for integration: 9
+2444: [2019-10-13 13:23:19.477] [info] Weight computed in 32049ms
+2445: [2019-10-13 13:23:19.477] [info] finished computing weight: 8
+2446: [2019-10-13 13:23:19.478] [info] calculating top_mass at 169
+2447: [2019-10-13 13:23:19.485] [info] Number of expected inputs: 4
+2448: [2019-10-13 13:23:19.485] [info] Number of dimensions for integration: 9
+2449: [2019-10-13 13:23:51.870] [info] Weight computed in 32384ms
+2450: [2019-10-13 13:23:51.870] [info] finished computing weight: 9
+2451: [2019-10-13 13:23:51.870] [info] calculating top_mass at 170
+2452: [2019-10-13 13:23:51.878] [info] Number of expected inputs: 4
+2453: [2019-10-13 13:23:51.878] [info] Number of dimensions for integration: 9
+2454: [2019-10-13 13:24:25.503] [info] Weight computed in 33625ms
+2455: [2019-10-13 13:24:25.503] [info] finished computing weight: 10
+2456: [2019-10-13 13:24:25.503] [info] calculating top_mass at 171
+2457: [2019-10-13 13:24:25.511] [info] Number of expected inputs: 4
+2458: [2019-10-13 13:24:25.511] [info] Number of dimensions for integration: 9
+2459: [2019-10-13 13:24:59.707] [info] Weight computed in 34196ms
+2460: [2019-10-13 13:24:59.707] [info] finished computing weight: 11
+2461: [2019-10-13 13:24:59.707] [info] calculating top_mass at 172
+2462: [2019-10-13 13:24:59.715] [info] Number of expected inputs: 4
+2463: [2019-10-13 13:24:59.715] [info] Number of dimensions for integration: 9
+2464: [2019-10-13 13:25:34.359] [info] Weight computed in 34644ms
+2465: [2019-10-13 13:25:34.359] [info] finished computing weight: 12
+2466: [2019-10-13 13:25:34.359] [info] calculating top_mass at 173
+2467: [2019-10-13 13:25:34.367] [info] Number of expected inputs: 4
+2468: [2019-10-13 13:25:34.367] [info] Number of dimensions for integration: 9
+2469: [2019-10-13 13:26:09.538] [info] Weight computed in 35171ms
+2470: [2019-10-13 13:26:09.538] [info] finished computing weight: 13
+2471: [2019-10-13 13:26:09.539] [info] calculating top_mass at 174
+2472: [2019-10-13 13:26:09.546] [info] Number of expected inputs: 4
+2473: [2019-10-13 13:26:09.546] [info] Number of dimensions for integration: 9
+2474: [2019-10-13 13:26:45.164] [info] Weight computed in 35617ms
+2475: [2019-10-13 13:26:45.164] [info] finished computing weight: 14
+2476: [2019-10-13 13:26:45.164] [info] calculating top_mass at 175
+2477: [2019-10-13 13:26:45.172] [info] Number of expected inputs: 4
+2478: [2019-10-13 13:26:45.172] [info] Number of dimensions for integration: 9
+2479: [2019-10-13 13:27:20.750] [info] Weight computed in 35577ms
+2480: [2019-10-13 13:27:20.750] [info] finished computing weight: 15
+2481: [2019-10-13 13:27:20.750] [info] calculating top_mass at 176
+2482: [2019-10-13 13:27:20.758] [info] Number of expected inputs: 4
+2483: [2019-10-13 13:27:20.758] [info] Number of dimensions for integration: 9
+2484: [2019-10-13 13:27:56.211] [info] Weight computed in 35452ms
+2485: [2019-10-13 13:27:56.211] [info] finished computing weight: 16
+2486: [2019-10-13 13:27:56.211] [info] calculating top_mass at 177
+2487: [2019-10-13 13:27:56.218] [info] Number of expected inputs: 4
+2488: [2019-10-13 13:27:56.218] [info] Number of dimensions for integration: 9
+2489: [2019-10-13 13:28:32.122] [info] Weight computed in 35903ms
+2490: [2019-10-13 13:28:32.122] [info] finished computing weight: 17
+2491: [2019-10-13 13:28:32.122] [info] calculating top_mass at 178
+2492: [2019-10-13 13:28:32.129] [info] Number of expected inputs: 4
+2493: [2019-10-13 13:28:32.129] [info] Number of dimensions for integration: 9
+2494: [2019-10-13 13:29:08.184] [info] Weight computed in 36054ms
+2495: [2019-10-13 13:29:08.184] [info] finished computing weight: 18
+2496: [2019-10-13 13:29:08.184] [info] calculating top_mass at 179
+2497: [2019-10-13 13:29:08.192] [info] Number of expected inputs: 4
+2498: [2019-10-13 13:29:08.192] [info] Number of dimensions for integration: 9
+2499: [2019-10-13 13:29:43.840] [info] Weight computed in 35648ms
+2500: [2019-10-13 13:29:43.840] [info] finished computing weight: 19
+2501: [2019-10-13 13:29:43.841] [info] calculating top_mass at 180
+2502: [2019-10-13 13:29:43.848] [info] Number of expected inputs: 4
+2503: [2019-10-13 13:29:43.848] [info] Number of dimensions for integration: 9
+2504: [2019-10-13 13:30:19.220] [info] Weight computed in 35371ms
+2505: [2019-10-13 13:30:19.220] [info] finished computing weight: 20
+2506: [2019-10-13 13:30:19.220] [info] calculating top_mass at 181
+2507: [2019-10-13 13:30:19.228] [info] Number of expected inputs: 4
+2508: [2019-10-13 13:30:19.228] [info] Number of dimensions for integration: 9
+2509: [2019-10-13 13:30:54.633] [info] Weight computed in 35404ms
+2510: [2019-10-13 13:30:54.633] [info] finished computing weight: 21
+2511: [2019-10-13 13:30:54.633] [info] calculating top_mass at 182
+2512: [2019-10-13 13:30:54.640] [info] Number of expected inputs: 4
+2513: [2019-10-13 13:30:54.640] [info] Number of dimensions for integration: 9
+2514: [2019-10-13 13:31:29.851] [info] Weight computed in 35210ms
+2515: [2019-10-13 13:31:29.851] [info] finished computing weight: 22
+2516: [2019-10-13 13:31:29.851] [info] calculating top_mass at 183
+2517: [2019-10-13 13:31:29.858] [info] Number of expected inputs: 4
+2518: [2019-10-13 13:31:29.858] [info] Number of dimensions for integration: 9
+2519: [2019-10-13 13:32:04.833] [info] Weight computed in 34974ms
+2520: [2019-10-13 13:32:04.833] [info] finished computing weight: 23
+2521: [2019-10-13 13:32:04.833] [info] calculating top_mass at 184
+2522: [2019-10-13 13:32:04.840] [info] Number of expected inputs: 4
+2523: [2019-10-13 13:32:04.840] [info] Number of dimensions for integration: 9
+2524: [2019-10-13 13:32:39.256] [info] Weight computed in 34415ms
+2525: [2019-10-13 13:32:39.256] [info] finished computing weight: 24
+2526: [2019-10-13 13:32:39.256] [info] calculating top_mass at 185
+2527: [2019-10-13 13:32:39.264] [info] Number of expected inputs: 4
+2528: [2019-10-13 13:32:39.264] [info] Number of dimensions for integration: 9
+2529: [2019-10-13 13:33:13.501] [info] Weight computed in 34237ms
+2530: [2019-10-13 13:33:13.501] [info] finished computing weight: 25
+2531: [2019-10-13 13:33:13.502] [info] finished computing event: 13
+2532: [2019-10-13 13:33:13.502] [info] weight: 4.63586e-20
+2533: [2019-10-13 13:33:13.502] [info] ratio: 1.06718
+2534: [2019-10-13 13:33:13.502] [info] weight: 4.8535e-20
+2535: [2019-10-13 13:33:13.502] [info] ratio: 1.11729
+2536: [2019-10-13 13:33:13.502] [info] weight: 5.01794e-20
+2537: [2019-10-13 13:33:13.502] [info] ratio: 1.15514
+2538: [2019-10-13 13:33:13.502] [info] weight: 5.11544e-20
+2539: [2019-10-13 13:33:13.502] [info] ratio: 1.17759
+2540: [2019-10-13 13:33:13.502] [info] weight: 5.3536e-20
+2541: [2019-10-13 13:33:13.502] [info] ratio: 1.23241
+2542: [2019-10-13 13:33:13.502] [info] weight: 5.22801e-20
+2543: [2019-10-13 13:33:13.502] [info] ratio: 1.2035
+2544: [2019-10-13 13:33:13.502] [info] weight: 5.19991e-20
+2545: [2019-10-13 13:33:13.502] [info] ratio: 1.19703
+2546: [2019-10-13 13:33:13.502] [info] weight: 5.14168e-20
+2547: [2019-10-13 13:33:13.502] [info] ratio: 1.18363
+2548: [2019-10-13 13:33:13.502] [info] weight: 5.00708e-20
+2549: [2019-10-13 13:33:13.502] [info] ratio: 1.15264
+2550: [2019-10-13 13:33:13.502] [info] weight: 4.89113e-20
+2551: [2019-10-13 13:33:13.502] [info] ratio: 1.12595
+2552: [2019-10-13 13:33:13.502] [info] weight: 4.73825e-20
+2553: [2019-10-13 13:33:13.502] [info] ratio: 1.09075
+2554: [2019-10-13 13:33:13.502] [info] weight: 4.56499e-20
+2555: [2019-10-13 13:33:13.502] [info] ratio: 1.05087
+2556: [2019-10-13 13:33:13.502] [info] weight: 4.34401e-20
+2557: [2019-10-13 13:33:13.502] [info] ratio: 1
+2558: [2019-10-13 13:33:13.502] [info] weight: 4.15344e-20
+2559: [2019-10-13 13:33:13.502] [info] ratio: 0.95613
+2560: [2019-10-13 13:33:13.502] [info] weight: 3.9564e-20
+2561: [2019-10-13 13:33:13.502] [info] ratio: 0.910771
+2562: [2019-10-13 13:33:13.502] [info] weight: 3.7494e-20
+2563: [2019-10-13 13:33:13.502] [info] ratio: 0.86312
+2564: [2019-10-13 13:33:13.502] [info] weight: 3.56156e-20
+2565: [2019-10-13 13:33:13.502] [info] ratio: 0.81988
+2566: [2019-10-13 13:33:13.502] [info] weight: 3.37619e-20
+2567: [2019-10-13 13:33:13.502] [info] ratio: 0.777205
+2568: [2019-10-13 13:33:13.502] [info] weight: 3.18608e-20
+2569: [2019-10-13 13:33:13.502] [info] ratio: 0.733441
+2570: [2019-10-13 13:33:13.502] [info] weight: 3.02116e-20
+2571: [2019-10-13 13:33:13.502] [info] ratio: 0.695478
+2572: [2019-10-13 13:33:13.502] [info] weight: 2.87115e-20
+2573: [2019-10-13 13:33:13.502] [info] ratio: 0.660946
+2574: [2019-10-13 13:33:13.502] [info] weight: 2.69645e-20
+2575: [2019-10-13 13:33:13.502] [info] ratio: 0.620727
+2576: [2019-10-13 13:33:13.502] [info] weight: 2.55078e-20
+2577: [2019-10-13 13:33:13.502] [info] ratio: 0.587194
+2578: [2019-10-13 13:33:13.502] [info] weight: 2.40667e-20
+2579: [2019-10-13 13:33:13.502] [info] ratio: 0.554021
+2580: [2019-10-13 13:33:13.502] [info] weight: 2.27595e-20
+2581: [2019-10-13 13:33:13.502] [info] ratio: 0.523929
+2582: [2019-10-13 13:33:13.502] [info] weight: 2.15361e-20
+2583: [2019-10-13 13:33:13.502] [info] ratio: 0.495767
+2584: [2019-10-13 13:33:13.502] [info] calculating event 14/15
+2585: [2019-10-13 13:33:13.502] [info] calculating top_mass at 160
+2586: [2019-10-13 13:33:13.510] [info] Number of expected inputs: 4
+2587: [2019-10-13 13:33:13.510] [info] Number of dimensions for integration: 9
+2588: [2019-10-13 13:33:28.593] [info] Weight computed in 15082ms
+2589: [2019-10-13 13:33:28.593] [info] finished computing weight: 0
+2590: [2019-10-13 13:33:28.593] [info] calculating top_mass at 161
+2591: [2019-10-13 13:33:28.601] [info] Number of expected inputs: 4
+2592: [2019-10-13 13:33:28.601] [info] Number of dimensions for integration: 9
+2593: [2019-10-13 13:33:43.692] [info] Weight computed in 15090ms
+2594: [2019-10-13 13:33:43.692] [info] finished computing weight: 1
+2595: [2019-10-13 13:33:43.692] [info] calculating top_mass at 162
+2596: [2019-10-13 13:33:43.700] [info] Number of expected inputs: 4
+2597: [2019-10-13 13:33:43.700] [info] Number of dimensions for integration: 9
+2598: [2019-10-13 13:33:58.760] [info] Weight computed in 15060ms
+2599: [2019-10-13 13:33:58.760] [info] finished computing weight: 2
+2600: [2019-10-13 13:33:58.760] [info] calculating top_mass at 163
+2601: [2019-10-13 13:33:58.768] [info] Number of expected inputs: 4
+2602: [2019-10-13 13:33:58.768] [info] Number of dimensions for integration: 9
+2603: [2019-10-13 13:34:14.047] [info] Weight computed in 15278ms
+2604: [2019-10-13 13:34:14.047] [info] finished computing weight: 3
+2605: [2019-10-13 13:34:14.047] [info] calculating top_mass at 164
+2606: [2019-10-13 13:34:14.055] [info] Number of expected inputs: 4
+2607: [2019-10-13 13:34:14.055] [info] Number of dimensions for integration: 9
+2608: [2019-10-13 13:34:29.359] [info] Weight computed in 15303ms
+2609: [2019-10-13 13:34:29.359] [info] finished computing weight: 4
+2610: [2019-10-13 13:34:29.359] [info] calculating top_mass at 165
+2611: [2019-10-13 13:34:29.367] [info] Number of expected inputs: 4
+2612: [2019-10-13 13:34:29.367] [info] Number of dimensions for integration: 9
+2613: [2019-10-13 13:34:44.760] [info] Weight computed in 15392ms
+2614: [2019-10-13 13:34:44.760] [info] finished computing weight: 5
+2615: [2019-10-13 13:34:44.760] [info] calculating top_mass at 166
+2616: [2019-10-13 13:34:44.768] [info] Number of expected inputs: 4
+2617: [2019-10-13 13:34:44.768] [info] Number of dimensions for integration: 9
+2618: [2019-10-13 13:34:59.971] [info] Weight computed in 15202ms
+2619: [2019-10-13 13:34:59.971] [info] finished computing weight: 6
+2620: [2019-10-13 13:34:59.971] [info] calculating top_mass at 167
+2621: [2019-10-13 13:34:59.979] [info] Number of expected inputs: 4
+2622: [2019-10-13 13:34:59.979] [info] Number of dimensions for integration: 9
+2623: [2019-10-13 13:35:15.384] [info] Weight computed in 15404ms
+2624: [2019-10-13 13:35:15.384] [info] finished computing weight: 7
+2625: [2019-10-13 13:35:15.384] [info] calculating top_mass at 168
+2626: [2019-10-13 13:35:15.391] [info] Number of expected inputs: 4
+2627: [2019-10-13 13:35:15.391] [info] Number of dimensions for integration: 9
+2628: [2019-10-13 13:35:30.751] [info] Weight computed in 15359ms
+2629: [2019-10-13 13:35:30.751] [info] finished computing weight: 8
+2630: [2019-10-13 13:35:30.751] [info] calculating top_mass at 169
+2631: [2019-10-13 13:35:30.759] [info] Number of expected inputs: 4
+2632: [2019-10-13 13:35:30.759] [info] Number of dimensions for integration: 9
+2633: [2019-10-13 13:35:46.084] [info] Weight computed in 15324ms
+2634: [2019-10-13 13:35:46.084] [info] finished computing weight: 9
+2635: [2019-10-13 13:35:46.084] [info] calculating top_mass at 170
+2636: [2019-10-13 13:35:46.092] [info] Number of expected inputs: 4
+2637: [2019-10-13 13:35:46.092] [info] Number of dimensions for integration: 9
+2638: [2019-10-13 13:36:01.523] [info] Weight computed in 15431ms
+2639: [2019-10-13 13:36:01.523] [info] finished computing weight: 10
+2640: [2019-10-13 13:36:01.524] [info] calculating top_mass at 171
+2641: [2019-10-13 13:36:01.531] [info] Number of expected inputs: 4
+2642: [2019-10-13 13:36:01.531] [info] Number of dimensions for integration: 9
+2643: [2019-10-13 13:36:17.137] [info] Weight computed in 15605ms
+2644: [2019-10-13 13:36:17.137] [info] finished computing weight: 11
+2645: [2019-10-13 13:36:17.137] [info] calculating top_mass at 172
+2646: [2019-10-13 13:36:17.145] [info] Number of expected inputs: 4
+2647: [2019-10-13 13:36:17.145] [info] Number of dimensions for integration: 9
+2648: [2019-10-13 13:36:32.801] [info] Weight computed in 15655ms
+2649: [2019-10-13 13:36:32.801] [info] finished computing weight: 12
+2650: [2019-10-13 13:36:32.801] [info] calculating top_mass at 173
+2651: [2019-10-13 13:36:32.808] [info] Number of expected inputs: 4
+2652: [2019-10-13 13:36:32.808] [info] Number of dimensions for integration: 9
+2653: [2019-10-13 13:36:48.528] [info] Weight computed in 15719ms
+2654: [2019-10-13 13:36:48.528] [info] finished computing weight: 13
+2655: [2019-10-13 13:36:48.528] [info] calculating top_mass at 174
+2656: [2019-10-13 13:36:48.536] [info] Number of expected inputs: 4
+2657: [2019-10-13 13:36:48.536] [info] Number of dimensions for integration: 9
+2658: [2019-10-13 13:37:03.993] [info] Weight computed in 15456ms
+2659: [2019-10-13 13:37:03.993] [info] finished computing weight: 14
+2660: [2019-10-13 13:37:03.993] [info] calculating top_mass at 175
+2661: [2019-10-13 13:37:04.000] [info] Number of expected inputs: 4
+2662: [2019-10-13 13:37:04.000] [info] Number of dimensions for integration: 9
+2663: [2019-10-13 13:37:19.238] [info] Weight computed in 15238ms
+2664: [2019-10-13 13:37:19.239] [info] finished computing weight: 15
+2665: [2019-10-13 13:37:19.239] [info] calculating top_mass at 176
+2666: [2019-10-13 13:37:19.246] [info] Number of expected inputs: 4
+2667: [2019-10-13 13:37:19.246] [info] Number of dimensions for integration: 9
+2668: [2019-10-13 13:37:34.863] [info] Weight computed in 15616ms
+2669: [2019-10-13 13:37:34.863] [info] finished computing weight: 16
+2670: [2019-10-13 13:37:34.863] [info] calculating top_mass at 177
+2671: [2019-10-13 13:37:34.871] [info] Number of expected inputs: 4
+2672: [2019-10-13 13:37:34.871] [info] Number of dimensions for integration: 9
+2673: [2019-10-13 13:37:50.245] [info] Weight computed in 15374ms
+2674: [2019-10-13 13:37:50.245] [info] finished computing weight: 17
+2675: [2019-10-13 13:37:50.246] [info] calculating top_mass at 178
+2676: [2019-10-13 13:37:50.253] [info] Number of expected inputs: 4
+2677: [2019-10-13 13:37:50.253] [info] Number of dimensions for integration: 9
+2678: [2019-10-13 13:38:05.598] [info] Weight computed in 15344ms
+2679: [2019-10-13 13:38:05.598] [info] finished computing weight: 18
+2680: [2019-10-13 13:38:05.598] [info] calculating top_mass at 179
+2681: [2019-10-13 13:38:05.606] [info] Number of expected inputs: 4
+2682: [2019-10-13 13:38:05.606] [info] Number of dimensions for integration: 9
+2683: [2019-10-13 13:38:20.907] [info] Weight computed in 15300ms
+2684: [2019-10-13 13:38:20.907] [info] finished computing weight: 19
+2685: [2019-10-13 13:38:20.907] [info] calculating top_mass at 180
+2686: [2019-10-13 13:38:20.914] [info] Number of expected inputs: 4
+2687: [2019-10-13 13:38:20.914] [info] Number of dimensions for integration: 9
+2688: [2019-10-13 13:38:36.179] [info] Weight computed in 15264ms
+2689: [2019-10-13 13:38:36.179] [info] finished computing weight: 20
+2690: [2019-10-13 13:38:36.179] [info] calculating top_mass at 181
+2691: [2019-10-13 13:38:36.186] [info] Number of expected inputs: 4
+2692: [2019-10-13 13:38:36.186] [info] Number of dimensions for integration: 9
+2693: [2019-10-13 13:38:51.364] [info] Weight computed in 15177ms
+2694: [2019-10-13 13:38:51.364] [info] finished computing weight: 21
+2695: [2019-10-13 13:38:51.365] [info] calculating top_mass at 182
+2696: [2019-10-13 13:38:51.372] [info] Number of expected inputs: 4
+2697: [2019-10-13 13:38:51.372] [info] Number of dimensions for integration: 9
+2698: [2019-10-13 13:39:06.617] [info] Weight computed in 15245ms
+2699: [2019-10-13 13:39:06.617] [info] finished computing weight: 22
+2700: [2019-10-13 13:39:06.618] [info] calculating top_mass at 183
+2701: [2019-10-13 13:39:06.625] [info] Number of expected inputs: 4
+2702: [2019-10-13 13:39:06.625] [info] Number of dimensions for integration: 9
+2703: [2019-10-13 13:39:21.638] [info] Weight computed in 15012ms
+2704: [2019-10-13 13:39:21.638] [info] finished computing weight: 23
+2705: [2019-10-13 13:39:21.638] [info] calculating top_mass at 184
+2706: [2019-10-13 13:39:21.646] [info] Number of expected inputs: 4
+2707: [2019-10-13 13:39:21.646] [info] Number of dimensions for integration: 9
+2708: [2019-10-13 13:39:36.824] [info] Weight computed in 15178ms
+2709: [2019-10-13 13:39:36.824] [info] finished computing weight: 24
+2710: [2019-10-13 13:39:36.824] [info] calculating top_mass at 185
+2711: [2019-10-13 13:39:36.832] [info] Number of expected inputs: 4
+2712: [2019-10-13 13:39:36.832] [info] Number of dimensions for integration: 9
+2713: [2019-10-13 13:39:51.751] [info] Weight computed in 14918ms
+2714: [2019-10-13 13:39:51.751] [info] finished computing weight: 25
+2715: [2019-10-13 13:39:51.751] [info] finished computing event: 14
+2716: [2019-10-13 13:39:51.751] [info] weight: 8.11083e-23
+2717: [2019-10-13 13:39:51.751] [info] ratio: 0.773541
+2718: [2019-10-13 13:39:51.751] [info] weight: 8.39698e-23
+2719: [2019-10-13 13:39:51.751] [info] ratio: 0.800831
+2720: [2019-10-13 13:39:51.751] [info] weight: 8.77113e-23
+2721: [2019-10-13 13:39:51.751] [info] ratio: 0.836515
+2722: [2019-10-13 13:39:51.751] [info] weight: 9.0467e-23
+2723: [2019-10-13 13:39:51.751] [info] ratio: 0.862796
+2724: [2019-10-13 13:39:51.751] [info] weight: 9.42198e-23
+2725: [2019-10-13 13:39:51.751] [info] ratio: 0.898587
+2726: [2019-10-13 13:39:51.751] [info] weight: 9.63266e-23
+2727: [2019-10-13 13:39:51.751] [info] ratio: 0.91868
+2728: [2019-10-13 13:39:51.751] [info] weight: 9.87448e-23
+2729: [2019-10-13 13:39:51.751] [info] ratio: 0.941743
+2730: [2019-10-13 13:39:51.751] [info] weight: 1.00356e-22
+2731: [2019-10-13 13:39:51.751] [info] ratio: 0.957109
+2732: [2019-10-13 13:39:51.751] [info] weight: 1.01264e-22
+2733: [2019-10-13 13:39:51.751] [info] ratio: 0.965765
+2734: [2019-10-13 13:39:51.751] [info] weight: 1.03212e-22
+2735: [2019-10-13 13:39:51.751] [info] ratio: 0.984344
+2736: [2019-10-13 13:39:51.751] [info] weight: 1.03105e-22
+2737: [2019-10-13 13:39:51.751] [info] ratio: 0.983328
+2738: [2019-10-13 13:39:51.751] [info] weight: 1.04128e-22
+2739: [2019-10-13 13:39:51.751] [info] ratio: 0.993086
+2740: [2019-10-13 13:39:51.751] [info] weight: 1.04853e-22
+2741: [2019-10-13 13:39:51.751] [info] ratio: 1
+2742: [2019-10-13 13:39:51.751] [info] weight: 1.03991e-22
+2743: [2019-10-13 13:39:51.752] [info] ratio: 0.991777
+2744: [2019-10-13 13:39:51.752] [info] weight: 1.03647e-22
+2745: [2019-10-13 13:39:51.752] [info] ratio: 0.988496
+2746: [2019-10-13 13:39:51.752] [info] weight: 1.03509e-22
+2747: [2019-10-13 13:39:51.752] [info] ratio: 0.987177
+2748: [2019-10-13 13:39:51.752] [info] weight: 1.00884e-22
+2749: [2019-10-13 13:39:51.752] [info] ratio: 0.962141
+2750: [2019-10-13 13:39:51.752] [info] weight: 1.01959e-22
+2751: [2019-10-13 13:39:51.752] [info] ratio: 0.972396
+2752: [2019-10-13 13:39:51.752] [info] weight: 9.91901e-23
+2753: [2019-10-13 13:39:51.752] [info] ratio: 0.94599
+2754: [2019-10-13 13:39:51.752] [info] weight: 9.64601e-23
+2755: [2019-10-13 13:39:51.752] [info] ratio: 0.919953
+2756: [2019-10-13 13:39:51.752] [info] weight: 9.49197e-23
+2757: [2019-10-13 13:39:51.752] [info] ratio: 0.905262
+2758: [2019-10-13 13:39:51.752] [info] weight: 9.12313e-23
+2759: [2019-10-13 13:39:51.752] [info] ratio: 0.870085
+2760: [2019-10-13 13:39:51.752] [info] weight: 8.95931e-23
+2761: [2019-10-13 13:39:51.752] [info] ratio: 0.854462
+2762: [2019-10-13 13:39:51.752] [info] weight: 8.67752e-23
+2763: [2019-10-13 13:39:51.752] [info] ratio: 0.827587
+2764: [2019-10-13 13:39:51.752] [info] weight: 8.2759e-23
+2765: [2019-10-13 13:39:51.752] [info] ratio: 0.789284
+2766: [2019-10-13 13:39:51.752] [info] weight: 7.89527e-23
+2767: [2019-10-13 13:39:51.752] [info] ratio: 0.752983
+2768: [2019-10-13 13:39:51.752] [info] Finished, remove commas with sed 's/,$//' weights.csv > weights_clean.csv 

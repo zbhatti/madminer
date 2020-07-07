@@ -141,6 +141,7 @@ class DenseDoublyParameterizedRatioModel(nn.Module):
             x.requires_grad = True
 
         # f(x | theta0, theta1)
+        # do I need the original variables?
         f_th0_th1 = torch.cat((theta0, theta1, x), 1)
 
         for i, layer in enumerate(self.layers):
